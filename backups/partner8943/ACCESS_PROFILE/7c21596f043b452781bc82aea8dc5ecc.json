@@ -1,0 +1,72 @@
+{
+  "jwsHeader": null,
+  "jwsSignature": null,
+  "object": {
+    "accessRequestConfig": {
+      "approvalSchemes": [
+        {
+          "approverId": "cca20d19-6d6b-4e81-8566-6596beb38d8c",
+          "approverType": "GOVERNANCE_GROUP"
+        },
+        {
+          "approverId": null,
+          "approverType": "OWNER"
+        }
+      ],
+      "commentsRequired": false,
+      "denialCommentsRequired": false,
+      "formDefinitionId": null,
+      "maxPermittedAccessDuration": null,
+      "reauthorizationRequired": false,
+      "requireEndDate": false
+    },
+    "additionalOwners": [],
+    "created": "2024-10-04T10:01:57.824523Z",
+    "description": "AccessProfile 2 CSV patch update 3",
+    "enabled": true,
+    "entitlements": [
+      {
+        "id": "01bfc28a44a945dd8475967c32d0408e",
+        "name": "CompCommittee",
+        "type": "ENTITLEMENT"
+      },
+      {
+        "id": "2d981a4d1346455ca44c25d3126ffac5",
+        "name": "Account Operators",
+        "type": "ENTITLEMENT"
+      }
+    ],
+    "id": "7c21596f043b452781bc82aea8dc5ecc",
+    "modified": "2024-10-04T10:01:57.889267Z",
+    "name": "AccessProfile 2",
+    "owner": {
+      "id": "1dff61379fdc41fbac00c7f5ae992e23",
+      "name": "cjoglar",
+      "type": "IDENTITY"
+    },
+    "privilegeLevel": null,
+    "provisioningCriteria": null,
+    "requestable": true,
+    "revocationRequestConfig": {
+      "approvalSchemes": [
+        {
+          "approverId": null,
+          "approverType": "OWNER"
+        }
+      ]
+    },
+    "segmentRefs": [],
+    "segments": [],
+    "source": {
+      "id": "dd15e795a6884b1e914126cdaf8ac66d",
+      "name": "Active Directory LAB SIA",
+      "type": "SOURCE"
+    }
+  },
+  "self": {
+    "id": "7c21596f043b452781bc82aea8dc5ecc",
+    "name": "AccessProfile 2",
+    "type": "ACCESS_PROFILE"
+  },
+  "version": 1
+}

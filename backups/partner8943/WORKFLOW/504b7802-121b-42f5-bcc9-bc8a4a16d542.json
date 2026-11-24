@@ -1,0 +1,105 @@
+{
+  "jwsHeader": null,
+  "jwsSignature": null,
+  "object": {
+    "created": "2026-11-03T07:16:22.634784498Z",
+    "creator": {
+      "id": "06c1619bb4ad4fa3b793330ced2408fe",
+      "name": "rcgalvez",
+      "type": "IDENTITY"
+    },
+    "definition": {
+      "start": "Get Identity",
+      "steps": {
+        "End Step - Success": {
+          "actionId": "sp:operator-success",
+          "displayName": "",
+          "type": "success"
+        },
+        "Form": {
+          "actionId": "sp:forms",
+          "attributes": {
+            "formDefinitionId": "fb30673f-e5b0-4c75-b7bd-2f01c33b17b3",
+            "inputForForm_nombre.$": "$.getIdentity.attributes.firstname",
+            "recipient.$": "$.trigger.submittedBy.id"
+          },
+          "displayName": "",
+          "nextStep": "HTTP Request",
+          "type": "action",
+          "versionNumber": 1
+        },
+        "Get Identity": {
+          "actionId": "sp:get-identity",
+          "attributes": {
+            "id.$": "$.trigger.formData.username"
+          },
+          "displayName": "",
+          "nextStep": "Form",
+          "type": "action",
+          "versionNumber": 2
+        },
+        "HTTP Request": {
+          "actionId": "sp:http",
+          "attributes": {
+            "jsonRequestBody.$": "$.getIdentity.attributes.firstname",
+            "method": "post",
+            "param_authenticationRef": "oauth",
+            "param_oauth": {
+              "mapping": {
+                "auth_client_id": "clientId",
+                "auth_client_secret": "clientSecret",
+                "auth_credential_location": "credentialLocation",
+                "auth_token_url": "tokenURL"
+              },
+              "paramType": "1.4"
+            },
+            "param_oauth_scopes": {
+              "mapping": {
+                "auth_scopes": "scopes"
+              },
+              "paramType": "3.1"
+            },
+            "requestContentType": "json",
+            "requestHeaders": {},
+            "url": "https://partner8943.api.identitynow-demo.com/v2025/accounts"
+          },
+          "displayName": "",
+          "nextStep": "End Step - Success",
+          "type": "action",
+          "versionNumber": 3
+        }
+      }
+    },
+    "description": "Workflow para modificar usuarios cuando se lance un formulario",
+    "enabled": false,
+    "id": "504b7802-121b-42f5-bcc9-bc8a4a16d542",
+    "modified": "2026-11-04T11:03:41.209746981Z",
+    "modifiedBy": {
+      "id": "06c1619bb4ad4fa3b793330ced2408fe",
+      "name": "rcgalvez",
+      "type": "IDENTITY"
+    },
+    "name": "Test Raul Formularios Modificacion",
+    "owner": {
+      "id": "06c1619bb4ad4fa3b793330ced2408fe",
+      "name": "rcgalvez",
+      "type": "IDENTITY"
+    },
+    "trigger": {
+      "attributes": {
+        "filter.$": "$[?(@.formDefinitionId == '861d183e-9d3c-4735-afc0-acf66caf13f8')]",
+        "formDefinitionId": "861d183e-9d3c-4735-afc0-acf66caf13f8",
+        "id": "sp:form-submitted",
+        "integrationId": null
+      },
+      "mode": "basic",
+      "type": "EVENT"
+    }
+  },
+  "self": {
+    "id": "504b7802-121b-42f5-bcc9-bc8a4a16d542",
+    "name": "Test Raul Formularios Modificacion",
+    "type": "WORKFLOW"
+  },
+  "version": 1
+}

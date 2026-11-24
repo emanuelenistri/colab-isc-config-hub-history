@@ -1,0 +1,23 @@
+{
+  "jwsHeader": null,
+  "jwsSignature": null,
+  "object": {
+    "description": "Managed by Workflows",
+    "enabled": false,
+    "id": "c2c05147-7433-4bff-aee7-aa4e3cff8b14",
+    "name": "Incomplete Campaign Escalation",
+    "responseDeadline": "PT1H",
+    "triggerId": "idn:campaign-ended",
+    "triggerName": "Campaign Ended",
+    "type": "WORKFLOW",
+    "workflowConfig": {
+      "workflowId": "c2c05147-7433-4bff-aee7-aa4e3cff8b14"
+    }
+  },
+  "self": {
+    "id": "c2c05147-7433-4bff-aee7-aa4e3cff8b14",
+    "name": "Incomplete Campaign Escalation",
+    "type": "TRIGGER_SUBSCRIPTION"
+  },
+  "version": 1
+}

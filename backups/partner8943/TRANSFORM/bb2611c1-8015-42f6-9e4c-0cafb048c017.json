@@ -1,0 +1,32 @@
+{
+  "jwsHeader": null,
+  "jwsSignature": null,
+  "object": {
+    "attributes": {
+      "values": [
+        {
+          "attributes": {
+            "name": "country"
+          },
+          "type": "identityAttribute"
+        },
+        {
+          "attributes": {
+            "name": "countryId"
+          },
+          "type": "identityAttribute"
+        }
+      ]
+    },
+    "id": "bb2611c1-8015-42f6-9e4c-0cafb048c017",
+    "internal": false,
+    "name": "Z Concat CountryId + Country",
+    "type": "concat"
+  },
+  "self": {
+    "id": "bb2611c1-8015-42f6-9e4c-0cafb048c017",
+    "name": "Z Concat CountryId + Country",
+    "type": "TRANSFORM"
+  },
+  "version": 1
+}

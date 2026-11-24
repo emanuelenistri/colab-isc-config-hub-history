@@ -1,0 +1,34 @@
+{
+  "jwsHeader": null,
+  "jwsSignature": null,
+  "object": {
+    "connectionCount": 0,
+    "connections": null,
+    "created": null,
+    "description": "Configuration access for Sources",
+    "id": "0e8a4156-0aff-4182-98e4-24cc8d38f1dc",
+    "memberCount": 0,
+    "members": [
+      {
+        "id": "52d193362ebd40768ceed93070b5fb44",
+        "name": "Jerry.Bennett",
+        "type": "IDENTITY"
+      }
+    ],
+    "modified": null,
+    "name": "Source Owners",
+    "owner": {
+      "displayName": null,
+      "emailAddress": null,
+      "id": "52d193362ebd40768ceed93070b5fb44",
+      "name": "Jerry.Bennett",
+      "type": "IDENTITY"
+    }
+  },
+  "self": {
+    "id": "0e8a4156-0aff-4182-98e4-24cc8d38f1dc",
+    "name": "Source Owners",
+    "type": "GOVERNANCE_GROUP"
+  },
+  "version": 1
+}

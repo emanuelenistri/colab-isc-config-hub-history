@@ -1,0 +1,26 @@
+{
+  "jwsHeader": null,
+  "jwsSignature": null,
+  "object": {
+    "attributes": {
+      "values": [
+        {
+          "attributes": {
+            "value": "dummy.externos.cajamar.es"
+          },
+          "type": "static"
+        }
+      ]
+    },
+    "id": "c48bc23f-3157-420b-96ad-7eabc453e2a2",
+    "internal": false,
+    "name": "emailDomain",
+    "type": "firstValid"
+  },
+  "self": {
+    "id": "c48bc23f-3157-420b-96ad-7eabc453e2a2",
+    "name": "emailDomain",
+    "type": "TRANSFORM"
+  },
+  "version": 1
+}

@@ -1,0 +1,20 @@
+{
+  "jwsHeader": null,
+  "jwsSignature": null,
+  "object": {
+    "id": "b02c1fdd-bee7-46fe-859f-caba421b6116",
+    "name": "Default Groups",
+    "passwordPolicy": {
+      "id": "5f2172bee521428aa6e5c9a961ac7e07",
+      "name": "Default Policy",
+      "type": "PASSWORD_POLICY"
+    },
+    "sources": []
+  },
+  "self": {
+    "id": "b02c1fdd-bee7-46fe-859f-caba421b6116",
+    "name": "Default Groups",
+    "type": "PASSWORD_SYNC_GROUP"
+  },
+  "version": 1
+}

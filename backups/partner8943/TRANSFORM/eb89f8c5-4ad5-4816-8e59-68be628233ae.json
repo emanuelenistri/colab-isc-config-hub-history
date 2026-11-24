@@ -1,0 +1,46 @@
+{
+  "jwsHeader": null,
+  "jwsSignature": null,
+  "object": {
+    "attributes": {
+      "expression": "$userId eq nulo",
+      "internal": false,
+      "negativeCondition": "$userId",
+      "positiveCondition": "$userIdCalculado",
+      "userId": {
+        "attributes": {
+          "values": [
+            "nulo",
+            {
+              "attributes": {
+                "input": {
+                  "attributes": {
+                    "name": "uid"
+                  },
+                  "type": "identityAttribute"
+                }
+              },
+              "type": "lower"
+            }
+          ]
+        },
+        "type": "firstValid"
+      },
+      "userIdCalculado": {
+        "values": [
+          "nuevo"
+        ]
+      }
+    },
+    "id": "eb89f8c5-4ad5-4816-8e59-68be628233ae",
+    "internal": false,
+    "name": "Z Prueba",
+    "type": "conditional"
+  },
+  "self": {
+    "id": "eb89f8c5-4ad5-4816-8e59-68be628233ae",
+    "name": "Z Prueba",
+    "type": "TRANSFORM"
+  },
+  "version": 1
+}

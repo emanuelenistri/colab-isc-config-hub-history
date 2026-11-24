@@ -1,0 +1,145 @@
+{
+  "jwsHeader": null,
+  "jwsSignature": null,
+  "object": {
+    "created": "2024-11-28T15:41:13.480377215Z",
+    "creator": {
+      "id": "d024cdc01088491194e571464f97b308",
+      "name": "dmedinay",
+      "type": "IDENTITY"
+    },
+    "definition": {
+      "start": "Get List of Identities",
+      "steps": {
+        "End Step - Success 2": {
+          "displayName": "Finalizar Workflow",
+          "type": "success"
+        },
+        "Get List of Identities": {
+          "actionId": "sp:get-identities",
+          "attributes": {
+            "inputSavedSearch": "91c4dba2-cfdd-465a-a9ab-66dc3224e15a",
+            "searchBy": "savedSearch"
+          },
+          "displayName": "",
+          "nextStep": "Send Email 2",
+          "type": "action",
+          "versionNumber": 2
+        },
+        "Loop": {
+          "actionId": "sp:loop:iterator",
+          "attributes": {
+            "context.$": "{{$.trigger.changes[?(@.attribute == \"email\")].newValue}}",
+            "input.$": "$.getListOfIdentities.identities",
+            "start": "Get Identity",
+            "steps": {
+              "Compare Strings": {
+                "choiceList": [
+                  {
+                    "comparator": "StringEquals",
+                    "nextStep": "Send Email 1",
+                    "variableA.$": "$.loop.loopInput.attributes.email",
+                    "variableB.$": "$.context.attributes.email"
+                  }
+                ],
+                "defaultStep": "End Step - Success",
+                "displayName": "Comparar Emails",
+                "type": "choice"
+              },
+              "End Step - Success": {
+                "displayName": "Terminar Iteración",
+                "type": "success"
+              },
+              "Get Identity": {
+                "actionId": "sp:get-identity",
+                "attributes": {
+                  "id.$": "$.loop.loopInput.id"
+                },
+                "displayName": "Obtener Identidad Iterada",
+                "nextStep": "Compare Strings",
+                "type": "action",
+                "versionNumber": 2
+              },
+              "Send Email 1": {
+                "actionId": "sp:send-email",
+                "attributes": {
+                  "body": "<p>Se encontró un email duplicado: {{$.context.attributes.email}}</p>",
+                  "context": {},
+                  "recipientEmailList": [
+                    "dmedinay@sia.es"
+                  ],
+                  "subject": "Email Duplicado"
+                },
+                "displayName": "Enviar Notificación",
+                "nextStep": "End Step - Success",
+                "type": "action",
+                "versionNumber": 2
+              }
+            }
+          },
+          "displayName": "Iterar Sobre Identidades",
+          "nextStep": "End Step - Success 2",
+          "type": "action",
+          "versionNumber": 1
+        },
+        "Send Email 2": {
+          "actionId": "sp:send-email",
+          "attributes": {
+            "body": "<p>{{$.trigger.changes[?(@.attribute == \"email\")].newValue}}</p>",
+            "context": {},
+            "recipientEmailList": [
+              "dmedinay@sia.es"
+            ],
+            "subject": "Nuevo Email Detectado"
+          },
+          "displayName": "Notificar Nuevo Email",
+          "nextStep": "Loop",
+          "type": "action",
+          "versionNumber": 2
+        }
+      }
+    },
+    "description": "",
+    "enabled": false,
+    "id": "2ccffc98-5583-4d40-986e-01e355f42160",
+    "modified": "2024-11-28T16:23:51.597668003Z",
+    "modifiedBy": {
+      "id": "d024cdc01088491194e571464f97b308",
+      "name": "dmedinay",
+      "type": "IDENTITY"
+    },
+    "name": "Email Duplicado",
+    "owner": {
+      "id": "d024cdc01088491194e571464f97b308",
+      "name": "dmedinay",
+      "type": "IDENTITY"
+    },
+    "trigger": {
+      "attributes": {
+        "filter.$": "$.changes[?(@.attribute == \"email\")]",
+        "filterDefinition": {
+          "conditions": [
+            {
+              "operator": "==",
+              "path": "attribute",
+              "type": "string",
+              "value": "email"
+            }
+          ],
+          "logic": "and",
+          "path": "changes"
+        },
+        "id": "idn:identity-attributes-changed",
+        "integrationId": null
+      },
+      "mode": "basic",
+      "type": "EVENT"
+    }
+  },
+  "self": {
+    "id": "2ccffc98-5583-4d40-986e-01e355f42160",
+    "name": "Email Duplicado",
+    "type": "WORKFLOW"
+  },
+  "version": 1
+}

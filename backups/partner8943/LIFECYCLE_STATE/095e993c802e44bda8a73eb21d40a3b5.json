@@ -1,0 +1,40 @@
+{
+  "jwsHeader": null,
+  "jwsSignature": null,
+  "object": {
+    "accessActionConfiguration": {
+      "removeAllAccessEnabled": false
+    },
+    "accessProfileIds": [],
+    "accessProfileRefs": null,
+    "accountActionRefs": [],
+    "accountActions": [],
+    "created": "2025-02-25T10:39:04.169Z",
+    "description": null,
+    "emailNotificationOption": {
+      "emailAddressList": [],
+      "notifyAllAdmins": false,
+      "notifyManagers": false,
+      "notifySpecificUsers": false
+    },
+    "enabled": false,
+    "id": "095e993c802e44bda8a73eb21d40a3b5",
+    "identityCount": 0,
+    "identityProfileRef": {
+      "id": "34a7519df3c641178b4375cc0c9fdc29",
+      "name": "NERM TEST",
+      "type": "IDENTITY_PROFILE"
+    },
+    "identityState": null,
+    "modified": "2025-02-25T10:39:04.169Z",
+    "name": "Preactivo",
+    "priority": null,
+    "technicalName": "preactivo"
+  },
+  "self": {
+    "id": "095e993c802e44bda8a73eb21d40a3b5",
+    "name": "Preactivo",
+    "type": "LIFECYCLE_STATE"
+  },
+  "version": 1
+}

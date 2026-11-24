@@ -1,0 +1,72 @@
+{
+  "jwsHeader": null,
+  "jwsSignature": null,
+  "object": {
+    "allowedControls": [],
+    "approvalGuidance": null,
+    "compensatingControls": "Manager daily review - check for unauthorized supplier creation and review of daily transactions.",
+    "conflictingAccessCriteria": {
+      "leftCriteria": {
+        "criteriaList": [
+          {
+            "id": "bb0d309dc28648c498cc0c3160d863f0",
+            "name": "AccountsPayable",
+            "type": "ENTITLEMENT"
+          }
+        ],
+        "name": "Money_In"
+      },
+      "rightCriteria": {
+        "criteriaList": [
+          {
+            "id": "0cf1109c99c041e896aff56b3c28ed4f",
+            "name": "AccountsReceivable",
+            "type": "ENTITLEMENT"
+          }
+        ],
+        "name": "Money_Out"
+      }
+    },
+    "correctionAdvice": "Remove one of the Cash In or Cash Out conflicts or get VP approval.",
+    "created": "2024-02-29T17:14:29Z",
+    "creatorId": "0533ec736d874f4eb4c76552977bf727",
+    "creatorRef": {
+      "id": "0533ec736d874f4eb4c76552977bf727",
+      "name": "SailPoint Support",
+      "type": "IDENTITY"
+    },
+    "description": "This policy looks across multiple applications for Accounts Receivable and Payable conflicts in accordance with SOX 2.0 compliance controls.",
+    "externalPolicyReference": "https://www.sec.gov/info/smallbus/404guide/intro.shtml",
+    "id": "99c43e9b-0630-4bbc-9677-4f22e5e5f09b",
+    "level": "HIGH",
+    "modified": "2024-02-29T17:14:29Z",
+    "modifierId": null,
+    "name": "Money In & Money Out",
+    "ownerRef": {
+      "id": "fe353d5f33bf4e1dbbfb32a913a2ae40",
+      "name": "alejandro.fernandez",
+      "type": "IDENTITY"
+    },
+    "policyQuery": "@access(id:bb0d309dc28648c498cc0c3160d863f0) AND @access(id:0cf1109c99c041e896aff56b3c28ed4f)",
+    "preventSetting": null,
+    "scheduled": false,
+    "secondaryOwnerRefs": [],
+    "state": "ENFORCED",
+    "tags": [
+      "ACCOUNTING",
+      "SOX",
+      "VIOLATION_SOD"
+    ],
+    "type": "CONFLICTING_ACCESS_BASED",
+    "violationOwnerAssignmentConfig": {
+      "assignmentRule": "MANAGER",
+      "ownerRef": null
+    }
+  },
+  "self": {
+    "id": "99c43e9b-0630-4bbc-9677-4f22e5e5f09b",
+    "name": "Money In & Money Out",
+    "type": "SOD_POLICY"
+  },
+  "version": 1
+}

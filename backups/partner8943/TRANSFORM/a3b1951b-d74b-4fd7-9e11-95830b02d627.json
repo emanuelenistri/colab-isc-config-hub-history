@@ -1,0 +1,27 @@
+{
+  "jwsHeader": null,
+  "jwsSignature": null,
+  "object": {
+    "attributes": {
+      "values": [
+        "Modificado por IDM: ",
+        {
+          "attributes": {
+            "name": "modifydate"
+          },
+          "type": "identityAttribute"
+        }
+      ]
+    },
+    "id": "a3b1951b-d74b-4fd7-9e11-95830b02d627",
+    "internal": false,
+    "name": "Z Concat Modificado por IDM: + ModifyDate",
+    "type": "concat"
+  },
+  "self": {
+    "id": "a3b1951b-d74b-4fd7-9e11-95830b02d627",
+    "name": "Z Concat Modificado por IDM: + ModifyDate",
+    "type": "TRANSFORM"
+  },
+  "version": 1
+}

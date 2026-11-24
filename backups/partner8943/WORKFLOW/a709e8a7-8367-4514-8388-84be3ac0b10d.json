@@ -1,0 +1,77 @@
+{
+  "jwsHeader": null,
+  "jwsSignature": null,
+  "object": {
+    "created": "2024-02-29T17:13:23.493183894Z",
+    "creator": {
+      "id": "0533ec736d874f4eb4c76552977bf727",
+      "name": "slpt.support",
+      "type": "IDENTITY"
+    },
+    "definition": {
+      "start": "Manage ServiceNow Ticket",
+      "steps": {
+        "Manage ServiceNow Ticket": {
+          "actionId": "sp:snow",
+          "attributes": {
+            "action": "create"
+          },
+          "nextStep": "Wait",
+          "type": "action",
+          "versionNumber": 1
+        },
+        "Manage ServiceNow Ticket 1": {
+          "actionId": "sp:snow",
+          "attributes": {
+            "action": "update",
+            "stateUpdate": "6"
+          },
+          "nextStep": "failure",
+          "type": "action",
+          "versionNumber": 1
+        },
+        "Wait": {
+          "actionId": "sp:sleep",
+          "attributes": {
+            "duration": "20m",
+            "type": "waitFor"
+          },
+          "nextStep": "Manage ServiceNow Ticket 1",
+          "type": "action",
+          "versionNumber": 1
+        },
+        "failure": {
+          "type": "failure"
+        }
+      }
+    },
+    "description": "Creates a ticket on every access request",
+    "enabled": false,
+    "id": "a709e8a7-8367-4514-8388-84be3ac0b10d",
+    "modified": "2024-02-29T17:13:23.493183894Z",
+    "modifiedBy": {
+      "id": "0533ec736d874f4eb4c76552977bf727",
+      "name": "slpt.support",
+      "type": "IDENTITY"
+    },
+    "name": "Service Now- ticket generation Example",
+    "owner": {
+      "id": "fe353d5f33bf4e1dbbfb32a913a2ae40",
+      "name": "alejandro.fernandez",
+      "type": "IDENTITY"
+    },
+    "trigger": {
+      "attributes": {
+        "id": "idn:access-request-post-approval",
+        "integrationId": null
+      },
+      "type": "EVENT"
+    }
+  },
+  "self": {
+    "id": "a709e8a7-8367-4514-8388-84be3ac0b10d",
+    "name": "Service Now- ticket generation Example",
+    "type": "WORKFLOW"
+  },
+  "version": 1
+}

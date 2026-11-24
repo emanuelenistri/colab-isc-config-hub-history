@@ -1,0 +1,87 @@
+{
+  "jwsHeader": null,
+  "jwsSignature": null,
+  "object": {
+    "accessModelMetadata": {
+      "attributes": []
+    },
+    "accessProfiles": [
+      {
+        "id": "684027d3f1f6468a8be5195c0becf40c",
+        "name": "Default All Employees",
+        "type": "ACCESS_PROFILE"
+      }
+    ],
+    "accessRequestConfig": {
+      "approvalSchemes": [
+        {
+          "approverId": null,
+          "approverType": "OWNER"
+        },
+        {
+          "approverId": null,
+          "approverType": "OWNER"
+        }
+      ],
+      "commentsRequired": false,
+      "denialCommentsRequired": false,
+      "formDefinitionId": null,
+      "maxPermittedAccessDuration": null,
+      "reauthorizationRequired": false,
+      "requireEndDate": false
+    },
+    "additionalOwners": [],
+    "created": "2024-09-30T11:55:07.710335Z",
+    "description": "Prueba creacion Rol patch",
+    "dimensionRefs": null,
+    "dimensional": false,
+    "dimensions": [],
+    "enabled": false,
+    "entitlements": [],
+    "id": "e59e9fa2b4534d79ba316f43054c44ea",
+    "legacyMembershipInfo": null,
+    "membership": {
+      "criteria": null,
+      "identities": [
+        {
+          "aliasName": null,
+          "id": "1dff61379fdc41fbac00c7f5ae992e23",
+          "name": "cjoglar",
+          "type": "IDENTITY"
+        },
+        {
+          "aliasName": null,
+          "id": "4f5d4df07aad444c8676954c1a690f9f",
+          "name": "vmayo",
+          "type": "IDENTITY"
+        }
+      ],
+      "type": "IDENTITY_LIST"
+    },
+    "modified": "2024-09-30T11:55:07.710335Z",
+    "name": "BCC prueba2",
+    "owner": {
+      "id": "1dff61379fdc41fbac00c7f5ae992e23",
+      "name": "cjoglar",
+      "type": "IDENTITY"
+    },
+    "privilegeLevel": null,
+    "requestable": false,
+    "revocationRequestConfig": {
+      "approvalSchemes": [
+        {
+          "approverId": null,
+          "approverType": "OWNER"
+        }
+      ]
+    },
+    "segmentRefs": [],
+    "segments": []
+  },
+  "self": {
+    "id": "e59e9fa2b4534d79ba316f43054c44ea",
+    "name": "BCC prueba2",
+    "type": "ROLE"
+  },
+  "version": 1
+}

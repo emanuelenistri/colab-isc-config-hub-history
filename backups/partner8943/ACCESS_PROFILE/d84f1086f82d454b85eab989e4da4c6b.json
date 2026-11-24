@@ -1,0 +1,76 @@
+{
+  "jwsHeader": null,
+  "jwsSignature": null,
+  "object": {
+    "accessRequestConfig": {
+      "approvalSchemes": [
+        {
+          "approverId": "cca20d19-6d6b-4e81-8566-6596beb38d8c",
+          "approverType": "GOVERNANCE_GROUP"
+        },
+        {
+          "approverId": null,
+          "approverType": "MANAGER"
+        },
+        {
+          "approverId": null,
+          "approverType": "OWNER"
+        }
+      ],
+      "commentsRequired": false,
+      "denialCommentsRequired": false,
+      "formDefinitionId": null,
+      "maxPermittedAccessDuration": null,
+      "reauthorizationRequired": false,
+      "requireEndDate": false
+    },
+    "additionalOwners": [],
+    "created": "2024-10-04T10:01:54.359043Z",
+    "description": "AccessProfile 1 CSV patch update 2",
+    "enabled": true,
+    "entitlements": [
+      {
+        "id": "96aa8741a4c64896a947e6e21c44d22a",
+        "name": "SAP_BC_LVC_ALL",
+        "type": "ENTITLEMENT"
+      },
+      {
+        "id": "a7e8e0d45c9c4592b56b403e60f0e625",
+        "name": "SAP_B_ALE_GRP_AD_T_56184456",
+        "type": "ENTITLEMENT"
+      }
+    ],
+    "id": "d84f1086f82d454b85eab989e4da4c6b",
+    "modified": "2024-10-04T10:01:54.42906Z",
+    "name": "AccessProfile 1",
+    "owner": {
+      "id": "4f5d4df07aad444c8676954c1a690f9f",
+      "name": "vmayo",
+      "type": "IDENTITY"
+    },
+    "privilegeLevel": null,
+    "provisioningCriteria": null,
+    "requestable": true,
+    "revocationRequestConfig": {
+      "approvalSchemes": [
+        {
+          "approverId": "22d76064-7374-451f-b95b-d844ced1abff",
+          "approverType": "GOVERNANCE_GROUP"
+        }
+      ]
+    },
+    "segmentRefs": [],
+    "segments": [],
+    "source": {
+      "id": "3d2a1c53970d4a73af8e4854d73b2466",
+      "name": "SAP LAB",
+      "type": "SOURCE"
+    }
+  },
+  "self": {
+    "id": "d84f1086f82d454b85eab989e4da4c6b",
+    "name": "AccessProfile 1",
+    "type": "ACCESS_PROFILE"
+  },
+  "version": 1
+}

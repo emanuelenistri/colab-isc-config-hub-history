@@ -1,0 +1,19 @@
+{
+  "jwsHeader": null,
+  "jwsSignature": null,
+  "object": {
+    "attributes": {
+      "value": "cajamar.int/Cajamar/EMPRESAS-EXTERNAS"
+    },
+    "id": "f8babba7-9d30-4ba6-9bd6-4b8e6cc87b90",
+    "internal": false,
+    "name": "DN_external",
+    "type": "static"
+  },
+  "self": {
+    "id": "f8babba7-9d30-4ba6-9bd6-4b8e6cc87b90",
+    "name": "DN_external",
+    "type": "TRANSFORM"
+  },
+  "version": 1
+}

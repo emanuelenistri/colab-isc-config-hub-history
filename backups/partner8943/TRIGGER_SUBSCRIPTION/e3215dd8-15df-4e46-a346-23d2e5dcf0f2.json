@@ -1,0 +1,24 @@
+{
+  "jwsHeader": null,
+  "jwsSignature": null,
+  "object": {
+    "description": "Managed by Workflows",
+    "enabled": false,
+    "filter": "$[?($.attributes.department == \"sales\")]",
+    "id": "e3215dd8-15df-4e46-a346-23d2e5dcf0f2",
+    "name": "Template: Initiate Onboarding Process When a New Identity is Created",
+    "responseDeadline": "PT1H",
+    "triggerId": "idn:identity-created",
+    "triggerName": "Identity Created",
+    "type": "WORKFLOW",
+    "workflowConfig": {
+      "workflowId": "e3215dd8-15df-4e46-a346-23d2e5dcf0f2"
+    }
+  },
+  "self": {
+    "id": "e3215dd8-15df-4e46-a346-23d2e5dcf0f2",
+    "name": "Template: Initiate Onboarding Process When a New Identity is Created",
+    "type": "TRIGGER_SUBSCRIPTION"
+  },
+  "version": 1
+}

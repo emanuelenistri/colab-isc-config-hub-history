@@ -1,0 +1,52 @@
+{
+  "jwsHeader": null,
+  "jwsSignature": null,
+  "object": {
+    "attributes": {
+      "cloudLifeCycleState": {
+        "attributes": {
+          "input": {
+            "attributes": {
+              "name": "cloudLifeCycleState"
+            },
+            "type": "identityAttribute"
+          }
+        },
+        "value": "#if($name== \"nulo\")prueba$date#{else}#end"
+      },
+      "date": {
+        "attributes": {
+          "expresion": "now+2h",
+          "roundUp": true
+        },
+        "type": "dateMath"
+      },
+      "internal": false,
+      "name": {
+        "attributes": {
+          "values": [
+            "nulo",
+            {
+              "attributes": {
+                "name": "lastname"
+              },
+              "type": "identityAttribute"
+            }
+          ]
+        },
+        "type": "firstValid"
+      },
+      "requiresPeriodicRefresh": "true"
+    },
+    "id": "3dbf9684-ba69-4cbc-b183-68d3252c098a",
+    "internal": false,
+    "name": "Z dateIfHasNotADEmail",
+    "type": "static"
+  },
+  "self": {
+    "id": "3dbf9684-ba69-4cbc-b183-68d3252c098a",
+    "name": "Z dateIfHasNotADEmail",
+    "type": "TRANSFORM"
+  },
+  "version": 1
+}

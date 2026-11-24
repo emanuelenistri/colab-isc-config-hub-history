@@ -1,0 +1,55 @@
+{
+  "jwsHeader": null,
+  "jwsSignature": null,
+  "object": {
+    "attributes": [
+      {
+        "displayName": "IdentityNow Username",
+        "enabled": true,
+        "name": "uid",
+        "target": "distinguishedName"
+      },
+      {
+        "displayName": "Personal Phone",
+        "enabled": true,
+        "name": "phone",
+        "target": "telephoneNumber"
+      },
+      {
+        "displayName": "att_display_name",
+        "enabled": true,
+        "name": "displayName",
+        "target": "displayName"
+      },
+      {
+        "displayName": "att_email",
+        "enabled": true,
+        "name": "email",
+        "target": "mail"
+      },
+      {
+        "displayName": "att_first_name",
+        "enabled": true,
+        "name": "firstname",
+        "target": "givenName"
+      },
+      {
+        "displayName": "att_last_name",
+        "enabled": true,
+        "name": "lastname",
+        "target": "sn"
+      }
+    ],
+    "source": {
+      "id": "3c0b62cf29fe4b0694a89ba7cf38bf45",
+      "name": null,
+      "type": "SOURCE"
+    }
+  },
+  "self": {
+    "id": "d8fc47cd-9c26-4d94-82ef-1f94868a008c:3c0b62cf29fe4b0694a89ba7cf38bf45",
+    "name": null,
+    "type": "ATTR_SYNC_SOURCE_CONFIG"
+  },
+  "version": 1
+}

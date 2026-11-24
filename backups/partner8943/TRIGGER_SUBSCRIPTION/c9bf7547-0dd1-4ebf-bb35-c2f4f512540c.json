@@ -1,0 +1,24 @@
+{
+  "jwsHeader": null,
+  "jwsSignature": null,
+  "object": {
+    "description": "Managed by Workflows",
+    "enabled": false,
+    "filter": "$[?(@.workflowId == 'c9bf7547-0dd1-4ebf-bb35-c2f4f512540c')]",
+    "id": "c9bf7547-0dd1-4ebf-bb35-c2f4f512540c",
+    "name": "Template: Create a Security Group in Active Directory",
+    "responseDeadline": "PT1H",
+    "triggerId": "idn:interactive-process-launched",
+    "triggerName": "Interactive Trigger",
+    "type": "WORKFLOW",
+    "workflowConfig": {
+      "workflowId": "c9bf7547-0dd1-4ebf-bb35-c2f4f512540c"
+    }
+  },
+  "self": {
+    "id": "c9bf7547-0dd1-4ebf-bb35-c2f4f512540c",
+    "name": "Template: Create a Security Group in Active Directory",
+    "type": "TRIGGER_SUBSCRIPTION"
+  },
+  "version": 1
+}

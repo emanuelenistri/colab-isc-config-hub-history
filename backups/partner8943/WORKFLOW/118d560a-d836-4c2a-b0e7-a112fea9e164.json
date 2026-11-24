@@ -1,0 +1,67 @@
+{
+  "jwsHeader": null,
+  "jwsSignature": null,
+  "object": {
+    "created": "2024-02-29T17:13:21.657976019Z",
+    "creator": {
+      "id": "0533ec736d874f4eb4c76552977bf727",
+      "name": "slpt.support",
+      "type": "IDENTITY"
+    },
+    "definition": {
+      "start": "Get Accounts",
+      "steps": {
+        "Get Accounts": {
+          "actionId": "sp:get-accounts",
+          "attributes": {},
+          "nextStep": "Manage Access",
+          "type": "action",
+          "versionNumber": 1
+        },
+        "Manage Access": {
+          "actionId": "sp:access:manage",
+          "attributes": {
+            "requestType": "REVOKE_ACCESS"
+          },
+          "nextStep": "Manage ServiceNow Ticket",
+          "type": "action",
+          "versionNumber": 1
+        },
+        "Manage ServiceNow Ticket": {
+          "actionId": "sp:snow",
+          "attributes": {},
+          "type": "action",
+          "versionNumber": 1
+        }
+      }
+    },
+    "description": "",
+    "enabled": false,
+    "id": "118d560a-d836-4c2a-b0e7-a112fea9e164",
+    "modified": "2024-02-29T17:13:21.657976019Z",
+    "modifiedBy": {
+      "id": "0533ec736d874f4eb4c76552977bf727",
+      "name": "slpt.support",
+      "type": "IDENTITY"
+    },
+    "name": "Movement",
+    "owner": {
+      "id": "fe353d5f33bf4e1dbbfb32a913a2ae40",
+      "name": "alejandro.fernandez",
+      "type": "IDENTITY"
+    },
+    "trigger": {
+      "attributes": {
+        "id": "idn:external-http",
+        "integrationId": null
+      },
+      "type": "EXTERNAL"
+    }
+  },
+  "self": {
+    "id": "118d560a-d836-4c2a-b0e7-a112fea9e164",
+    "name": "Movement",
+    "type": "WORKFLOW"
+  },
+  "version": 1
+}

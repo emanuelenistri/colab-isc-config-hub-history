@@ -1,0 +1,97 @@
+{
+  "jwsHeader": null,
+  "jwsSignature": null,
+  "object": {
+    "attributes": {
+      "digito_1": {
+        "attributes": {
+          "begin": 0,
+          "end": 1,
+          "input": {
+            "attributes": {
+              "value": "061590"
+            },
+            "type": "static"
+          }
+        },
+        "type": "substring"
+      },
+      "digito_2": {
+        "attributes": {
+          "begin": 1,
+          "end": 2,
+          "input": {
+            "attributes": {
+              "value": "061590"
+            },
+            "type": "static"
+          }
+        },
+        "type": "substring"
+      },
+      "digito_3": {
+        "attributes": {
+          "begin": 2,
+          "end": 3,
+          "input": {
+            "attributes": {
+              "value": "061590"
+            },
+            "type": "static"
+          }
+        },
+        "type": "substring"
+      },
+      "digito_4": {
+        "attributes": {
+          "begin": 3,
+          "end": 4,
+          "input": {
+            "attributes": {
+              "value": "061590"
+            },
+            "type": "static"
+          }
+        },
+        "type": "substring"
+      },
+      "digito_5": {
+        "attributes": {
+          "begin": 4,
+          "end": 5,
+          "input": {
+            "attributes": {
+              "value": "061590"
+            },
+            "type": "static"
+          }
+        },
+        "type": "substring"
+      },
+      "digito_6": {
+        "attributes": {
+          "begin": 5,
+          "end": 6,
+          "input": {
+            "attributes": {
+              "value": "061590"
+            },
+            "type": "static"
+          }
+        },
+        "type": "substring"
+      },
+      "value": "#set($Integer = 0) #set($result = ($Integer.parseInt($digito_1)*1) + ($Integer.parseInt($digito_2)*3) + ($Integer.parseInt($digito_3)*7) + ($Integer.parseInt($digito_4)*1) + ($Integer.parseInt($digito_5)*3) + ($Integer.parseInt($digito_6)*7)) #set($modulo = $result % 10) #set($result = 10 - $modulo) #if($result == 10)#set($result = 0) #end $result"
+    },
+    "id": "6ee0c92a-0a1d-4fd0-827d-6fc140a1ace5",
+    "internal": false,
+    "name": "Sergio_encryptedEmployeeNumber",
+    "type": "static"
+  },
+  "self": {
+    "id": "6ee0c92a-0a1d-4fd0-827d-6fc140a1ace5",
+    "name": "Sergio_encryptedEmployeeNumber",
+    "type": "TRANSFORM"
+  },
+  "version": 1
+}

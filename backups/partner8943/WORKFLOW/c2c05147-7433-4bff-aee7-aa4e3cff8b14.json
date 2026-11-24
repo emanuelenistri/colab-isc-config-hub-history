@@ -1,0 +1,84 @@
+{
+  "jwsHeader": null,
+  "jwsSignature": null,
+  "object": {
+    "created": "2024-02-29T17:13:21.222875712Z",
+    "creator": {
+      "id": "0533ec736d874f4eb4c76552977bf727",
+      "name": "slpt.support",
+      "type": "IDENTITY"
+    },
+    "definition": {
+      "start": "Compare Strings",
+      "steps": {
+        "Compare Strings": {
+          "choiceList": [
+            {
+              "comparator": "StringEquals",
+              "nextStep": "Create Certification Campaign",
+              "variableA.$": "$.trigger.campaign.status",
+              "variableB": "INCOMPLETE"
+            }
+          ],
+          "defaultStep": "failure",
+          "type": "choice"
+        },
+        "Create Certification Campaign": {
+          "actionId": "sp:create-campaign",
+          "attributes": {
+            "activateUponCreation": true,
+            "description": "Automatically triggered campaign due to uncertified items",
+            "duration": "1w",
+            "emailNotificationEnabled": true,
+            "name": "Escalation for Incomplete Campaign",
+            "recommendationsEnabled": true,
+            "reviewerCertificationType": "IDENTITY",
+            "reviewerId.$": "$.trigger.campaign.campaignOwner.id.manager",
+            "reviewerIdentitiesToCertify.$": "$.trigger.campaign.id",
+            "type": "REVIEWER_IDENTITY",
+            "undecidedAccess": true
+          },
+          "description": null,
+          "nextStep": "success",
+          "type": "action",
+          "versionNumber": 2
+        },
+        "failure": {
+          "failureName": "Failure",
+          "type": "failure"
+        },
+        "success": {
+          "type": "success"
+        }
+      }
+    },
+    "description": "",
+    "enabled": false,
+    "id": "c2c05147-7433-4bff-aee7-aa4e3cff8b14",
+    "modified": "2024-02-29T17:13:21.222875712Z",
+    "modifiedBy": {
+      "id": "0533ec736d874f4eb4c76552977bf727",
+      "name": "slpt.support",
+      "type": "IDENTITY"
+    },
+    "name": "Incomplete Campaign Escalation",
+    "owner": {
+      "id": "fe353d5f33bf4e1dbbfb32a913a2ae40",
+      "name": "alejandro.fernandez",
+      "type": "IDENTITY"
+    },
+    "trigger": {
+      "attributes": {
+        "id": "idn:campaign-ended",
+        "integrationId": null
+      },
+      "type": "EVENT"
+    }
+  },
+  "self": {
+    "id": "c2c05147-7433-4bff-aee7-aa4e3cff8b14",
+    "name": "Incomplete Campaign Escalation",
+    "type": "WORKFLOW"
+  },
+  "version": 1
+}

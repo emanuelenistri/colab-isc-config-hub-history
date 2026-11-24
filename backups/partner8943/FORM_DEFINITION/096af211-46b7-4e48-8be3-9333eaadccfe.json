@@ -1,0 +1,154 @@
+{
+  "jwsHeader": null,
+  "jwsSignature": null,
+  "object": {
+    "created": "2026-10-28T15:29:47.722446125Z",
+    "description": "Prueba",
+    "formConditions": [],
+    "formElements": [
+      {
+        "config": {
+          "alignment": "LEFT",
+          "description": "Inserte los datos de usuario aqui",
+          "formElements": [
+            {
+              "config": {
+                "default": "",
+                "description": "",
+                "helpText": "Apellido",
+                "label": "Apellido",
+                "placeholder": "",
+                "required": true
+              },
+              "elementType": "TEXT",
+              "id": "1297003800090",
+              "key": "apellido",
+              "validations": [
+                {
+                  "validationType": "REQUIRED"
+                }
+              ]
+            },
+            {
+              "config": {
+                "default": "",
+                "description": "",
+                "helpText": "Documento de identificación del usuario",
+                "label": "Documento de Identifiacion",
+                "placeholder": "",
+                "required": true
+              },
+              "elementType": "TEXT",
+              "id": "777447571959",
+              "key": "dni",
+              "validations": [
+                {
+                  "config": {
+                    "message": "DNI/NIE no válido",
+                    "regex": "^([0-9]{8}|[XYZ][0-9]{7})[TRWAGMYFPDXBNJZSQVHLCKE]$"
+                  },
+                  "validationType": "REGEX"
+                },
+                {
+                  "validationType": "REQUIRED"
+                }
+              ]
+            },
+            {
+              "config": {
+                "default": "",
+                "description": "",
+                "helpText": "El correo electronico",
+                "label": "Correo",
+                "placeholder": "",
+                "required": true
+              },
+              "elementType": "EMAIL",
+              "id": "217581104803",
+              "key": "correo",
+              "validations": [
+                {
+                  "validationType": "EMAIL"
+                },
+                {
+                  "validationType": "REQUIRED"
+                }
+              ]
+            },
+            {
+              "config": {
+                "default": "",
+                "description": "",
+                "helpText": "Nombre de pila (nombre)",
+                "label": "Nombre",
+                "placeholder": "",
+                "required": true
+              },
+              "elementType": "TEXT",
+              "id": "457464910030",
+              "key": "nombre",
+              "validations": [
+                {
+                  "validationType": "REQUIRED"
+                }
+              ]
+            },
+            {
+              "config": {
+                "default": "",
+                "description": "",
+                "helpText": "Nombre del usuario (id)",
+                "label": "Nombre de usuario",
+                "placeholder": "",
+                "required": true
+              },
+              "elementType": "TEXT",
+              "id": "142499033072",
+              "key": "id",
+              "validations": [
+                {
+                  "validationType": "REQUIRED"
+                }
+              ]
+            }
+          ],
+          "label": "Datos de usuario",
+          "labelStyle": "h2",
+          "showLabel": true
+        },
+        "elementType": "SECTION",
+        "id": "1286282515983",
+        "validations": []
+      }
+    ],
+    "formInput": [
+      {
+        "description": "",
+        "id": "nombreUsuario",
+        "label": "Nombre usuario",
+        "type": "STRING"
+      }
+    ],
+    "id": "096af211-46b7-4e48-8be3-9333eaadccfe",
+    "modified": "2026-10-30T09:10:44.249242067Z",
+    "name": "Test Raúl",
+    "owner": {
+      "id": "06c1619bb4ad4fa3b793330ced2408fe",
+      "name": "rcgalvez",
+      "type": "IDENTITY"
+    },
+    "usedBy": [
+      {
+        "id": "MySailPoint",
+        "name": "",
+        "type": "MySailPoint"
+      }
+    ]
+  },
+  "self": {
+    "id": "096af211-46b7-4e48-8be3-9333eaadccfe",
+    "name": "Test Raúl",
+    "type": "FORM_DEFINITION"
+  },
+  "version": 1
+}

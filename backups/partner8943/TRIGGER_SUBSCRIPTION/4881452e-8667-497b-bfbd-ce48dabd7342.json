@@ -1,0 +1,24 @@
+{
+  "jwsHeader": null,
+  "jwsSignature": null,
+  "object": {
+    "description": "Managed by Workflows",
+    "enabled": false,
+    "filter": "$[?($.attributes.department == \"sales\")]",
+    "id": "4881452e-8667-497b-bfbd-ce48dabd7342",
+    "name": "Service Now ticket-Initiate Onboarding Process ",
+    "responseDeadline": "PT1H",
+    "triggerId": "idn:identity-created",
+    "triggerName": "Identity Created",
+    "type": "WORKFLOW",
+    "workflowConfig": {
+      "workflowId": "4881452e-8667-497b-bfbd-ce48dabd7342"
+    }
+  },
+  "self": {
+    "id": "4881452e-8667-497b-bfbd-ce48dabd7342",
+    "name": "Service Now ticket-Initiate Onboarding Process ",
+    "type": "TRIGGER_SUBSCRIPTION"
+  },
+  "version": 1
+}

@@ -1,0 +1,19 @@
+{
+  "jwsHeader": null,
+  "jwsSignature": null,
+  "object": {
+    "attributes": {
+      "value": "E"
+    },
+    "id": "110cbcb2-f0f8-48ad-8884-4dfb53c3e97c",
+    "internal": false,
+    "name": "TipoUsuario",
+    "type": "static"
+  },
+  "self": {
+    "id": "110cbcb2-f0f8-48ad-8884-4dfb53c3e97c",
+    "name": "TipoUsuario",
+    "type": "TRANSFORM"
+  },
+  "version": 1
+}

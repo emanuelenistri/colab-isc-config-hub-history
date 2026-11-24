@@ -1,0 +1,137 @@
+{
+  "jwsHeader": null,
+  "jwsSignature": null,
+  "object": {
+    "created": "2024-06-14T06:10:26.08537923Z",
+    "creator": {
+      "id": "84a568c1f5024b24b21a25a27379ac66",
+      "name": "smenendezp",
+      "type": "IDENTITY"
+    },
+    "definition": {
+      "start": "Get List of Identities",
+      "steps": {
+        "Get List of Identities": {
+          "actionId": "sp:get-identities",
+          "attributes": {
+            "inputQuery": "@accounts(source.name:\"smenendezp non-employees prueba\")",
+            "searchBy": "searchQuery"
+          },
+          "displayName": "",
+          "nextStep": "Loop",
+          "type": "action",
+          "versionNumber": 2
+        },
+        "Loop": {
+          "actionId": "sp:loop:iterator",
+          "attributes": {
+            "context.$": "",
+            "input.$": "$.getListOfIdentities.identities",
+            "start": "Get Identity",
+            "steps": {
+              "Compare Strings": {
+                "choiceList": [
+                  {
+                    "comparator": "StringEquals",
+                    "nextStep": "Get Accounts",
+                    "variableA.$": "$.getIdentity.attributes.cloudLifecycleState",
+                    "variableB": "active"
+                  }
+                ],
+                "defaultStep": "End Step - Failure",
+                "displayName": "",
+                "type": "choice"
+              },
+              "End Step - Failure": {
+                "displayName": "",
+                "failureName": "Error",
+                "type": "failure"
+              },
+              "End Step - Success": {
+                "displayName": "",
+                "type": "success"
+              },
+              "Get Accounts": {
+                "actionId": "sp:get-accounts",
+                "attributes": {
+                  "filterCriteria": "name",
+                  "getAccountsBy": "specificIdentity",
+                  "identity.$": "$.getIdentity.id",
+                  "operator": "eq",
+                  "value": "$.trigger.results.resultItemList[*].title"
+                },
+                "description": "This action identifies the appropriate account data for the listed accounts provided by the SaaS Management report.",
+                "nextStep": "Manage Accounts",
+                "type": "action",
+                "versionNumber": 1
+              },
+              "Get Identity": {
+                "actionId": "sp:get-identity",
+                "attributes": {
+                  "id.$": "$.loop.loopInput.id"
+                },
+                "displayName": "",
+                "nextStep": "Compare Strings",
+                "type": "action",
+                "versionNumber": 2
+              },
+              "Manage Accounts": {
+                "actionId": "sp:manage-account",
+                "attributes": {
+                  "accountIds.$": "$.getAccounts.accounts[*].id",
+                  "operation": "disable"
+                },
+                "description": "This action deprovisions all accounts returned by the Get Accounts step to help eliminate risk and license costs for inactive accounts.",
+                "nextStep": "End Step - Success",
+                "type": "action",
+                "versionNumber": 1
+              }
+            }
+          },
+          "displayName": "",
+          "nextStep": "success",
+          "type": "action",
+          "versionNumber": 1
+        },
+        "success": {
+          "description": "This workflow has completed successfully.",
+          "type": "success"
+        }
+      }
+    },
+    "description": "Comprueba las cuentas de una fuente que tenga activo el atributo 'cloudLifecycleState' establecido en 'active' y las desactiva.",
+    "enabled": false,
+    "id": "983578a5-05eb-46a9-a705-81987d53803f",
+    "modified": "2024-06-14T06:10:42.08830958Z",
+    "modifiedBy": {
+      "id": "84a568c1f5024b24b21a25a27379ac66",
+      "name": "smenendezp",
+      "type": "IDENTITY"
+    },
+    "name": "becarios_desactivar_cuentas_con_cloudLifecycleState_activo",
+    "owner": {
+      "id": "84a568c1f5024b24b21a25a27379ac66",
+      "name": "smenendezp",
+      "type": "IDENTITY"
+    },
+    "trigger": {
+      "attributes": {
+        "cronString": "0 0 * * *",
+        "dailyTimes": [
+          "1969-12-31T23:00:00.000Z"
+        ],
+        "frequency": "daily",
+        "id": "idn:cron-schedule",
+        "integrationId": null,
+        "timeZone": "Europe/Madrid"
+      },
+      "type": "SCHEDULED"
+    }
+  },
+  "self": {
+    "id": "983578a5-05eb-46a9-a705-81987d53803f",
+    "name": "becarios_desactivar_cuentas_con_cloudLifecycleState_activo",
+    "type": "WORKFLOW"
+  },
+  "version": 1
+}

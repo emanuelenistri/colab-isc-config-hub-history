@@ -1,0 +1,24 @@
+{
+  "jwsHeader": null,
+  "jwsSignature": null,
+  "object": {
+    "description": "Managed by Workflows",
+    "enabled": true,
+    "filter": "$[?(@.formDefinitionId == '0b85f0f3-391e-4e0c-b4fa-5c5311a4c1da')]",
+    "id": "69659945-02a9-4945-9b4f-78f292e1122b",
+    "name": "Test Form",
+    "responseDeadline": "PT1H",
+    "triggerId": "sp:form-submitted",
+    "triggerName": "Form Submitted",
+    "type": "WORKFLOW",
+    "workflowConfig": {
+      "workflowId": "69659945-02a9-4945-9b4f-78f292e1122b"
+    }
+  },
+  "self": {
+    "id": "69659945-02a9-4945-9b4f-78f292e1122b",
+    "name": "Test Form",
+    "type": "TRIGGER_SUBSCRIPTION"
+  },
+  "version": 1
+}

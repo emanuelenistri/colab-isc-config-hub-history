@@ -1,0 +1,243 @@
+{
+  "jwsHeader": null,
+  "jwsSignature": null,
+  "object": {
+    "created": "2026-10-28T15:30:34.406528434Z",
+    "description": "Formulario para pruebas",
+    "formConditions": [],
+    "formElements": [
+      {
+        "config": {
+          "alignment": "LEFT",
+          "description": "Enter the information required to register a new SL user.",
+          "formElements": [
+            {
+              "config": {
+                "columnCount": 2,
+                "columns": [
+                  [
+                    {
+                      "config": {
+                        "dataSource": {
+                          "config": {
+                            "objectType": "IDENTITY"
+                          },
+                          "dataSourceType": "INTERNAL"
+                        },
+                        "forceSelect": true,
+                        "helpText": "Select the manager responsible for the new SL user.",
+                        "label": "Manager",
+                        "maximum": 1,
+                        "placeholder": "",
+                        "required": true
+                      },
+                      "elementType": "SELECT",
+                      "id": "535464351548",
+                      "key": "manager",
+                      "validations": [
+                        {
+                          "validationType": "DATA_SOURCE"
+                        },
+                        {
+                          "validationType": "REQUIRED"
+                        }
+                      ]
+                    }
+                  ],
+                  [
+                    {
+                      "config": {
+                        "default": "",
+                        "description": "",
+                        "helpText": "Enter a unique UserID identifier",
+                        "label": "User ID",
+                        "placeholder": "",
+                        "required": true
+                      },
+                      "elementType": "TEXT",
+                      "id": "730373772073",
+                      "key": "userId",
+                      "validations": [
+                        {
+                          "validationType": "REQUIRED"
+                        }
+                      ]
+                    }
+                  ]
+                ],
+                "description": "",
+                "label": "Column Set",
+                "labelStyle": "h5",
+                "showLabel": false
+              },
+              "elementType": "COLUMN_SET",
+              "id": "819247799062",
+              "key": "",
+              "validations": []
+            },
+            {
+              "config": {
+                "columnCount": 2,
+                "columns": [
+                  [
+                    {
+                      "config": {
+                        "default": "",
+                        "description": "",
+                        "helpText": "Enter a DNI or NIE using uppercase letters",
+                        "label": "NIF/NIE",
+                        "placeholder": "12345678Z ",
+                        "required": true
+                      },
+                      "elementType": "TEXT",
+                      "id": "91165256905",
+                      "key": "nifNie",
+                      "validations": [
+                        {
+                          "config": {
+                            "max": 9
+                          },
+                          "validationType": "MAX_LENGTH"
+                        },
+                        {
+                          "config": {
+                            "message": "Invalid format. Enter a valid DNI or NIE.",
+                            "regex": "^([0-9]{8}|[XYZ][0-9]{7})[TRWAGMYFPDXBNJZSQVHLCKE]$"
+                          },
+                          "validationType": "REGEX"
+                        },
+                        {
+                          "config": {
+                            "min": 9
+                          },
+                          "validationType": "MIN_LENGTH"
+                        },
+                        {
+                          "validationType": "REQUIRED"
+                        }
+                      ]
+                    }
+                  ],
+                  [
+                    {
+                      "config": {
+                        "default": "",
+                        "description": "",
+                        "helpText": "Enter the email",
+                        "label": "Email Field",
+                        "placeholder": "example.test@domain.com",
+                        "required": true
+                      },
+                      "elementType": "EMAIL",
+                      "id": "1283023686952",
+                      "key": "emailField",
+                      "validations": [
+                        {
+                          "validationType": "EMAIL"
+                        },
+                        {
+                          "validationType": "REQUIRED"
+                        }
+                      ]
+                    }
+                  ]
+                ],
+                "description": "",
+                "label": "Column Set",
+                "labelStyle": "h5",
+                "showLabel": false
+              },
+              "elementType": "COLUMN_SET",
+              "id": "1538457563504",
+              "key": "",
+              "validations": []
+            },
+            {
+              "config": {
+                "columnCount": 2,
+                "columns": [
+                  [
+                    {
+                      "config": {
+                        "default": "",
+                        "description": "",
+                        "helpText": "Enter the Last Name",
+                        "label": "Last Name",
+                        "placeholder": "",
+                        "required": true
+                      },
+                      "elementType": "TEXT",
+                      "id": "1309497961428",
+                      "key": "lastName",
+                      "validations": [
+                        {
+                          "validationType": "REQUIRED"
+                        }
+                      ]
+                    }
+                  ],
+                  [
+                    {
+                      "config": {
+                        "default": "",
+                        "description": "",
+                        "helpText": "Enter the first name",
+                        "label": "First Name",
+                        "placeholder": "",
+                        "required": true
+                      },
+                      "elementType": "TEXT",
+                      "id": "856571406675",
+                      "key": "firstName",
+                      "validations": [
+                        {
+                          "validationType": "REQUIRED"
+                        }
+                      ]
+                    }
+                  ]
+                ],
+                "description": "",
+                "label": "Column Set",
+                "labelStyle": "h5",
+                "showLabel": false
+              },
+              "elementType": "COLUMN_SET",
+              "id": "424803395431",
+              "key": "",
+              "validations": []
+            }
+          ],
+          "label": "User Information",
+          "labelStyle": "h2",
+          "showLabel": true
+        },
+        "elementType": "SECTION",
+        "id": "592416364359",
+        "validations": []
+      }
+    ],
+    "formInput": [],
+    "id": "28679c62-d61e-4df3-82c3-9293380f11fc",
+    "modified": "2026-11-24T11:28:56.766733349Z",
+    "name": "SL-Form-CreateUser",
+    "owner": {
+      "id": "d024cdc01088491194e571464f97b308",
+      "name": "dmedinay",
+      "type": "IDENTITY"
+    },
+    "usedBy": [
+      {
+        "id": "ed661321-88e7-473c-857b-557067bdc28b",
+        "name": "SL-Workflow-CreateUserViaForm",
+        "type": "WORKFLOW"
+      }
+    ]
+  },
+  "self": {
+    "id": "28679c62-d61e-4df3-82c3-9293380f11fc",
+    "name": "SL-Form-CreateUser",
+    "type": "FORM_DEFINITION"
+  },
+  "version": 1
+}

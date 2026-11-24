@@ -1,0 +1,58 @@
+{
+  "jwsHeader": null,
+  "jwsSignature": null,
+  "object": {
+    "accessRequestConfig": {
+      "approvalSchemes": [
+        {
+          "approverId": null,
+          "approverType": "MANAGER"
+        }
+      ],
+      "commentsRequired": false,
+      "denialCommentsRequired": false,
+      "formDefinitionId": null,
+      "maxPermittedAccessDuration": null,
+      "reauthorizationRequired": false,
+      "requireEndDate": false
+    },
+    "additionalOwners": [],
+    "created": "2024-09-30T10:09:23.711821Z",
+    "description": null,
+    "enabled": true,
+    "entitlements": [
+      {
+        "id": "2d981a4d1346455ca44c25d3126ffac5",
+        "name": "Account Operators",
+        "type": "ENTITLEMENT"
+      }
+    ],
+    "id": "cd23726b00b949278884488d94a4d00e",
+    "modified": "2024-09-30T10:09:47.206303Z",
+    "name": "Test AP",
+    "owner": {
+      "id": "748aaee232614741b6f6cddf341ee281",
+      "name": "lmmartinez",
+      "type": "IDENTITY"
+    },
+    "privilegeLevel": null,
+    "provisioningCriteria": null,
+    "requestable": true,
+    "revocationRequestConfig": {
+      "approvalSchemes": []
+    },
+    "segmentRefs": [],
+    "segments": [],
+    "source": {
+      "id": "dd15e795a6884b1e914126cdaf8ac66d",
+      "name": "Active Directory LAB SIA",
+      "type": "SOURCE"
+    }
+  },
+  "self": {
+    "id": "cd23726b00b949278884488d94a4d00e",
+    "name": "Test AP",
+    "type": "ACCESS_PROFILE"
+  },
+  "version": 1
+}

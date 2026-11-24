@@ -1,0 +1,33 @@
+{
+  "jwsHeader": null,
+  "jwsSignature": null,
+  "object": {
+    "attributes": {
+      "values": [
+        ".",
+        "acceso",
+        {
+          "attributes": {
+            "input": {
+              "attributes": {
+                "name": "dni"
+              },
+              "type": "identityAttribute"
+            }
+          },
+          "type": "upper"
+        }
+      ]
+    },
+    "id": "37afe642-24ca-4e61-8a5e-6e9e6eb4f3e9",
+    "internal": false,
+    "name": "Z Concat acceso + DNI en mayusculas",
+    "type": "concat"
+  },
+  "self": {
+    "id": "37afe642-24ca-4e61-8a5e-6e9e6eb4f3e9",
+    "name": "Z Concat acceso + DNI en mayusculas",
+    "type": "TRANSFORM"
+  },
+  "version": 1
+}

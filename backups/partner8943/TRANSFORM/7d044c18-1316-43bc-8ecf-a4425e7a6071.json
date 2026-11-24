@@ -1,0 +1,25 @@
+{
+  "jwsHeader": null,
+  "jwsSignature": null,
+  "object": {
+    "attributes": {
+      "input": {
+        "attributes": {
+          "begin": 0,
+          "end": 1
+        },
+        "type": "substring"
+      }
+    },
+    "id": "7d044c18-1316-43bc-8ecf-a4425e7a6071",
+    "internal": false,
+    "name": "inicial_segundo_nombre_compuesto",
+    "type": "lower"
+  },
+  "self": {
+    "id": "7d044c18-1316-43bc-8ecf-a4425e7a6071",
+    "name": "inicial_segundo_nombre_compuesto",
+    "type": "TRANSFORM"
+  },
+  "version": 1
+}

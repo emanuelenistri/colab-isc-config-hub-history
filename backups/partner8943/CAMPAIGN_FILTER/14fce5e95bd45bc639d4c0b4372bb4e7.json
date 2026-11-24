@@ -1,0 +1,33 @@
+{
+  "jwsHeader": null,
+  "jwsSignature": null,
+  "object": {
+    "criteriaList": [
+      {
+        "children": null,
+        "id": "",
+        "negateResult": false,
+        "operation": "EQUALS",
+        "property": "jobTitle",
+        "recordChildMatches": false,
+        "shortCircuit": false,
+        "suppressMatchedItems": false,
+        "type": "IDENTITY_ATTRIBUTE",
+        "value": "Administrador"
+      }
+    ],
+    "description": "Filtro prueba",
+    "id": "14fce5e95bd45bc639d4c0b4372bb4e7",
+    "isSystemFilter": false,
+    "migrationStatus": "TO_BE_MIGRATED",
+    "mode": "EXCLUSION",
+    "name": "Test CJP filtro",
+    "owner": "cjoglar cjoglar"
+  },
+  "self": {
+    "id": "14fce5e95bd45bc639d4c0b4372bb4e7",
+    "name": "Test CJP filtro",
+    "type": "CAMPAIGN_FILTER"
+  },
+  "version": 1
+}

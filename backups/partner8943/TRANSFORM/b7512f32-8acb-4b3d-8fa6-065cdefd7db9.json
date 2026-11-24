@@ -1,0 +1,32 @@
+{
+  "jwsHeader": null,
+  "jwsSignature": null,
+  "object": {
+    "attributes": {
+      "fecha": {
+        "attributes": {
+          "input": {
+            "attributes": {
+              "name": "startDate"
+            },
+            "type": "identityAttribute"
+          },
+          "inputFormat": "dd/MM/yyyy",
+          "outputFormat": "ddMMyyyy"
+        },
+        "type": "dateFormat"
+      },
+      "value": "$fecha"
+    },
+    "id": "b7512f32-8acb-4b3d-8fa6-065cdefd7db9",
+    "internal": false,
+    "name": "Transform-Dateformat-static",
+    "type": "static"
+  },
+  "self": {
+    "id": "b7512f32-8acb-4b3d-8fa6-065cdefd7db9",
+    "name": "Transform-Dateformat-static",
+    "type": "TRANSFORM"
+  },
+  "version": 1
+}

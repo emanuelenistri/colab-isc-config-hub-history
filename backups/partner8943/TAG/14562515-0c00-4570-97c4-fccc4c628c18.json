@@ -1,0 +1,23 @@
+{
+  "jwsHeader": null,
+  "jwsSignature": null,
+  "object": {
+    "created": null,
+    "id": "14562515-0c00-4570-97c4-fccc4c628c18",
+    "modified": null,
+    "name": "INTERNALCONTROL237",
+    "taggedObjects": [
+      {
+        "id": "d4f5a242-13ad-4c24-a6b9-2ce252e676b7",
+        "name": "Non-IT Users with Privileged System Access",
+        "type": "SOD_POLICY"
+      }
+    ]
+  },
+  "self": {
+    "id": "14562515-0c00-4570-97c4-fccc4c628c18",
+    "name": "INTERNALCONTROL237",
+    "type": "TAG"
+  },
+  "version": 1
+}

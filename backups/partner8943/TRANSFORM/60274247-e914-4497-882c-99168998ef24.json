@@ -1,0 +1,41 @@
+{
+  "jwsHeader": null,
+  "jwsSignature": null,
+  "object": {
+    "attributes": {
+      "values": [
+        "@",
+        {
+          "attributes": {
+            "id": "emailDomain"
+          },
+          "type": "reference"
+        },
+        {
+          "attributes": {
+            "input": {
+              "attributes": {
+                "attributeName": "mail",
+                "sourceName": "Active Directory LAB SIA"
+              },
+              "type": "accountAttribute"
+            },
+            "regex": "@.*",
+            "replacement": ""
+          },
+          "type": "replace"
+        }
+      ]
+    },
+    "id": "60274247-e914-4497-882c-99168998ef24",
+    "internal": false,
+    "name": "Transform-mail-test",
+    "type": "concat"
+  },
+  "self": {
+    "id": "60274247-e914-4497-882c-99168998ef24",
+    "name": "Transform-mail-test",
+    "type": "TRANSFORM"
+  },
+  "version": 1
+}

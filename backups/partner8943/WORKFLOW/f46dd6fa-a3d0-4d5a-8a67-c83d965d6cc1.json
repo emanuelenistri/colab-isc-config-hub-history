@@ -1,0 +1,79 @@
+{
+  "jwsHeader": null,
+  "jwsSignature": null,
+  "object": {
+    "created": "2024-02-29T17:13:24.125840232Z",
+    "creator": {
+      "id": "0533ec736d874f4eb4c76552977bf727",
+      "name": "slpt.support",
+      "type": "IDENTITY"
+    },
+    "definition": {
+      "start": "IsJobTitleChange",
+      "steps": {
+        "Get Identity History": {
+          "actionId": "sp:get-identity-history",
+          "attributes": {
+            "eventTypes": null,
+            "from.$": null,
+            "id.$": "$.trigger.identity.id"
+          },
+          "description": null,
+          "nextStep": "Send Email",
+          "type": "action"
+        },
+        "IsJobTitleChange": {
+          "choiceList": [
+            {
+              "comparator": "StringEquals",
+              "nextStep": "Get Identity History",
+              "variableA.$": "$.changes[?(@.attribute=='jobTitle')].attribute",
+              "variableB": "jobTitle"
+            }
+          ],
+          "defaultStep": "success",
+          "type": "choice"
+        },
+        "Send Email": {
+          "actionId": "sp:send-email",
+          "attributes": {
+            "body": null,
+            "recipientId.$": null
+          },
+          "type": "action"
+        },
+        "success": {
+          "type": "success"
+        }
+      }
+    },
+    "description": "Workflow when an identity moves within an organization to another team, changing managers, etc.\n\nSend access history to new manager.",
+    "enabled": false,
+    "id": "f46dd6fa-a3d0-4d5a-8a67-c83d965d6cc1",
+    "modified": "2024-02-29T17:13:24.125840232Z",
+    "modifiedBy": {
+      "id": "0533ec736d874f4eb4c76552977bf727",
+      "name": "slpt.support",
+      "type": "IDENTITY"
+    },
+    "name": "Workflow Mover Access History",
+    "owner": {
+      "id": "fe353d5f33bf4e1dbbfb32a913a2ae40",
+      "name": "alejandro.fernandez",
+      "type": "IDENTITY"
+    },
+    "trigger": {
+      "attributes": {
+        "id": "idn:identity-attributes-changed",
+        "integrationId": null
+      },
+      "type": "EVENT"
+    }
+  },
+  "self": {
+    "id": "f46dd6fa-a3d0-4d5a-8a67-c83d965d6cc1",
+    "name": "Workflow Mover Access History",
+    "type": "WORKFLOW"
+  },
+  "version": 1
+}

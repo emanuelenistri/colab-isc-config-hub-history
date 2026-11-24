@@ -1,0 +1,178 @@
+{
+  "jwsHeader": null,
+  "jwsSignature": null,
+  "object": {
+    "created": "2024-08-21T08:08:18.708590933Z",
+    "creator": {
+      "id": "49e4267e2cc547b0ad4fb41df46774ec",
+      "name": "mgmontejo",
+      "type": "IDENTITY"
+    },
+    "definition": {
+      "start": "Get List of Identities 1",
+      "steps": {
+        "End Step - Success 2": {
+          "displayName": "",
+          "type": "success"
+        },
+        "Get List of Identities 1": {
+          "actionId": "sp:get-identities",
+          "attributes": {
+            "inputManagedBy": null,
+            "inputManagerOf.$": "$.trigger.attributes.firstname",
+            "inputQuery": "@accounts(source.name:\"BCC-Source-External\")",
+            "searchBy": "searchQuery"
+          },
+          "displayName": "",
+          "nextStep": "Loop",
+          "type": "action",
+          "versionNumber": 2
+        },
+        "Loop": {
+          "actionId": "sp:loop:iterator",
+          "attributes": {
+            "context.$": "",
+            "input.$": "$.getListOfIdentities1.identities",
+            "start": "Define Variable 1",
+            "steps": {
+              "Compare Strings": {
+                "choiceList": [
+                  {
+                    "comparator": "StringEquals",
+                    "nextStep": "Send Email",
+                    "variableA.$": "$.defineVariable1.prueba",
+                    "variableB.$": "$.getIdentity1.attributes.firstname"
+                  }
+                ],
+                "defaultStep": "Send Email 1",
+                "displayName": "",
+                "type": "choice"
+              },
+              "Define Variable 1": {
+                "attributes": {
+                  "id": "sp:define-variable",
+                  "variables": [
+                    {
+                      "description": "",
+                      "name": "firstname_variable",
+                      "transforms": [],
+                      "variableA.$": "$.trigger.attributes.firstname"
+                    },
+                    {
+                      "description": "",
+                      "name": "prueba",
+                      "transforms": [],
+                      "variableA": "Sia_test12"
+                    }
+                  ]
+                },
+                "displayName": "",
+                "nextStep": "Get Identity 1",
+                "type": "Mutation"
+              },
+              "End Step - Success": {
+                "displayName": "",
+                "type": "success"
+              },
+              "End Step - Success 1": {
+                "displayName": "",
+                "type": "success"
+              },
+              "Get Identity 1": {
+                "actionId": "sp:get-identity",
+                "attributes": {
+                  "id.$": "$.loop.loopInput.id"
+                },
+                "description": null,
+                "displayName": "",
+                "nextStep": "Compare Strings",
+                "type": "action",
+                "versionNumber": 2
+              },
+              "Send Email": {
+                "actionId": "sp:send-email",
+                "attributes": {
+                  "body": "Ya existía",
+                  "context": {},
+                  "from.$": "",
+                  "recipientEmailList": [
+                    "mgmontejo@sia.es",
+                    "smenendezp@sia.es"
+                  ],
+                  "subject": null
+                },
+                "displayName": "",
+                "nextStep": "End Step - Success",
+                "type": "action",
+                "versionNumber": 2
+              },
+              "Send Email 1": {
+                "actionId": "sp:send-email",
+                "attributes": {
+                  "body": "No existía",
+                  "context": {},
+                  "from.$": "",
+                  "recipientEmailList": [
+                    "mgmontejo@sia.es",
+                    "smenendezp@sia.es"
+                  ],
+                  "subject": null
+                },
+                "displayName": "",
+                "nextStep": "End Step - Success 1",
+                "type": "action",
+                "versionNumber": 2
+              }
+            }
+          },
+          "displayName": "",
+          "nextStep": "End Step - Success 2",
+          "type": "action",
+          "versionNumber": 1
+        }
+      }
+    },
+    "description": "",
+    "enabled": false,
+    "id": "9ea59707-d365-419e-aa15-02b4b664788b",
+    "modified": "2024-08-21T10:02:43.989687765Z",
+    "modifiedBy": {
+      "id": "49e4267e2cc547b0ad4fb41df46774ec",
+      "name": "mgmontejo",
+      "type": "IDENTITY"
+    },
+    "name": "PruebaMarcos_desactivarCicloVida",
+    "owner": {
+      "id": "49e4267e2cc547b0ad4fb41df46774ec",
+      "name": "mgmontejo",
+      "type": "IDENTITY"
+    },
+    "trigger": {
+      "attributes": {
+        "filter.$": "$.attributes[?(@.firstname == \"Sia_test12\")]",
+        "filterDefinition": {
+          "conditions": [
+            {
+              "operator": "==",
+              "path": "firstname",
+              "type": "string",
+              "value": "Sia_test12"
+            }
+          ],
+          "logic": "and",
+          "path": "attributes"
+        },
+        "id": "idn:identity-created",
+        "integrationId": null
+      },
+      "mode": "basic",
+      "type": "EVENT"
+    }
+  },
+  "self": {
+    "id": "9ea59707-d365-419e-aa15-02b4b664788b",
+    "name": "PruebaMarcos_desactivarCicloVida",
+    "type": "WORKFLOW"
+  },
+  "version": 1
+}

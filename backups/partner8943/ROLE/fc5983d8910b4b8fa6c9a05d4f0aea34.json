@@ -1,0 +1,82 @@
+{
+  "jwsHeader": null,
+  "jwsSignature": null,
+  "object": {
+    "accessModelMetadata": {
+      "attributes": []
+    },
+    "accessProfiles": [],
+    "accessRequestConfig": {
+      "approvalSchemes": [],
+      "commentsRequired": null,
+      "denialCommentsRequired": null,
+      "formDefinitionId": null,
+      "maxPermittedAccessDuration": null,
+      "reauthorizationRequired": false,
+      "requireEndDate": false
+    },
+    "additionalOwners": [],
+    "created": "2026-10-20T07:20:48.750597Z",
+    "description": "Rol de pertenencia creado para tester (Role1)",
+    "dimensionRefs": null,
+    "dimensional": false,
+    "dimensions": [],
+    "enabled": false,
+    "entitlements": [
+      {
+        "id": "1a178129-471d-4eac-b70e-bb849b98972d",
+        "name": "Group Policy Creator Owners",
+        "sourceId": "dd15e795-a688-4b1e-9141-26cdaf8ac66d",
+        "sourceName": "Active Directory LAB SIA",
+        "type": "ENTITLEMENT"
+      }
+    ],
+    "id": "fc5983d8910b4b8fa6c9a05d4f0aea34",
+    "legacyMembershipInfo": null,
+    "membership": {
+      "criteria": {
+        "children": [
+          {
+            "children": null,
+            "key": {
+              "property": "attribute.jobId",
+              "sourceId": null,
+              "type": "IDENTITY"
+            },
+            "operation": "EQUALS",
+            "stringValue": null,
+            "values": [
+              "12"
+            ]
+          }
+        ],
+        "key": null,
+        "operation": "OR",
+        "stringValue": null,
+        "values": null
+      },
+      "identities": null,
+      "type": "STANDARD"
+    },
+    "modified": "2026-10-20T07:24:49.372863Z",
+    "name": "ETG_Role1",
+    "owner": {
+      "id": "87ab43d717894124b9d41b6585502238",
+      "name": "etribaldos",
+      "type": "IDENTITY"
+    },
+    "privilegeLevel": null,
+    "requestable": false,
+    "revocationRequestConfig": {
+      "approvalSchemes": []
+    },
+    "segmentRefs": [],
+    "segments": []
+  },
+  "self": {
+    "id": "fc5983d8910b4b8fa6c9a05d4f0aea34",
+    "name": "ETG_Role1",
+    "type": "ROLE"
+  },
+  "version": 1
+}

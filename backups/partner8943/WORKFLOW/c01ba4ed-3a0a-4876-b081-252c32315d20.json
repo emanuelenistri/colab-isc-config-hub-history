@@ -1,0 +1,72 @@
+{
+  "jwsHeader": null,
+  "jwsSignature": null,
+  "object": {
+    "created": "2024-09-11T09:57:30.70925949Z",
+    "creator": {
+      "id": "06c1619bb4ad4fa3b793330ced2408fe",
+      "name": "rcgalvez",
+      "type": "IDENTITY"
+    },
+    "definition": {
+      "start": "Send Email",
+      "steps": {
+        "End Step - Success": {
+          "displayName": "",
+          "type": "success"
+        },
+        "Send Email": {
+          "actionId": "sp:send-email",
+          "attributes": {
+            "body": "HOLA",
+            "context": {},
+            "from": "",
+            "recipientEmailList": [
+              "smenendezp@sia.es"
+            ],
+            "subject": "Test"
+          },
+          "description": "",
+          "displayName": "",
+          "nextStep": "End Step - Success",
+          "type": "action",
+          "versionNumber": 2
+        }
+      }
+    },
+    "description": "",
+    "enabled": false,
+    "id": "c01ba4ed-3a0a-4876-b081-252c32315d20",
+    "modified": "2024-09-11T16:03:16.079549252Z",
+    "modifiedBy": {
+      "id": "84a568c1f5024b24b21a25a27379ac66",
+      "name": "smenendezp",
+      "type": "IDENTITY"
+    },
+    "name": "Test mail",
+    "owner": {
+      "id": "06c1619bb4ad4fa3b793330ced2408fe",
+      "name": "rcgalvez",
+      "type": "IDENTITY"
+    },
+    "trigger": {
+      "attributes": {
+        "cronString": "0 0 * * *",
+        "dailyTimes": [
+          "1969-12-31T23:00:00.000Z"
+        ],
+        "frequency": "daily",
+        "id": "idn:cron-schedule",
+        "integrationId": null,
+        "timeZone": "Europe/Madrid"
+      },
+      "type": "SCHEDULED"
+    }
+  },
+  "self": {
+    "id": "c01ba4ed-3a0a-4876-b081-252c32315d20",
+    "name": "Test mail",
+    "type": "WORKFLOW"
+  },
+  "version": 1
+}

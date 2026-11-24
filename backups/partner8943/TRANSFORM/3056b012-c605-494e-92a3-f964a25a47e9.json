@@ -1,0 +1,26 @@
+{
+  "jwsHeader": null,
+  "jwsSignature": null,
+  "object": {
+    "attributes": {
+      "GESCH_Value": {
+        "attributes": {
+          "attributeName": "absentismo",
+          "sourceName": "BCC-Source-External"
+        },
+        "type": "accountAttribute"
+      },
+      "value": "#if($GESCH_Value == \"true\")Mr.#elseif($GESCH_Value == \"false\")Ms.#end"
+    },
+    "id": "3056b012-c605-494e-92a3-f964a25a47e9",
+    "internal": false,
+    "name": "Z MR o MS",
+    "type": "static"
+  },
+  "self": {
+    "id": "3056b012-c605-494e-92a3-f964a25a47e9",
+    "name": "Z MR o MS",
+    "type": "TRANSFORM"
+  },
+  "version": 1
+}

@@ -1,0 +1,73 @@
+{
+  "jwsHeader": null,
+  "jwsSignature": null,
+  "object": {
+    "created": "2025-06-10T08:57:39.091266163Z",
+    "creator": {
+      "id": "d024cdc01088491194e571464f97b308",
+      "name": "dmedinay",
+      "type": "IDENTITY"
+    },
+    "definition": {
+      "start": "Send Email",
+      "steps": {
+        "End Step - Success": {
+          "actionId": "sp:operator-success",
+          "displayName": "",
+          "type": "success"
+        },
+        "Send Email": {
+          "actionId": "sp:send-email",
+          "attributes": {
+            "body": "<p>Hola</p>",
+            "context": {},
+            "recipientEmailList": [
+              "dmedinay@sia.es"
+            ]
+          },
+          "displayName": "",
+          "nextStep": "End Step - Success",
+          "type": "action",
+          "versionNumber": 2
+        }
+      }
+    },
+    "description": "",
+    "enabled": false,
+    "id": "905e5089-fa33-40ad-aa71-fae6ca03c79e",
+    "modified": "2025-06-11T11:16:56.863857982Z",
+    "modifiedBy": {
+      "id": "d024cdc01088491194e571464f97b308",
+      "name": "dmedinay",
+      "type": "IDENTITY"
+    },
+    "name": "test5",
+    "owner": {
+      "id": "d024cdc01088491194e571464f97b308",
+      "name": "dmedinay",
+      "type": "IDENTITY"
+    },
+    "trigger": {
+      "attributes": {
+        "cronString": "0 11,10,12,13 * * *",
+        "dailyTimes": [
+          "1970-01-01T09:00:00.000Z",
+          "1970-01-01T10:00:00.000Z",
+          "1970-01-01T11:00:00.000Z",
+          "1970-01-01T12:00:00.000Z"
+        ],
+        "frequency": "daily",
+        "id": "idn:cron-schedule",
+        "integrationId": null,
+        "timeZone": "Europe/Madrid"
+      },
+      "type": "SCHEDULED"
+    }
+  },
+  "self": {
+    "id": "905e5089-fa33-40ad-aa71-fae6ca03c79e",
+    "name": "test5",
+    "type": "WORKFLOW"
+  },
+  "version": 1
+}

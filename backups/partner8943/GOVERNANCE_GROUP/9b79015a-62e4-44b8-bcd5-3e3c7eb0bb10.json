@@ -1,0 +1,39 @@
+{
+  "jwsHeader": null,
+  "jwsSignature": null,
+  "object": {
+    "connectionCount": 0,
+    "connections": null,
+    "created": null,
+    "description": "Accounting Team Managers ",
+    "id": "9b79015a-62e4-44b8-bcd5-3e3c7eb0bb10",
+    "memberCount": 0,
+    "members": [
+      {
+        "id": "52d193362ebd40768ceed93070b5fb44",
+        "name": "Jerry.Bennett",
+        "type": "IDENTITY"
+      },
+      {
+        "id": "d52fa6f20a3b4af284d7fe379844c277",
+        "name": "Catherine.Simmons",
+        "type": "IDENTITY"
+      }
+    ],
+    "modified": null,
+    "name": "Accounting Team Manager-level Approver Group",
+    "owner": {
+      "displayName": null,
+      "emailAddress": null,
+      "id": "52d193362ebd40768ceed93070b5fb44",
+      "name": "Jerry.Bennett",
+      "type": "IDENTITY"
+    }
+  },
+  "self": {
+    "id": "9b79015a-62e4-44b8-bcd5-3e3c7eb0bb10",
+    "name": "Accounting Team Manager-level Approver Group",
+    "type": "GOVERNANCE_GROUP"
+  },
+  "version": 1
+}

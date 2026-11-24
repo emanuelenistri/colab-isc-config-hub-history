@@ -1,0 +1,20 @@
+{
+  "jwsHeader": null,
+  "jwsSignature": null,
+  "object": {
+    "attributes": {
+      "managerName": "$identity.getManager().getStringAttribute(\"displayName\")",
+      "value": "$managerName"
+    },
+    "id": "ca7a148c-c22d-4eb8-944c-9c97995bb1a6",
+    "internal": false,
+    "name": "testManager",
+    "type": "static"
+  },
+  "self": {
+    "id": "ca7a148c-c22d-4eb8-944c-9c97995bb1a6",
+    "name": "testManager",
+    "type": "TRANSFORM"
+  },
+  "version": 1
+}

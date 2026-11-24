@@ -1,0 +1,39 @@
+{
+  "jwsHeader": null,
+  "jwsSignature": null,
+  "object": {
+    "attributes": {
+      "values": [
+        "@",
+        {
+          "attributes": {
+            "id": "emailDomain"
+          },
+          "type": "reference"
+        },
+        {
+          "attributes": {
+            "input": {
+              "attributes": {
+                "name": "email"
+              },
+              "type": "identityAttribute"
+            },
+            "regex": "@.*"
+          },
+          "type": "replace"
+        }
+      ]
+    },
+    "id": "ef36ad2f-8467-4224-ace7-fa85900e53e8",
+    "internal": false,
+    "name": "Z mail2",
+    "type": "concat"
+  },
+  "self": {
+    "id": "ef36ad2f-8467-4224-ace7-fa85900e53e8",
+    "name": "Z mail2",
+    "type": "TRANSFORM"
+  },
+  "version": 1
+}

@@ -1,0 +1,28 @@
+{
+  "jwsHeader": null,
+  "jwsSignature": null,
+  "object": {
+    "connectionCount": 0,
+    "connections": null,
+    "created": null,
+    "description": "HR Approvers",
+    "id": "fc379bdd-0d0a-435f-b89b-e0f0900bd7ed",
+    "memberCount": 0,
+    "members": null,
+    "modified": null,
+    "name": "HR Approvers",
+    "owner": {
+      "displayName": null,
+      "emailAddress": null,
+      "id": "47a8b3b7d5d14355865adef4f7915d6e",
+      "name": "Amanda.Ross",
+      "type": "IDENTITY"
+    }
+  },
+  "self": {
+    "id": "fc379bdd-0d0a-435f-b89b-e0f0900bd7ed",
+    "name": "HR Approvers",
+    "type": "GOVERNANCE_GROUP"
+  },
+  "version": 1
+}

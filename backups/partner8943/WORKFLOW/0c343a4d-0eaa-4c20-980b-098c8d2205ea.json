@@ -1,0 +1,425 @@
+{
+  "jwsHeader": null,
+  "jwsSignature": null,
+  "object": {
+    "created": "2025-11-05T15:16:35.538173834Z",
+    "creator": {
+      "id": "1dff61379fdc41fbac00c7f5ae992e23",
+      "name": "cjoglar",
+      "type": "IDENTITY"
+    },
+    "definition": {
+      "start": "Get Identity",
+      "steps": {
+        "Approval Policy": {
+          "actionId": "sp:access-request-approval",
+          "attributes": {
+            "accessRequestId.$": "$.trigger.accessRequestId",
+            "accountActivityId.$": "$.trigger.accountActivityId",
+            "approvalActionAtTimeout": "EXPIRED",
+            "approvalReminder": "true",
+            "approvalTimeout": 8,
+            "approvalType": "QUORUM",
+            "autoApprovalEnabled.$": "$.trigger.autoApprovalEnabled",
+            "fallbackApprover.$": "$.trigger.fallbackApprover",
+            "multiApproverReviewersConfig_approvalScheme": "SERIAL",
+            "parentWorkflowExecutionId.$": "$.trigger.parentWorkflowExecutionId",
+            "priority": "HIGH",
+            "quorumApprovalPercentage": 60,
+            "quorumApproverReviewersConfig_approvalScheme": "PARALLEL",
+            "quorumApproverReviewersConfig_reviewers": [
+              {
+                "approverCategory": "IDENTITY",
+                "approverNumber": 1,
+                "identityId.$": "$.defineVariable1.reviewer1"
+              },
+              {
+                "approverCategory": "IDENTITY",
+                "approverNumber": 2,
+                "identityId.$": "$.defineVariable1.reviewer2"
+              },
+              {
+                "approverCategory": "IDENTITY",
+                "approverNumber": 3,
+                "identityId.$": "$.defineVariable1.reviewer3"
+              },
+              {
+                "approverCategory": "IDENTITY",
+                "approverNumber": 4,
+                "identityId.$": "$.defineVariable1.reviewer4"
+              },
+              {
+                "approverCategory": "IDENTITY",
+                "approverNumber": 5,
+                "identityId.$": "$.defineVariable1.reviewer5"
+              }
+            ],
+            "reminderFrequency_cronString": "0 10 * * *",
+            "reminderFrequency_dailyTimes": [
+              "1969-12-31T16:00:00.000Z"
+            ],
+            "reminderFrequency_frequency": "daily",
+            "reminderFrequency_timeZone": "America/Chicago",
+            "reminderFrequency_weeklyDays": null,
+            "requestId.$": "$.trigger.requestId",
+            "requestedAt.$": "$.trigger.createdAt",
+            "requestedBy.$": "$.trigger.requestedBy",
+            "requestedFor.$": "$.trigger.requestedFor",
+            "requestedItem.$": "$.trigger.requestedItem",
+            "workflowExecutionId.$": "$.trigger.workflowExecutionId"
+          },
+          "description": "This quorum approval policy requires 60% approval to approve the request. The approvals are sent in parallel to 5 Approval Board members.\n\nThis step is set to High priority.\nReviewers are emailed daily reminders if they haven’t yet completed the request.\nIf this review has not been completed within 8 days, the request expires and is rejected.",
+          "displayName": "Quorum 60% of Approval Board",
+          "nextStep": "Compare Strings 1",
+          "type": "action",
+          "versionNumber": 1
+        },
+        "Approval Policy 1": {
+          "actionId": "sp:access-request-approval",
+          "attributes": {
+            "accessRequestId.$": "$.trigger.accessRequestId",
+            "accountActivityId.$": "$.trigger.accountActivityId",
+            "approvalActionAtTimeout": "EXPIRED",
+            "approvalReminder": "true",
+            "approvalTimeout": 8,
+            "approvalType": "SINGLE",
+            "autoApprovalEnabled.$": "$.trigger.autoApprovalEnabled",
+            "fallbackApprover.$": "$.trigger.fallbackApprover",
+            "multiApproverReviewersConfig_approvalScheme": "SERIAL",
+            "parentWorkflowExecutionId.$": "$.trigger.parentWorkflowExecutionId",
+            "priority": "HIGH",
+            "quorumApproverReviewersConfig_approvalScheme": "SERIAL",
+            "reminderFrequency_cronString": "0 10 * * *",
+            "reminderFrequency_dailyTimes": [
+              "1969-12-31T16:00:00.000Z"
+            ],
+            "reminderFrequency_frequency": "daily",
+            "reminderFrequency_timeZone": "America/Chicago",
+            "requestId.$": "$.trigger.requestId",
+            "requestedAt.$": "$.trigger.createdAt",
+            "requestedBy.$": "$.trigger.requestedBy",
+            "requestedFor.$": "$.trigger.requestedFor",
+            "requestedItem.$": "$.trigger.requestedItem",
+            "singleApproverCategory": "GOVERNANCE_GROUP",
+            "singleApproverGovernanceGroupId": "",
+            "workflowExecutionId.$": "$.trigger.workflowExecutionId"
+          },
+          "description": "The recipient has an outlier score of 0.5 or higher, so approval from a member of the Security Governance Group is required before proceeding to the Quorum approval.",
+          "displayName": "Security Governance Group Approval",
+          "nextStep": "Compare Strings",
+          "type": "action",
+          "versionNumber": 1
+        },
+        "Approval Policy 2": {
+          "actionId": "sp:access-request-approval",
+          "attributes": {
+            "accessRequestId.$": "$.trigger.accessRequestId",
+            "accountActivityId.$": "$.trigger.accountActivityId",
+            "approvalActionAtTimeout": "EXPIRED",
+            "approvalReminder": "true",
+            "approvalTimeout": 8,
+            "approvalType": "QUORUM",
+            "autoApprovalEnabled.$": "$.trigger.autoApprovalEnabled",
+            "fallbackApprover.$": "$.trigger.fallbackApprover",
+            "multiApproverReviewersConfig_approvalScheme": "SERIAL",
+            "parentWorkflowExecutionId.$": "$.trigger.parentWorkflowExecutionId",
+            "priority": "LOW",
+            "quorumApprovalPercentage": 60,
+            "quorumApproverReviewersConfig_approvalScheme": "PARALLEL",
+            "quorumApproverReviewersConfig_reviewers": [
+              {
+                "approverCategory": "ACCESS_ITEM_OWNER",
+                "approverNumber": 2
+              },
+              {
+                "approverCategory": "IDENTITY",
+                "approverNumber": 3,
+                "identityId.$": "$.defineVariable1.reviewer1"
+              },
+              {
+                "approverCategory": "IDENTITY",
+                "approverNumber": 4,
+                "identityId.$": "$.defineVariable1.reviewer2"
+              },
+              {
+                "approverCategory": "IDENTITY",
+                "approverNumber": 5,
+                "identityId.$": "$.defineVariable1.reviewer3"
+              },
+              {
+                "approverCategory": "MANAGER_OF",
+                "approverNumber": 1
+              }
+            ],
+            "reminderFrequency_cronString": "0 10 * * *",
+            "reminderFrequency_dailyTimes": [
+              "1969-12-31T16:00:00.000Z"
+            ],
+            "reminderFrequency_frequency": "daily",
+            "reminderFrequency_timeZone": "America/Chicago",
+            "requestId.$": "$.trigger.requestId",
+            "requestedAt.$": "$.trigger.createdAt",
+            "requestedBy.$": "$.trigger.requestedBy",
+            "requestedFor.$": "$.trigger.requestedFor",
+            "requestedItem.$": "$.trigger.requestedItem",
+            "workflowExecutionId.$": "$.trigger.workflowExecutionId"
+          },
+          "description": "The recipient has no outlier score or an outlier score of less than 0.5, so they are considered low risk. \nThis quorum approval policy requires 60% approval to approve the request. The approvals are sent in parallel to the recipient’s manager, the access item owner, and 3 Approval Board members.\n\nThis step is set to Low priority.\nReviewers are emailed daily reminders if they haven’t yet completed the request.\nIf this review is not completed within 8 days, the request expires and is rejected.\n\nNOTE: Since there are 3 approval board members, they can override the manager and access item owner with approval of all 3.",
+          "displayName": "Quorum 60% Approval - Low Risk",
+          "nextStep": "Compare Strings 2",
+          "type": "action",
+          "versionNumber": 1
+        },
+        "Compare Numbers": {
+          "actionId": "sp:compare-numbers",
+          "choiceList": [
+            {
+              "comparator": "NumericGreaterThanEquals",
+              "nextStep": "Approval Policy 1",
+              "variableA.$": "$.defineVariable.outlierScore",
+              "variableB": 0.5
+            }
+          ],
+          "defaultStep": "Approval Policy 2",
+          "description": "The outlier score is evaluated to determine if it is 0.5 or higher. If the score is 0.5 or higher, it evaluates True, otherwise False.",
+          "displayName": "Outlier Score >= 0.5?",
+          "type": "choice"
+        },
+        "Compare Numbers 1": {
+          "actionId": "sp:compare-numbers",
+          "choiceList": [
+            {
+              "comparator": "NumericGreaterThan",
+              "nextStep": "Define Variable",
+              "variableA.$": "$.hTTPRequest.body.length()",
+              "variableB": 0
+            }
+          ],
+          "defaultStep": "Approval Policy 2",
+          "description": "The results from the previous step are evaluated to determine if an outlier score was found. If an outlier score was found, it evaluates to True, otherwise False.",
+          "displayName": "XDR Data Exists?",
+          "type": "choice"
+        },
+        "Compare Strings": {
+          "actionId": "sp:compare-strings",
+          "choiceList": [
+            {
+              "comparator": "StringEquals",
+              "nextStep": "Approval Policy",
+              "variableA.$": "$.approvalPolicy1.status",
+              "variableB": "APPROVED"
+            }
+          ],
+          "defaultStep": "Send Email",
+          "description": "The status of the Approval Policy Action is evaluated to determine if the request was approved. If the status is APPROVED, it evaluates to True. If it is any other status, it evaluates to False.",
+          "displayName": "Security Approval Status = APPROVED?",
+          "type": "choice"
+        },
+        "Compare Strings 1": {
+          "actionId": "sp:compare-strings",
+          "choiceList": [
+            {
+              "comparator": "StringEquals",
+              "nextStep": "Send Email 1",
+              "variableA.$": "$.approvalPolicy.status",
+              "variableB": "APPROVED"
+            }
+          ],
+          "defaultStep": "Send Email",
+          "description": "The status of the Approval Policy Action is evaluated to determine if the request was approved. If the status is APPROVED, it evaluates to True. If it is any other status, it evaluates to False.",
+          "displayName": "Quorum Approval Status = APPROVED?",
+          "type": "choice"
+        },
+        "Compare Strings 2": {
+          "actionId": "sp:compare-strings",
+          "choiceList": [
+            {
+              "comparator": "StringEquals",
+              "nextStep": "Send Email 1",
+              "variableA.$": "$.approvalPolicy2.status",
+              "variableB": "APPROVED"
+            }
+          ],
+          "defaultStep": "Send Email",
+          "description": "The status of the Approval Policy Action is evaluated to determine if the request was approved. If the status is APPROVED, it evaluates to True. If it is any other status, it evaluates to False.",
+          "displayName": "Quorum Approval (low risk) = APPROVED?",
+          "type": "choice"
+        },
+        "Define Variable": {
+          "actionId": "sp:define-variable",
+          "attributes": {
+            "id": "sp:define-variable",
+            "variables": [
+              {
+                "description": "",
+                "name": "Outlier Score",
+                "transforms": [],
+                "variableA.$": "$.hTTPRequest.body[0].score"
+              }
+            ]
+          },
+          "displayName": "Define Outlier Score Variable",
+          "nextStep": "Compare Numbers",
+          "type": "Mutation"
+        },
+        "Define Variable 1": {
+          "actionId": "sp:define-variable",
+          "attributes": {
+            "id": "sp:define-variable",
+            "variables": [
+              {
+                "description": "This operator creates 5 new variables for the first 5 identities returned from the previous step. These new variables are used in the Approval Policy Action to specify dynamically defined Quorum reviewers.",
+                "name": "Reviewer1",
+                "transforms": [],
+                "variableA.$": "$.getListOfIdentities.identities[0].id"
+              },
+              {
+                "description": "This operator creates 5 new variables for the first 5 identities returned from the previous step. These new variables are used in the Approval Policy Action to specify dynamically defined Quorum reviewers.",
+                "name": "Reviewer2",
+                "transforms": [],
+                "variableA.$": "$.getListOfIdentities.identities[1].id"
+              },
+              {
+                "description": "This operator creates 5 new variables for the first 5 identities returned from the previous step. These new variables are used in the Approval Policy Action to specify dynamically defined Quorum reviewers.",
+                "name": "Reviewer3",
+                "transforms": [],
+                "variableA.$": "$.getListOfIdentities.identities[2].id"
+              },
+              {
+                "description": "This operator creates 5 new variables for the first 5 identities returned from the previous step. These new variables are used in the Approval Policy Action to specify dynamically defined Quorum reviewers.",
+                "name": "Reviewer4",
+                "transforms": [],
+                "variableA.$": "$.getListOfIdentities.identities[3].id"
+              },
+              {
+                "description": "This operator creates 5 new variables for the first 5 identities returned from the previous step. These new variables are used in the Approval Policy Action to specify dynamically defined Quorum reviewers.",
+                "name": "Reviewer5",
+                "transforms": [],
+                "variableA.$": "$.getListOfIdentities.identities[0].id"
+              }
+            ]
+          },
+          "displayName": "Define Approval Board Reviewers",
+          "nextStep": "HTTP Request",
+          "type": "Mutation"
+        },
+        "End Step - Success": {
+          "actionId": "sp:operator-success",
+          "description": "The access request was rejected, and the recipient was successfully notified. The workflow completed successfully.",
+          "displayName": "Complete Execution - Rejected",
+          "type": "success"
+        },
+        "End Step - Success 1": {
+          "actionId": "sp:operator-success",
+          "description": "The access request was approved, and the recipient was notified. The workflow completed successfully.",
+          "displayName": "Complete Execution - Approved",
+          "type": "success"
+        },
+        "Get Identity": {
+          "actionId": "sp:get-identity",
+          "attributes": {
+            "id.$": "$.trigger.requestedFor.id"
+          },
+          "description": "The full set of attributes for the identity the access is requested for are retrieved. This recipient is the identity that was provided in the Requested For field of the access request.",
+          "displayName": "Get Recipient Identity Attributes",
+          "nextStep": "Get List of Identities",
+          "type": "action",
+          "versionNumber": 2
+        },
+        "Get List of Identities": {
+          "actionId": "sp:get-identities",
+          "attributes": {
+            "inputQuery": "attributes.title:ApprovalBoard",
+            "inputTags": "NEW_TAG",
+            "searchBy": "searchQuery"
+          },
+          "description": "All identities with the title “Approval Board” are retrieved.",
+          "displayName": "Get Approval Board Members",
+          "nextStep": "Define Variable 1",
+          "type": "action",
+          "versionNumber": 2
+        },
+        "HTTP Request": {
+          "actionId": "sp:http",
+          "attributes": {
+            "authenticationType": "basic",
+            "basicAuthPassword": "",
+            "basicAuthUserName": "Test",
+            "method": "get",
+            "requestContentType": "json",
+            "requestHeaders": {
+              "X-SailPoint-Experimental": "true"
+            },
+            "url": "https://sailpoint.api.identitynow.com/v2025/outliers",
+            "urlParams": {
+              "filters": "id eq \"{{$.trigger.requestedFor.id}}\""
+            }
+          },
+          "description": "This step is used to gather extended detection and response data. Here, the outlier score of the recipient is retrieved.",
+          "displayName": "Get XDR Data",
+          "nextStep": "Compare Numbers 1",
+          "type": "action",
+          "versionNumber": 2
+        },
+        "Send Email": {
+          "actionId": "sp:send-email",
+          "attributes": {
+            "body": "<p>Hello {{$.getIdentity.attributes.displayName}},</p>\n<p>Your access request for <span style=\"color: #e03e2d;\"><strong>{{$.trigger.requestedItem.name}}</strong></span> has been rejected with status <span style=\"color: #e03e2d;\"><strong>{{$.approvalPolicy2.status}}</strong></span>.</p>\n<p>Comments from the reviewers can be found here:</p>\n<p><span style=\"color: #f1c40f;\"><strong>{{$.approvalPolicy2.comments}}</strong></span></p>\n<p>Thank you,&nbsp;</p>\n<p>Your Security Team</p>",
+            "context": {},
+            "from": "noreply@sailpoint.com",
+            "recipientEmailList.$": "$.getIdentity.attributes.email",
+            "subject": "Access Request Denied"
+          },
+          "description": "The access request was rejected. An email is sent to the recipient to notify them that the request was either expired or was denied.",
+          "displayName": "Notify Requester - Access Rejected",
+          "nextStep": "End Step - Success",
+          "type": "action",
+          "versionNumber": 2
+        },
+        "Send Email 1": {
+          "actionId": "sp:send-email",
+          "attributes": {
+            "body": "<p>Congratulations {{$.getIdentity.attributes.displayName}},</p>\n<p>Your request for&nbsp;</p>\n<p><span style=\"color: #2dc26b;\"><strong>{{$.trigger.requestedItem.name}} </strong><span style=\"color: #000000;\">has been Approved with the following approval comments:</span></span></p>\n<p><strong><span style=\"color: #f1c40f;\">{{$.approvalPolicy.comments}}</span></strong></p>\n<p><span style=\"color: #000000;\">Thank you,&nbsp;</span></p>\n<p><span style=\"color: #000000;\">Your Security Team</span></p>",
+            "context": {},
+            "from": "noreply@sailpoint.com",
+            "recipientEmailList.$": "$.getIdentity.attributes.email",
+            "subject": "Access Request Approved"
+          },
+          "description": "The access request was approved. An email is sent to the recipient to notify them that the request was approved.",
+          "displayName": "Notify Requester - Access Approved",
+          "nextStep": "End Step - Success 1",
+          "type": "action",
+          "versionNumber": 2
+        }
+      }
+    },
+    "description": "This workflow triggers when an access request is submitted. A set of dynamic approvers are defined using variables based on their title of Approval Board. The recipient’s outlier score is retrieved to branch the approvals based on risk. If the recipient is deemed low risk, the request moves to quorum approval. If the recipient is not low risk, a single approval is required before the request goes to quorum approval. The recipient is notified of the review results via email.",
+    "enabled": false,
+    "id": "0c343a4d-0eaa-4c20-980b-098c8d2205ea",
+    "modified": "2025-11-05T15:16:35.538173834Z",
+    "modifiedBy": {
+      "id": "1dff61379fdc41fbac00c7f5ae992e23",
+      "name": "cjoglar",
+      "type": "IDENTITY"
+    },
+    "name": "Template: Quorum Based Approval of Access Request",
+    "owner": {
+      "id": "1dff61379fdc41fbac00c7f5ae992e23",
+      "name": "cjoglar",
+      "type": "IDENTITY"
+    },
+    "trigger": {
+      "attributes": {
+        "id": "idn:access-request-trigger",
+        "integrationId": null
+      },
+      "type": "AccessRequestTrigger"
+    }
+  },
+  "self": {
+    "id": "0c343a4d-0eaa-4c20-980b-098c8d2205ea",
+    "name": "Template: Quorum Based Approval of Access Request",
+    "type": "WORKFLOW"
+  },
+  "version": 1
+}

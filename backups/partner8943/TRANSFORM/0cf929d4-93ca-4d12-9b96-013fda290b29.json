@@ -1,0 +1,19 @@
+{
+  "jwsHeader": null,
+  "jwsSignature": null,
+  "object": {
+    "attributes": {
+      "value": "133643044190000000"
+    },
+    "id": "0cf929d4-93ca-4d12-9b96-013fda290b29",
+    "internal": false,
+    "name": "lastLogonTimestamp_menor_45_dias",
+    "type": "static"
+  },
+  "self": {
+    "id": "0cf929d4-93ca-4d12-9b96-013fda290b29",
+    "name": "lastLogonTimestamp_menor_45_dias",
+    "type": "TRANSFORM"
+  },
+  "version": 1
+}

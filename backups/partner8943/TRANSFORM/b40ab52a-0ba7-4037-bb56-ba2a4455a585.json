@@ -1,0 +1,26 @@
+{
+  "jwsHeader": null,
+  "jwsSignature": null,
+  "object": {
+    "attributes": {
+      "prueba": {
+        "attributes": {
+          "value": "MACARENA lÓPEZ sánchez"
+        },
+        "type": "static"
+      },
+      "requiresPeriodicRefresh": "true",
+      "value": "#set($words = $prueba.split(\" \"))#set($resultado = \"\")#foreach($w in $words)#set($word = $w.trim())#if($word != \"\")#set($lower = $word.toLowerCase())#if($foreach.index == 0)#set($cap = $lower.substring(0,1).toUpperCase() + $lower.substring(1))#elseif($lower == \"del\" || $lower == \"de\" || $lower == \"von\" || $lower == \"la\" || $lower == \"y\" || $lower == \"of\" || $lower == \"los\")#set($cap = $lower)#elseif($lower == \"mac\")#set($cap = \"Mac\")#elseif($lower == \"mc\")#set($cap = \"Mc\")#else#set($cap = $lower.substring(0,1).toUpperCase() + $lower.substring(1))#end#if($resultado == \"\")#set($resultado = $cap)#else#set($resultado = \"$resultado $cap\")#end#end#end$resultado"
+    },
+    "id": "b40ab52a-0ba7-4037-bb56-ba2a4455a585",
+    "internal": false,
+    "name": "TEST_NAMES",
+    "type": "static"
+  },
+  "self": {
+    "id": "b40ab52a-0ba7-4037-bb56-ba2a4455a585",
+    "name": "TEST_NAMES",
+    "type": "TRANSFORM"
+  },
+  "version": 1
+}

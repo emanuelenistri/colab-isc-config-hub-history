@@ -1,0 +1,70 @@
+{
+  "jwsHeader": null,
+  "jwsSignature": null,
+  "object": {
+    "created": "2026-10-28T10:23:27.654043197Z",
+    "creator": {
+      "id": "1dff61379fdc41fbac00c7f5ae992e23",
+      "name": "cjoglar",
+      "type": "IDENTITY"
+    },
+    "definition": {
+      "start": "Send Email",
+      "steps": {
+        "End Step - Success": {
+          "actionId": "sp:operator-success",
+          "displayName": "",
+          "type": "success"
+        },
+        "Send Email": {
+          "actionId": "sp:send-email",
+          "attributes": {
+            "body": "<p>Buenos dias,<br>Se ha inciado el formulario de creacion de Externos.</p>\n<p>El nombre de usuario es {{$.trigger.formData.nombre}}</p>\n<p>Un saludo,</p>",
+            "context": {},
+            "from": null,
+            "recipientEmailList": [
+              "cjoglar@sia.es"
+            ],
+            "replyTo": null,
+            "subject": "Prueba Inicio Formulario"
+          },
+          "displayName": "",
+          "nextStep": "End Step - Success",
+          "type": "action",
+          "versionNumber": 2
+        }
+      }
+    },
+    "description": "",
+    "enabled": true,
+    "id": "69659945-02a9-4945-9b4f-78f292e1122b",
+    "modified": "2026-10-29T06:33:04.999059812Z",
+    "modifiedBy": {
+      "id": "06c1619bb4ad4fa3b793330ced2408fe",
+      "name": "rcgalvez",
+      "type": "IDENTITY"
+    },
+    "name": "Test Form",
+    "owner": {
+      "id": "1dff61379fdc41fbac00c7f5ae992e23",
+      "name": "cjoglar",
+      "type": "IDENTITY"
+    },
+    "trigger": {
+      "attributes": {
+        "filter.$": "$[?(@.formDefinitionId == '0b85f0f3-391e-4e0c-b4fa-5c5311a4c1da')]",
+        "formDefinitionId": "0b85f0f3-391e-4e0c-b4fa-5c5311a4c1da",
+        "id": "sp:form-submitted",
+        "integrationId": null
+      },
+      "mode": "basic",
+      "type": "EVENT"
+    }
+  },
+  "self": {
+    "id": "69659945-02a9-4945-9b4f-78f292e1122b",
+    "name": "Test Form",
+    "type": "WORKFLOW"
+  },
+  "version": 1
+}

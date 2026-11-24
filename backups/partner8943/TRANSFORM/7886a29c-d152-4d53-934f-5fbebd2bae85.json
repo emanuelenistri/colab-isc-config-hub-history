@@ -1,0 +1,51 @@
+{
+  "jwsHeader": null,
+  "jwsSignature": null,
+  "object": {
+    "attributes": {
+      "expression": "$userId eq nulo",
+      "negativeCondition": "$userId",
+      "positiveCondition": "$userIdCalculado",
+      "userId": {
+        "attributes": {
+          "values": [
+            "nulo",
+            {
+              "attributes": {
+                "input": {
+                  "attributes": {
+                    "name": "uid"
+                  },
+                  "type": "identityAttribute"
+                }
+              },
+              "type": "upper"
+            }
+          ]
+        },
+        "type": "firstValid"
+      },
+      "userIdCalculado": {
+        "attributes": {
+          "input": {
+            "attributes": {
+              "id": "displayName"
+            },
+            "type": "reference"
+          }
+        },
+        "type": "upper"
+      }
+    },
+    "id": "7886a29c-d152-4d53-934f-5fbebd2bae85",
+    "internal": false,
+    "name": "Transform-UIDLower",
+    "type": "conditional"
+  },
+  "self": {
+    "id": "7886a29c-d152-4d53-934f-5fbebd2bae85",
+    "name": "Transform-UIDLower",
+    "type": "TRANSFORM"
+  },
+  "version": 1
+}

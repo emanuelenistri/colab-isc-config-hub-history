@@ -1,0 +1,56 @@
+{
+  "jwsHeader": null,
+  "jwsSignature": null,
+  "object": {
+    "attributes": {
+      "assignedOffice": {
+        "attributes": {
+          "attributeName": "assignedOffice",
+          "sourceName": "BCC-Source-Internal"
+        },
+        "type": "accountAttribute"
+      },
+      "bbc_dt_sscc": {
+        "attributes": {
+          "value": "cajamar.int/Cajamar/DT/"
+        },
+        "type": "static"
+      },
+      "officeType": {
+        "attributes": {
+          "input": {
+            "attributes": {
+              "attributeName": "officeType",
+              "sourceName": "BCC-Source-Internal"
+            },
+            "type": "accountAttribute"
+          }
+        },
+        "type": "upper"
+      },
+      "oficina_red": {
+        "attributes": {
+          "value": "cajamar.int/Cajamar/Oficinas/"
+        },
+        "type": "static"
+      },
+      "participada": {
+        "attributes": {
+          "value": "cajamar.int/Cajamar/EMPRESAS-PARTICIPADAS"
+        },
+        "type": "static"
+      },
+      "value": "#if($officeType == \"PARTICIPADA\")$participada#elseif($officeType == \"BCC\" || $officeType == \"DT\" || $officeType == \"SSCC\")$bbc_dt_sscc$assignedOffice#elseif($officeType == \"OFICINA RED\")$oficina_red$assignedOffice \"-00\"#end"
+    },
+    "id": "1a34e778-aaa5-4cb0-8ac9-20a19ff75850",
+    "internal": false,
+    "name": "DN_internal",
+    "type": "static"
+  },
+  "self": {
+    "id": "1a34e778-aaa5-4cb0-8ac9-20a19ff75850",
+    "name": "DN_internal",
+    "type": "TRANSFORM"
+  },
+  "version": 1
+}

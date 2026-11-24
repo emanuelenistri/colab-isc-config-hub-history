@@ -1,0 +1,21 @@
+{
+  "jwsHeader": null,
+  "jwsSignature": null,
+  "object": {
+    "attributes": {
+      "expression": "now",
+      "input": {},
+      "roundUp": true
+    },
+    "id": "2cc68542-5405-419e-949b-40f83ba5f05a",
+    "internal": false,
+    "name": "Z Prueba dateMath",
+    "type": "dateMath"
+  },
+  "self": {
+    "id": "2cc68542-5405-419e-949b-40f83ba5f05a",
+    "name": "Z Prueba dateMath",
+    "type": "TRANSFORM"
+  },
+  "version": 1
+}

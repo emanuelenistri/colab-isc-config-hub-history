@@ -1,0 +1,79 @@
+{
+  "jwsHeader": null,
+  "jwsSignature": null,
+  "object": {
+    "created": "2024-10-08T10:52:17.884453294Z",
+    "creator": {
+      "id": "06c1619bb4ad4fa3b793330ced2408fe",
+      "name": "rcgalvez",
+      "type": "IDENTITY"
+    },
+    "definition": {
+      "start": "Approve Access Request",
+      "steps": {
+        "Approve Access Request": {
+          "actionId": "sp:approve-request",
+          "attributes": {
+            "approvalId.$": "$.trigger.accessRequestId",
+            "comment": "Comentario de prueba."
+          },
+          "displayName": "",
+          "nextStep": "Send Email",
+          "type": "action",
+          "versionNumber": 1
+        },
+        "End Step - Success": {
+          "actionId": "sp:operator-success",
+          "displayName": "",
+          "type": "success"
+        },
+        "Send Email": {
+          "actionId": "sp:send-email",
+          "attributes": {
+            "body": "<p>${body}</p>",
+            "context": {
+              "body.$": "$"
+            },
+            "from": null,
+            "recipientEmailList": [
+              "cjoglar@sia.es"
+            ],
+            "subject": "Test"
+          },
+          "displayName": "",
+          "nextStep": "End Step - Success",
+          "type": "action",
+          "versionNumber": 2
+        }
+      }
+    },
+    "description": "",
+    "enabled": false,
+    "id": "9f20721f-fa85-4a80-bc92-685093e85ae0",
+    "modified": "2025-11-05T15:15:53.084662617Z",
+    "modifiedBy": {
+      "id": "1dff61379fdc41fbac00c7f5ae992e23",
+      "name": "cjoglar",
+      "type": "IDENTITY"
+    },
+    "name": "Dynamic Approver Raul",
+    "owner": {
+      "id": "06c1619bb4ad4fa3b793330ced2408fe",
+      "name": "rcgalvez",
+      "type": "IDENTITY"
+    },
+    "trigger": {
+      "attributes": {
+        "id": "idn:access-request-trigger",
+        "integrationId": null
+      },
+      "type": "AccessRequestTrigger"
+    }
+  },
+  "self": {
+    "id": "9f20721f-fa85-4a80-bc92-685093e85ae0",
+    "name": "Dynamic Approver Raul",
+    "type": "WORKFLOW"
+  },
+  "version": 1
+}

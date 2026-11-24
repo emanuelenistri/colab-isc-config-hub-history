@@ -1,0 +1,27 @@
+{
+  "jwsHeader": null,
+  "jwsSignature": null,
+  "object": {
+    "attributes": {
+      "values": [
+        "-00",
+        {
+          "attributes": {
+            "name": "assignedOffice"
+          },
+          "type": "identityAttribute"
+        }
+      ]
+    },
+    "id": "d69deaa7-29d7-41ba-ac66-50d43ed4ff32",
+    "internal": false,
+    "name": "Z_concat Oficina + -00",
+    "type": "concat"
+  },
+  "self": {
+    "id": "d69deaa7-29d7-41ba-ac66-50d43ed4ff32",
+    "name": "Z_concat Oficina + -00",
+    "type": "TRANSFORM"
+  },
+  "version": 1
+}

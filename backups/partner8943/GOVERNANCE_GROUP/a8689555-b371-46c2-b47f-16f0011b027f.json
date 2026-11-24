@@ -1,0 +1,39 @@
+{
+  "jwsHeader": null,
+  "jwsSignature": null,
+  "object": {
+    "connectionCount": 0,
+    "connections": null,
+    "created": null,
+    "description": "Example for Governace Groups",
+    "id": "a8689555-b371-46c2-b47f-16f0011b027f",
+    "memberCount": 0,
+    "members": [
+      {
+        "id": "bc3935cf474241e6a3c5bc591de2f024",
+        "name": "aga4",
+        "type": "IDENTITY"
+      },
+      {
+        "id": "d024cdc01088491194e571464f97b308",
+        "name": "dmedinay",
+        "type": "IDENTITY"
+      }
+    ],
+    "modified": null,
+    "name": "Test Governance Groups",
+    "owner": {
+      "displayName": null,
+      "emailAddress": null,
+      "id": "d024cdc01088491194e571464f97b308",
+      "name": "dmedinay",
+      "type": "IDENTITY"
+    }
+  },
+  "self": {
+    "id": "a8689555-b371-46c2-b47f-16f0011b027f",
+    "name": "Test Governance Groups",
+    "type": "GOVERNANCE_GROUP"
+  },
+  "version": 1
+}

@@ -1,0 +1,23 @@
+{
+  "jwsHeader": null,
+  "jwsSignature": null,
+  "object": {
+    "description": "Managed by Workflows",
+    "enabled": false,
+    "id": "ddd4eb96-923d-42b6-8161-432d55bdffd4",
+    "name": "wfprueba01",
+    "responseDeadline": "PT1H",
+    "triggerId": "idn:identity-created",
+    "triggerName": "Identity Created",
+    "type": "WORKFLOW",
+    "workflowConfig": {
+      "workflowId": "ddd4eb96-923d-42b6-8161-432d55bdffd4"
+    }
+  },
+  "self": {
+    "id": "ddd4eb96-923d-42b6-8161-432d55bdffd4",
+    "name": "wfprueba01",
+    "type": "TRIGGER_SUBSCRIPTION"
+  },
+  "version": 1
+}

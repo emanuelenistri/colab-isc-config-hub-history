@@ -1,0 +1,24 @@
+{
+  "jwsHeader": null,
+  "jwsSignature": null,
+  "object": {
+    "description": "Managed by Workflows",
+    "enabled": false,
+    "filter": "$.changes[?(@.attribute == \"cloudLifecycleState\")]",
+    "id": "b70a202f-6543-4d1d-8030-b44c27c0220f",
+    "name": "Prueba deshabilitar una cuenta",
+    "responseDeadline": "PT1H",
+    "triggerId": "idn:identity-attributes-changed",
+    "triggerName": "Identity Attributes Changed",
+    "type": "WORKFLOW",
+    "workflowConfig": {
+      "workflowId": "b70a202f-6543-4d1d-8030-b44c27c0220f"
+    }
+  },
+  "self": {
+    "id": "b70a202f-6543-4d1d-8030-b44c27c0220f",
+    "name": "Prueba deshabilitar una cuenta",
+    "type": "TRIGGER_SUBSCRIPTION"
+  },
+  "version": 1
+}

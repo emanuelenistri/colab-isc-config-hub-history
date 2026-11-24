@@ -1,0 +1,40 @@
+{
+  "jwsHeader": null,
+  "jwsSignature": null,
+  "object": {
+    "accessActionConfiguration": {
+      "removeAllAccessEnabled": false
+    },
+    "accessProfileIds": [],
+    "accessProfileRefs": null,
+    "accountActionRefs": [],
+    "accountActions": [],
+    "created": "2025-02-25T10:37:33.257Z",
+    "description": null,
+    "emailNotificationOption": {
+      "emailAddressList": [],
+      "notifyAllAdmins": false,
+      "notifyManagers": false,
+      "notifySpecificUsers": false
+    },
+    "enabled": true,
+    "id": "8ee11f448fe44a21bc5b3f544fce8d3d",
+    "identityCount": 0,
+    "identityProfileRef": {
+      "id": "34a7519df3c641178b4375cc0c9fdc29",
+      "name": "NERM TEST",
+      "type": "IDENTITY_PROFILE"
+    },
+    "identityState": "INACTIVE_SHORT_TERM",
+    "modified": "2025-02-25T11:18:28.840Z",
+    "name": "Suspendido",
+    "priority": null,
+    "technicalName": "suspendido"
+  },
+  "self": {
+    "id": "8ee11f448fe44a21bc5b3f544fce8d3d",
+    "name": "Suspendido",
+    "type": "LIFECYCLE_STATE"
+  },
+  "version": 1
+}

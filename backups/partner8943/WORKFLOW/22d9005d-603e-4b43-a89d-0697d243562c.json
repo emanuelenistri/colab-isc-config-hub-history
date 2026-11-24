@@ -1,0 +1,128 @@
+{
+  "jwsHeader": null,
+  "jwsSignature": null,
+  "object": {
+    "created": "2024-06-12T15:14:42.932162012Z",
+    "creator": {
+      "id": "1dff61379fdc41fbac00c7f5ae992e23",
+      "name": "cjoglar",
+      "type": "IDENTITY"
+    },
+    "definition": {
+      "start": "Get List of Identities",
+      "steps": {
+        "End Step - Success": {
+          "displayName": "",
+          "type": "success"
+        },
+        "Get Accounts": {
+          "actionId": "sp:get-accounts",
+          "attributes": {
+            "filterCriteria": "identityId",
+            "getAccountsBy": "filters",
+            "identity": "98a4f70392494390910051f076090d69",
+            "operator": "in",
+            "valueList.$": "$.getListOfIdentities.identities[*].id"
+          },
+          "displayName": "",
+          "nextStep": "Loop",
+          "type": "action",
+          "versionNumber": 1
+        },
+        "Get List of Identities": {
+          "actionId": "sp:get-identities",
+          "attributes": {
+            "inputQuery": "attributes.cloudLifecycleState:Active",
+            "inputSavedSearch": null,
+            "searchBy": "searchQuery"
+          },
+          "displayName": "",
+          "nextStep": "Get Accounts",
+          "type": "action",
+          "versionNumber": 2
+        },
+        "Loop": {
+          "actionId": "sp:loop:iterator",
+          "attributes": {
+            "context.$": "$",
+            "input.$": "$.getAccounts.accounts",
+            "start": "Compare Strings",
+            "steps": {
+              "Compare Strings": {
+                "choiceList": [
+                  {
+                    "comparator": "StringEquals",
+                    "nextStep": "Manage Accounts",
+                    "variableA.$": "$.loop.loopInput.cloudLifecycleState",
+                    "variableB": "active"
+                  }
+                ],
+                "defaultStep": "End Step - Failure",
+                "displayName": "",
+                "type": "choice"
+              },
+              "End Step - Failure": {
+                "displayName": "",
+                "failureName": "bajoyayo",
+                "type": "failure"
+              },
+              "End Step - Success 1": {
+                "displayName": "",
+                "type": "success"
+              },
+              "Manage Accounts": {
+                "actionId": "sp:manage-account",
+                "attributes": {
+                  "accountIds.$": "$.loop.loopInput[*].id",
+                  "operation": "disable"
+                },
+                "displayName": "",
+                "nextStep": "End Step - Success 1",
+                "type": "action",
+                "versionNumber": 1
+              }
+            }
+          },
+          "displayName": "",
+          "nextStep": "End Step - Success",
+          "type": "action",
+          "versionNumber": 1
+        }
+      }
+    },
+    "description": "No",
+    "enabled": false,
+    "id": "22d9005d-603e-4b43-a89d-0697d243562c",
+    "modified": "2024-06-12T15:20:01.763775814Z",
+    "modifiedBy": {
+      "id": "1dff61379fdc41fbac00c7f5ae992e23",
+      "name": "cjoglar",
+      "type": "IDENTITY"
+    },
+    "name": "CJP Test",
+    "owner": {
+      "id": "1dff61379fdc41fbac00c7f5ae992e23",
+      "name": "cjoglar",
+      "type": "IDENTITY"
+    },
+    "trigger": {
+      "attributes": {
+        "cronString": "0 0 * * *",
+        "dailyTimes": [
+          "1969-12-31T23:00:00.000Z"
+        ],
+        "frequency": "daily",
+        "id": "idn:cron-schedule",
+        "integrationId": null,
+        "timeZone": "Europe/Madrid"
+      },
+      "type": "SCHEDULED"
+    }
+  },
+  "self": {
+    "id": "22d9005d-603e-4b43-a89d-0697d243562c",
+    "name": "CJP Test",
+    "type": "WORKFLOW"
+  },
+  "version": 1
+}

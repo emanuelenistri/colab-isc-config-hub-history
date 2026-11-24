@@ -1,0 +1,98 @@
+{
+  "jwsHeader": null,
+  "jwsSignature": null,
+  "object": {
+    "created": "2025-11-05T15:27:21.075440228Z",
+    "creator": {
+      "id": "1dff61379fdc41fbac00c7f5ae992e23",
+      "name": "cjoglar",
+      "type": "IDENTITY"
+    },
+    "definition": {
+      "start": "Send Email",
+      "steps": {
+        "End Step - Success": {
+          "actionId": "sp:operator-success",
+          "displayName": "",
+          "type": "success"
+        },
+        "HTTP Request": {
+          "actionId": "sp:http",
+          "attributes": {
+            "authenticationType": "OAuth",
+            "jsonPatchRequestBody": null,
+            "jsonRequestBody": {
+              "output": {
+                "id": "826cf702-2147-47aa-845c-4eaaa9df3f2f",
+                "name": "Test CJP",
+                "type": "GOVERNANCE_GROUP"
+              },
+              "secret": "{{$.trigger._metadata.secret}}"
+            },
+            "method": "post",
+            "oAuthClientId": "cdcc941bb12042709244f2d924227e91",
+            "oAuthClientSecret": "",
+            "oAuthCredentialLocation": "oAuthInHeader",
+            "oAuthTokenUrl": "https://partner8943.api.identitynow-demo.com/oauth/token",
+            "requestContentType": "json",
+            "requestHeaders": {
+              "content-type": "application/json"
+            },
+            "url.$": "$.trigger._metadata.callbackURL"
+          },
+          "displayName": "",
+          "nextStep": "End Step - Success",
+          "type": "action",
+          "versionNumber": 2
+        },
+        "Send Email": {
+          "actionId": "sp:send-email",
+          "attributes": {
+            "body": "<p>${body}</p>\n<p>{{$.trigger._metadata.callbackURL}}</p>\n<p>{{$.trigger}}</p>",
+            "context": {
+              "body.$": "$"
+            },
+            "from": null,
+            "recipientEmailList": [
+              "cjoglar@minsait.com"
+            ],
+            "replyTo": null,
+            "subject": "Test"
+          },
+          "displayName": "",
+          "nextStep": "HTTP Request",
+          "type": "action",
+          "versionNumber": 2
+        }
+      }
+    },
+    "description": "Prueba",
+    "enabled": false,
+    "id": "2514d451-49ab-4b7a-80b8-f2c77edd00de",
+    "modified": "2025-11-05T15:27:21.075440228Z",
+    "modifiedBy": {
+      "id": "1dff61379fdc41fbac00c7f5ae992e23",
+      "name": "cjoglar",
+      "type": "IDENTITY"
+    },
+    "name": "Copy of Dynamic Approval Dani",
+    "owner": {
+      "id": "1dff61379fdc41fbac00c7f5ae992e23",
+      "name": "cjoglar",
+      "type": "IDENTITY"
+    },
+    "trigger": {
+      "attributes": {
+        "id": "idn:external-http",
+        "integrationId": null
+      },
+      "type": "EXTERNAL"
+    }
+  },
+  "self": {
+    "id": "2514d451-49ab-4b7a-80b8-f2c77edd00de",
+    "name": "Copy of Dynamic Approval Dani",
+    "type": "WORKFLOW"
+  },
+  "version": 1
+}

@@ -1,0 +1,23 @@
+{
+  "jwsHeader": null,
+  "jwsSignature": null,
+  "object": {
+    "description": "Managed by Workflows",
+    "enabled": false,
+    "id": "605cc41d-ce98-47f4-bd00-9942f36646d3",
+    "name": "Becarios con mismo DNI se envía email al manager de la identidad creada",
+    "responseDeadline": "PT1H",
+    "triggerId": "idn:identity-created",
+    "triggerName": "Identity Created",
+    "type": "WORKFLOW",
+    "workflowConfig": {
+      "workflowId": "605cc41d-ce98-47f4-bd00-9942f36646d3"
+    }
+  },
+  "self": {
+    "id": "605cc41d-ce98-47f4-bd00-9942f36646d3",
+    "name": "Becarios con mismo DNI se envía email al manager de la identidad creada",
+    "type": "TRIGGER_SUBSCRIPTION"
+  },
+  "version": 1
+}

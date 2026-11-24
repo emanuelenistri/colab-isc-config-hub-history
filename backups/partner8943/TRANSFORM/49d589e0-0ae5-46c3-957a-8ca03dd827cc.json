@@ -1,0 +1,125 @@
+{
+  "jwsHeader": null,
+  "jwsSignature": null,
+  "object": {
+    "attributes": {
+      "values": [
+        " ",
+        " ",
+        " ",
+        {
+          "attributes": {
+            "values": [
+              "",
+              {
+                "attributes": {
+                  "attributeName": "dni",
+                  "sourceName": "BCC-Source-External"
+                },
+                "type": "accountAttribute"
+              }
+            ]
+          },
+          "type": "firstValid"
+        },
+        {
+          "attributes": {
+            "values": [
+              "",
+              {
+                "attributes": {
+                  "attributeName": "firstName",
+                  "sourceName": "BCC-Source-External"
+                },
+                "type": "accountAttribute"
+              },
+              {
+                "attributes": {
+                  "attributeName": "firstName",
+                  "sourceName": "BCC-Source-Internal"
+                },
+                "type": "accountAttribute"
+              },
+              {
+                "attributes": {
+                  "attributeName": "firstname_ne_attribute",
+                  "sourceName": "NERM Test 2"
+                },
+                "type": "accountAttribute"
+              }
+            ]
+          },
+          "type": "firstValid"
+        },
+        {
+          "attributes": {
+            "values": [
+              "",
+              {
+                "attributes": {
+                  "attributeName": "lastName",
+                  "sourceName": "BCC-Source-External"
+                },
+                "type": "accountAttribute"
+              },
+              {
+                "attributes": {
+                  "attributeName": "lastName",
+                  "sourceName": "BCC-Source-Internal"
+                },
+                "type": "accountAttribute"
+              },
+              {
+                "attributes": {
+                  "attributeName": "lastname_ne_attribute",
+                  "sourceName": "NERM Test 2"
+                },
+                "type": "accountAttribute"
+              }
+            ]
+          },
+          "type": "firstValid"
+        },
+        {
+          "attributes": {
+            "values": [
+              "",
+              {
+                "attributes": {
+                  "attributeName": "secondLastName",
+                  "sourceName": "BCC-Source-External"
+                },
+                "type": "accountAttribute"
+              },
+              {
+                "attributes": {
+                  "attributeName": "secondLastName",
+                  "sourceName": "BCC-Source-Internal"
+                },
+                "type": "accountAttribute"
+              },
+              {
+                "attributes": {
+                  "attributeName": "secondlastname_ne_attribute",
+                  "sourceName": "NERM Test 2"
+                },
+                "type": "accountAttribute"
+              }
+            ]
+          },
+          "type": "firstValid"
+        }
+      ]
+    },
+    "id": "49d589e0-0ae5-46c3-957a-8ca03dd827cc",
+    "internal": false,
+    "name": "displayName",
+    "type": "concat"
+  },
+  "self": {
+    "id": "49d589e0-0ae5-46c3-957a-8ca03dd827cc",
+    "name": "displayName",
+    "type": "TRANSFORM"
+  },
+  "version": 1
+}

@@ -1,0 +1,24 @@
+{
+  "jwsHeader": null,
+  "jwsSignature": null,
+  "object": {
+    "description": "Managed by Workflows",
+    "enabled": true,
+    "filter": "$[?(@.workflowId == '4c2398f0-bd6f-4bcf-813f-c83f3e43bd4f')]",
+    "id": "4c2398f0-bd6f-4bcf-813f-c83f3e43bd4f",
+    "name": "Test launch",
+    "responseDeadline": "PT1H",
+    "triggerId": "idn:interactive-process-launched",
+    "triggerName": "Interactive Trigger",
+    "type": "WORKFLOW",
+    "workflowConfig": {
+      "workflowId": "4c2398f0-bd6f-4bcf-813f-c83f3e43bd4f"
+    }
+  },
+  "self": {
+    "id": "4c2398f0-bd6f-4bcf-813f-c83f3e43bd4f",
+    "name": "Test launch",
+    "type": "TRIGGER_SUBSCRIPTION"
+  },
+  "version": 1
+}

@@ -1,0 +1,35 @@
+{
+  "jwsHeader": null,
+  "jwsSignature": null,
+  "object": {
+    "attributes": {
+      "values": [
+        "Vacio",
+        {
+          "attributes": {
+            "expression": "$officeType eq 'SSCC'",
+            "negativeCondition": "No oficina",
+            "officeType": {
+              "attributes": {
+                "name": "officeType"
+              },
+              "type": "identityAttribute"
+            },
+            "positiveCondition": "Oficina"
+          },
+          "type": "conditional"
+        }
+      ]
+    },
+    "id": "e26b28b9-c839-4f44-8eaf-dca3c348c435",
+    "internal": false,
+    "name": "Z OfficeType 03 V.2",
+    "type": "firstValid"
+  },
+  "self": {
+    "id": "e26b28b9-c839-4f44-8eaf-dca3c348c435",
+    "name": "Z OfficeType 03 V.2",
+    "type": "TRANSFORM"
+  },
+  "version": 1
+}

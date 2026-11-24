@@ -1,0 +1,62 @@
+{
+  "jwsHeader": null,
+  "jwsSignature": null,
+  "object": {
+    "attributes": {
+      "ignoreErrors": true,
+      "values": [
+        "",
+        {
+          "attributes": {
+            "values": [
+              "@",
+              {
+                "attributes": {
+                  "begin": 0,
+                  "end": {
+                    "attributes": {
+                      "input": {
+                        "attributes": {
+                          "attributeName": "givenName",
+                          "sourceName": "Active Directory LAB SIA"
+                        },
+                        "type": "accountAttribute"
+                      },
+                      "substring": "@"
+                    },
+                    "type": "indexOf"
+                  },
+                  "input": {
+                    "attributes": {
+                      "attributeName": "givenName",
+                      "sourceName": "Active Directory LAB SIA"
+                    },
+                    "type": "accountAttribute"
+                  }
+                },
+                "type": "substring"
+              },
+              {
+                "attributes": {
+                  "id": "emailDomain"
+                },
+                "type": "reference"
+              }
+            ]
+          },
+          "type": "concat"
+        }
+      ]
+    },
+    "id": "6de8b47b-4ebf-4230-abd9-327a257e2d5c",
+    "internal": false,
+    "name": "Transform-mail-test-firstValid",
+    "type": "firstValid"
+  },
+  "self": {
+    "id": "6de8b47b-4ebf-4230-abd9-327a257e2d5c",
+    "name": "Transform-mail-test-firstValid",
+    "type": "TRANSFORM"
+  },
+  "version": 1
+}

@@ -1,0 +1,24 @@
+{
+  "jwsHeader": null,
+  "jwsSignature": null,
+  "object": {
+    "description": "Managed by Workflows",
+    "enabled": false,
+    "filter": "$.changes[?(@.attribute == \"email\")]",
+    "id": "8ec17474-0d73-4899-b985-2830c9ddfe5a",
+    "name": "Copy of test cjp",
+    "responseDeadline": "PT1H",
+    "triggerId": "idn:identity-attributes-changed",
+    "triggerName": "Identity Attributes Changed",
+    "type": "WORKFLOW",
+    "workflowConfig": {
+      "workflowId": "8ec17474-0d73-4899-b985-2830c9ddfe5a"
+    }
+  },
+  "self": {
+    "id": "8ec17474-0d73-4899-b985-2830c9ddfe5a",
+    "name": "Copy of test cjp",
+    "type": "TRIGGER_SUBSCRIPTION"
+  },
+  "version": 1
+}

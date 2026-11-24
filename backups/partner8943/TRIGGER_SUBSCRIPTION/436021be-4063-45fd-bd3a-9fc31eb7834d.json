@@ -1,0 +1,23 @@
+{
+  "jwsHeader": null,
+  "jwsSignature": null,
+  "object": {
+    "description": "Managed by Workflows",
+    "enabled": false,
+    "id": "436021be-4063-45fd-bd3a-9fc31eb7834d",
+    "name": "OnBoarding New Contractor",
+    "responseDeadline": "PT1H",
+    "triggerId": "idn:identity-created",
+    "triggerName": "Identity Created",
+    "type": "WORKFLOW",
+    "workflowConfig": {
+      "workflowId": "436021be-4063-45fd-bd3a-9fc31eb7834d"
+    }
+  },
+  "self": {
+    "id": "436021be-4063-45fd-bd3a-9fc31eb7834d",
+    "name": "OnBoarding New Contractor",
+    "type": "TRIGGER_SUBSCRIPTION"
+  },
+  "version": 1
+}

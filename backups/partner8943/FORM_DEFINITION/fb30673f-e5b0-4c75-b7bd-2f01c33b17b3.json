@@ -1,0 +1,196 @@
+{
+  "jwsHeader": null,
+  "jwsSignature": null,
+  "object": {
+    "created": "2026-11-03T07:38:09.765407855Z",
+    "description": "Formulario que modifica usuarios",
+    "formConditions": [
+      {
+        "effects": [
+          {
+            "config": {
+              "defaultValueLabel": "apellido",
+              "element": "1714607939596"
+            },
+            "effectType": "SET_DEFAULT_VALUE"
+          }
+        ],
+        "ruleOperator": "AND",
+        "rules": [
+          {
+            "operator": "NOT_EM",
+            "source": "apellido",
+            "sourceType": "INPUT",
+            "value": "",
+            "valueType": "STRING"
+          }
+        ]
+      },
+      {
+        "effects": [
+          {
+            "config": {
+              "defaultValueLabel": "correo",
+              "element": "1714607939596"
+            },
+            "effectType": "SET_DEFAULT_VALUE"
+          }
+        ],
+        "ruleOperator": "AND",
+        "rules": [
+          {
+            "operator": "NOT_EM",
+            "source": "correo",
+            "sourceType": "ELEMENT",
+            "value": "",
+            "valueType": "STRING"
+          }
+        ]
+      },
+      {
+        "effects": [
+          {
+            "config": {
+              "defaultValueLabel": "nombre",
+              "element": "1183726340066"
+            },
+            "effectType": "SET_DEFAULT_VALUE"
+          }
+        ],
+        "ruleOperator": "AND",
+        "rules": [
+          {
+            "operator": "NOT_EM",
+            "source": "nombre",
+            "sourceType": "INPUT",
+            "value": "",
+            "valueType": "STRING"
+          }
+        ]
+      }
+    ],
+    "formElements": [
+      {
+        "config": {
+          "alignment": "LEFT",
+          "description": "",
+          "formElements": [
+            {
+              "config": {
+                "default": "",
+                "description": "",
+                "helpText": "",
+                "label": "Apellido",
+                "placeholder": "",
+                "required": false
+              },
+              "elementType": "TEXT",
+              "id": "1714607939596",
+              "key": "apellido",
+              "validations": []
+            },
+            {
+              "config": {
+                "default": "",
+                "description": "",
+                "helpText": "",
+                "label": "Correos",
+                "placeholder": "",
+                "required": false
+              },
+              "elementType": "EMAIL",
+              "id": "445778702769",
+              "key": "correo",
+              "validations": [
+                {
+                  "validationType": "EMAIL"
+                }
+              ]
+            },
+            {
+              "config": {
+                "default": "",
+                "description": "",
+                "helpText": "",
+                "label": "NIF",
+                "placeholder": "",
+                "required": false
+              },
+              "elementType": "TEXT",
+              "id": "327714524956",
+              "key": "nif",
+              "validations": []
+            },
+            {
+              "config": {
+                "default": "",
+                "description": "",
+                "helpText": "",
+                "label": "Nombre",
+                "placeholder": "",
+                "required": false
+              },
+              "elementType": "TEXT",
+              "id": "1183726340066",
+              "key": "nombre",
+              "validations": []
+            }
+          ],
+          "label": "Datos del usuario",
+          "labelStyle": "h2",
+          "showLabel": true
+        },
+        "elementType": "SECTION",
+        "id": "893812496807",
+        "validations": []
+      }
+    ],
+    "formInput": [
+      {
+        "description": "",
+        "id": "apellido",
+        "label": "apellido",
+        "type": "STRING"
+      },
+      {
+        "description": "",
+        "id": "correo",
+        "label": "correo",
+        "type": "STRING"
+      },
+      {
+        "description": "",
+        "id": "nif",
+        "label": "NIF",
+        "type": "STRING"
+      },
+      {
+        "description": "",
+        "id": "nombre",
+        "label": "nombre",
+        "type": "STRING"
+      }
+    ],
+    "id": "fb30673f-e5b0-4c75-b7bd-2f01c33b17b3",
+    "modified": "2026-11-04T11:32:18.255858927Z",
+    "name": "Test Formulario Modificación 2",
+    "owner": {
+      "id": "06c1619bb4ad4fa3b793330ced2408fe",
+      "name": "rcgalvez",
+      "type": "IDENTITY"
+    },
+    "usedBy": [
+      {
+        "id": "504b7802-121b-42f5-bcc9-bc8a4a16d542",
+        "name": "Test Raul Formularios Modificacion",
+        "type": "WORKFLOW"
+      }
+    ]
+  },
+  "self": {
+    "id": "fb30673f-e5b0-4c75-b7bd-2f01c33b17b3",
+    "name": "Test Formulario Modificación 2",
+    "type": "FORM_DEFINITION"
+  },
+  "version": 1
+}

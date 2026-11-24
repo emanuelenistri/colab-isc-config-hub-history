@@ -1,0 +1,23 @@
+{
+  "jwsHeader": null,
+  "jwsSignature": null,
+  "object": {
+    "description": "Managed by Workflows",
+    "enabled": false,
+    "id": "a709e8a7-8367-4514-8388-84be3ac0b10d",
+    "name": "Service Now- ticket generation Example",
+    "responseDeadline": "PT1H",
+    "triggerId": "idn:access-request-post-approval",
+    "triggerName": "Access Request Decision",
+    "type": "WORKFLOW",
+    "workflowConfig": {
+      "workflowId": "a709e8a7-8367-4514-8388-84be3ac0b10d"
+    }
+  },
+  "self": {
+    "id": "a709e8a7-8367-4514-8388-84be3ac0b10d",
+    "name": "Service Now- ticket generation Example",
+    "type": "TRIGGER_SUBSCRIPTION"
+  },
+  "version": 1
+}

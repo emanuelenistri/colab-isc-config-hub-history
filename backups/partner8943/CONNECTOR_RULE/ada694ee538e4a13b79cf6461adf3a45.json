@@ -1,0 +1,54 @@
+{
+  "jwsHeader": null,
+  "jwsSignature": null,
+  "object": {
+    "attributes": {
+      "sourceVersion": "1.0"
+    },
+    "created": "2024-10-10T11:58:32.744Z",
+    "description": "This rule is used by the  Web Services connector before performing any operation like testconnection, aggregation, etc.",
+    "id": "ada694ee538e4a13b79cf6461adf3a45",
+    "modified": "2024-10-10T11:58:32.744Z",
+    "name": "Test Rule",
+    "signature": {
+      "input": [
+        {
+          "description": "REST Client Object",
+          "name": "restClient",
+          "type": null
+        },
+        {
+          "description": "The application whose data file is being processed.",
+          "name": "application",
+          "type": null
+        },
+        {
+          "description": "The current request information contain header, body, context url, method type, response attribute map,\n          successful response code\n        ",
+          "name": "requestEndPoint",
+          "type": null
+        },
+        {
+          "description": "earlier response object ",
+          "name": "oldResponseMap",
+          "type": null
+        }
+      ],
+      "output": {
+        "description": "Updated EndPoint Object",
+        "name": "EndPoint",
+        "type": null
+      }
+    },
+    "sourceCode": {
+      "script": "import java.io.BufferedReader;\nimport java.io.ByteArrayInputStream;\nimport java.io.File;\nimport java.io.FileNotFoundException;\nimport java.io.FileReader;\nimport java.util.ArrayList;\nimport java.util.Base64;\nimport java.util.HashMap;\nimport java.util.LinkedList;\nimport java.util.List;\nimport java.util.Map;\nimport javax.xml.parsers.ParserConfigurationException;\nimport javax.xml.xpath.*;\nimport java.io.IOException;\nimport java.io.StringReader;\nimport org.w3c.dom.Element;\nimport org.w3c.dom.NodeList;\nimport org.apache.commons.lang3.StringUtils;\nimport org.w3c.dom.Document;\nimport org.xml.sax.InputSource;\nimport org.xml.sax.SAXException;\nimport javax.xml.parsers.DocumentBuilder;\nimport javax.xml.parsers.DocumentBuilderFactory;\nimport org.w3c.dom.Node;\n\nimport java.text.ParseException;\nimport java.util.Date;\nimport java.util.Calendar;\nimport java.util.GregorianCalendar;\nimport java.text.DateFormat;\nimport java.text.SimpleDateFormat;\nimport java.time.format.DateTimeFormatter;\nimport java.time.LocalDate;\n\t \n       \nArrayList  accountList = new ArrayList();\n\nlog.error(\"EDP SAP FF After Operation Rule: Entering\" );\n\nif(rawResponseObject != null) {\n\n   log.error(\"EDP SAP FF After Operation Rule: rawResponseObject is not null\" );\n\n    try {\n        //create the DocumentBuilder object\n        DocumentBuilder builder = DocumentBuilderFactory.newInstance().newDocumentBuilder();\n        Document doc = builder.parse(new ByteArrayInputStream(rawResponseObject.getBytes()));\n\n        NodeList nList = doc.getElementsByTagName(\"item\");\n\n    \tif (null != nList && nList.getLength() > 0) {\n    \t\tlog.error(\"EDP SAP FF After Operation Rule: Length: \" + nList.getLength());\n    \t\t\n\n    \t\tList<String> userList = new LinkedList<String>();\n\n\t        for (int i = 0; null != nList && i < nList.getLength(); i++) {\n\t            Node nod = nList.item(i);\n    \n                DateFormat dateFormat = new SimpleDateFormat( \"yyyy-MM-dd\" );\n                String validTo = nod.getElementsByTagName(\"VALID_TO\").item(0).getTextContent();\n                Date today = new Date();\n                SimpleDateFormat sdf = new SimpleDateFormat(\"yyyy-MM-dd\");\n                Date date;\n                try {\n                    date = dateFormat.parse(validTo);\n                    if(today.compareTo(date) < 0) {\n                        if ( !userList.contains(nod.getElementsByTagName(\"FF_USER\").item(0).getTextContent()) ) {\n                            userList.add ( nod.getElementsByTagName(\"FF_USER\").item(0).getTextContent());\n                        }\n\n                    }\n                }\n                catch (ParseException e) {\n                    log.error(\"EDP SAP FF After Operation Rule: ParseException\");\n                }\n\n\n\n\t        }\n\n\t        for(String employeeEntry : userList){\n\n\t        \tList<String> groupList = new LinkedList<String>();\n\t        \tMap account = new HashMap();\n\n\t            for (int i = 0; null != nList && i < nList.getLength(); i++) {\n\n\t              \tNode nod = nList.item(i);\n                \n                \n\n\t              \tif ( nod.getElementsByTagName(\"FF_USER\").item(0).getTextContent().contains(employeeEntry)){\n                \n                        DateFormat dateFormat = new SimpleDateFormat( \"yyyy-MM-dd\" );\n                        String validTo = nod.getElementsByTagName(\"VALID_TO\").item(0).getTextContent();\n                        Date today = new Date();\n                        SimpleDateFormat sdf = new SimpleDateFormat(\"yyyy-MM-dd\");\n                        Date date;\n                        try {\n                            date = dateFormat.parse(validTo);\n                            if(today.compareTo(date) < 0) {\n                                                \n\t              \t\t           groupList.add ( nod.getElementsByTagName(\"FFOBJECT\").item(0).getTextContent() + \" - \" + nod.getElementsByTagName(\"CONNECTOR\").item(0).getTextContent());\n                \n                            }\n                        }\n                        catch (ParseException e) {\n                            log.error(\"EDP SAP FF After Operation Rule: ParseException\");\n                        }\n                \n                \n\n\t              \t}\n\n\t          \t}\n\n\t          \taccount.put(\"Userid\", employeeEntry);\n\t\t\t\taccount.put(\"FFOBJECT\", groupList);\n\t\t\t\taccountList.add(account);\n\t\t\t\t\n\t        }\n\n          \n\n        }\n\n    } catch (Exception e) {\n        log.info(\"Error \" +  e.getMessage());\n\t\tlog.error(e.getMessage());\n\t}\n\n}\n\nMap accountListMap = new HashMap();\naccountListMap.put(\"data\", accountList );\n\nlog.error(\"EDP SAP FF After Operation Rule: Done Running Aggregation After Rule\" );\n\nreturn accountListMap;",
+      "version": "1.0"
+    },
+    "type": "WebServiceBeforeOperationRule"
+  },
+  "self": {
+    "id": "ada694ee538e4a13b79cf6461adf3a45",
+    "name": "Test Rule",
+    "type": "CONNECTOR_RULE"
+  },
+  "version": 1
+}

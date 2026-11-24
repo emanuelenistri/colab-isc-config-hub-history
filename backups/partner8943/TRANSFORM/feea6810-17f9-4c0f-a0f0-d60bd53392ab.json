@@ -1,0 +1,35 @@
+{
+  "jwsHeader": null,
+  "jwsSignature": null,
+  "object": {
+    "attributes": {
+      "values": [
+        " ",
+        {
+          "attributes": {
+            "attributeName": "apellido",
+            "sourceName": "SL-Source-External"
+          },
+          "type": "accountAttribute"
+        },
+        {
+          "attributes": {
+            "attributeName": "nombre",
+            "sourceName": "SL-Source-External"
+          },
+          "type": "accountAttribute"
+        }
+      ]
+    },
+    "id": "feea6810-17f9-4c0f-a0f0-d60bd53392ab",
+    "internal": false,
+    "name": "SL-Transform-displayName",
+    "type": "concat"
+  },
+  "self": {
+    "id": "feea6810-17f9-4c0f-a0f0-d60bd53392ab",
+    "name": "SL-Transform-displayName",
+    "type": "TRANSFORM"
+  },
+  "version": 1
+}

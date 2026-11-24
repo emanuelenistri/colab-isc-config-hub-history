@@ -1,0 +1,24 @@
+{
+  "jwsHeader": null,
+  "jwsSignature": null,
+  "object": {
+    "description": "Managed by Workflows",
+    "enabled": false,
+    "filter": "$.changes[?(@.attribute == \"department\")]",
+    "id": "64114f34-803b-4b47-8d5a-bfa2c46a704d",
+    "name": "Template: Create and Activate a Certification Campaign",
+    "responseDeadline": "PT1H",
+    "triggerId": "idn:identity-attributes-changed",
+    "triggerName": "Identity Attributes Changed",
+    "type": "WORKFLOW",
+    "workflowConfig": {
+      "workflowId": "64114f34-803b-4b47-8d5a-bfa2c46a704d"
+    }
+  },
+  "self": {
+    "id": "64114f34-803b-4b47-8d5a-bfa2c46a704d",
+    "name": "Template: Create and Activate a Certification Campaign",
+    "type": "TRIGGER_SUBSCRIPTION"
+  },
+  "version": 1
+}

@@ -1,0 +1,88 @@
+{
+  "jwsHeader": null,
+  "jwsSignature": null,
+  "object": {
+    "created": "2024-06-13T11:26:55.19024944Z",
+    "creator": {
+      "id": "06c1619bb4ad4fa3b793330ced2408fe",
+      "name": "rcgalvez",
+      "type": "IDENTITY"
+    },
+    "definition": {
+      "start": "Get Identity",
+      "steps": {
+        "End Step - Success": {
+          "displayName": "",
+          "type": "success"
+        },
+        "Get Identity": {
+          "actionId": "sp:get-identity",
+          "attributes": {
+            "id.$": "$.trigger.attributes.manager"
+          },
+          "displayName": "",
+          "nextStep": "Send Email",
+          "type": "action",
+          "versionNumber": 2
+        },
+        "Send Email": {
+          "actionId": "sp:send-email",
+          "attributes": {
+            "body": "{{$.trigger.attributes.managerRef.name}}, la identidad {{$.trigger.attributes.firstName}}",
+            "context": {},
+            "recipientEmailList": [
+              "rcgalvez@sia.es"
+            ]
+          },
+          "description": null,
+          "displayName": "",
+          "nextStep": "End Step - Success",
+          "type": "action",
+          "versionNumber": 2
+        }
+      }
+    },
+    "description": "",
+    "enabled": false,
+    "id": "e1b99071-e6a8-4795-9953-f56d1c37840c",
+    "modified": "2024-06-13T14:36:39.862130372Z",
+    "modifiedBy": {
+      "id": "06c1619bb4ad4fa3b793330ced2408fe",
+      "name": "rcgalvez",
+      "type": "IDENTITY"
+    },
+    "name": "Cuentas Externas Raúl",
+    "owner": {
+      "id": "06c1619bb4ad4fa3b793330ced2408fe",
+      "name": "rcgalvez",
+      "type": "IDENTITY"
+    },
+    "trigger": {
+      "attributes": {
+        "filter.$": "$.attributes[?(@.type == \"externo\")]",
+        "filterDefinition": {
+          "conditions": [
+            {
+              "operator": "==",
+              "path": "type",
+              "type": "string",
+              "value": "externo"
+            }
+          ],
+          "logic": "and",
+          "path": "attributes"
+        },
+        "id": "idn:identity-created",
+        "integrationId": null
+      },
+      "mode": "basic",
+      "type": "EVENT"
+    }
+  },
+  "self": {
+    "id": "e1b99071-e6a8-4795-9953-f56d1c37840c",
+    "name": "Cuentas Externas Raúl",
+    "type": "WORKFLOW"
+  },
+  "version": 1
+}

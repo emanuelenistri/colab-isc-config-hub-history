@@ -1,0 +1,61 @@
+{
+  "jwsHeader": null,
+  "jwsSignature": null,
+  "object": {
+    "attributes": [
+      {
+        "displayName": "Alias",
+        "enabled": false,
+        "name": "alias",
+        "target": "displayName"
+      },
+      {
+        "displayName": "IdentityNow Username",
+        "enabled": true,
+        "name": "uid",
+        "target": "sAMAccountName"
+      },
+      {
+        "displayName": "Telephone Number",
+        "enabled": true,
+        "name": "telephoneNumber",
+        "target": "telephoneNumber"
+      },
+      {
+        "displayName": "att_email",
+        "enabled": true,
+        "name": "email",
+        "target": "mail"
+      },
+      {
+        "displayName": "att_last_name",
+        "enabled": true,
+        "name": "lastname",
+        "target": "givenName"
+      },
+      {
+        "displayName": "att_manager",
+        "enabled": true,
+        "name": "manager",
+        "target": "manager"
+      },
+      {
+        "displayName": "stateGID",
+        "enabled": false,
+        "name": "stateGID",
+        "target": "title"
+      }
+    ],
+    "source": {
+      "id": "dd15e795a6884b1e914126cdaf8ac66d",
+      "name": "Active Directory LAB SIA",
+      "type": "SOURCE"
+    }
+  },
+  "self": {
+    "id": "d8fc47cd-9c26-4d94-82ef-1f94868a008c:dd15e795a6884b1e914126cdaf8ac66d",
+    "name": "Active Directory LAB SIA",
+    "type": "ATTR_SYNC_SOURCE_CONFIG"
+  },
+  "version": 1
+}

@@ -1,0 +1,186 @@
+{
+  "jwsHeader": null,
+  "jwsSignature": null,
+  "object": {
+    "created": "2026-11-24T08:36:39.012044679Z",
+    "creator": {
+      "id": "d024cdc01088491194e571464f97b308",
+      "name": "dmedinay",
+      "type": "IDENTITY"
+    },
+    "definition": {
+      "start": "Interactive Form",
+      "steps": {
+        "Compare Strings": {
+          "actionId": "sp:compare-strings",
+          "choiceList": [
+            {
+              "comparator": "StringEquals",
+              "nextStep": "HTTP Request",
+              "variableA.$": "$.genericApprovalPolicy.status",
+              "variableB": "APPROVED"
+            }
+          ],
+          "defaultStep": "Interactive Message",
+          "displayName": "",
+          "type": "choice"
+        },
+        "End Step - Failure": {
+          "actionId": "sp:operator-failure",
+          "description": null,
+          "displayName": "",
+          "failureDetails": "The account creation request could not be submitted to SailPoint.",
+          "failureName": "SL Account Creation Request Failed",
+          "type": "failure"
+        },
+        "End Step - Success": {
+          "actionId": "sp:operator-success",
+          "displayName": "",
+          "type": "success"
+        },
+        "End Step - Success 1": {
+          "actionId": "sp:operator-success",
+          "displayName": "",
+          "type": "success"
+        },
+        "Generic Approval Policy": {
+          "actionId": "sp:generic-approval",
+          "attributes": {
+            "approvalActionAtTimeout": "EXPIRED",
+            "approvalReminder": "false",
+            "approvalTimeout": 7,
+            "approvalType": "SINGLE",
+            "byIdentity.$": "$.trigger.launchedBy.id",
+            "description": "User ID: {{$.interactiveForm.formData.userId}}\nName: {{$.interactiveForm.formData.firstName}} {{$.interactiveForm.formData.lastName}}\nEmail: {{$.interactiveForm.formData.emailField}}",
+            "forIdentity.$": "$.trigger.launchedBy.id",
+            "multiApproverReviewersConfig_approvalScheme": "SERIAL",
+            "name": "Create SL user: {{$.interactiveForm.formData.firstName}} {{$.interactiveForm.formData.lastName}}",
+            "priority": "MEDIUM",
+            "quorumApproverReviewersConfig_approvalScheme": "SERIAL",
+            "reAuthRequired": false,
+            "reminderFrequency_timeZone": "Europe/Madrid",
+            "requestedBy": "IDENTITY",
+            "requestedFor": "IDENTITY",
+            "singleApproverCategory": "IDENTITY",
+            "singleApproverIdentityId.$": "$.interactiveForm.formData.manager"
+          },
+          "description": "Approval required to create a new SL user",
+          "displayName": "",
+          "nextStep": "Compare Strings",
+          "type": "action",
+          "versionNumber": 1
+        },
+        "Get Identity": {
+          "actionId": "sp:get-identity",
+          "attributes": {
+            "id.$": "$.interactiveForm.formData.manager"
+          },
+          "description": null,
+          "displayName": "Get Identity (Manager)",
+          "nextStep": "Generic Approval Policy",
+          "type": "action",
+          "versionNumber": 2
+        },
+        "HTTP Request": {
+          "actionId": "sp:http",
+          "attributes": {
+            "jsonRequestBody": {
+              "attributes": {
+                "NIF": "{{$.interactiveForm.formData.nifNie}}",
+                "apellido": "{{$.interactiveForm.formData.lastName}}",
+                "correo": "{{$.interactiveForm.formData.emailField}}",
+                "id": "{{$.interactiveForm.formData.userId}}",
+                "manager": "{{$.getIdentity.attributes.uid}}",
+                "nombre": "{{$.interactiveForm.formData.firstName}}",
+                "sourceId": "a57560a1baaa487f81ec2acfae52d0c0"
+              }
+            },
+            "method": "post",
+            "param_authenticationRef": "oauth",
+            "param_oauth": {
+              "mapping": {
+                "auth_client_id": "clientId",
+                "auth_client_secret": "clientSecret",
+                "auth_credential_location": "credentialLocation",
+                "auth_token_url": "tokenURL"
+              },
+              "paramID": "e73423ac-6e4a-4947-b354-777875570dc4",
+              "paramType": "1.4",
+              "refID": "c93e97cf-bf58-4e91-8c54-ae4f323c7b6f"
+            },
+            "requestContentType": "json",
+            "url": "https://partner8943.api.identitynow-demo.com/accounts/v1"
+          },
+          "catch": [
+            {
+              "next": "End Step - Failure"
+            }
+          ],
+          "description": "Submits an account creation request to SailPoint.",
+          "displayName": "",
+          "nextStep": "End Step - Success",
+          "type": "action",
+          "versionNumber": 3
+        },
+        "Interactive Form": {
+          "actionId": "sp:interactive-form",
+          "attributes": {
+            "formDefinitionId": "28679c62-d61e-4df3-82c3-9293380f11fc",
+            "interactiveProcessId.$": "$.trigger.interactiveProcessId",
+            "message": "<p>Complete the form to continue&nbsp;</p>",
+            "ownerId.$": "$.trigger.launchedBy.id",
+            "title": "Interactive Form"
+          },
+          "description": "Interactive Form",
+          "displayName": "InteractiveForm",
+          "nextStep": "Get Identity",
+          "type": "action",
+          "versionNumber": 1
+        },
+        "Interactive Message": {
+          "actionId": "sp:interactive-message",
+          "attributes": {
+            "category": "WARN",
+            "interactiveProcessId.$": "$.trigger.interactiveProcessId",
+            "message": "<p>The user creation was not approved. No account has been created.</p>",
+            "ownerId.$": "$.trigger.launchedBy.id",
+            "title": "Request not approved"
+          },
+          "displayName": "",
+          "nextStep": "End Step - Success 1",
+          "type": "action",
+          "versionNumber": 1
+        }
+      }
+    },
+    "description": "Workflow to register new SL users through an interactive form.",
+    "enabled": false,
+    "id": "ed661321-88e7-473c-857b-557067bdc28b",
+    "modified": "2026-11-24T14:23:38.006366844Z",
+    "modifiedBy": {
+      "id": "d024cdc01088491194e571464f97b308",
+      "name": "dmedinay",
+      "type": "IDENTITY"
+    },
+    "name": "SL-Workflow-CreateUserViaForm",
+    "owner": {
+      "id": "d024cdc01088491194e571464f97b308",
+      "name": "dmedinay",
+      "type": "IDENTITY"
+    },
+    "trigger": {
+      "attributes": {
+        "filter.$": "$[?(@.workflowId == 'ed661321-88e7-473c-857b-557067bdc28b')]",
+        "id": "idn:interactive-process-launched",
+        "integrationId": null
+      },
+      "type": "EVENT"
+    }
+  },
+  "self": {
+    "id": "ed661321-88e7-473c-857b-557067bdc28b",
+    "name": "SL-Workflow-CreateUserViaForm",
+    "type": "WORKFLOW"
+  },
+  "version": 1
+}

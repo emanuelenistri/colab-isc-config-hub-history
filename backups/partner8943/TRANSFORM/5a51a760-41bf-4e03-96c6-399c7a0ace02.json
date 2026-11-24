@@ -1,0 +1,19 @@
+{
+  "jwsHeader": null,
+  "jwsSignature": null,
+  "object": {
+    "attributes": {
+      "value": "0240"
+    },
+    "id": "5a51a760-41bf-4e03-96c6-399c7a0ace02",
+    "internal": false,
+    "name": "CodEmpresa",
+    "type": "static"
+  },
+  "self": {
+    "id": "5a51a760-41bf-4e03-96c6-399c7a0ace02",
+    "name": "CodEmpresa",
+    "type": "TRANSFORM"
+  },
+  "version": 1
+}

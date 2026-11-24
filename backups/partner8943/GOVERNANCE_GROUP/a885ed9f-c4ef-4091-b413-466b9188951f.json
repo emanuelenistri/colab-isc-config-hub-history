@@ -1,0 +1,44 @@
+{
+  "jwsHeader": null,
+  "jwsSignature": null,
+  "object": {
+    "connectionCount": 0,
+    "connections": null,
+    "created": null,
+    "description": "Es una prueba",
+    "id": "a885ed9f-c4ef-4091-b413-466b9188951f",
+    "memberCount": 0,
+    "members": [
+      {
+        "id": "6ae3a97e72fc4bb4b6f27303d64bf693",
+        "name": "aactiva",
+        "type": "IDENTITY"
+      },
+      {
+        "id": "b5da43ae636141ef903b37050ee24f95",
+        "name": "aavla",
+        "type": "IDENTITY"
+      },
+      {
+        "id": "bc3935cf474241e6a3c5bc591de2f024",
+        "name": "aga4",
+        "type": "IDENTITY"
+      }
+    ],
+    "modified": null,
+    "name": "Prueba Formacion soporte",
+    "owner": {
+      "displayName": null,
+      "emailAddress": null,
+      "id": "d024cdc01088491194e571464f97b308",
+      "name": "dmedinay",
+      "type": "IDENTITY"
+    }
+  },
+  "self": {
+    "id": "a885ed9f-c4ef-4091-b413-466b9188951f",
+    "name": "Prueba Formacion soporte",
+    "type": "GOVERNANCE_GROUP"
+  },
+  "version": 1
+}

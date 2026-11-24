@@ -1,0 +1,100 @@
+{
+  "jwsHeader": null,
+  "jwsSignature": null,
+  "object": {
+    "created": "2024-06-14T06:11:20.762279591Z",
+    "creator": {
+      "id": "84a568c1f5024b24b21a25a27379ac66",
+      "name": "smenendezp",
+      "type": "IDENTITY"
+    },
+    "definition": {
+      "start": "Get List of Identities",
+      "steps": {
+        "End Step - Success": {
+          "displayName": "",
+          "type": "success"
+        },
+        "Get List of Identities": {
+          "actionId": "sp:get-identities",
+          "attributes": {
+            "inputQuery": "@accounts(source.name:\"BCC-Source-External\")",
+            "searchBy": "searchQuery"
+          },
+          "description": "",
+          "displayName": "",
+          "nextStep": "Loop",
+          "type": "action",
+          "versionNumber": 2
+        },
+        "Loop": {
+          "actionId": "sp:loop:iterator",
+          "attributes": {
+            "context.$": "$.getListOfIdentities.identities",
+            "input.$": "$.getListOfIdentities.identities",
+            "start": "Send Email",
+            "steps": {
+              "End Step - Success 1": {
+                "displayName": "",
+                "type": "success"
+              },
+              "Send Email": {
+                "actionId": "sp:send-email",
+                "attributes": {
+                  "body": "{{$.loop.loopInput.lastName}}",
+                  "context": null,
+                  "recipientEmailList": [
+                    "smenendezp@sia.es"
+                  ]
+                },
+                "description": null,
+                "displayName": "",
+                "nextStep": "End Step - Success 1",
+                "type": "action",
+                "versionNumber": 2
+              }
+            }
+          },
+          "displayName": "",
+          "nextStep": "End Step - Success",
+          "type": "action",
+          "versionNumber": 1
+        }
+      }
+    },
+    "description": "Envía un email a cada identidad de una determinada fuente.",
+    "enabled": false,
+    "id": "aa60aecb-9eef-4efc-9b9f-b6a5d1ea5d7e",
+    "modified": "2024-09-10T16:23:40.728065568Z",
+    "modifiedBy": {
+      "id": "84a568c1f5024b24b21a25a27379ac66",
+      "name": "smenendezp",
+      "type": "IDENTITY"
+    },
+    "name": "becarios_enviar_mail_a_cada_identidad",
+    "owner": {
+      "id": "84a568c1f5024b24b21a25a27379ac66",
+      "name": "smenendezp",
+      "type": "IDENTITY"
+    },
+    "trigger": {
+      "attributes": {
+        "cronString": "0 0 * * *",
+        "dailyTimes": [
+          "1969-12-31T23:00:00.000Z"
+        ],
+        "frequency": "daily",
+        "id": "idn:cron-schedule",
+        "integrationId": null,
+        "timeZone": "Europe/Madrid"
+      },
+      "type": "SCHEDULED"
+    }
+  },
+  "self": {
+    "id": "aa60aecb-9eef-4efc-9b9f-b6a5d1ea5d7e",
+    "name": "becarios_enviar_mail_a_cada_identidad",
+    "type": "WORKFLOW"
+  },
+  "version": 1
+}

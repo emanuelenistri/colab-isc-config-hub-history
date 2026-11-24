@@ -1,0 +1,23 @@
+{
+  "jwsHeader": null,
+  "jwsSignature": null,
+  "object": {
+    "description": "Managed by Workflows",
+    "enabled": false,
+    "id": "08b4bf76-a376-4c3f-9592-d425adca3001",
+    "name": "Workflow Mover Campaign Test",
+    "responseDeadline": "PT1H",
+    "triggerId": "idn:identity-attributes-changed",
+    "triggerName": "Identity Attributes Changed",
+    "type": "WORKFLOW",
+    "workflowConfig": {
+      "workflowId": "08b4bf76-a376-4c3f-9592-d425adca3001"
+    }
+  },
+  "self": {
+    "id": "08b4bf76-a376-4c3f-9592-d425adca3001",
+    "name": "Workflow Mover Campaign Test",
+    "type": "TRIGGER_SUBSCRIPTION"
+  },
+  "version": 1
+}

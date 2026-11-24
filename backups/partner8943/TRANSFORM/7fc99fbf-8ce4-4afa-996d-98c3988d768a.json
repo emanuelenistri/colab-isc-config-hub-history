@@ -1,0 +1,28 @@
+{
+  "jwsHeader": null,
+  "jwsSignature": null,
+  "object": {
+    "attributes": {
+      "input": {
+        "attributes": {
+          "name": "officeType"
+        },
+        "type": "identityAttribute"
+      },
+      "table": {
+        "SSCC": "oficina",
+        "default": " "
+      }
+    },
+    "id": "7fc99fbf-8ce4-4afa-996d-98c3988d768a",
+    "internal": false,
+    "name": "Z OfficeType 03",
+    "type": "lookup"
+  },
+  "self": {
+    "id": "7fc99fbf-8ce4-4afa-996d-98c3988d768a",
+    "name": "Z OfficeType 03",
+    "type": "TRANSFORM"
+  },
+  "version": 1
+}

@@ -1,0 +1,367 @@
+{
+  "jwsHeader": null,
+  "jwsSignature": null,
+  "object": {
+    "authoritativeSource": {
+      "id": "b9904c2b0c214ba6aace92a95ad3ff68",
+      "name": "NERM",
+      "type": "SOURCE"
+    },
+    "created": "2025-02-24T12:31:59.949Z",
+    "description": "NERM Test",
+    "hasTimeBasedAttr": true,
+    "id": "34a7519df3c641178b4375cc0c9fdc29",
+    "identityAttributeConfig": {
+      "attributeTransforms": [
+        {
+          "identityAttributeName": "absentismo",
+          "transformDefinition": {
+            "attributes": {
+              "id": "TEST",
+              "input": {
+                "attributes": {
+                  "attributeName": "user_id",
+                  "sourceId": "b9904c2b0c214ba6aace92a95ad3ff68",
+                  "sourceName": "NERM"
+                },
+                "type": "accountAttribute"
+              }
+            },
+            "type": "reference"
+          }
+        },
+        {
+          "identityAttributeName": "assignedOffice",
+          "transformDefinition": {
+            "attributes": {
+              "attributeName": "assignedOffice_ne_attribute",
+              "sourceName": "NERM Test 2"
+            },
+            "type": "accountAttribute"
+          }
+        },
+        {
+          "identityAttributeName": "assignedOfficeManager",
+          "transformDefinition": {
+            "attributes": {
+              "attributeName": "assignedofficemanager_ne_attribute",
+              "sourceName": "NERM Test 2"
+            },
+            "type": "accountAttribute"
+          }
+        },
+        {
+          "identityAttributeName": "cloudLifecycleState",
+          "transformDefinition": {
+            "attributes": {
+              "id": "test_Dani_ultimo_CloudLifecycle_external",
+              "input": {
+                "attributes": {
+                  "attributeName": "user_id",
+                  "sourceId": "b9904c2b0c214ba6aace92a95ad3ff68",
+                  "sourceName": "NERM"
+                },
+                "type": "accountAttribute"
+              }
+            },
+            "type": "reference"
+          }
+        },
+        {
+          "identityAttributeName": "contractNumber",
+          "transformDefinition": {
+            "attributes": {
+              "attributeName": "contracnumber_ne_attribute",
+              "sourceName": "NERM Test 2"
+            },
+            "type": "accountAttribute"
+          }
+        },
+        {
+          "identityAttributeName": "deliveryAddress",
+          "transformDefinition": {
+            "attributes": {
+              "attributeName": "deliveryaddress_ne_attribute",
+              "sourceName": "NERM Test 2"
+            },
+            "type": "accountAttribute"
+          }
+        },
+        {
+          "identityAttributeName": "displayName",
+          "transformDefinition": {
+            "attributes": {
+              "id": "displayName",
+              "input": {
+                "attributes": {
+                  "attributeName": "firstname_ne_attribute",
+                  "sourceId": "b9904c2b0c214ba6aace92a95ad3ff68",
+                  "sourceName": "NERM"
+                },
+                "type": "accountAttribute"
+              }
+            },
+            "type": "reference"
+          }
+        },
+        {
+          "identityAttributeName": "dni",
+          "transformDefinition": {
+            "attributes": {
+              "attributeName": "dni_ne_attribute",
+              "sourceName": "NERM Test 2"
+            },
+            "type": "accountAttribute"
+          }
+        },
+        {
+          "identityAttributeName": "email",
+          "transformDefinition": {
+            "attributes": {
+              "attributeName": "email",
+              "sourceName": "NERM Test 2"
+            },
+            "type": "accountAttribute"
+          }
+        },
+        {
+          "identityAttributeName": "endDate",
+          "transformDefinition": {
+            "attributes": {
+              "attributeName": "enddate_ne_attribute",
+              "sourceName": "NERM Test 2"
+            },
+            "type": "accountAttribute"
+          }
+        },
+        {
+          "identityAttributeName": "entity",
+          "transformDefinition": {
+            "attributes": {
+              "attributeName": "entity_ne_attribute",
+              "sourceName": "NERM Test 2"
+            },
+            "type": "accountAttribute"
+          }
+        },
+        {
+          "identityAttributeName": "externalCompany",
+          "transformDefinition": {
+            "attributes": {
+              "attributeName": "externalcompany_ne_attribute",
+              "sourceName": "NERM Test 2"
+            },
+            "type": "accountAttribute"
+          }
+        },
+        {
+          "identityAttributeName": "externalNumber",
+          "transformDefinition": {
+            "attributes": {
+              "attributeName": "externalnumber_ne_attribute",
+              "sourceName": "NERM Test 2"
+            },
+            "type": "accountAttribute"
+          }
+        },
+        {
+          "identityAttributeName": "firstname",
+          "transformDefinition": {
+            "attributes": {
+              "attributeName": "firstname_ne_attribute",
+              "sourceName": "NERM Test 2"
+            },
+            "type": "accountAttribute"
+          }
+        },
+        {
+          "identityAttributeName": "job",
+          "transformDefinition": {
+            "attributes": {
+              "attributeName": "job_ne_attribute",
+              "sourceName": "NERM Test 2"
+            },
+            "type": "accountAttribute"
+          }
+        },
+        {
+          "identityAttributeName": "jobDate",
+          "transformDefinition": {
+            "attributes": {
+              "attributeName": "jobDate_ne_attribute",
+              "sourceName": "NERM Test 2"
+            },
+            "type": "accountAttribute"
+          }
+        },
+        {
+          "identityAttributeName": "jobId",
+          "transformDefinition": {
+            "attributes": {
+              "attributeName": "jobId_ne_attribute",
+              "sourceName": "NERM Test 2"
+            },
+            "type": "accountAttribute"
+          }
+        },
+        {
+          "identityAttributeName": "lastname",
+          "transformDefinition": {
+            "attributes": {
+              "attributeName": "lastname_ne_attribute",
+              "sourceName": "NERM Test 2"
+            },
+            "type": "accountAttribute"
+          }
+        },
+        {
+          "identityAttributeName": "officialIdentityType",
+          "transformDefinition": {
+            "attributes": {
+              "attributeName": "officialIdentityType_ne_attribute",
+              "sourceName": "NERM Test 2"
+            },
+            "type": "accountAttribute"
+          }
+        },
+        {
+          "identityAttributeName": "phone",
+          "transformDefinition": {
+            "attributes": {
+              "id": "pre-noEmail",
+              "input": {
+                "attributes": {
+                  "attributeName": "user_id",
+                  "sourceId": "b9904c2b0c214ba6aace92a95ad3ff68",
+                  "sourceName": "NERM"
+                },
+                "type": "accountAttribute"
+              }
+            },
+            "type": "reference"
+          }
+        },
+        {
+          "identityAttributeName": "physicalOffice",
+          "transformDefinition": {
+            "attributes": {
+              "attributeName": "physicaloffice_ne_attribute",
+              "sourceName": "NERM Test 2"
+            },
+            "type": "accountAttribute"
+          }
+        },
+        {
+          "identityAttributeName": "pruebaidentityattribute",
+          "transformDefinition": {
+            "attributes": {
+              "id": "TEST_STREETS",
+              "input": {
+                "attributes": {
+                  "attributeName": "user_id",
+                  "sourceName": "NERM Test 2"
+                },
+                "type": "accountAttribute"
+              }
+            },
+            "type": "reference"
+          }
+        },
+        {
+          "identityAttributeName": "secondlastname",
+          "transformDefinition": {
+            "attributes": {
+              "attributeName": "secondlastname_ne_attribute",
+              "sourceName": "NERM Test 2"
+            },
+            "type": "accountAttribute"
+          }
+        },
+        {
+          "identityAttributeName": "startDate",
+          "transformDefinition": {
+            "attributes": {
+              "attributeName": "startdate_ne_attribute",
+              "sourceName": "NERM Test 2"
+            },
+            "type": "accountAttribute"
+          }
+        },
+        {
+          "identityAttributeName": "telephoneNumber",
+          "transformDefinition": {
+            "attributes": {
+              "attributeName": "telephonenumber_ne_attribute",
+              "sourceName": "NERM Test 2"
+            },
+            "type": "accountAttribute"
+          }
+        },
+        {
+          "identityAttributeName": "testSearchable",
+          "transformDefinition": {
+            "attributes": {
+              "id": "TEST_NAMES",
+              "input": {
+                "attributes": {
+                  "attributeName": "user_id",
+                  "sourceName": "NERM Test 2"
+                },
+                "type": "accountAttribute"
+              }
+            },
+            "type": "reference"
+          }
+        },
+        {
+          "identityAttributeName": "uid",
+          "transformDefinition": {
+            "attributes": {
+              "attributeName": "user_id",
+              "sourceName": "NERM Test 2"
+            },
+            "type": "accountAttribute"
+          }
+        },
+        {
+          "identityAttributeName": "userCrc32",
+          "transformDefinition": {
+            "attributes": {
+              "attributeName": "user_crc32_ne_attribute",
+              "sourceName": "NERM Test 2"
+            },
+            "type": "accountAttribute"
+          }
+        },
+        {
+          "identityAttributeName": "userId",
+          "transformDefinition": {
+            "attributes": {
+              "attributeName": "user_id",
+              "sourceName": "NERM Test 2"
+            },
+            "type": "accountAttribute"
+          }
+        }
+      ],
+      "enabled": true
+    },
+    "identityCount": 10,
+    "identityExceptionReportReference": null,
+    "identityRefreshRequired": false,
+    "modified": "2025-03-24T18:55:32.450Z",
+    "name": "NERM TEST",
+    "owner": {
+      "id": "84a568c1f5024b24b21a25a27379ac66",
+      "name": "smenendezp",
+      "type": "IDENTITY"
+    },
+    "priority": 50
+  },
+  "self": {
+    "id": "34a7519df3c641178b4375cc0c9fdc29",
+    "name": "NERM TEST",
+    "type": "IDENTITY_PROFILE"
+  },
+  "version": 1
+}

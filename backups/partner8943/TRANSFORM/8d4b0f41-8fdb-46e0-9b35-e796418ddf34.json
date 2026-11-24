@@ -1,0 +1,25 @@
+{
+  "jwsHeader": null,
+  "jwsSignature": null,
+  "object": {
+    "attributes": {
+      "values": [
+        " ",
+        " ",
+        "Valor1",
+        "Valor2",
+        "Valor3"
+      ]
+    },
+    "id": "8d4b0f41-8fdb-46e0-9b35-e796418ddf34",
+    "internal": false,
+    "name": "Z Multi",
+    "type": "concat"
+  },
+  "self": {
+    "id": "8d4b0f41-8fdb-46e0-9b35-e796418ddf34",
+    "name": "Z Multi",
+    "type": "TRANSFORM"
+  },
+  "version": 1
+}

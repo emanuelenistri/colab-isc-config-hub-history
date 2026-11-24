@@ -1,0 +1,54 @@
+{
+  "jwsHeader": null,
+  "jwsSignature": null,
+  "object": {
+    "connectionCount": 0,
+    "connections": null,
+    "created": null,
+    "description": "Group for reviewing policy violations and exceptions",
+    "id": "5af263a4-cbd8-442c-84c6-ee085317c832",
+    "memberCount": 0,
+    "members": [
+      {
+        "id": "06c1619bb4ad4fa3b793330ced2408fe",
+        "name": "rcgalvez",
+        "type": "IDENTITY"
+      },
+      {
+        "id": "0705ab41bb664d20a05e9db5cdcfbd78",
+        "name": "Thomas.Martinez",
+        "type": "IDENTITY"
+      },
+      {
+        "id": "240002e0902e46a6b9410cab01d8932f",
+        "name": "Diane.Hayes",
+        "type": "IDENTITY"
+      },
+      {
+        "id": "52d193362ebd40768ceed93070b5fb44",
+        "name": "Jerry.Bennett",
+        "type": "IDENTITY"
+      },
+      {
+        "id": "84a568c1f5024b24b21a25a27379ac66",
+        "name": "smenendezp",
+        "type": "IDENTITY"
+      }
+    ],
+    "modified": null,
+    "name": "IT Security",
+    "owner": {
+      "displayName": null,
+      "emailAddress": null,
+      "id": "52d193362ebd40768ceed93070b5fb44",
+      "name": "Jerry.Bennett",
+      "type": "IDENTITY"
+    }
+  },
+  "self": {
+    "id": "5af263a4-cbd8-442c-84c6-ee085317c832",
+    "name": "IT Security",
+    "type": "GOVERNANCE_GROUP"
+  },
+  "version": 1
+}

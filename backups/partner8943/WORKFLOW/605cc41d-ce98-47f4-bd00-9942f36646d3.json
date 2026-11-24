@@ -1,0 +1,130 @@
+{
+  "jwsHeader": null,
+  "jwsSignature": null,
+  "object": {
+    "created": "2024-09-18T10:47:02.551198576Z",
+    "creator": {
+      "id": "49e4267e2cc547b0ad4fb41df46774ec",
+      "name": "mgmontejo",
+      "type": "IDENTITY"
+    },
+    "definition": {
+      "start": "Get List of Identities",
+      "steps": {
+        "End Step - Success 2": {
+          "displayName": "",
+          "type": "success"
+        },
+        "Get List of Identities": {
+          "actionId": "sp:get-identities",
+          "attributes": {
+            "inputQuery": "attributes.dni:{{$.trigger.attributes.dni}}",
+            "searchBy": "searchQuery"
+          },
+          "displayName": "",
+          "nextStep": "Loop",
+          "type": "action",
+          "versionNumber": 2
+        },
+        "Loop": {
+          "actionId": "sp:loop:iterator",
+          "attributes": {
+            "context.$": "$",
+            "input.$": "$.getListOfIdentities.identities",
+            "start": "Get Identity",
+            "steps": {
+              "Compare Strings": {
+                "choiceList": [
+                  {
+                    "comparator": "StringGreaterThan",
+                    "nextStep": "Get Identity 1",
+                    "variableA.$": "$.getIdentity.name",
+                    "variableB": "$.a"
+                  }
+                ],
+                "defaultStep": "End Step - Success",
+                "displayName": "",
+                "type": "choice"
+              },
+              "End Step - Success": {
+                "displayName": "",
+                "type": "success"
+              },
+              "End Step - Success 1": {
+                "displayName": "",
+                "type": "success"
+              },
+              "Get Identity": {
+                "actionId": "sp:get-identity",
+                "attributes": {
+                  "id.$": "$.loop.loopInput.id"
+                },
+                "displayName": "",
+                "nextStep": "Compare Strings",
+                "type": "action",
+                "versionNumber": 2
+              },
+              "Get Identity 1": {
+                "actionId": "sp:get-identity",
+                "attributes": {
+                  "id.$": "$.getIdentity.managerRef.id"
+                },
+                "displayName": "",
+                "nextStep": "Send Email",
+                "type": "action",
+                "versionNumber": 2
+              },
+              "Send Email": {
+                "actionId": "sp:send-email",
+                "attributes": {
+                  "body": "<p>Te avisamos ya que eres el manager de {$.trigger.attributes.name} que ya existe la identidad \"{$.getIdentity.name}\" con su mismo DNI \"{$.getIdentity.dni}\".</p>\n<p>&nbsp;</p>",
+                  "context": null,
+                  "from": null,
+                  "recipientEmailList.$": "$.getIdentity1.attributes.email",
+                  "subject": "Hay identidades con el mismo DNI"
+                },
+                "description": "",
+                "displayName": "",
+                "nextStep": "End Step - Success 1",
+                "type": "action",
+                "versionNumber": 2
+              }
+            }
+          },
+          "displayName": "",
+          "nextStep": "End Step - Success 2",
+          "type": "action",
+          "versionNumber": 1
+        }
+      }
+    },
+    "description": "Si se crea una identidad se busca las identidades activas que tengan el mismo dni que la creada y mandar un email al manager de la identidad creada",
+    "enabled": false,
+    "id": "605cc41d-ce98-47f4-bd00-9942f36646d3",
+    "modified": "2024-09-18T11:51:32.963552161Z",
+    "modifiedBy": {
+      "id": "49e4267e2cc547b0ad4fb41df46774ec",
+      "name": "mgmontejo",
+      "type": "IDENTITY"
+    },
+    "name": "Becarios con mismo DNI se envía email al manager de la identidad creada",
+    "owner": {
+      "id": "49e4267e2cc547b0ad4fb41df46774ec",
+      "name": "mgmontejo",
+      "type": "IDENTITY"
+    },
+    "trigger": {
+      "attributes": {
+        "id": "idn:identity-created",
+        "integrationId": null
+      },
+      "type": "EVENT"
+    }
+  },
+  "self": {
+    "id": "605cc41d-ce98-47f4-bd00-9942f36646d3",
+    "name": "Becarios con mismo DNI se envía email al manager de la identidad creada",
+    "type": "WORKFLOW"
+  },
+  "version": 1
+}

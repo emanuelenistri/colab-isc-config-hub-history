@@ -1,0 +1,30 @@
+{
+  "jwsHeader": null,
+  "jwsSignature": null,
+  "object": {
+    "body": "<p>Dear $__recipient.name,<br><br></p>\n<p>Your access to the '$accessItemName' $accessItemType is now scheduled to expire on $scheduledSunsetDate.</p>\n<p>If you still need access to '$accessItemName' after this date, you will need to request it again to extend the duration of the access.</p>\n<p>Please contact the $__global.productName administrator if you have any questions.</p>\n<p>&nbsp;</p>\n<p><br>Thanks,<br>The $__global.productName Team</p>",
+    "created": "2025-06-03T06:08:55.191Z",
+    "description": "Sent to a user when their access expiration date has changed.",
+    "details": null,
+    "footer": null,
+    "from": "$__global.emailFromAddress",
+    "header": null,
+    "id": "9404ad60-dd2e-46a9-9eb5-5991e5b61d5c",
+    "inboxTemplate": null,
+    "key": "certification_end_date_modified_notification",
+    "locale": "en",
+    "medium": "EMAIL",
+    "modified": "2025-06-03T06:09:13.279Z",
+    "name": "Access End Date Modified",
+    "replyTo": "$__global.emailFromAddress",
+    "slackTemplate": null,
+    "subject": "Access End Date Modified",
+    "teamsTemplate": null
+  },
+  "self": {
+    "id": "9404ad60-dd2e-46a9-9eb5-5991e5b61d5c",
+    "name": "Access End Date Modified",
+    "type": "NOTIFICATION_TEMPLATE"
+  },
+  "version": 1
+}

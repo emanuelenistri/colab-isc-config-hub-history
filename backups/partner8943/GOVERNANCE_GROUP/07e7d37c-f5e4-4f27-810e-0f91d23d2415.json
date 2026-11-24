@@ -1,0 +1,39 @@
+{
+  "jwsHeader": null,
+  "jwsSignature": null,
+  "object": {
+    "connectionCount": 0,
+    "connections": null,
+    "created": null,
+    "description": "test para certificaciones",
+    "id": "07e7d37c-f5e4-4f27-810e-0f91d23d2415",
+    "memberCount": 0,
+    "members": [
+      {
+        "id": "06c1619bb4ad4fa3b793330ced2408fe",
+        "name": "rcgalvez",
+        "type": "IDENTITY"
+      },
+      {
+        "id": "84a568c1f5024b24b21a25a27379ac66",
+        "name": "smenendezp",
+        "type": "IDENTITY"
+      }
+    ],
+    "modified": null,
+    "name": "smenendezp-raul test",
+    "owner": {
+      "displayName": null,
+      "emailAddress": null,
+      "id": "84a568c1f5024b24b21a25a27379ac66",
+      "name": "smenendezp",
+      "type": "IDENTITY"
+    }
+  },
+  "self": {
+    "id": "07e7d37c-f5e4-4f27-810e-0f91d23d2415",
+    "name": "smenendezp-raul test",
+    "type": "GOVERNANCE_GROUP"
+  },
+  "version": 1
+}

@@ -1,0 +1,23 @@
+{
+  "jwsHeader": null,
+  "jwsSignature": null,
+  "object": {
+    "description": "Managed by Workflows",
+    "enabled": false,
+    "id": "b4dd75ae-9322-48ff-b423-95b5beede7b8",
+    "name": "Template: Notify Access Request Decided",
+    "responseDeadline": "PT1H",
+    "triggerId": "idn:access-request-post-approval",
+    "triggerName": "Access Request Decision",
+    "type": "WORKFLOW",
+    "workflowConfig": {
+      "workflowId": "b4dd75ae-9322-48ff-b423-95b5beede7b8"
+    }
+  },
+  "self": {
+    "id": "b4dd75ae-9322-48ff-b423-95b5beede7b8",
+    "name": "Template: Notify Access Request Decided",
+    "type": "TRIGGER_SUBSCRIPTION"
+  },
+  "version": 1
+}

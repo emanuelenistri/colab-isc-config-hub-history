@@ -1,0 +1,34 @@
+{
+  "jwsHeader": null,
+  "jwsSignature": null,
+  "object": {
+    "connectionCount": 0,
+    "connections": null,
+    "created": null,
+    "description": "This group is responsible for managing the compliance of SODs voilations.",
+    "id": "86695376-051d-4778-ba9d-5c803f78d008",
+    "memberCount": 0,
+    "members": [
+      {
+        "id": "d52fa6f20a3b4af284d7fe379844c277",
+        "name": "Catherine.Simmons",
+        "type": "IDENTITY"
+      }
+    ],
+    "modified": null,
+    "name": "SODs Governance Group",
+    "owner": {
+      "displayName": null,
+      "emailAddress": null,
+      "id": "52d193362ebd40768ceed93070b5fb44",
+      "name": "Jerry.Bennett",
+      "type": "IDENTITY"
+    }
+  },
+  "self": {
+    "id": "86695376-051d-4778-ba9d-5c803f78d008",
+    "name": "SODs Governance Group",
+    "type": "GOVERNANCE_GROUP"
+  },
+  "version": 1
+}

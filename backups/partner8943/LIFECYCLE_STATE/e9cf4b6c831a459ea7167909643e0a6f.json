@@ -1,0 +1,40 @@
+{
+  "jwsHeader": null,
+  "jwsSignature": null,
+  "object": {
+    "accessActionConfiguration": {
+      "removeAllAccessEnabled": false
+    },
+    "accessProfileIds": [],
+    "accessProfileRefs": null,
+    "accountActionRefs": [],
+    "accountActions": [],
+    "created": "2025-02-25T10:37:15.816Z",
+    "description": null,
+    "emailNotificationOption": {
+      "emailAddressList": [],
+      "notifyAllAdmins": false,
+      "notifyManagers": false,
+      "notifySpecificUsers": false
+    },
+    "enabled": true,
+    "id": "e9cf4b6c831a459ea7167909643e0a6f",
+    "identityCount": 0,
+    "identityProfileRef": {
+      "id": "34a7519df3c641178b4375cc0c9fdc29",
+      "name": "NERM TEST",
+      "type": "IDENTITY_PROFILE"
+    },
+    "identityState": "ACTIVE",
+    "modified": "2025-02-25T11:18:13.447Z",
+    "name": "Activo",
+    "priority": null,
+    "technicalName": "activo"
+  },
+  "self": {
+    "id": "e9cf4b6c831a459ea7167909643e0a6f",
+    "name": "Activo",
+    "type": "LIFECYCLE_STATE"
+  },
+  "version": 1
+}

@@ -1,0 +1,72 @@
+{
+  "jwsHeader": null,
+  "jwsSignature": null,
+  "object": {
+    "accessModelMetadata": {
+      "attributes": []
+    },
+    "accessProfiles": [],
+    "accessRequestConfig": {
+      "approvalSchemes": [
+        {
+          "approverId": "b42ff1a9-42e4-4cd6-b7e3-91ca24afb400",
+          "approverType": "GOVERNANCE_GROUP"
+        }
+      ],
+      "commentsRequired": false,
+      "denialCommentsRequired": false,
+      "formDefinitionId": null,
+      "maxPermittedAccessDuration": null,
+      "reauthorizationRequired": false,
+      "requireEndDate": false
+    },
+    "additionalOwners": [],
+    "created": "2024-07-01T07:16:12.492311Z",
+    "description": null,
+    "dimensionRefs": null,
+    "dimensional": false,
+    "dimensions": [],
+    "enabled": true,
+    "entitlements": [],
+    "id": "5b3b723e246a4d23aea96f1dbab38e6b",
+    "legacyMembershipInfo": null,
+    "membership": {
+      "criteria": null,
+      "identities": [
+        {
+          "aliasName": "etribaldos",
+          "id": "87ab43d717894124b9d41b6585502238",
+          "name": "etribaldos",
+          "type": "IDENTITY"
+        },
+        {
+          "aliasName": "vmayo",
+          "id": "4f5d4df07aad444c8676954c1a690f9f",
+          "name": "vmayo",
+          "type": "IDENTITY"
+        }
+      ],
+      "type": "IDENTITY_LIST"
+    },
+    "modified": "2026-11-04T12:47:03.719458Z",
+    "name": "Rol CajamarIDNOW Herldesk capabilitie",
+    "owner": {
+      "id": "1dff61379fdc41fbac00c7f5ae992e23",
+      "name": "cjoglar",
+      "type": "IDENTITY"
+    },
+    "privilegeLevel": null,
+    "requestable": true,
+    "revocationRequestConfig": {
+      "approvalSchemes": []
+    },
+    "segmentRefs": [],
+    "segments": []
+  },
+  "self": {
+    "id": "5b3b723e246a4d23aea96f1dbab38e6b",
+    "name": "Rol CajamarIDNOW Herldesk capabilitie",
+    "type": "ROLE"
+  },
+  "version": 1
+}

@@ -1,0 +1,37 @@
+{
+  "jwsHeader": null,
+  "jwsSignature": null,
+  "object": {
+    "created": "2024-08-21T06:59:05.945283063Z",
+    "creator": {
+      "id": "84a568c1f5024b24b21a25a27379ac66",
+      "name": "smenendezp",
+      "type": "IDENTITY"
+    },
+    "definition": {
+      "steps": {}
+    },
+    "description": "",
+    "enabled": false,
+    "id": "4c8fb795-94c3-410a-b115-f65312ceee61",
+    "modified": "2024-08-21T06:59:05.945283063Z",
+    "modifiedBy": {
+      "id": "84a568c1f5024b24b21a25a27379ac66",
+      "name": "smenendezp",
+      "type": "IDENTITY"
+    },
+    "name": "test bcc",
+    "owner": {
+      "id": "84a568c1f5024b24b21a25a27379ac66",
+      "name": "smenendezp",
+      "type": "IDENTITY"
+    },
+    "trigger": {}
+  },
+  "self": {
+    "id": "4c8fb795-94c3-410a-b115-f65312ceee61",
+    "name": "test bcc",
+    "type": "WORKFLOW"
+  },
+  "version": 1
+}

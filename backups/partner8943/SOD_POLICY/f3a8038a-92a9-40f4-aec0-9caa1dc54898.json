@@ -1,0 +1,50 @@
+{
+  "jwsHeader": null,
+  "jwsSignature": null,
+  "object": {
+    "allowedControls": [],
+    "approvalGuidance": null,
+    "compensatingControls": "ACME Corp does not allow for contractors to have CyberArk access. In accordance, this individual must go through additional screening for ABCXYZ.",
+    "conflictingAccessCriteria": null,
+    "correctionAdvice": "Remove access when no longer appropriate.",
+    "created": "2024-02-29T17:14:32Z",
+    "creatorId": "0533ec736d874f4eb4c76552977bf727",
+    "creatorRef": {
+      "id": "0533ec736d874f4eb4c76552977bf727",
+      "name": "SailPoint Support",
+      "type": "IDENTITY"
+    },
+    "description": "Contractors with a CyberArk Account",
+    "externalPolicyReference": "https://my.sharepointonline.com/somecompany/policies/contractors",
+    "id": "f3a8038a-92a9-40f4-aec0-9caa1dc54898",
+    "level": null,
+    "modified": "2024-02-29T17:14:32Z",
+    "modifierId": null,
+    "name": "Contractors with a CyberArk Account",
+    "ownerRef": {
+      "id": "fe353d5f33bf4e1dbbfb32a913a2ae40",
+      "name": "alejandro.fernandez",
+      "type": "IDENTITY"
+    },
+    "policyQuery": "@accounts(source.name:\"CyberArk\") AND identityProfile.name:\"Contractors\"",
+    "preventSetting": null,
+    "scheduled": false,
+    "secondaryOwnerRefs": [],
+    "state": "ENFORCED",
+    "tags": [
+      "CONTROLX",
+      "NIST"
+    ],
+    "type": "GENERAL",
+    "violationOwnerAssignmentConfig": {
+      "assignmentRule": "MANAGER",
+      "ownerRef": null
+    }
+  },
+  "self": {
+    "id": "f3a8038a-92a9-40f4-aec0-9caa1dc54898",
+    "name": "Contractors with a CyberArk Account",
+    "type": "SOD_POLICY"
+  },
+  "version": 1
+}

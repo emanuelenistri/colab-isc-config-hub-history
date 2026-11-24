@@ -1,0 +1,26 @@
+{
+  "jwsHeader": null,
+  "jwsSignature": null,
+  "object": {
+    "attributes": {
+      "input": {
+        "attributes": {
+          "value": "20250101"
+        },
+        "type": "static"
+      },
+      "inputFormat": "yyyyMMdd",
+      "outputFormat": "yyyy-MM-dd'T'HH:mm:ss'Z'"
+    },
+    "id": "d5ba5a2f-0d6f-42a0-aeeb-7abe0eecc1bb",
+    "internal": false,
+    "name": "Z prueba dateFormat",
+    "type": "dateFormat"
+  },
+  "self": {
+    "id": "d5ba5a2f-0d6f-42a0-aeeb-7abe0eecc1bb",
+    "name": "Z prueba dateFormat",
+    "type": "TRANSFORM"
+  },
+  "version": 1
+}

@@ -1,0 +1,36 @@
+{
+  "jwsHeader": null,
+  "jwsSignature": null,
+  "object": {
+    "description": "prueba token",
+    "id": "d16af82c-4bcc-434a-90e6-7090f5666098",
+    "lastModifiedAt": "2026-04-24T09:29:26.683172Z",
+    "lastModifiedBy": {
+      "id": "1dff61379fdc41fbac00c7f5ae992e23",
+      "name": "cjoglar",
+      "type": "IDENTITY"
+    },
+    "name": "token",
+    "owner": {
+      "id": "1dff61379fdc41fbac00c7f5ae992e23",
+      "name": "cjoglar",
+      "type": "IDENTITY"
+    },
+    "privateFieldsLastModifiedAt": "2026-04-24T09:29:26.683172Z",
+    "privateFieldsLastModifiedBy": {
+      "id": "1dff61379fdc41fbac00c7f5ae992e23",
+      "name": "cjoglar",
+      "type": "IDENTITY"
+    },
+    "publicFields": {
+      "headerName": "token"
+    },
+    "type": "1.3"
+  },
+  "self": {
+    "id": "d16af82c-4bcc-434a-90e6-7090f5666098",
+    "name": "token",
+    "type": "SPS_PARAMETER"
+  },
+  "version": 1
+}

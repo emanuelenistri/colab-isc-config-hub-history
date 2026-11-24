@@ -1,0 +1,24 @@
+{
+  "jwsHeader": null,
+  "jwsSignature": null,
+  "object": {
+    "description": "Managed by Workflows",
+    "enabled": false,
+    "filter": "$[?(@.score >= 0.9)]",
+    "id": "cf11d3ec-0766-4682-969c-5eebad4c186c",
+    "name": "smenendezp_Disable Accounts for Detected Outlier Identities (0.9+)",
+    "responseDeadline": "PT1H",
+    "triggerId": "iai:outlier-detected",
+    "triggerName": "Outlier Detected",
+    "type": "WORKFLOW",
+    "workflowConfig": {
+      "workflowId": "cf11d3ec-0766-4682-969c-5eebad4c186c"
+    }
+  },
+  "self": {
+    "id": "cf11d3ec-0766-4682-969c-5eebad4c186c",
+    "name": "smenendezp_Disable Accounts for Detected Outlier Identities (0.9+)",
+    "type": "TRIGGER_SUBSCRIPTION"
+  },
+  "version": 1
+}

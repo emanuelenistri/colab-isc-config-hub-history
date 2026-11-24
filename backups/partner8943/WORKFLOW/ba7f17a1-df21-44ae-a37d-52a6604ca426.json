@@ -1,0 +1,94 @@
+{
+  "jwsHeader": null,
+  "jwsSignature": null,
+  "object": {
+    "created": "2026-10-29T09:44:05.814271122Z",
+    "creator": {
+      "id": "06c1619bb4ad4fa3b793330ced2408fe",
+      "name": "rcgalvez",
+      "type": "IDENTITY"
+    },
+    "definition": {
+      "start": "HTTP Request",
+      "steps": {
+        "End Step - Success": {
+          "actionId": "sp:operator-success",
+          "displayName": "",
+          "type": "success"
+        },
+        "HTTP Request": {
+          "actionId": "sp:http",
+          "attributes": {
+            "jsonRequestBody": {
+              "attributes": {
+                "apellido": "{{$.trigger.formData.apellido}}",
+                "correo": "{{$.trigger.formData.correo}}",
+                "id": "{{$.trigger.formData.id}}",
+                "nombre": "{{$.trigger.formData.nombre}}",
+                "sourceId": "a57560a1baaa487f81ec2acfae52d0c0"
+              }
+            },
+            "method": "post",
+            "param_authenticationRef": "oauth",
+            "param_oauth": {
+              "mapping": {
+                "auth_client_id": "clientId",
+                "auth_client_secret": "clientSecret",
+                "auth_credential_location": "credentialLocation",
+                "auth_token_url": "tokenURL"
+              },
+              "paramID": "afd67a0a-527b-478e-b71e-e942c4b8a11d",
+              "paramType": "1.4",
+              "refID": "fae82893-82c0-47a8-9f0e-8831810b1ff9"
+            },
+            "param_oauth_scopes": {
+              "mapping": {
+                "auth_scopes": "scopes"
+              },
+              "paramID": "",
+              "paramType": "3.1"
+            },
+            "requestContentType": "json",
+            "requestHeaders": {},
+            "url": "https://partner8943.api.identitynow-demo.com/v2025/accounts"
+          },
+          "displayName": "",
+          "nextStep": "End Step - Success",
+          "type": "action",
+          "versionNumber": 3
+        }
+      }
+    },
+    "description": "Workflow para crear usuarios cuando se lance un formulario",
+    "enabled": true,
+    "id": "ba7f17a1-df21-44ae-a37d-52a6604ca426",
+    "modified": "2026-10-29T13:34:59.021568962Z",
+    "modifiedBy": {
+      "id": "06c1619bb4ad4fa3b793330ced2408fe",
+      "name": "rcgalvez",
+      "type": "IDENTITY"
+    },
+    "name": "Test Raul Formularios",
+    "owner": {
+      "id": "06c1619bb4ad4fa3b793330ced2408fe",
+      "name": "rcgalvez",
+      "type": "IDENTITY"
+    },
+    "trigger": {
+      "attributes": {
+        "filter.$": "$[?(@.formDefinitionId == '096af211-46b7-4e48-8be3-9333eaadccfe')]",
+        "formDefinitionId": "096af211-46b7-4e48-8be3-9333eaadccfe",
+        "id": "sp:form-submitted",
+        "integrationId": null
+      },
+      "mode": "basic",
+      "type": "EVENT"
+    }
+  },
+  "self": {
+    "id": "ba7f17a1-df21-44ae-a37d-52a6604ca426",
+    "name": "Test Raul Formularios",
+    "type": "WORKFLOW"
+  },
+  "version": 1
+}

@@ -1,0 +1,38 @@
+{
+  "jwsHeader": null,
+  "jwsSignature": null,
+  "object": {
+    "description": "",
+    "id": "e73423ac-6e4a-4947-b354-777875570dc4",
+    "lastModifiedAt": "2026-11-03T07:47:36.484474Z",
+    "lastModifiedBy": {
+      "id": "d024cdc01088491194e571464f97b308",
+      "name": "dmedinay",
+      "type": "IDENTITY"
+    },
+    "name": "SL-Parameter-APISailPointOAuth2Credentials",
+    "owner": {
+      "id": "d024cdc01088491194e571464f97b308",
+      "name": "dmedinay",
+      "type": "IDENTITY"
+    },
+    "privateFieldsLastModifiedAt": "2026-11-03T07:47:36.484474Z",
+    "privateFieldsLastModifiedBy": {
+      "id": "d024cdc01088491194e571464f97b308",
+      "name": "dmedinay",
+      "type": "IDENTITY"
+    },
+    "publicFields": {
+      "clientId": "a6dc5b16b416499fbb609e0dfcc4225c",
+      "credentialLocation": "BODY",
+      "tokenURL": "https://partner8943.api.identitynow-demo.com/oauth/token"
+    },
+    "type": "1.4"
+  },
+  "self": {
+    "id": "e73423ac-6e4a-4947-b354-777875570dc4",
+    "name": "SL-Parameter-APISailPointOAuth2Credentials",
+    "type": "SPS_PARAMETER"
+  },
+  "version": 1
+}

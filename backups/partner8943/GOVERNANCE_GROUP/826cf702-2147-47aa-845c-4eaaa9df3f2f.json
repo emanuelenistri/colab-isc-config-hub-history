@@ -1,0 +1,39 @@
+{
+  "jwsHeader": null,
+  "jwsSignature": null,
+  "object": {
+    "connectionCount": 0,
+    "connections": null,
+    "created": null,
+    "description": "Prueba",
+    "id": "826cf702-2147-47aa-845c-4eaaa9df3f2f",
+    "memberCount": 0,
+    "members": [
+      {
+        "id": "1dff61379fdc41fbac00c7f5ae992e23",
+        "name": "cjoglar",
+        "type": "IDENTITY"
+      },
+      {
+        "id": "87ab43d717894124b9d41b6585502238",
+        "name": "etribaldos",
+        "type": "IDENTITY"
+      }
+    ],
+    "modified": null,
+    "name": "Test CJP",
+    "owner": {
+      "displayName": null,
+      "emailAddress": null,
+      "id": "1dff61379fdc41fbac00c7f5ae992e23",
+      "name": "cjoglar",
+      "type": "IDENTITY"
+    }
+  },
+  "self": {
+    "id": "826cf702-2147-47aa-845c-4eaaa9df3f2f",
+    "name": "Test CJP",
+    "type": "GOVERNANCE_GROUP"
+  },
+  "version": 1
+}

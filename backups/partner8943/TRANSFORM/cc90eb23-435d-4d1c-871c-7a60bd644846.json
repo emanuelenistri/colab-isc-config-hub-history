@@ -1,0 +1,26 @@
+{
+  "jwsHeader": null,
+  "jwsSignature": null,
+  "object": {
+    "attributes": {
+      "input": {
+        "attributes": {
+          "name": "startDate"
+        },
+        "type": "identityAttribute"
+      },
+      "inputFormat": "dd/MM/yyyy",
+      "outputFormat": "ddMMyyyy"
+    },
+    "id": "cc90eb23-435d-4d1c-871c-7a60bd644846",
+    "internal": false,
+    "name": "dateFormat2",
+    "type": "dateFormat"
+  },
+  "self": {
+    "id": "cc90eb23-435d-4d1c-871c-7a60bd644846",
+    "name": "dateFormat2",
+    "type": "TRANSFORM"
+  },
+  "version": 1
+}

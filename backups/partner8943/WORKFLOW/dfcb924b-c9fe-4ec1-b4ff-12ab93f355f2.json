@@ -1,0 +1,118 @@
+{
+  "jwsHeader": null,
+  "jwsSignature": null,
+  "object": {
+    "created": "2024-09-12T09:49:52.471220923Z",
+    "creator": {
+      "id": "49e4267e2cc547b0ad4fb41df46774ec",
+      "name": "mgmontejo",
+      "type": "IDENTITY"
+    },
+    "definition": {
+      "start": "Get List of Identities",
+      "steps": {
+        "End Step - Success 2": {
+          "displayName": "",
+          "type": "success"
+        },
+        "Get List of Identities": {
+          "actionId": "sp:get-identities",
+          "attributes": {
+            "inputQuery": "attributes.dni:{{$.trigger.attributes.dni}}",
+            "searchBy": "searchQuery"
+          },
+          "displayName": "",
+          "nextStep": "Loop",
+          "type": "action",
+          "versionNumber": 2
+        },
+        "Loop": {
+          "actionId": "sp:loop:iterator",
+          "attributes": {
+            "context.$": "$",
+            "input.$": "$.getListOfIdentities.identities",
+            "start": "Get Identity",
+            "steps": {
+              "Compare Strings": {
+                "choiceList": [
+                  {
+                    "comparator": "StringEquals",
+                    "nextStep": "End Step - Success 1",
+                    "variableA.$": "$.trigger.identity.name",
+                    "variableB.$": "$.getIdentity.name"
+                  }
+                ],
+                "defaultStep": "Send Email 1",
+                "displayName": "",
+                "type": "choice"
+              },
+              "End Step - Success": {
+                "displayName": "",
+                "type": "success"
+              },
+              "End Step - Success 1": {
+                "displayName": "",
+                "type": "success"
+              },
+              "Get Identity": {
+                "actionId": "sp:get-identity",
+                "attributes": {
+                  "id.$": "$.loop.loopInput.id"
+                },
+                "displayName": "",
+                "nextStep": "Compare Strings",
+                "type": "action",
+                "versionNumber": 2
+              },
+              "Send Email 1": {
+                "actionId": "sp:send-email",
+                "attributes": {
+                  "body": "<p>Se ha creado la identidad \"{$.trigger.identity.name}\" con tu mismo DNI.</p>",
+                  "context": {},
+                  "recipientEmailList.$": "$.getIdentity.attributes.email",
+                  "subject": "Se ha creado una identidad con tu mismo DNI"
+                },
+                "displayName": "",
+                "nextStep": "End Step - Success",
+                "type": "action",
+                "versionNumber": 2
+              }
+            }
+          },
+          "displayName": "",
+          "nextStep": "End Step - Success 2",
+          "type": "action",
+          "versionNumber": 1
+        }
+      }
+    },
+    "description": "Si se crea una identidad se busca las identidades activas que tengan el mismo dni que la creada y mandar un email",
+    "enabled": false,
+    "id": "dfcb924b-c9fe-4ec1-b4ff-12ab93f355f2",
+    "modified": "2024-09-18T11:54:59.62952588Z",
+    "modifiedBy": {
+      "id": "49e4267e2cc547b0ad4fb41df46774ec",
+      "name": "mgmontejo",
+      "type": "IDENTITY"
+    },
+    "name": "Becarios con mismo DNI se envía email",
+    "owner": {
+      "id": "49e4267e2cc547b0ad4fb41df46774ec",
+      "name": "mgmontejo",
+      "type": "IDENTITY"
+    },
+    "trigger": {
+      "attributes": {
+        "id": "idn:identity-created",
+        "integrationId": null
+      },
+      "type": "EVENT"
+    }
+  },
+  "self": {
+    "id": "dfcb924b-c9fe-4ec1-b4ff-12ab93f355f2",
+    "name": "Becarios con mismo DNI se envía email",
+    "type": "WORKFLOW"
+  },
+  "version": 1
+}

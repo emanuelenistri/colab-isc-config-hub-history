@@ -1,0 +1,40 @@
+{
+  "jwsHeader": null,
+  "jwsSignature": null,
+  "object": {
+    "attributes": {
+      "input": {
+        "attributes": {
+          "begin": 0,
+          "end": 4,
+          "input": {
+            "attributes": {
+              "ignoreErrors": true,
+              "values": [
+                {
+                  "attributes": {
+                    "attributeName": "email",
+                    "sourceName": "BCC-IdentityProfile-External"
+                  },
+                  "type": "accountAttribute"
+                }
+              ]
+            },
+            "type": "firstValid"
+          }
+        },
+        "type": "substring"
+      }
+    },
+    "id": "c91d9558-9a5f-4974-9a36-af2ded2f9aaf",
+    "internal": false,
+    "name": "Transform-indexOf",
+    "type": "indexOf"
+  },
+  "self": {
+    "id": "c91d9558-9a5f-4974-9a36-af2ded2f9aaf",
+    "name": "Transform-indexOf",
+    "type": "TRANSFORM"
+  },
+  "version": 1
+}

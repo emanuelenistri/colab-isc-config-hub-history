@@ -1,0 +1,30 @@
+{
+  "jwsHeader": null,
+  "jwsSignature": null,
+  "object": {
+    "body": "<p>Hello ${__recipient.alias},</p>\n<p><br />As a result of a recent maintenance event in our demo environment, you need to take some action to use your SailPoint tenant. Please be aware that it may take a few hours to accomplish these tasks.<br /><br />Your username is: <span style=\"font-weight:bold\">${__recipient.alias}</span></p>\n<p><br /><strong><span style=\"font-size:14pt\">Instructions</span></strong></p>\n<p><br /><strong>Step 1 - Network access</strong><br />As an added security layer, only known IP addresses are allowed to access the demo environment. To accomplish this, please submit your company’s IP address range by using this <u><a href=\"https://harbor-gate.gtm.sailpointtechnologies.com/\">form.</a></u>   In the future, you can maintain this list in your tenant.  Go to Admin – System Settings – Network Settings and add the client/partners IP address range to the CIDR Notations. </p>\n<p> <br /><strong>Do not proceed to the next step until you receive an email that these have been added.  </strong><br /><br /><strong>Step 2 - Register</strong><br />Once you have received the email informing you that your IP address range has been added, please visit this link to re-register: <a href=\"${registrationUrl}\">Register Now</a><br /><br /><strong>Step 3 – VA Creation</strong><br />After accessing your tenant, please follow the below steps to bring your VA back online<br />     ·       You will need to create a new VA for your tenant (do not try to re-use the old)<br />     ·       You will need to run va-bootstrap reset to reset the existing VA and run through the pairing steps again<br /><br /><strong>Step 4 – Re-enter application credentials</strong><br />All applications will need to be reauthenticated prior to aggregation.   Please edit each source configuration, re-enter the service account credentials, test the connection, and save the configuration.<br /><br /><strong>Step 5 – Other secrets and Personal Access Tokens</strong><br />All secrets. Personal Access Tokens or API keys need to be recreated.<br /><br />If you see an issue with your tenant that you are unable to resolve, please open <u><a href=\"https://www.sailpoint.com/contact-us\">Support Ticket</a></u>.  </p>\n<p>Thanks,<br />The $__global.productName Team</p>",
+    "created": "2026-11-19T18:45:26.664Z",
+    "description": "Sent to invite a user to your SailPoint products.",
+    "details": null,
+    "footer": null,
+    "from": "$__global.emailFromAddress",
+    "header": null,
+    "id": "10fdb9d5-c595-4c60-93b1-59d2105e5682",
+    "inboxTemplate": null,
+    "key": "user_invitation-custom",
+    "locale": "en",
+    "medium": "EMAIL",
+    "modified": "2026-11-19T18:45:26.670Z",
+    "name": "User Invitation",
+    "replyTo": "$__global.emailFromAddress",
+    "slackTemplate": null,
+    "subject": "Welcome to $__global.productName",
+    "teamsTemplate": null
+  },
+  "self": {
+    "id": "10fdb9d5-c595-4c60-93b1-59d2105e5682",
+    "name": "User Invitation",
+    "type": "NOTIFICATION_TEMPLATE"
+  },
+  "version": 1
+}

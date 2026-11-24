@@ -1,0 +1,22 @@
+{
+  "jwsHeader": null,
+  "jwsSignature": null,
+  "object": {
+    "attributes": {
+      "attributeName": "dn",
+      "name": "Cloud Services Deployment Utility",
+      "operation": "getReferenceIdentityAttribute",
+      "uid": "manager"
+    },
+    "id": "06956d83-797e-4035-98fc-65d2ad6d7300",
+    "internal": false,
+    "name": "managerUID",
+    "type": "rule"
+  },
+  "self": {
+    "id": "06956d83-797e-4035-98fc-65d2ad6d7300",
+    "name": "managerUID",
+    "type": "TRANSFORM"
+  },
+  "version": 1
+}

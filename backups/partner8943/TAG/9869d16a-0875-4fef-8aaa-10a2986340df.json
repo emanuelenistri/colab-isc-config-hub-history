@@ -1,0 +1,28 @@
+{
+  "jwsHeader": null,
+  "jwsSignature": null,
+  "object": {
+    "created": null,
+    "id": "9869d16a-0875-4fef-8aaa-10a2986340df",
+    "modified": null,
+    "name": "VIOLATION_SOD",
+    "taggedObjects": [
+      {
+        "id": "68747320-55e5-41fc-9f37-ebd944f02df9",
+        "name": "Invoice Creation and Approval Control",
+        "type": "SOD_POLICY"
+      },
+      {
+        "id": "99c43e9b-0630-4bbc-9677-4f22e5e5f09b",
+        "name": "Money In & Money Out",
+        "type": "SOD_POLICY"
+      }
+    ]
+  },
+  "self": {
+    "id": "9869d16a-0875-4fef-8aaa-10a2986340df",
+    "name": "VIOLATION_SOD",
+    "type": "TAG"
+  },
+  "version": 1
+}

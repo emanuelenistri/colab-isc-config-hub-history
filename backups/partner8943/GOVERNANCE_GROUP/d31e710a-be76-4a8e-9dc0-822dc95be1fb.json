@@ -1,0 +1,39 @@
+{
+  "jwsHeader": null,
+  "jwsSignature": null,
+  "object": {
+    "connectionCount": 0,
+    "connections": null,
+    "created": null,
+    "description": "Finance stakeholders",
+    "id": "d31e710a-be76-4a8e-9dc0-822dc95be1fb",
+    "memberCount": 0,
+    "members": [
+      {
+        "id": "0f2ebd56c71d4f0f812dee0d0430c77e",
+        "name": "Janet.Washington",
+        "type": "IDENTITY"
+      },
+      {
+        "id": "d52fa6f20a3b4af284d7fe379844c277",
+        "name": "Catherine.Simmons",
+        "type": "IDENTITY"
+      }
+    ],
+    "modified": null,
+    "name": "Finance Approvers",
+    "owner": {
+      "displayName": null,
+      "emailAddress": null,
+      "id": "87ab43d717894124b9d41b6585502238",
+      "name": "etribaldos",
+      "type": "IDENTITY"
+    }
+  },
+  "self": {
+    "id": "d31e710a-be76-4a8e-9dc0-822dc95be1fb",
+    "name": "Finance Approvers",
+    "type": "GOVERNANCE_GROUP"
+  },
+  "version": 1
+}

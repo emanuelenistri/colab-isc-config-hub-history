@@ -1,0 +1,46 @@
+{
+  "jwsHeader": null,
+  "jwsSignature": null,
+  "object": {
+    "attributes": {
+      "displayNameGenerado": {
+        "attributes": {
+          "id": "displayName"
+        },
+        "type": "reference"
+      },
+      "dniValor": {
+        "attributes": {
+          "values": [
+            {
+              "attributes": {
+                "name": "uid"
+              },
+              "type": "identityAttribute"
+            },
+            {
+              "attributes": {
+                "value": "vacio"
+              },
+              "type": "static"
+            }
+          ]
+        },
+        "type": "firstValid"
+      },
+      "expression": "$dniValor eq vacio",
+      "negativeCondition": "$dniValor",
+      "positiveCondition": "$displayNameGenerado"
+    },
+    "id": "809731c0-703e-4fc3-a1f0-905d87723601",
+    "internal": false,
+    "name": "Z Comprobar y Asignar DNI",
+    "type": "conditional"
+  },
+  "self": {
+    "id": "809731c0-703e-4fc3-a1f0-905d87723601",
+    "name": "Z Comprobar y Asignar DNI",
+    "type": "TRANSFORM"
+  },
+  "version": 1
+}

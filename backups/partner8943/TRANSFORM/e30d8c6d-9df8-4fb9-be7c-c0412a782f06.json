@@ -1,0 +1,31 @@
+{
+  "jwsHeader": null,
+  "jwsSignature": null,
+  "object": {
+    "attributes": {
+      "begin": {
+        "attributes": {
+          "substring": "@"
+        },
+        "type": "indexOf"
+      },
+      "input": {
+        "attributes": {
+          "attributeName": "mail",
+          "sourceName": "Active Directory LAB SIA"
+        },
+        "type": "accountAttribute"
+      }
+    },
+    "id": "e30d8c6d-9df8-4fb9-be7c-c0412a782f06",
+    "internal": false,
+    "name": "Prueba",
+    "type": "substring"
+  },
+  "self": {
+    "id": "e30d8c6d-9df8-4fb9-be7c-c0412a782f06",
+    "name": "Prueba",
+    "type": "TRANSFORM"
+  },
+  "version": 1
+}

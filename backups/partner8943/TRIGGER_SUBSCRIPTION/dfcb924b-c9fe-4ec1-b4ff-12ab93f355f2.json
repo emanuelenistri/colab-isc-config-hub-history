@@ -1,0 +1,23 @@
+{
+  "jwsHeader": null,
+  "jwsSignature": null,
+  "object": {
+    "description": "Managed by Workflows",
+    "enabled": false,
+    "id": "dfcb924b-c9fe-4ec1-b4ff-12ab93f355f2",
+    "name": "Becarios con mismo DNI se envía email",
+    "responseDeadline": "PT1H",
+    "triggerId": "idn:identity-created",
+    "triggerName": "Identity Created",
+    "type": "WORKFLOW",
+    "workflowConfig": {
+      "workflowId": "dfcb924b-c9fe-4ec1-b4ff-12ab93f355f2"
+    }
+  },
+  "self": {
+    "id": "dfcb924b-c9fe-4ec1-b4ff-12ab93f355f2",
+    "name": "Becarios con mismo DNI se envía email",
+    "type": "TRIGGER_SUBSCRIPTION"
+  },
+  "version": 1
+}

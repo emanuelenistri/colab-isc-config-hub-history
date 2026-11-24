@@ -1,0 +1,23 @@
+{
+  "jwsHeader": null,
+  "jwsSignature": null,
+  "object": {
+    "created": null,
+    "id": "675f504e-8d34-4c9b-a621-5a7c9732fbda",
+    "modified": null,
+    "name": "NIST",
+    "taggedObjects": [
+      {
+        "id": "f3a8038a-92a9-40f4-aec0-9caa1dc54898",
+        "name": "Contractors with a CyberArk Account",
+        "type": "SOD_POLICY"
+      }
+    ]
+  },
+  "self": {
+    "id": "675f504e-8d34-4c9b-a621-5a7c9732fbda",
+    "name": "NIST",
+    "type": "TAG"
+  },
+  "version": 1
+}

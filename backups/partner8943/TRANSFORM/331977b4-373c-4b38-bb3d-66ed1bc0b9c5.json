@@ -1,0 +1,27 @@
+{
+  "jwsHeader": null,
+  "jwsSignature": null,
+  "object": {
+    "attributes": {
+      "input": {
+        "attributes": {
+          "expression": "now",
+          "roundUp": false
+        },
+        "type": "dateMath"
+      },
+      "inputFormat": "ISO8601",
+      "outputFormat": "ISO8601"
+    },
+    "id": "331977b4-373c-4b38-bb3d-66ed1bc0b9c5",
+    "internal": false,
+    "name": "Transform-dateFormat",
+    "type": "dateFormat"
+  },
+  "self": {
+    "id": "331977b4-373c-4b38-bb3d-66ed1bc0b9c5",
+    "name": "Transform-dateFormat",
+    "type": "TRANSFORM"
+  },
+  "version": 1
+}

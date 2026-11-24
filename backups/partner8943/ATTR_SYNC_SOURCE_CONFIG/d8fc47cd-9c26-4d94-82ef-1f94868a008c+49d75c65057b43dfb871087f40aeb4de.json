@@ -1,0 +1,25 @@
+{
+  "jwsHeader": null,
+  "jwsSignature": null,
+  "object": {
+    "attributes": [
+      {
+        "displayName": "att_display_name",
+        "enabled": true,
+        "name": "displayName",
+        "target": "displayName"
+      }
+    ],
+    "source": {
+      "id": "49d75c65057b43dfb871087f40aeb4de",
+      "name": null,
+      "type": "SOURCE"
+    }
+  },
+  "self": {
+    "id": "d8fc47cd-9c26-4d94-82ef-1f94868a008c:49d75c65057b43dfb871087f40aeb4de",
+    "name": null,
+    "type": "ATTR_SYNC_SOURCE_CONFIG"
+  },
+  "version": 1
+}

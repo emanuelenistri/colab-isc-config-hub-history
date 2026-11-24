@@ -1,0 +1,81 @@
+{
+  "jwsHeader": null,
+  "jwsSignature": null,
+  "object": {
+    "created": "2024-02-29T17:13:21.851815309Z",
+    "creator": {
+      "id": "0533ec736d874f4eb4c76552977bf727",
+      "name": "slpt.support",
+      "type": "IDENTITY"
+    },
+    "definition": {
+      "start": "Compare Strings",
+      "steps": {
+        "Activate Certification Campaign": {
+          "actionId": "sp:activate-campaign",
+          "attributes": {
+            "id.$": "$.createCertificationCampaign.id"
+          },
+          "description": "Activate the Campaign",
+          "nextStep": "success",
+          "type": "action"
+        },
+        "Compare Strings": {
+          "choiceList": [
+            {
+              "comparator": "StringEquals",
+              "nextStep": "success",
+              "variableA.$": "$.trigger.changes[?(@.attribute == 'jobTitle')].oldValue",
+              "variableB.$": "$.trigger.changes[?(@.attribute == 'jobTitle')].newValue"
+            }
+          ],
+          "defaultStep": "Create Certification Campaign",
+          "type": "choice"
+        },
+        "Create Certification Campaign": {
+          "actionId": "sp:create-campaign",
+          "attributes": {
+            "description": "Workflows-Generated Campaign for job title changes",
+            "duration": "24h",
+            "identityId.$": "$.trigger.identity.id",
+            "name": "Workflows-Generated Campaign"
+          },
+          "description": "This will create the campaign",
+          "nextStep": "Activate Certification Campaign",
+          "type": "action"
+        },
+        "success": {
+          "type": "success"
+        }
+      }
+    },
+    "description": "Workflow when identities move between teams - create certification",
+    "enabled": false,
+    "id": "08b4bf76-a376-4c3f-9592-d425adca3001",
+    "modified": "2024-02-29T17:13:21.851815309Z",
+    "modifiedBy": {
+      "id": "0533ec736d874f4eb4c76552977bf727",
+      "name": "slpt.support",
+      "type": "IDENTITY"
+    },
+    "name": "Workflow Mover Campaign Test",
+    "owner": {
+      "id": "fe353d5f33bf4e1dbbfb32a913a2ae40",
+      "name": "alejandro.fernandez",
+      "type": "IDENTITY"
+    },
+    "trigger": {
+      "attributes": {
+        "id": "idn:identity-attributes-changed",
+        "integrationId": null
+      },
+      "type": "EVENT"
+    }
+  },
+  "self": {
+    "id": "08b4bf76-a376-4c3f-9592-d425adca3001",
+    "name": "Workflow Mover Campaign Test",
+    "type": "WORKFLOW"
+  },
+  "version": 1
+}

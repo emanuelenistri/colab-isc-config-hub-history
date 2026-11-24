@@ -1,0 +1,451 @@
+{
+  "jwsHeader": null,
+  "jwsSignature": null,
+  "object": {
+    "accountCorrelationRule": null,
+    "beforeProvisioningRule": null,
+    "connectorAttributes": {
+      "appTemplateData": "{\"whiteListedAttributes\":[\"enableProvisioningFeature\"]}",
+      "appendHostName": false,
+      "authType": "SQLAuthentication",
+      "cloudCacheUpdate": 1795432826083,
+      "cloudDisplayName": "SQL Server 01",
+      "connectionType": "direct",
+      "connectorFileUploadHistory": {
+        "mssql-jdbc-13.6.0.jre8.jar": "2026-11-05T10:48:00.709948436Z"
+      },
+      "connectorName": "Microsoft SQL Server",
+      "connector_files": "mssql-jdbc-13.6.0.jre8.jar",
+      "deleteThresholdPercentage": 10,
+      "driverClass": "com.microsoft.sqlserver.jdbc.SQLServerDriver",
+      "enableProvisioningFeature": true,
+      "healthCheckTimeout": 30,
+      "healthy": false,
+      "pageSize": "1000",
+      "since": "2025-04-01T07:48:30.691Z",
+      "status": "SOURCE_STATE_FAILURE_SOURCE",
+      "templateApplication": "Microsoft SQL Server Template",
+      "url": "jdbc:sqlserver://<server\\[instance]>:<port>",
+      "useEnhancedConnector": true,
+      "user": "sailpoint"
+    },
+    "connectorClass": "sailpoint.connector.MSSQLServerConnector",
+    "connectorScriptName": "microsoft-sql-server-angularsc",
+    "correlationConfigDetails": {
+      "attributeAssignments": [
+        {
+          "complex": false,
+          "filterString": null,
+          "ignoreCase": false,
+          "matchMode": null,
+          "operation": "EQ",
+          "property": "name",
+          "sequence": 1,
+          "value": "name"
+        }
+      ],
+      "id": "e41c9ab598724522bf6d9c951d26f464",
+      "name": "SQL Server 01 Account Correlation Config"
+    },
+    "crossTenantConnectorAttributes": {},
+    "deleteThreshold": 10,
+    "description": "SQL Server 01",
+    "features": [
+      "DIRECT_PERMISSIONS",
+      "ENABLE",
+      "GROUP_PROVISIONING",
+      "PASSWORD",
+      "PROVISIONING",
+      "SEARCH",
+      "SYNC_PROVISIONING",
+      "UNLOCK"
+    ],
+    "id": "7310a5e4b23e4614bf2c6d41c75185c6",
+    "managementWorkgroup": null,
+    "managerCorrelationMapping": null,
+    "managerCorrelationRule": null,
+    "name": "SQL Server 01",
+    "owner": {
+      "id": "748aaee232614741b6f6cddf341ee281",
+      "name": "lmmartinez",
+      "type": "IDENTITY"
+    },
+    "passwordPolicies": null,
+    "provisionAsCsv": false,
+    "provisioningPolicies": [
+      {
+        "description": null,
+        "fields": [
+          {
+            "attributes": {
+              "cloudMaxSize": "20",
+              "cloudMaxUniqueChecks": "50",
+              "cloudRequired": "true",
+              "template": "$(firstname).$(lastname)$(uniqueCounter)"
+            },
+            "isMultiValued": false,
+            "isRequired": true,
+            "name": "native_identity",
+            "transform": {
+              "attributes": {
+                "name": "Create Unique Account ID"
+              },
+              "type": "rule"
+            },
+            "type": "string"
+          },
+          {
+            "attributes": {
+              "cloudRequired": "true"
+            },
+            "isMultiValued": false,
+            "isRequired": false,
+            "name": "password",
+            "transform": {
+              "attributes": {
+                "name": "Create Password"
+              },
+              "type": "rule"
+            },
+            "type": "secret"
+          },
+          {
+            "attributes": {
+              "cloudRequired": "true"
+            },
+            "isMultiValued": false,
+            "isRequired": true,
+            "name": "type_desc",
+            "transform": {
+              "attributes": {
+                "value": "SQL_LOGIN"
+              },
+              "type": "static"
+            },
+            "type": "string"
+          }
+        ],
+        "name": "account",
+        "usageType": "CREATE"
+      },
+      {
+        "description": null,
+        "fields": [
+          {
+            "attributes": {},
+            "isMultiValued": false,
+            "isRequired": false,
+            "name": "password",
+            "transform": null,
+            "type": "secret"
+          },
+          {
+            "attributes": {},
+            "isMultiValued": false,
+            "isRequired": true,
+            "name": "native_identity",
+            "transform": null,
+            "type": "string"
+          },
+          {
+            "attributes": {},
+            "isMultiValued": false,
+            "isRequired": true,
+            "name": "type_desc",
+            "transform": null,
+            "type": "string"
+          }
+        ],
+        "name": "create group",
+        "usageType": "CREATE_GROUP"
+      }
+    ],
+    "schemas": [
+      {
+        "attributes": [
+          {
+            "description": "Account name",
+            "isEntitlement": false,
+            "isGroup": false,
+            "isManaged": false,
+            "isMulti": false,
+            "name": "name",
+            "nativeName": null,
+            "schema": null,
+            "type": "STRING"
+          },
+          {
+            "description": "Creation date of the login",
+            "isEntitlement": false,
+            "isGroup": false,
+            "isManaged": false,
+            "isMulti": false,
+            "name": "create_date",
+            "nativeName": null,
+            "schema": null,
+            "type": "STRING"
+          },
+          {
+            "description": "Database users which are associated to the login",
+            "isEntitlement": false,
+            "isGroup": false,
+            "isManaged": false,
+            "isMulti": true,
+            "name": "DBUser",
+            "nativeName": null,
+            "schema": null,
+            "type": "STRING"
+          },
+          {
+            "description": "Description type of the login",
+            "isEntitlement": false,
+            "isGroup": false,
+            "isManaged": false,
+            "isMulti": false,
+            "name": "type_desc",
+            "nativeName": null,
+            "schema": null,
+            "type": "STRING"
+          },
+          {
+            "description": "ID of database principal",
+            "isEntitlement": false,
+            "isGroup": false,
+            "isManaged": false,
+            "isMulti": false,
+            "name": "principal_id",
+            "nativeName": null,
+            "schema": null,
+            "type": "STRING"
+          },
+          {
+            "description": "ID of the principal that owns this database principal",
+            "isEntitlement": false,
+            "isGroup": false,
+            "isManaged": false,
+            "isMulti": false,
+            "name": "owning_principal_id",
+            "nativeName": null,
+            "schema": null,
+            "type": "STRING"
+          },
+          {
+            "description": "If  the value is 1, then this row represents an entry for one of the fixed database roles",
+            "isEntitlement": false,
+            "isGroup": false,
+            "isManaged": false,
+            "isMulti": false,
+            "name": "is_fixed_role",
+            "nativeName": null,
+            "schema": null,
+            "type": "STRING"
+          },
+          {
+            "description": "Last modification date of the login",
+            "isEntitlement": false,
+            "isGroup": false,
+            "isManaged": false,
+            "isMulti": false,
+            "name": "modify_date",
+            "nativeName": null,
+            "schema": null,
+            "type": "STRING"
+          },
+          {
+            "description": "Native identity represented by default as loginName",
+            "isEntitlement": false,
+            "isGroup": false,
+            "isManaged": false,
+            "isMulti": false,
+            "name": "native_identity",
+            "nativeName": null,
+            "schema": null,
+            "type": "STRING"
+          },
+          {
+            "description": "SID of the login",
+            "isEntitlement": false,
+            "isGroup": false,
+            "isManaged": false,
+            "isMulti": false,
+            "name": "sid",
+            "nativeName": null,
+            "schema": null,
+            "type": "STRING"
+          },
+          {
+            "description": "Server and database roles assigned to the login and its mapped database users",
+            "isEntitlement": true,
+            "isGroup": true,
+            "isManaged": false,
+            "isMulti": true,
+            "name": "roles",
+            "nativeName": null,
+            "schema": {
+              "id": "9a7e73654f3e4e5598f11d0969a071fc",
+              "name": "group",
+              "type": "CONNECTOR_SCHEMA"
+            },
+            "type": "STRING"
+          },
+          {
+            "description": "Server login associated to account",
+            "isEntitlement": false,
+            "isGroup": false,
+            "isManaged": false,
+            "isMulti": false,
+            "name": "server_login",
+            "nativeName": null,
+            "schema": null,
+            "type": "STRING"
+          },
+          {
+            "description": "Server name",
+            "isEntitlement": false,
+            "isGroup": false,
+            "isManaged": false,
+            "isMulti": false,
+            "name": "server_name",
+            "nativeName": null,
+            "schema": null,
+            "type": "STRING"
+          },
+          {
+            "description": "Type of the login",
+            "isEntitlement": false,
+            "isGroup": false,
+            "isManaged": false,
+            "isMulti": false,
+            "name": "type",
+            "nativeName": null,
+            "schema": null,
+            "type": "STRING"
+          }
+        ],
+        "configuration": {},
+        "created": "2024-10-19T05:34:56.487Z",
+        "displayAttribute": "native_identity",
+        "features": [],
+        "hierarchyAttribute": null,
+        "id": "b4f82f219e704200b20c61084e87eb19",
+        "identityAttribute": "native_identity",
+        "includePermissions": false,
+        "modified": "2024-10-19T05:34:56.487Z",
+        "name": "account",
+        "nativeObjectType": "account"
+      },
+      {
+        "attributes": [
+          {
+            "description": "Database ID in which group exists",
+            "isEntitlement": false,
+            "isGroup": false,
+            "isManaged": false,
+            "isMulti": false,
+            "name": "database_id",
+            "nativeName": null,
+            "schema": null,
+            "type": "STRING"
+          },
+          {
+            "description": "Database name in which group exists",
+            "isEntitlement": false,
+            "isGroup": false,
+            "isManaged": false,
+            "isMulti": false,
+            "name": "database_name",
+            "nativeName": null,
+            "schema": null,
+            "type": "STRING"
+          },
+          {
+            "description": "Description type of the group",
+            "isEntitlement": false,
+            "isGroup": false,
+            "isManaged": false,
+            "isMulti": false,
+            "name": "type_desc",
+            "nativeName": null,
+            "schema": null,
+            "type": "STRING"
+          },
+          {
+            "description": "Group name",
+            "isEntitlement": false,
+            "isGroup": false,
+            "isManaged": false,
+            "isMulti": false,
+            "name": "name",
+            "nativeName": null,
+            "schema": null,
+            "type": "STRING"
+          },
+          {
+            "description": "Id of database principal",
+            "isEntitlement": false,
+            "isGroup": false,
+            "isManaged": false,
+            "isMulti": false,
+            "name": "principal_id",
+            "nativeName": null,
+            "schema": null,
+            "type": "STRING"
+          },
+          {
+            "description": "Native identity represented by default as groupName@serverName or groupName@databaseName",
+            "isEntitlement": false,
+            "isGroup": false,
+            "isManaged": false,
+            "isMulti": false,
+            "name": "native_identity",
+            "nativeName": null,
+            "schema": null,
+            "type": "STRING"
+          },
+          {
+            "description": "Roles assigned to the group",
+            "isEntitlement": false,
+            "isGroup": false,
+            "isManaged": false,
+            "isMulti": true,
+            "name": "roles",
+            "nativeName": null,
+            "schema": null,
+            "type": "STRING"
+          },
+          {
+            "description": "Server name of the group",
+            "isEntitlement": false,
+            "isGroup": false,
+            "isManaged": false,
+            "isMulti": false,
+            "name": "server_name",
+            "nativeName": null,
+            "schema": null,
+            "type": "STRING"
+          }
+        ],
+        "configuration": {},
+        "created": "2024-10-19T05:34:56.487Z",
+        "displayAttribute": "native_identity",
+        "features": [
+          "PROVISIONING"
+        ],
+        "hierarchyAttribute": null,
+        "id": "9a7e73654f3e4e5598f11d0969a071fc",
+        "identityAttribute": "native_identity",
+        "includePermissions": false,
+        "modified": "2024-10-19T05:34:56.571Z",
+        "name": "group",
+        "nativeObjectType": "group"
+      }
+    ],
+    "type": "Microsoft SQL Server - Direct"
+  },
+  "self": {
+    "id": "7310a5e4b23e4614bf2c6d41c75185c6",
+    "name": "SQL Server 01",
+    "type": "SOURCE"
+  },
+  "version": 1
+}

@@ -1,0 +1,43 @@
+{
+  "jwsHeader": null,
+  "jwsSignature": null,
+  "object": {
+    "attributes": [
+      {
+        "displayName": "IdentityNow Username",
+        "enabled": true,
+        "name": "uid",
+        "target": "profile_uid_ne_attribute"
+      },
+      {
+        "displayName": "att_email",
+        "enabled": true,
+        "name": "email",
+        "target": "email"
+      },
+      {
+        "displayName": "att_first_name",
+        "enabled": true,
+        "name": "firstname",
+        "target": "first_name"
+      },
+      {
+        "displayName": "att_last_name",
+        "enabled": true,
+        "name": "lastname",
+        "target": "last_name"
+      }
+    ],
+    "source": {
+      "id": "60fd2bd81dcd419d91bddac786fe6616",
+      "name": null,
+      "type": "SOURCE"
+    }
+  },
+  "self": {
+    "id": "d8fc47cd-9c26-4d94-82ef-1f94868a008c:60fd2bd81dcd419d91bddac786fe6616",
+    "name": null,
+    "type": "ATTR_SYNC_SOURCE_CONFIG"
+  },
+  "version": 1
+}

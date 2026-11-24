@@ -1,0 +1,29 @@
+{
+  "jwsHeader": null,
+  "jwsSignature": null,
+  "object": {
+    "description": "",
+    "enabled": false,
+    "httpConfig": {
+      "basicAuthConfig": null,
+      "bearerTokenAuthConfig": {
+        "bearerToken": null
+      },
+      "httpAuthenticationType": "BEARER_TOKEN",
+      "httpDispatchMode": "ASYNC",
+      "url": "https://partner8943.api.identitynow-demo.com/beta/workflows/execute/external/9021fcf8-0383-48a6-ad66-3a45b21e5108"
+    },
+    "id": "24a2760d-0477-4b92-84a2-d4f7e1f9aa4c",
+    "name": "Dynamic Approver Raul",
+    "responseDeadline": "PT1H",
+    "triggerId": "idn:access-request-dynamic-approver",
+    "triggerName": "Access Request Dynamic Approver",
+    "type": "HTTP"
+  },
+  "self": {
+    "id": "24a2760d-0477-4b92-84a2-d4f7e1f9aa4c",
+    "name": "Dynamic Approver Raul",
+    "type": "TRIGGER_SUBSCRIPTION"
+  },
+  "version": 1
+}

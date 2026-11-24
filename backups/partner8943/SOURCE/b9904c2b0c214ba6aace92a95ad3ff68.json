@@ -1,0 +1,335 @@
+{
+  "jwsHeader": null,
+  "jwsSignature": null,
+  "object": {
+    "accountCorrelationRule": null,
+    "beforeProvisioningRule": null,
+    "connectorAttributes": {
+      "checkDeletedDisabled": true,
+      "cloudAuthoritativeSourcePrecedence": 50,
+      "cloudCacheUpdate": 1795485605076,
+      "cloudDisplayName": "NERM",
+      "cloudIdentityProfileName": "NERM TEST",
+      "connectionType": "direct",
+      "connectorName": "SailPoint Non-Employee Risk Management",
+      "deleteThresholdPercentage": 100,
+      "enableProvisioningFeature": false,
+      "healthCheckTimeout": 30,
+      "healthy": false,
+      "idnProxyType": "sp-connect",
+      "profileTypeId": "01d23343-943e-4e8c-bc93-a5277d9c10d5",
+      "recommendationStatus": "ERROR",
+      "since": "2026-11-12T01:58:24.751Z",
+      "sourceConnected": true,
+      "spConnectorSpecId": "39946170-edb9-46ac-b5f4-3c9bccef4cbb",
+      "status": "SOURCE_STATE_FAILURE_SOURCE",
+      "templateApplication": "SailPoint Non-Employee Risk Management",
+      "tenantDomain": "partner8943.mynonemployee.com",
+      "uiMarkAsAuthoritative": true
+    },
+    "connectorClass": "",
+    "connectorScriptName": "39946170-edb9-46ac-b5f4-3c9bccef4cbb",
+    "correlationConfigDetails": {
+      "attributeAssignments": null,
+      "id": null,
+      "name": null
+    },
+    "crossTenantConnectorAttributes": {},
+    "deleteThreshold": 100,
+    "description": "Test",
+    "features": [],
+    "id": "b9904c2b0c214ba6aace92a95ad3ff68",
+    "managementWorkgroup": {
+      "id": "ae32e58b-af6f-4137-9a0c-4a9232ef020f",
+      "name": "Accounting",
+      "type": "GOVERNANCE_GROUP"
+    },
+    "managerCorrelationMapping": {
+      "accountAttributeName": "user_id",
+      "identityAttributeName": "uid"
+    },
+    "managerCorrelationRule": null,
+    "name": "NERM",
+    "owner": {
+      "id": "84a568c1f5024b24b21a25a27379ac66",
+      "name": "smenendezp",
+      "type": "IDENTITY"
+    },
+    "passwordPolicies": null,
+    "provisionAsCsv": false,
+    "provisioningPolicies": [
+      {
+        "description": null,
+        "fields": [],
+        "name": "",
+        "usageType": "CREATE"
+      }
+    ],
+    "schemas": [
+      {
+        "attributes": [
+          {
+            "description": "assignedOffice_ne_attribute",
+            "isEntitlement": false,
+            "isGroup": false,
+            "isManaged": false,
+            "isMulti": false,
+            "name": "assignedOffice_ne_attribute",
+            "nativeName": null,
+            "schema": null,
+            "type": "STRING"
+          },
+          {
+            "description": "assignedofficemanager_ne_attribute",
+            "isEntitlement": false,
+            "isGroup": false,
+            "isManaged": false,
+            "isMulti": false,
+            "name": "assignedofficemanager_ne_attribute",
+            "nativeName": null,
+            "schema": null,
+            "type": "STRING"
+          },
+          {
+            "description": "contracnumber_ne_attribute",
+            "isEntitlement": false,
+            "isGroup": false,
+            "isManaged": false,
+            "isMulti": false,
+            "name": "contracnumber_ne_attribute",
+            "nativeName": null,
+            "schema": null,
+            "type": "STRING"
+          },
+          {
+            "description": "deliveryaddress_ne_attribute",
+            "isEntitlement": false,
+            "isGroup": false,
+            "isManaged": false,
+            "isMulti": false,
+            "name": "deliveryaddress_ne_attribute",
+            "nativeName": null,
+            "schema": null,
+            "type": "STRING"
+          },
+          {
+            "description": "dni_ne_attribute",
+            "isEntitlement": false,
+            "isGroup": false,
+            "isManaged": false,
+            "isMulti": false,
+            "name": "dni_ne_attribute",
+            "nativeName": null,
+            "schema": null,
+            "type": "STRING"
+          },
+          {
+            "description": "email",
+            "isEntitlement": false,
+            "isGroup": false,
+            "isManaged": false,
+            "isMulti": false,
+            "name": "email",
+            "nativeName": null,
+            "schema": null,
+            "type": "STRING"
+          },
+          {
+            "description": "enddate_ne_attribute",
+            "isEntitlement": false,
+            "isGroup": false,
+            "isManaged": false,
+            "isMulti": false,
+            "name": "enddate_ne_attribute",
+            "nativeName": null,
+            "schema": null,
+            "type": "STRING"
+          },
+          {
+            "description": "entity_ne_attribute",
+            "isEntitlement": false,
+            "isGroup": false,
+            "isManaged": false,
+            "isMulti": false,
+            "name": "entity_ne_attribute",
+            "nativeName": null,
+            "schema": null,
+            "type": "STRING"
+          },
+          {
+            "description": "externalcompany_ne_attribute",
+            "isEntitlement": false,
+            "isGroup": false,
+            "isManaged": false,
+            "isMulti": false,
+            "name": "externalcompany_ne_attribute",
+            "nativeName": null,
+            "schema": null,
+            "type": "STRING"
+          },
+          {
+            "description": "externalnumber_ne_attribute",
+            "isEntitlement": false,
+            "isGroup": false,
+            "isManaged": false,
+            "isMulti": false,
+            "name": "externalnumber_ne_attribute",
+            "nativeName": null,
+            "schema": null,
+            "type": "STRING"
+          },
+          {
+            "description": "firstname_ne_attribute",
+            "isEntitlement": false,
+            "isGroup": false,
+            "isManaged": false,
+            "isMulti": false,
+            "name": "firstname_ne_attribute",
+            "nativeName": null,
+            "schema": null,
+            "type": "STRING"
+          },
+          {
+            "description": "jobDate_ne_attribute",
+            "isEntitlement": false,
+            "isGroup": false,
+            "isManaged": false,
+            "isMulti": false,
+            "name": "jobDate_ne_attribute",
+            "nativeName": null,
+            "schema": null,
+            "type": "STRING"
+          },
+          {
+            "description": "jobId_ne_attribute",
+            "isEntitlement": false,
+            "isGroup": false,
+            "isManaged": false,
+            "isMulti": false,
+            "name": "jobId_ne_attribute",
+            "nativeName": null,
+            "schema": null,
+            "type": "STRING"
+          },
+          {
+            "description": "job_ne_attribute",
+            "isEntitlement": false,
+            "isGroup": false,
+            "isManaged": false,
+            "isMulti": false,
+            "name": "job_ne_attribute",
+            "nativeName": null,
+            "schema": null,
+            "type": "STRING"
+          },
+          {
+            "description": "lastname_ne_attribute",
+            "isEntitlement": false,
+            "isGroup": false,
+            "isManaged": false,
+            "isMulti": false,
+            "name": "lastname_ne_attribute",
+            "nativeName": null,
+            "schema": null,
+            "type": "STRING"
+          },
+          {
+            "description": "officialIdentityType_ne_attribute",
+            "isEntitlement": false,
+            "isGroup": false,
+            "isManaged": false,
+            "isMulti": false,
+            "name": "officialIdentityType_ne_attribute",
+            "nativeName": null,
+            "schema": null,
+            "type": "STRING"
+          },
+          {
+            "description": "physicaloffice_ne_attribute",
+            "isEntitlement": false,
+            "isGroup": false,
+            "isManaged": false,
+            "isMulti": false,
+            "name": "physicaloffice_ne_attribute",
+            "nativeName": null,
+            "schema": null,
+            "type": "STRING"
+          },
+          {
+            "description": "secondlastname_ne_attribute",
+            "isEntitlement": false,
+            "isGroup": false,
+            "isManaged": false,
+            "isMulti": false,
+            "name": "secondlastname_ne_attribute",
+            "nativeName": null,
+            "schema": null,
+            "type": "STRING"
+          },
+          {
+            "description": "startdate_ne_attribute",
+            "isEntitlement": false,
+            "isGroup": false,
+            "isManaged": false,
+            "isMulti": false,
+            "name": "startdate_ne_attribute",
+            "nativeName": null,
+            "schema": null,
+            "type": "STRING"
+          },
+          {
+            "description": "telephonenumber_ne_attribute",
+            "isEntitlement": false,
+            "isGroup": false,
+            "isManaged": false,
+            "isMulti": false,
+            "name": "telephonenumber_ne_attribute",
+            "nativeName": null,
+            "schema": null,
+            "type": "STRING"
+          },
+          {
+            "description": "user_crc32_ne_attribute",
+            "isEntitlement": false,
+            "isGroup": false,
+            "isManaged": false,
+            "isMulti": false,
+            "name": "user_crc32_ne_attribute",
+            "nativeName": null,
+            "schema": null,
+            "type": "STRING"
+          },
+          {
+            "description": "user_id",
+            "isEntitlement": false,
+            "isGroup": false,
+            "isManaged": false,
+            "isMulti": false,
+            "name": "user_id",
+            "nativeName": null,
+            "schema": null,
+            "type": "STRING"
+          }
+        ],
+        "configuration": {},
+        "created": "2025-02-24T12:02:34.532Z",
+        "displayAttribute": "user_id",
+        "features": [],
+        "hierarchyAttribute": null,
+        "id": "1d0551a36b6e497a8b23054889fa67ad",
+        "identityAttribute": "dni_ne_attribute",
+        "includePermissions": false,
+        "modified": "2025-02-27T10:39:54.610Z",
+        "name": "account",
+        "nativeObjectType": "User"
+      }
+    ],
+    "type": "39946170-edb9-46ac-b5f4-3c9bccef4cbb"
+  },
+  "self": {
+    "id": "b9904c2b0c214ba6aace92a95ad3ff68",
+    "name": "NERM",
+    "type": "SOURCE"
+  },
+  "version": 1
+}

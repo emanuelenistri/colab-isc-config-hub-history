@@ -1,0 +1,75 @@
+{
+  "jwsHeader": null,
+  "jwsSignature": null,
+  "object": {
+    "accountCorrelationRule": null,
+    "beforeProvisioningRule": null,
+    "connectorAttributes": {
+      "cloudCacheUpdate": 1795432385738,
+      "cloudDisplayName": "test multi-host sqlserver 2",
+      "connectionType": "direct",
+      "connectorName": "Multi-Host Microsoft SQL Server",
+      "deleteThresholdPercentage": 10,
+      "fileUploadDocLink": "https://documentation.sailpoint.com/connectors/multihost/ms_sql/help/multi_host/multihost_mssql/file_upload.html",
+      "fileUploadSupported": "true",
+      "healthy": false,
+      "maxAllowedSources": "250",
+      "maxSourcesPerAggGroup": "10",
+      "multiHostAttributes": {},
+      "multiValuedAttributes": [
+        "additionalConnProperties"
+      ],
+      "multihost_status": "ready",
+      "showAccountSchema": "true",
+      "showEntitlementSchema": "true",
+      "since": "2025-04-01T07:48:30.700Z",
+      "sourceListAttributes": [
+        "authType",
+        "url"
+      ],
+      "sourceType": "Microsoft SQL Server - Direct",
+      "status": "READY"
+    },
+    "connectorClass": "sailpoint.connector.OpenConnectorAdapter",
+    "connectorScriptName": "multi-host-microsoft-sql-server",
+    "correlationConfigDetails": {
+      "attributeAssignments": null,
+      "id": null,
+      "name": null
+    },
+    "crossTenantConnectorAttributes": {},
+    "deleteThreshold": 10,
+    "description": "test multi-host sqlserver",
+    "features": [
+      "DIRECT_PERMISSIONS",
+      "ENABLE",
+      "GROUP_PROVISIONING",
+      "PASSWORD",
+      "PROVISIONING",
+      "SEARCH",
+      "SYNC_PROVISIONING",
+      "UNLOCK"
+    ],
+    "id": "b086f5ffb2e24d6f81a4c025da46ad1e",
+    "managementWorkgroup": null,
+    "managerCorrelationMapping": null,
+    "managerCorrelationRule": null,
+    "name": "test multi-host sqlserver 2",
+    "owner": {
+      "id": "748aaee232614741b6f6cddf341ee281",
+      "name": "lmmartinez",
+      "type": "IDENTITY"
+    },
+    "passwordPolicies": null,
+    "provisionAsCsv": false,
+    "provisioningPolicies": [],
+    "schemas": [],
+    "type": "Multi-Host - Microsoft SQL Server"
+  },
+  "self": {
+    "id": "b086f5ffb2e24d6f81a4c025da46ad1e",
+    "name": "test multi-host sqlserver 2",
+    "type": "SOURCE"
+  },
+  "version": 1
+}

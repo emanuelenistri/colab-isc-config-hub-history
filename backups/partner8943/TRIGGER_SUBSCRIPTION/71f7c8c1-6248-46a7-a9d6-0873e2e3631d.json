@@ -1,0 +1,24 @@
+{
+  "jwsHeader": null,
+  "jwsSignature": null,
+  "object": {
+    "description": "Managed by Workflows",
+    "enabled": false,
+    "filter": "$.changes[?(@.attribute == \"email\")]",
+    "id": "71f7c8c1-6248-46a7-a9d6-0873e2e3631d",
+    "name": "Validar Email Duplicado",
+    "responseDeadline": "PT1H",
+    "triggerId": "idn:identity-attributes-changed",
+    "triggerName": "Identity Attributes Changed",
+    "type": "WORKFLOW",
+    "workflowConfig": {
+      "workflowId": "71f7c8c1-6248-46a7-a9d6-0873e2e3631d"
+    }
+  },
+  "self": {
+    "id": "71f7c8c1-6248-46a7-a9d6-0873e2e3631d",
+    "name": "Validar Email Duplicado",
+    "type": "TRIGGER_SUBSCRIPTION"
+  },
+  "version": 1
+}

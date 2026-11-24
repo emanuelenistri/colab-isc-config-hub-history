@@ -1,0 +1,66 @@
+{
+  "jwsHeader": null,
+  "jwsSignature": null,
+  "object": {
+    "accessRequestConfig": {
+      "approvalSchemes": [
+        {
+          "approverId": "4162fa8d-a797-40df-9dbc-7eafb30299aa",
+          "approverType": "GOVERNANCE_GROUP"
+        }
+      ],
+      "commentsRequired": null,
+      "denialCommentsRequired": null,
+      "formDefinitionId": null,
+      "maxPermittedAccessDuration": null,
+      "reauthorizationRequired": false,
+      "requireEndDate": false
+    },
+    "additionalOwners": [],
+    "created": "2025-08-01T11:06:24.184068Z",
+    "description": "Prueba AP",
+    "enabled": true,
+    "entitlements": [
+      {
+        "id": "8eef88a6b0ea4c2aadd548cad5d24d53",
+        "name": "$03T200-O163AANG0C2F",
+        "type": "ENTITLEMENT"
+      }
+    ],
+    "id": "d63fdd8b7ced446aa5d14f7b73dd12ec",
+    "modified": "2025-11-05T15:30:00.721928Z",
+    "name": "Test-APRaul3",
+    "owner": {
+      "id": "06c1619bb4ad4fa3b793330ced2408fe",
+      "name": "rcgalvez",
+      "type": "IDENTITY"
+    },
+    "privilegeLevel": null,
+    "provisioningCriteria": null,
+    "requestable": true,
+    "revocationRequestConfig": {
+      "approvalSchemes": []
+    },
+    "segmentRefs": [
+      {
+        "id": "ab3ad559-c0c7-405e-a35a-fee0e99f5464",
+        "name": "Test",
+        "type": "SEGMENT"
+      }
+    ],
+    "segments": [
+      "ab3ad559-c0c7-405e-a35a-fee0e99f5464"
+    ],
+    "source": {
+      "id": "dd15e795a6884b1e914126cdaf8ac66d",
+      "name": "Active Directory LAB SIA",
+      "type": "SOURCE"
+    }
+  },
+  "self": {
+    "id": "d63fdd8b7ced446aa5d14f7b73dd12ec",
+    "name": "Test-APRaul3",
+    "type": "ACCESS_PROFILE"
+  },
+  "version": 1
+}

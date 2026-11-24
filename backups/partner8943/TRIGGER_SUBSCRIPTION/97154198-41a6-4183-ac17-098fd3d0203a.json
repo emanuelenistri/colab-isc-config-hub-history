@@ -1,0 +1,24 @@
+{
+  "jwsHeader": null,
+  "jwsSignature": null,
+  "object": {
+    "description": "Managed by Workflows",
+    "enabled": false,
+    "filter": "$.attributes[?(@.type == \"externo\")]",
+    "id": "97154198-41a6-4183-ac17-098fd3d0203a",
+    "name": "becarios_atributo_type_externo_enviar_mail_a_manager",
+    "responseDeadline": "PT1H",
+    "triggerId": "idn:identity-created",
+    "triggerName": "Identity Created",
+    "type": "WORKFLOW",
+    "workflowConfig": {
+      "workflowId": "97154198-41a6-4183-ac17-098fd3d0203a"
+    }
+  },
+  "self": {
+    "id": "97154198-41a6-4183-ac17-098fd3d0203a",
+    "name": "becarios_atributo_type_externo_enviar_mail_a_manager",
+    "type": "TRIGGER_SUBSCRIPTION"
+  },
+  "version": 1
+}

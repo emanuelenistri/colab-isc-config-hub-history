@@ -1,0 +1,21 @@
+{
+  "jwsHeader": null,
+  "jwsSignature": null,
+  "object": {
+    "attributes": {
+      "cloudMaxSize": "100",
+      "cloudMaxUniqueChecks": "10",
+      "cloudRequired": "true"
+    },
+    "id": "e8c47e13-3acf-4a47-bbe3-a9308cf0502e",
+    "internal": false,
+    "name": "accountId",
+    "type": "string"
+  },
+  "self": {
+    "id": "e8c47e13-3acf-4a47-bbe3-a9308cf0502e",
+    "name": "accountId",
+    "type": "TRANSFORM"
+  },
+  "version": 1
+}

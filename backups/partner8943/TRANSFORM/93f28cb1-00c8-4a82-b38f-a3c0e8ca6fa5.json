@@ -1,0 +1,31 @@
+{
+  "jwsHeader": null,
+  "jwsSignature": null,
+  "object": {
+    "attributes": {
+      "ESTRUC_RED_SSCC_DT_Value": {
+        "attributes": {
+          "name": "ESTRUC_RED_SSCC_DT"
+        },
+        "type": "identityAttribute"
+      },
+      "STELL_Value": {
+        "attributes": {
+          "name": "STELL"
+        },
+        "type": "identityAttribute"
+      },
+      "value": "#if($ESTRUC_RED_SSCC_DT_Value == \"03\")Nivel: O#elseif($ESTRUC_RED_SSCC_DT_Value == \"01\" || $ESTRUC_RED_SSCC_DT_Value == \"04\")Nivel: E#elseif($ESTRUC_RED_SSCC_DT_Value == \"02\" && $STELL_Value == \"50000177\")Nivel: Z#elseif($ESTRUC_RED_SSCC_DT_Value == \"02\" && $STELL_Value != \"50000177\")Nivel: D#end"
+    },
+    "id": "93f28cb1-00c8-4a82-b38f-a3c0e8ca6fa5",
+    "internal": false,
+    "name": "Z levelId",
+    "type": "static"
+  },
+  "self": {
+    "id": "93f28cb1-00c8-4a82-b38f-a3c0e8ca6fa5",
+    "name": "Z levelId",
+    "type": "TRANSFORM"
+  },
+  "version": 1
+}

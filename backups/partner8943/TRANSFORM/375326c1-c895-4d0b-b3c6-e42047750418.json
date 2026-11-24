@@ -1,0 +1,47 @@
+{
+  "jwsHeader": null,
+  "jwsSignature": null,
+  "object": {
+    "attributes": {
+      "dominio": {
+        "attributes": {
+          "value": "@cajamar.int"
+        },
+        "type": "static"
+      },
+      "email": {
+        "attributes": {
+          "ignoreErrors": "true",
+          "values": [
+            "null",
+            {
+              "attributes": {
+                "name": "email"
+              },
+              "type": "identityAttribute"
+            }
+          ]
+        },
+        "type": "firstValid"
+      },
+      "user_id": {
+        "attributes": {
+          "attributeName": "user_id",
+          "sourceName": "NERM Test 2"
+        },
+        "type": "accountAttribute"
+      },
+      "value": "#if($email == \"null\")$user_id$dominio#{else}$email#end"
+    },
+    "id": "375326c1-c895-4d0b-b3c6-e42047750418",
+    "internal": false,
+    "name": "pre-noEmail",
+    "type": "static"
+  },
+  "self": {
+    "id": "375326c1-c895-4d0b-b3c6-e42047750418",
+    "name": "pre-noEmail",
+    "type": "TRANSFORM"
+  },
+  "version": 1
+}

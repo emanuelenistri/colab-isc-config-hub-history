@@ -1,0 +1,24 @@
+{
+  "jwsHeader": null,
+  "jwsSignature": null,
+  "object": {
+    "description": "Managed by Workflows",
+    "enabled": false,
+    "filter": "$.entitlementChanges[*].added[*]",
+    "id": "dfd15341-c22f-46d4-befa-5568a1a8d6d5",
+    "name": "Template: Revoke Entitlement Additions Detected as Native Change Account Updated",
+    "responseDeadline": "PT1H",
+    "triggerId": "idn:native-change-account-updated",
+    "triggerName": "Native Change Account Updated",
+    "type": "WORKFLOW",
+    "workflowConfig": {
+      "workflowId": "dfd15341-c22f-46d4-befa-5568a1a8d6d5"
+    }
+  },
+  "self": {
+    "id": "dfd15341-c22f-46d4-befa-5568a1a8d6d5",
+    "name": "Template: Revoke Entitlement Additions Detected as Native Change Account Updated",
+    "type": "TRIGGER_SUBSCRIPTION"
+  },
+  "version": 1
+}

@@ -1,0 +1,20 @@
+{
+  "jwsHeader": null,
+  "jwsSignature": null,
+  "object": {
+    "attributes": {
+      "inputFormat": "MMM dd yyyy, HH:mm:ss.SSS",
+      "outputFormat": "yyyy/dd/MM"
+    },
+    "id": "54145363-665b-42b6-a6dc-a586240fa549",
+    "internal": false,
+    "name": "Timestamp To Date",
+    "type": "dateFormat"
+  },
+  "self": {
+    "id": "54145363-665b-42b6-a6dc-a586240fa549",
+    "name": "Timestamp To Date",
+    "type": "TRANSFORM"
+  },
+  "version": 1
+}

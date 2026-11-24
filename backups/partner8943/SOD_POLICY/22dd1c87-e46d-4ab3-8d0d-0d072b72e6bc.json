@@ -1,0 +1,47 @@
+{
+  "jwsHeader": null,
+  "jwsSignature": null,
+  "object": {
+    "allowedControls": [],
+    "approvalGuidance": null,
+    "compensatingControls": "Assign a manager",
+    "conflictingAccessCriteria": null,
+    "correctionAdvice": "Assign a manager",
+    "created": "2024-02-29T17:14:32Z",
+    "creatorId": "0533ec736d874f4eb4c76552977bf727",
+    "creatorRef": {
+      "id": "0533ec736d874f4eb4c76552977bf727",
+      "name": "SailPoint Support",
+      "type": "IDENTITY"
+    },
+    "description": "No Manager Assigned",
+    "externalPolicyReference": null,
+    "id": "22dd1c87-e46d-4ab3-8d0d-0d072b72e6bc",
+    "level": null,
+    "modified": "2024-02-29T17:14:32Z",
+    "modifierId": null,
+    "name": "No Manager Assigned",
+    "ownerRef": {
+      "id": "fe353d5f33bf4e1dbbfb32a913a2ae40",
+      "name": "alejandro.fernandez",
+      "type": "IDENTITY"
+    },
+    "policyQuery": "NOT _exists_:manager.id",
+    "preventSetting": null,
+    "scheduled": false,
+    "secondaryOwnerRefs": [],
+    "state": "ENFORCED",
+    "tags": [],
+    "type": "GENERAL",
+    "violationOwnerAssignmentConfig": {
+      "assignmentRule": null,
+      "ownerRef": null
+    }
+  },
+  "self": {
+    "id": "22dd1c87-e46d-4ab3-8d0d-0d072b72e6bc",
+    "name": "No Manager Assigned",
+    "type": "SOD_POLICY"
+  },
+  "version": 1
+}

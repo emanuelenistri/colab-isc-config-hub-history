@@ -1,0 +1,64 @@
+{
+  "jwsHeader": null,
+  "jwsSignature": null,
+  "object": {
+    "attributes": {
+      "sourceVersion": "1.0"
+    },
+    "created": "2025-05-26T10:53:50.611Z",
+    "description": "This rule is used by the JDBC connector to build a map representation of the Resultset",
+    "id": "d0c4c98ccd9b4d04842fe3aad3d64d41",
+    "modified": "2025-05-27T13:43:21.452Z",
+    "name": "BCC-JDBC-Map-ZTabla",
+    "signature": {
+      "input": [
+        {
+          "description": "A Map containing state information.",
+          "name": "state",
+          "type": null
+        },
+        {
+          "description": "A connection object to connect to database.",
+          "name": "connection",
+          "type": null
+        },
+        {
+          "description": "A sailpoint.api.SailPointContext object that can be used to query the database if necessary.",
+          "name": "context",
+          "type": null
+        },
+        {
+          "description": "The ResultSet from database.",
+          "name": "result",
+          "type": null
+        },
+        {
+          "description": "The application whose data file is being processed.",
+          "name": "application",
+          "type": null
+        },
+        {
+          "description": "The log object associated with the SailPointContext.",
+          "name": "log",
+          "type": null
+        }
+      ],
+      "output": {
+        "description": "A Map of the resource object assembled from the data.",
+        "name": "map",
+        "type": null
+      }
+    },
+    "sourceCode": {
+      "script": "// source code\r\n\r\nimport sailpoint.connector.*;\r\n\r\n    Map map = JDBCConnector.buildMapFromResultSet(result, schema);\r\n\r\n    String managerId = (String) map.get(\"manager\");\r\n\r\n    if (\"00000\".equals(managerId)) {\r\n        map.put(\"manager\", \"\");\r\n    }\r\n\r\n    return map;",
+      "version": "1.0"
+    },
+    "type": "JDBCBuildMap"
+  },
+  "self": {
+    "id": "d0c4c98ccd9b4d04842fe3aad3d64d41",
+    "name": "BCC-JDBC-Map-ZTabla",
+    "type": "CONNECTOR_RULE"
+  },
+  "version": 1
+}

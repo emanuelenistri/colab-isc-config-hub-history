@@ -1,0 +1,75 @@
+{
+  "jwsHeader": null,
+  "jwsSignature": null,
+  "object": {
+    "accountCorrelationRule": null,
+    "beforeProvisioningRule": null,
+    "connectorAttributes": {
+      "cloudCacheUpdate": 1793873968483,
+      "cloudDisplayName": "test multi-host sqlserver 3",
+      "connectionType": "direct",
+      "connectorName": "Multi-Host Microsoft SQL Server",
+      "deleteThresholdPercentage": 10,
+      "fileUploadDocLink": "https://documentation.sailpoint.com/connectors/multihost/ms_sql/help/multi_host/multihost_mssql/file_upload.html",
+      "fileUploadSupported": "true",
+      "healthy": false,
+      "maxAllowedSources": "250",
+      "maxSourcesPerAggGroup": "10",
+      "multiHostAttributes": {},
+      "multiValuedAttributes": [
+        "additionalConnProperties"
+      ],
+      "multihost_status": "ready",
+      "showAccountSchema": "true",
+      "showEntitlementSchema": "true",
+      "since": "2025-04-01T07:48:30.664Z",
+      "sourceListAttributes": [
+        "authType",
+        "url"
+      ],
+      "sourceType": "Microsoft SQL Server - Direct",
+      "status": "SOURCE_STATE_ERROR_SOURCE"
+    },
+    "connectorClass": "sailpoint.connector.OpenConnectorAdapter",
+    "connectorScriptName": "multi-host-microsoft-sql-server",
+    "correlationConfigDetails": {
+      "attributeAssignments": null,
+      "id": null,
+      "name": null
+    },
+    "crossTenantConnectorAttributes": {},
+    "deleteThreshold": 10,
+    "description": "test multi-host sqlserver 3",
+    "features": [
+      "DIRECT_PERMISSIONS",
+      "ENABLE",
+      "GROUP_PROVISIONING",
+      "PASSWORD",
+      "PROVISIONING",
+      "SEARCH",
+      "SYNC_PROVISIONING",
+      "UNLOCK"
+    ],
+    "id": "1e5804e2e56648918a61b65c2cd2be89",
+    "managementWorkgroup": null,
+    "managerCorrelationMapping": null,
+    "managerCorrelationRule": null,
+    "name": "test multi-host sqlserver 3",
+    "owner": {
+      "id": "748aaee232614741b6f6cddf341ee281",
+      "name": "lmmartinez",
+      "type": "IDENTITY"
+    },
+    "passwordPolicies": null,
+    "provisionAsCsv": false,
+    "provisioningPolicies": [],
+    "schemas": [],
+    "type": "Multi-Host - Microsoft SQL Server"
+  },
+  "self": {
+    "id": "1e5804e2e56648918a61b65c2cd2be89",
+    "name": "test multi-host sqlserver 3",
+    "type": "SOURCE"
+  },
+  "version": 1
+}

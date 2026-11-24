@@ -1,0 +1,23 @@
+{
+  "jwsHeader": null,
+  "jwsSignature": null,
+  "object": {
+    "description": "Managed by Workflows",
+    "enabled": false,
+    "id": "f46dd6fa-a3d0-4d5a-8a67-c83d965d6cc1",
+    "name": "Workflow Mover Access History",
+    "responseDeadline": "PT1H",
+    "triggerId": "idn:identity-attributes-changed",
+    "triggerName": "Identity Attributes Changed",
+    "type": "WORKFLOW",
+    "workflowConfig": {
+      "workflowId": "f46dd6fa-a3d0-4d5a-8a67-c83d965d6cc1"
+    }
+  },
+  "self": {
+    "id": "f46dd6fa-a3d0-4d5a-8a67-c83d965d6cc1",
+    "name": "Workflow Mover Access History",
+    "type": "TRIGGER_SUBSCRIPTION"
+  },
+  "version": 1
+}

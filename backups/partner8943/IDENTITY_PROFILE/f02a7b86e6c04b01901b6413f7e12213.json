@@ -1,0 +1,159 @@
+{
+  "jwsHeader": null,
+  "jwsSignature": null,
+  "object": {
+    "authoritativeSource": {
+      "id": "ca5c0cf355a6466a984507b7f7b15416",
+      "name": "IdentityNow Admins",
+      "type": "SOURCE"
+    },
+    "created": "2024-02-29T16:56:42.607Z",
+    "description": "*** NO TOCAR ***",
+    "hasTimeBasedAttr": false,
+    "id": "f02a7b86e6c04b01901b6413f7e12213",
+    "identityAttributeConfig": {
+      "attributeTransforms": [
+        {
+          "identityAttributeName": "displayName",
+          "transformDefinition": {
+            "attributes": {
+              "attributeName": "name",
+              "sourceId": "ca5c0cf355a6466a984507b7f7b15416",
+              "sourceName": "IdentityNow Admins"
+            },
+            "type": "accountAttribute"
+          }
+        },
+        {
+          "identityAttributeName": "displayName",
+          "transformDefinition": {
+            "attributes": {
+              "attributeName": "name",
+              "sourceId": "ca5c0cf355a6466a984507b7f7b15416",
+              "sourceName": "IdentityNow Admins"
+            },
+            "type": "accountAttribute"
+          }
+        },
+        {
+          "identityAttributeName": "email",
+          "transformDefinition": {
+            "attributes": {
+              "attributeName": "e-mail",
+              "sourceId": "ca5c0cf355a6466a984507b7f7b15416",
+              "sourceName": "IdentityNow Admins"
+            },
+            "type": "accountAttribute"
+          }
+        },
+        {
+          "identityAttributeName": "firstname",
+          "transformDefinition": {
+            "attributes": {
+              "attributeName": "givenName",
+              "sourceId": "ca5c0cf355a6466a984507b7f7b15416",
+              "sourceName": "IdentityNow Admins"
+            },
+            "type": "accountAttribute"
+          }
+        },
+        {
+          "identityAttributeName": "lastname",
+          "transformDefinition": {
+            "attributes": {
+              "attributeName": "familyName",
+              "sourceId": "ca5c0cf355a6466a984507b7f7b15416",
+              "sourceName": "IdentityNow Admins"
+            },
+            "type": "accountAttribute"
+          }
+        },
+        {
+          "identityAttributeName": "personalEmail",
+          "transformDefinition": {
+            "attributes": {
+              "attributeName": "e-mail",
+              "sourceId": "ca5c0cf355a6466a984507b7f7b15416",
+              "sourceName": "IdentityNow Admins"
+            },
+            "type": "accountAttribute"
+          }
+        },
+        {
+          "identityAttributeName": "phone",
+          "transformDefinition": {
+            "attributes": {
+              "id": "E.164 Phone Format",
+              "input": {
+                "attributes": {
+                  "attributeName": "phone",
+                  "sourceId": "ca5c0cf355a6466a984507b7f7b15416",
+                  "sourceName": "IdentityNow Admins"
+                },
+                "type": "accountAttribute"
+              }
+            },
+            "type": "reference"
+          }
+        },
+        {
+          "identityAttributeName": "uid",
+          "transformDefinition": {
+            "attributes": {
+              "attributeName": "name",
+              "sourceId": "ca5c0cf355a6466a984507b7f7b15416",
+              "sourceName": "IdentityNow Admins"
+            },
+            "type": "accountAttribute"
+          }
+        },
+        {
+          "identityAttributeName": "uid",
+          "transformDefinition": {
+            "attributes": {
+              "attributeName": "name",
+              "sourceId": "ca5c0cf355a6466a984507b7f7b15416",
+              "sourceName": "IdentityNow Admins"
+            },
+            "type": "accountAttribute"
+          }
+        },
+        {
+          "identityAttributeName": "workPhone",
+          "transformDefinition": {
+            "attributes": {
+              "id": "E.164 Phone Format",
+              "input": {
+                "attributes": {
+                  "attributeName": "phone",
+                  "sourceId": "ca5c0cf355a6466a984507b7f7b15416",
+                  "sourceName": "IdentityNow Admins"
+                },
+                "type": "accountAttribute"
+              }
+            },
+            "type": "reference"
+          }
+        }
+      ],
+      "enabled": true
+    },
+    "identityCount": 24,
+    "identityExceptionReportReference": null,
+    "identityRefreshRequired": false,
+    "modified": "2024-06-19T13:43:24.003Z",
+    "name": "IdentityNow Admins",
+    "owner": {
+      "id": "0533ec736d874f4eb4c76552977bf727",
+      "name": "SailPoint Support",
+      "type": "IDENTITY"
+    },
+    "priority": 10
+  },
+  "self": {
+    "id": "f02a7b86e6c04b01901b6413f7e12213",
+    "name": "IdentityNow Admins",
+    "type": "IDENTITY_PROFILE"
+  },
+  "version": 1
+}

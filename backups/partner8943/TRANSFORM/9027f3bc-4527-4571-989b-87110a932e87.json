@@ -1,0 +1,364 @@
+{
+  "jwsHeader": null,
+  "jwsSignature": null,
+  "object": {
+    "attributes": {
+      "absentismo": {
+        "attributes": {
+          "ignoreErrors": "true",
+          "values": [
+            "N",
+            {
+              "attributes": {
+                "attributeName": "ABSENTISMO",
+                "sourceName": "ZTabla - JDBC"
+              },
+              "type": "accountAttribute"
+            }
+          ]
+        },
+        "type": "firstValid"
+      },
+      "cuarentenaMayor30dias": {
+        "attributes": {
+          "firstDate": {
+            "attributes": {
+              "values": [
+                {
+                  "attributes": {
+                    "expression": "+30d",
+                    "input": {
+                      "attributes": {
+                        "input": {
+                          "attributes": {
+                            "values": [
+                              "29991231",
+                              {
+                                "attributes": {
+                                  "attributeName": "FECHA_BAJA",
+                                  "sourceName": "ZTabla - JDBC"
+                                },
+                                "type": "accountAttribute"
+                              },
+                              {
+                                "attributes": {
+                                  "input": {
+                                    "attributes": {
+                                      "attributeName": "FECHA_BAJA",
+                                      "sourceName": "ZTabla - JDBC"
+                                    },
+                                    "type": "accountAttribute"
+                                  },
+                                  "table": {
+                                    "00000000": "29991231"
+                                  }
+                                },
+                                "type": "lookup"
+                              }
+                            ]
+                          },
+                          "type": "firstValid"
+                        },
+                        "inputFormat": "yyyyMMdd",
+                        "outputFormat": "ISO8601"
+                      },
+                      "type": "dateFormat"
+                    },
+                    "roundUp": true
+                  },
+                  "type": "dateMath"
+                }
+              ]
+            },
+            "type": "firstValid"
+          },
+          "negativeCondition": "false",
+          "operator": "lte",
+          "positiveCondition": "true",
+          "secondDate": {
+            "attributes": {
+              "expression": "now",
+              "roundUp": true
+            },
+            "type": "dateMath"
+          }
+        },
+        "type": "dateCompare"
+      },
+      "endDate": {
+        "attributes": {
+          "input": {
+            "attributes": {
+              "values": [
+                "29991231",
+                {
+                  "attributes": {
+                    "attributeName": "FECHA_BAJA",
+                    "sourceName": "ZTabla - JDBC"
+                  },
+                  "type": "accountAttribute"
+                },
+                {
+                  "attributes": {
+                    "input": {
+                      "attributes": {
+                        "attributeName": "FECHA_BAJA",
+                        "sourceName": "ZTabla - JDBC"
+                      },
+                      "type": "accountAttribute"
+                    },
+                    "table": {
+                      "00000000": "29991231"
+                    }
+                  },
+                  "type": "lookup"
+                }
+              ]
+            },
+            "type": "firstValid"
+          },
+          "inputFormat": "yyyyMMdd",
+          "outputFormat": "ISO8601"
+        },
+        "type": "dateFormat"
+      },
+      "endDateBeforeNow": {
+        "attributes": {
+          "firstDate": {
+            "attributes": {
+              "values": [
+                {
+                  "attributes": {
+                    "input": {
+                      "attributes": {
+                        "values": [
+                          "29991231",
+                          {
+                            "attributes": {
+                              "attributeName": "FECHA_BAJA",
+                              "sourceName": "ZTabla - JDBC"
+                            },
+                            "type": "accountAttribute"
+                          },
+                          {
+                            "attributes": {
+                              "input": {
+                                "attributes": {
+                                  "attributeName": "FECHA_BAJA",
+                                  "sourceName": "ZTabla - JDBC"
+                                },
+                                "type": "accountAttribute"
+                              },
+                              "table": {
+                                "00000000": "29991231"
+                              }
+                            },
+                            "type": "lookup"
+                          }
+                        ]
+                      },
+                      "type": "firstValid"
+                    },
+                    "inputFormat": "yyyyMMdd",
+                    "outputFormat": "ISO8601"
+                  },
+                  "type": "dateFormat"
+                }
+              ]
+            },
+            "type": "firstValid"
+          },
+          "negativeCondition": "false",
+          "operator": "lte",
+          "positiveCondition": "true",
+          "secondDate": {
+            "attributes": {
+              "expression": "now",
+              "roundUp": true
+            },
+            "type": "dateMath"
+          }
+        },
+        "type": "dateCompare"
+      },
+      "excedencia": {
+        "attributes": {
+          "ignoreErrors": "true",
+          "values": [
+            "N",
+            {
+              "attributes": {
+                "attributeName": "ESTADO",
+                "sourceName": "ZTabla - JDBC"
+              },
+              "type": "accountAttribute"
+            }
+          ]
+        },
+        "type": "firstValid"
+      },
+      "excedenciaMayor180Dias": {
+        "attributes": {
+          "firstDate": {
+            "attributes": {
+              "values": [
+                {
+                  "attributes": {
+                    "expression": "+180d",
+                    "input": {
+                      "attributes": {
+                        "input": {
+                          "attributes": {
+                            "values": [
+                              "29991231",
+                              {
+                                "attributes": {
+                                  "attributeName": "FECHA_BAJA",
+                                  "sourceName": "ZTabla - JDBC"
+                                },
+                                "type": "accountAttribute"
+                              },
+                              {
+                                "attributes": {
+                                  "input": {
+                                    "attributes": {
+                                      "attributeName": "FECHA_BAJA",
+                                      "sourceName": "ZTabla - JDBC"
+                                    },
+                                    "type": "accountAttribute"
+                                  },
+                                  "table": {
+                                    "00000000": "29991231"
+                                  }
+                                },
+                                "type": "lookup"
+                              }
+                            ]
+                          },
+                          "type": "firstValid"
+                        },
+                        "inputFormat": "yyyyMMdd",
+                        "outputFormat": "ISO8601"
+                      },
+                      "type": "dateFormat"
+                    },
+                    "roundUp": true
+                  },
+                  "type": "dateMath"
+                }
+              ]
+            },
+            "type": "firstValid"
+          },
+          "negativeCondition": "false",
+          "operator": "lte",
+          "positiveCondition": "true",
+          "secondDate": {
+            "attributes": {
+              "expression": "now",
+              "roundUp": true
+            },
+            "type": "dateMath"
+          }
+        },
+        "type": "dateCompare"
+      },
+      "flagWhiteList": {
+        "attributes": {
+          "ignoreErrors": "true",
+          "values": [
+            "N",
+            {
+              "attributes": {
+                "attributeName": "WHITELIST",
+                "sourceName": "ZTabla - JDBC"
+              },
+              "type": "accountAttribute"
+            }
+          ]
+        },
+        "type": "firstValid"
+      },
+      "requiresPeriodicRefresh": "true",
+      "startDateAfterNow": {
+        "attributes": {
+          "firstDate": {
+            "attributes": {
+              "values": [
+                "",
+                {
+                  "attributes": {
+                    "input": {
+                      "attributes": {
+                        "expression": "$faltaGid eq 00000000",
+                        "faltaGid": {
+                          "attributes": {
+                            "attributeName": "FALTA_GID",
+                            "sourceName": "ZTabla - JDBC"
+                          },
+                          "type": "accountAttribute"
+                        },
+                        "negativeCondition": "$faltaGid",
+                        "positiveCondition": "$startDate",
+                        "startDate": {
+                          "attributes": {
+                            "attributeName": "FECHA_ALTA",
+                            "sourceName": "ZTabla - JDBC"
+                          },
+                          "type": "accountAttribute"
+                        }
+                      },
+                      "type": "conditional"
+                    },
+                    "inputFormat": "yyyyMMdd",
+                    "outputFormat": "ISO8601"
+                  },
+                  "type": "dateFormat"
+                }
+              ]
+            },
+            "type": "firstValid"
+          },
+          "negativeCondition": "false",
+          "operator": "gt",
+          "positiveCondition": "true",
+          "secondDate": {
+            "attributes": {
+              "expression": "now",
+              "roundUp": true
+            },
+            "type": "dateMath"
+          }
+        },
+        "type": "dateCompare"
+      },
+      "test": {
+        "attributes": {
+          "endDate": {
+            "attributes": {
+              "attributeName": "FECHA_BAJA",
+              "sourceName": "ZTabla - JDBC"
+            },
+            "type": "accountAttribute"
+          },
+          "expression": "$endDate eq 00000000",
+          "negativeCondition": "$endDate",
+          "positiveCondition": "29991231",
+          "prueba": {}
+        },
+        "type": "conditional"
+      },
+      "value": "#if($startDateAfterNow == 'true' && $endDateBeforeNow == 'false')preactivo#elseif($flagWhiteList == \"S\")activo#elseif($absentismo == \"X\" && $cuarentenaMayor30dias != 'true')suspendido#elseif($excedencia == \"E\" && $excedenciaMayor180Dias != 'true')suspendido#elseif($excedencia == \"E\" && $excedenciaMayor180Dias == 'true')baja#elseif($cuarentenaMayor30dias == 'true')baja#elseif($endDateBeforeNow == 'true')suspendido#{else}activo#end"
+    },
+    "id": "9027f3bc-4527-4571-989b-87110a932e87",
+    "internal": false,
+    "name": "__1__CloudLifecycle_internal_test",
+    "type": "static"
+  },
+  "self": {
+    "id": "9027f3bc-4527-4571-989b-87110a932e87",
+    "name": "__1__CloudLifecycle_internal_test",
+    "type": "TRANSFORM"
+  },
+  "version": 1
+}

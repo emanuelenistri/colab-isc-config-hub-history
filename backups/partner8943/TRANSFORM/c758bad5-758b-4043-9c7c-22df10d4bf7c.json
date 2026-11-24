@@ -1,0 +1,68 @@
+{
+  "jwsHeader": null,
+  "jwsSignature": null,
+  "object": {
+    "attributes": {
+      "domainValue": {
+        "attributes": {
+          "values": [
+            "@",
+            {
+              "attributes": {
+                "id": "emailDomain"
+              },
+              "type": "reference"
+            }
+          ]
+        },
+        "type": "concat"
+      },
+      "mailValue": {
+        "attributes": {
+          "ignoreErrors": true,
+          "values": [
+            "vacio",
+            {
+              "attributes": {
+                "begin": 0,
+                "end": {
+                  "attributes": {
+                    "input": {
+                      "attributes": {
+                        "attributeName": "email",
+                        "sourceName": "Cajamar-IDNow"
+                      },
+                      "type": "accountAttribute"
+                    },
+                    "substring": "@"
+                  },
+                  "type": "indexOf"
+                },
+                "input": {
+                  "attributes": {
+                    "attributeName": "email",
+                    "sourceName": "Cajamar-IDNow"
+                  },
+                  "type": "accountAttribute"
+                }
+              },
+              "type": "substring"
+            }
+          ]
+        },
+        "type": "firstValid"
+      },
+      "value": "#if($mailValue == \"vacio\")#else$mailValue$domainValue#end"
+    },
+    "id": "c758bad5-758b-4043-9c7c-22df10d4bf7c",
+    "internal": false,
+    "name": "Z mail3",
+    "type": "static"
+  },
+  "self": {
+    "id": "c758bad5-758b-4043-9c7c-22df10d4bf7c",
+    "name": "Z mail3",
+    "type": "TRANSFORM"
+  },
+  "version": 1
+}

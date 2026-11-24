@@ -1,0 +1,40 @@
+{
+  "jwsHeader": null,
+  "jwsSignature": null,
+  "object": {
+    "attributes": {
+      "values": [
+        ".",
+        ".",
+        {
+          "attributes": {
+            "name": "FirstName"
+          },
+          "type": "identityAttribute"
+        },
+        {
+          "attributes": {
+            "name": "lastname"
+          },
+          "type": "identityAttribute"
+        },
+        {
+          "attributes": {
+            "name": "secondlastname"
+          },
+          "type": "identityAttribute"
+        }
+      ]
+    },
+    "id": "10caeb50-5584-4d4d-8e29-51ec3fd8d0c6",
+    "internal": false,
+    "name": "Concat lastname + secondLastName de Identidad",
+    "type": "concat"
+  },
+  "self": {
+    "id": "10caeb50-5584-4d4d-8e29-51ec3fd8d0c6",
+    "name": "Concat lastname + secondLastName de Identidad",
+    "type": "TRANSFORM"
+  },
+  "version": 1
+}

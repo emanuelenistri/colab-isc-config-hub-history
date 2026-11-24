@@ -1,0 +1,55 @@
+{
+  "jwsHeader": null,
+  "jwsSignature": null,
+  "object": {
+    "attributes": {
+      "requiresPeriodicRefresh": "true",
+      "values": [
+        "@",
+        {
+          "attributes": {
+            "id": "emailDomain"
+          },
+          "type": "reference"
+        },
+        {
+          "attributes": {
+            "values": [
+              {
+                "attributes": {
+                  "attributeName": "name",
+                  "sourceName": "BCC-Source-External"
+                },
+                "type": "accountAttribute"
+              },
+              {
+                "attributes": {
+                  "attributeName": "name",
+                  "sourceName": "BCC-Source-Internal"
+                },
+                "type": "accountAttribute"
+              },
+              {
+                "attributes": {
+                  "name": "dni"
+                },
+                "type": "identityAttribute"
+              }
+            ]
+          },
+          "type": "firstValid"
+        }
+      ]
+    },
+    "id": "3a949a46-ce90-48de-ab17-d0a6ecc807f6",
+    "internal": false,
+    "name": "emailExterno",
+    "type": "concat"
+  },
+  "self": {
+    "id": "3a949a46-ce90-48de-ab17-d0a6ecc807f6",
+    "name": "emailExterno",
+    "type": "TRANSFORM"
+  },
+  "version": 1
+}

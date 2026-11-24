@@ -1,0 +1,32 @@
+{
+  "jwsHeader": null,
+  "jwsSignature": null,
+  "object": {
+    "attributes": {
+      "values": [
+        {
+          "attributes": {
+            "name": "houseNumber"
+          },
+          "type": "identityAttribute"
+        },
+        {
+          "attributes": {
+            "name": "street"
+          },
+          "type": "identityAttribute"
+        }
+      ]
+    },
+    "id": "74dcf554-8584-4519-a9f3-49e5de8214f8",
+    "internal": false,
+    "name": "Z Concat Street + HouseNumber",
+    "type": "concat"
+  },
+  "self": {
+    "id": "74dcf554-8584-4519-a9f3-49e5de8214f8",
+    "name": "Z Concat Street + HouseNumber",
+    "type": "TRANSFORM"
+  },
+  "version": 1
+}

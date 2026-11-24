@@ -1,0 +1,66 @@
+{
+  "jwsHeader": null,
+  "jwsSignature": null,
+  "object": {
+    "accessModelMetadata": {
+      "attributes": []
+    },
+    "accessProfiles": [],
+    "accessRequestConfig": {
+      "approvalSchemes": [],
+      "commentsRequired": null,
+      "denialCommentsRequired": null,
+      "formDefinitionId": null,
+      "maxPermittedAccessDuration": null,
+      "reauthorizationRequired": false,
+      "requireEndDate": false
+    },
+    "additionalOwners": [],
+    "created": "2025-06-09T05:54:03.300675Z",
+    "description": null,
+    "dimensionRefs": null,
+    "dimensional": false,
+    "dimensions": [],
+    "enabled": false,
+    "entitlements": [
+      {
+        "id": "007d5079-d4c3-43c6-af3c-7656c479d3f0",
+        "name": "S_ENQU07",
+        "sourceId": "3d2a1c53-970d-4a73-af8e-4854d73b2466",
+        "sourceName": "SAP LAB",
+        "type": "ENTITLEMENT"
+      }
+    ],
+    "id": "e0bd8ccfe23740119f7c7395b450338f",
+    "legacyMembershipInfo": null,
+    "membership": null,
+    "modified": "2025-11-05T15:30:00.662352Z",
+    "name": "Prueba",
+    "owner": {
+      "id": "d024cdc01088491194e571464f97b308",
+      "name": "dmedinay",
+      "type": "IDENTITY"
+    },
+    "privilegeLevel": null,
+    "requestable": false,
+    "revocationRequestConfig": {
+      "approvalSchemes": []
+    },
+    "segmentRefs": [
+      {
+        "id": "ab3ad559-c0c7-405e-a35a-fee0e99f5464",
+        "name": "Test",
+        "type": "SEGMENT"
+      }
+    ],
+    "segments": [
+      "ab3ad559-c0c7-405e-a35a-fee0e99f5464"
+    ]
+  },
+  "self": {
+    "id": "e0bd8ccfe23740119f7c7395b450338f",
+    "name": "Prueba",
+    "type": "ROLE"
+  },
+  "version": 1
+}

@@ -1,0 +1,26 @@
+{
+  "jwsHeader": null,
+  "jwsSignature": null,
+  "object": {
+    "attributes": {
+      "prueba": {
+        "attributes": {
+          "value": "avda. LA MACAreNA mac GREgor DEL MAC RíO y DE LA RÍA MC VoN De LOS campos"
+        },
+        "type": "static"
+      },
+      "requiresPeriodicRefresh": "true",
+      "value": "#set($words = $prueba.split(\" \"))#set($resultado = \"\")#set($encontrado = false)#foreach($w in $words)#set($word = $w.trim())#if($word != \"\")#set($lower = $word.toLowerCase())#if(!$encontrado && ($lower == \"c/\" || $lower == \"c/.\" || $lower == \"cl\" || $lower == \"cl.\" || $lower == \"avda\" || $lower == \"avda.\" || $lower == \"av\" || $lower == \"av.\" || $lower == \"avd\" || $lower == \"avd.\" || $lower == \"pza\" || $lower == \"pza.\" || $lower == \"plaza\" || $lower == \"plaza.\" || $lower == \"plz\" || $lower == \"plz.\" || $lower == \"pso\" || $lower == \"pso.\" || $lower == \"paseo\" || $lower == \"paseo.\" || $lower == \"crta\" || $lower == \"crta.\" || $lower == \"ctra\" || $lower == \"ctra.\" || $lower == \"carretera\" || $lower == \"carretera.\" || $lower == \"ronda\" || $lower == \"ronda.\" || $lower == \"cam\" || $lower == \"cam.\" || $lower == \"camino\" || $lower == \"camino.\" || $lower == \"bda\" || $lower == \"bda.\" || $lower == \"urb\" || $lower == \"urb.\" || $lower == \"pol\" || $lower == \"pol.\" || $lower == \"pg\" || $lower == \"pg.\" || $lower == \"cno\" || $lower == \"cno.\"))#set($cap = $word.substring(0,1).toUpperCase() + $word.substring(1).toLowerCase())#else#if(!$encontrado)#set($cap = $lower.substring(0,1).toUpperCase() + $lower.substring(1))#set($encontrado = true)#elseif($lower == \"del\" || $lower == \"de\" || $lower == \"von\" || $lower == \"la\" || $lower == \"y\" || $lower == \"of\" || $lower == \"los\")#set($cap = $lower)#elseif($lower == \"mac\")#set($cap = \"Mac\")#elseif($lower == \"mc\")#set($cap = \"Mc\")#else#set($cap = $lower.substring(0,1).toUpperCase() + $lower.substring(1))#end#end#if($resultado == \"\")#set($resultado = $cap)#else#set($resultado = \"$resultado $cap\")#end#end#end$resultado"
+    },
+    "id": "e77623b1-6bdf-4ba5-831f-0dbda2a6e66e",
+    "internal": false,
+    "name": "TEST",
+    "type": "static"
+  },
+  "self": {
+    "id": "e77623b1-6bdf-4ba5-831f-0dbda2a6e66e",
+    "name": "TEST",
+    "type": "TRANSFORM"
+  },
+  "version": 1
+}

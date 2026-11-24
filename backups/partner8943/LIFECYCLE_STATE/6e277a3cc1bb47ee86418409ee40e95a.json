@@ -1,0 +1,40 @@
+{
+  "jwsHeader": null,
+  "jwsSignature": null,
+  "object": {
+    "accessActionConfiguration": {
+      "removeAllAccessEnabled": false
+    },
+    "accessProfileIds": [],
+    "accessProfileRefs": null,
+    "accountActionRefs": [],
+    "accountActions": [],
+    "created": "2024-02-29T16:56:43.587Z",
+    "description": null,
+    "emailNotificationOption": {
+      "emailAddressList": [],
+      "notifyAllAdmins": false,
+      "notifyManagers": false,
+      "notifySpecificUsers": false
+    },
+    "enabled": false,
+    "id": "6e277a3cc1bb47ee86418409ee40e95a",
+    "identityCount": 0,
+    "identityProfileRef": {
+      "id": "f02a7b86e6c04b01901b6413f7e12213",
+      "name": "IdentityNow Admins",
+      "type": "IDENTITY_PROFILE"
+    },
+    "identityState": null,
+    "modified": "2024-02-29T16:56:43.587Z",
+    "name": "Active",
+    "priority": null,
+    "technicalName": "active"
+  },
+  "self": {
+    "id": "6e277a3cc1bb47ee86418409ee40e95a",
+    "name": "Active",
+    "type": "LIFECYCLE_STATE"
+  },
+  "version": 1
+}

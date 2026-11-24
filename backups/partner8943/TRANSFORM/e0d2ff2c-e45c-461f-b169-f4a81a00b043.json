@@ -1,0 +1,25 @@
+{
+  "jwsHeader": null,
+  "jwsSignature": null,
+  "object": {
+    "attributes": {
+      "employeeNumber": {
+        "attributes": {
+          "name": "employeeNumber"
+        },
+        "type": "identityAttribute"
+      },
+      "value": "#set($Integer = 0) #set($result = $employeeNumber) #foreach($i in [1..6]) #if($result.length() < 6) #set($result = '0' + $result) #end #end #set($digito1 = $Integer.parseInt($result.substring(0,1)) * 1) #set($digito2 = $Integer.parseInt($result.substring(1,2)) * 3) #set($digito3 = $Integer.parseInt($result.substring(2,3)) * 7) #set($digito4 = $Integer.parseInt($result.substring(3,4)) * 1) #set($digito5 = $Integer.parseInt($result.substring(4,5)) * 3) #set($digito6 = $Integer.parseInt($result.substring(5,6)) * 7) #set($sumaTotal = $digito1 + $digito2 + $digito3 + $digito4 + $digito5 + $digito6) #set($modulo = $sumaTotal % 10) #set($digitoFinal = (10 - $modulo) % 10) #set($output = $employeeNumber + $digitoFinal) $output"
+    },
+    "id": "e0d2ff2c-e45c-461f-b169-f4a81a00b043",
+    "internal": false,
+    "name": "Z Modulo Suma Resta Dani",
+    "type": "static"
+  },
+  "self": {
+    "id": "e0d2ff2c-e45c-461f-b169-f4a81a00b043",
+    "name": "Z Modulo Suma Resta Dani",
+    "type": "TRANSFORM"
+  },
+  "version": 1
+}

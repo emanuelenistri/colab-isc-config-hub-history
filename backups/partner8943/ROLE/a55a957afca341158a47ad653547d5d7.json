@@ -1,0 +1,68 @@
+{
+  "jwsHeader": null,
+  "jwsSignature": null,
+  "object": {
+    "accessModelMetadata": {
+      "attributes": []
+    },
+    "accessProfiles": [],
+    "accessRequestConfig": {
+      "approvalSchemes": [
+        {
+          "approverId": null,
+          "approverType": "OWNER"
+        }
+      ],
+      "commentsRequired": false,
+      "denialCommentsRequired": false,
+      "formDefinitionId": null,
+      "maxPermittedAccessDuration": null,
+      "reauthorizationRequired": false,
+      "requireEndDate": false
+    },
+    "additionalOwners": [],
+    "created": "2024-10-03T18:03:20.383814Z",
+    "description": "Prueba creacion Rol patch",
+    "dimensionRefs": null,
+    "dimensional": false,
+    "dimensions": [],
+    "enabled": true,
+    "entitlements": [
+      {
+        "id": "2d981a4d-1346-455c-a44c-25d3126ffac5",
+        "name": "Account Operators",
+        "sourceId": "dd15e795-a688-4b1e-9141-26cdaf8ac66d",
+        "sourceName": "Active Directory LAB SIA",
+        "type": "ENTITLEMENT"
+      }
+    ],
+    "id": "a55a957afca341158a47ad653547d5d7",
+    "legacyMembershipInfo": null,
+    "membership": null,
+    "modified": "2025-11-05T15:24:05.731485Z",
+    "name": "BCC prueba 10",
+    "owner": {
+      "id": "84a568c1f5024b24b21a25a27379ac66",
+      "name": "smenendezp",
+      "type": "IDENTITY"
+    },
+    "privilegeLevel": null,
+    "requestable": true,
+    "revocationRequestConfig": {
+      "approvalSchemes": [
+        {
+          "approverId": null,
+          "approverType": "OWNER"
+        }
+      ]
+    },
+    "segmentRefs": [],
+    "segments": []
+  },
+  "self": {
+    "id": "a55a957afca341158a47ad653547d5d7",
+    "name": "BCC prueba 10",
+    "type": "ROLE"
+  },
+  "version": 1
+}

@@ -1,0 +1,34 @@
+{
+  "jwsHeader": null,
+  "jwsSignature": null,
+  "object": {
+    "attributes": {
+      "numeroEmpleado": {
+        "attributes": {
+          "values": [
+            "nulo",
+            {
+              "attributes": {
+                "attributeName": "employeeNumber",
+                "sourceName": "BCC-Source-External"
+              },
+              "type": "accountAttribute"
+            }
+          ]
+        },
+        "type": "firstValid"
+      },
+      "value": "#set($index = $numeroEmpleado.length() - 1) $numeroEmpleado.substring($index)"
+    },
+    "id": "5e98fdf2-f68a-46a7-9885-650a91ef4d4a",
+    "internal": false,
+    "name": "Z Prueba 3",
+    "type": "static"
+  },
+  "self": {
+    "id": "5e98fdf2-f68a-46a7-9885-650a91ef4d4a",
+    "name": "Z Prueba 3",
+    "type": "TRANSFORM"
+  },
+  "version": 1
+}

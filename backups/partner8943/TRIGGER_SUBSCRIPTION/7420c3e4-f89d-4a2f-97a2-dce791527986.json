@@ -1,0 +1,23 @@
+{
+  "jwsHeader": null,
+  "jwsSignature": null,
+  "object": {
+    "description": "Managed by Workflows",
+    "enabled": false,
+    "id": "7420c3e4-f89d-4a2f-97a2-dce791527986",
+    "name": "Service Now Sign Off Ticket",
+    "responseDeadline": "PT1H",
+    "triggerId": "idn:certification-signed-off",
+    "triggerName": "Certification Signed Off",
+    "type": "WORKFLOW",
+    "workflowConfig": {
+      "workflowId": "7420c3e4-f89d-4a2f-97a2-dce791527986"
+    }
+  },
+  "self": {
+    "id": "7420c3e4-f89d-4a2f-97a2-dce791527986",
+    "name": "Service Now Sign Off Ticket",
+    "type": "TRIGGER_SUBSCRIPTION"
+  },
+  "version": 1
+}

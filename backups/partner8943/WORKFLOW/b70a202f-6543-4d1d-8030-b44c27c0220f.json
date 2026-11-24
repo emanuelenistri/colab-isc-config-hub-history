@@ -1,0 +1,105 @@
+{
+  "jwsHeader": null,
+  "jwsSignature": null,
+  "object": {
+    "created": "2024-12-17T11:17:43.114073579Z",
+    "creator": {
+      "id": "49e4267e2cc547b0ad4fb41df46774ec",
+      "name": "mgmontejo",
+      "type": "IDENTITY"
+    },
+    "definition": {
+      "start": "Compare Strings",
+      "steps": {
+        "Compare Strings": {
+          "choiceList": [
+            {
+              "comparator": "StringEquals",
+              "nextStep": "Get Accounts",
+              "variableA.$": "$.trigger.changes[?(@.attribute===\"cloudLifecycleState\")].newValue",
+              "variableB": "baja"
+            }
+          ],
+          "defaultStep": "End Step - Success",
+          "displayName": "",
+          "type": "choice"
+        },
+        "End Step - Success": {
+          "displayName": "",
+          "type": "success"
+        },
+        "End Step - Success 2": {
+          "displayName": "",
+          "type": "success"
+        },
+        "Get Accounts": {
+          "actionId": "sp:get-accounts",
+          "attributes": {
+            "filterCriteria": "sourceId",
+            "getAccountsBy": "specificIdentity",
+            "identity.$": "$.trigger.identity.id",
+            "operator": "eq",
+            "value": null
+          },
+          "displayName": "",
+          "nextStep": "Manage Accounts",
+          "type": "action",
+          "versionNumber": 1
+        },
+        "Manage Accounts": {
+          "actionId": "sp:manage-account",
+          "attributes": {
+            "accountIds.$": "$.getAccounts.accounts[?(@.sourceName == \"Active Directory LAB SIA\")].id",
+            "operation": "disable"
+          },
+          "displayName": "",
+          "nextStep": "End Step - Success 2",
+          "type": "action",
+          "versionNumber": 1
+        }
+      }
+    },
+    "description": "",
+    "enabled": false,
+    "id": "b70a202f-6543-4d1d-8030-b44c27c0220f",
+    "modified": "2024-12-18T12:56:05.831233638Z",
+    "modifiedBy": {
+      "id": "49e4267e2cc547b0ad4fb41df46774ec",
+      "name": "mgmontejo",
+      "type": "IDENTITY"
+    },
+    "name": "Prueba deshabilitar una cuenta",
+    "owner": {
+      "id": "49e4267e2cc547b0ad4fb41df46774ec",
+      "name": "mgmontejo",
+      "type": "IDENTITY"
+    },
+    "trigger": {
+      "attributes": {
+        "filter.$": "$.changes[?(@.attribute == \"cloudLifecycleState\")]",
+        "filterDefinition": {
+          "conditions": [
+            {
+              "operator": "==",
+              "path": "attribute",
+              "type": "string",
+              "value": "cloudLifecycleState"
+            }
+          ],
+          "logic": "and",
+          "path": "changes"
+        },
+        "id": "idn:identity-attributes-changed",
+        "integrationId": null
+      },
+      "mode": "basic",
+      "type": "EVENT"
+    }
+  },
+  "self": {
+    "id": "b70a202f-6543-4d1d-8030-b44c27c0220f",
+    "name": "Prueba deshabilitar una cuenta",
+    "type": "WORKFLOW"
+  },
+  "version": 1
+}

@@ -1,0 +1,121 @@
+{
+  "jwsHeader": null,
+  "jwsSignature": null,
+  "object": {
+    "accessModelMetadata": {
+      "attributes": []
+    },
+    "accessProfiles": [
+      {
+        "id": "a5be588d3c0c4c29bb1cbc08df34d054",
+        "name": "acceso_AD",
+        "type": "ACCESS_PROFILE"
+      }
+    ],
+    "accessRequestConfig": {
+      "approvalSchemes": [
+        {
+          "approverId": null,
+          "approverType": "MANAGER"
+        },
+        {
+          "approverId": null,
+          "approverType": "OWNER"
+        }
+      ],
+      "commentsRequired": false,
+      "denialCommentsRequired": false,
+      "formDefinitionId": null,
+      "maxPermittedAccessDuration": null,
+      "reauthorizationRequired": false,
+      "requireEndDate": false
+    },
+    "additionalOwners": [],
+    "created": "2024-10-03T18:11:37.655559Z",
+    "description": "Prueba 2 Patch",
+    "dimensionRefs": null,
+    "dimensional": false,
+    "dimensions": [],
+    "enabled": false,
+    "entitlements": [
+      {
+        "id": "01bfc28a-44a9-45dd-8475-967c32d0408e",
+        "name": "CompCommittee",
+        "sourceId": "dd15e795-a688-4b1e-9141-26cdaf8ac66d",
+        "sourceName": "Active Directory LAB SIA",
+        "type": "ENTITLEMENT"
+      },
+      {
+        "id": "96aa8741-a4c6-4896-a947-e6e21c44d22a",
+        "name": "SAP_BC_LVC_ALL",
+        "sourceId": "3d2a1c53-970d-4a73-af8e-4854d73b2466",
+        "sourceName": "SAP LAB",
+        "type": "ENTITLEMENT"
+      }
+    ],
+    "id": "ac3d164476924c9bb3533f2cdf58233f",
+    "legacyMembershipInfo": null,
+    "membership": {
+      "criteria": {
+        "children": [
+          {
+            "children": [
+              {
+                "children": [],
+                "key": {
+                  "property": "attribute.cloudLifecycleState",
+                  "sourceId": "",
+                  "type": "IDENTITY"
+                },
+                "operation": "EQUALS",
+                "stringValue": "activo",
+                "values": null
+              },
+              {
+                "children": [],
+                "key": {
+                  "property": "attribute.cloudLifecycleState",
+                  "sourceId": "",
+                  "type": "IDENTITY"
+                },
+                "operation": "EQUALS",
+                "stringValue": "preactivo",
+                "values": null
+              }
+            ],
+            "key": null,
+            "operation": "AND",
+            "stringValue": "",
+            "values": null
+          }
+        ],
+        "key": null,
+        "operation": "OR",
+        "stringValue": "",
+        "values": null
+      },
+      "identities": null,
+      "type": "STANDARD"
+    },
+    "modified": "2024-10-03T18:11:37.655559Z",
+    "name": "BCC Prueba 13",
+    "owner": {
+      "id": "748aaee232614741b6f6cddf341ee281",
+      "name": "lmmartinez",
+      "type": "IDENTITY"
+    },
+    "privilegeLevel": null,
+    "requestable": false,
+    "revocationRequestConfig": {
+      "approvalSchemes": []
+    },
+    "segmentRefs": [],
+    "segments": []
+  },
+  "self": {
+    "id": "ac3d164476924c9bb3533f2cdf58233f",
+    "name": "BCC Prueba 13",
+    "type": "ROLE"
+  },
+  "version": 1
+}

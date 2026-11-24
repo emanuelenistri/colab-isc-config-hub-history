@@ -1,0 +1,85 @@
+{
+  "jwsHeader": null,
+  "jwsSignature": null,
+  "object": {
+    "created": "2026-05-25T13:23:45.697272373Z",
+    "creator": {
+      "id": "1dff61379fdc41fbac00c7f5ae992e23",
+      "name": "cjoglar",
+      "type": "IDENTITY"
+    },
+    "definition": {
+      "start": "Compare Number of Changes",
+      "steps": {
+        "Compare Number of Changes": {
+          "choiceList": [
+            {
+              "comparator": "NumericGreaterThan",
+              "nextStep": "Send Alert Email",
+              "variableA.$": "$.trigger.stats.changed",
+              "variableB": 30
+            }
+          ],
+          "defaultStep": "End Step - Success",
+          "type": "choice"
+        },
+        "End Step - Failure": {
+          "attributes": {
+            "message": "Aggregation stopped due to exceeding 30 changes threshold",
+            "name": "Aggregation Stopped"
+          },
+          "displayName": "",
+          "type": "failure"
+        },
+        "End Step - Success": {
+          "displayName": "",
+          "type": "success"
+        },
+        "Send Alert Email": {
+          "actionId": "sp:send-email",
+          "attributes": {
+            "body": "Aggregation on source ${sourceName} has been flagged because more than 30 changes were detected. Total changes: ${changedCount}. Please review the aggregation results.",
+            "context": {
+              "changedCount.$": "$.trigger.stats.changed",
+              "sourceName.$": "$.trigger.source.name"
+            },
+            "recipientEmailList": "admin@company.com",
+            "subject": "Alert: Aggregation Exceeded Change Threshold"
+          },
+          "displayName": "",
+          "nextStep": "End Step - Failure",
+          "type": "action",
+          "versionNumber": 2
+        }
+      }
+    },
+    "description": "Monitors account aggregation completion and stops the aggregation if more than 30 changes are detected",
+    "enabled": false,
+    "id": "6a2d0105-807a-4490-92f6-cbd9db45e4f9",
+    "modified": "2026-05-25T13:23:45.697272373Z",
+    "modifiedBy": {
+      "id": "1dff61379fdc41fbac00c7f5ae992e23",
+      "name": "cjoglar",
+      "type": "IDENTITY"
+    },
+    "name": "Stop Aggregation if More Than 30 Changes",
+    "owner": {
+      "id": "1dff61379fdc41fbac00c7f5ae992e23",
+      "name": "cjoglar",
+      "type": "IDENTITY"
+    },
+    "trigger": {
+      "attributes": {
+        "id": "idn:account-aggregation-completed",
+        "integrationId": null
+      },
+      "type": "EVENT"
+    }
+  },
+  "self": {
+    "id": "6a2d0105-807a-4490-92f6-cbd9db45e4f9",
+    "name": "Stop Aggregation if More Than 30 Changes",
+    "type": "WORKFLOW"
+  },
+  "version": 1
+}

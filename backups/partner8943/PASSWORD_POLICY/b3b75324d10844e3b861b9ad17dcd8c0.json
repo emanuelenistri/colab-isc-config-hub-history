@@ -1,0 +1,38 @@
+{
+  "jwsHeader": null,
+  "jwsSignature": null,
+  "object": {
+    "accountIdMinWordLength": -1,
+    "accountNameMinWordLength": -1,
+    "defaultPolicy": true,
+    "description": "Default Password Policy",
+    "enablePasswdExpiration": true,
+    "firstExpirationReminder": 1,
+    "id": "b3b75324d10844e3b861b9ad17dcd8c0",
+    "maxLength": 0,
+    "maxRepeatedChars": -1,
+    "minAlpha": 1,
+    "minCharacterTypes": 3,
+    "minLength": 10,
+    "minLower": 1,
+    "minNumeric": 1,
+    "minSpecial": 1,
+    "minUpper": 1,
+    "name": "Default",
+    "passwordExpiration": 90,
+    "requireStrongAuthOffNetwork": false,
+    "requireStrongAuthUntrustedGeographies": false,
+    "requireStrongAuthn": true,
+    "useAccountAttributes": true,
+    "useDictionary": false,
+    "useIdentityAttributes": true,
+    "validateAgainstAccountId": false,
+    "validateAgainstAccountName": true
+  },
+  "self": {
+    "id": "b3b75324d10844e3b861b9ad17dcd8c0",
+    "name": "Default",
+    "type": "PASSWORD_POLICY"
+  },
+  "version": 1
+}

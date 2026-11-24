@@ -1,0 +1,42 @@
+{
+  "jwsHeader": null,
+  "jwsSignature": null,
+  "object": {
+    "attributes": {
+      "values": [
+        "Modificado por IDM: ",
+        {
+          "attributes": {
+            "values": [
+              {
+                "attributes": {
+                  "attributeName": "modifyDate",
+                  "sourceName": "BCC-Source-External"
+                },
+                "type": "accountAttribute"
+              },
+              {
+                "attributes": {
+                  "attributeName": "modifyDate",
+                  "sourceName": "BCC-Source-Internal"
+                },
+                "type": "accountAttribute"
+              }
+            ]
+          },
+          "type": "firstValid"
+        }
+      ]
+    },
+    "id": "501634b4-7512-415d-af3b-5e3307730d49",
+    "internal": false,
+    "name": "modify",
+    "type": "concat"
+  },
+  "self": {
+    "id": "501634b4-7512-415d-af3b-5e3307730d49",
+    "name": "modify",
+    "type": "TRANSFORM"
+  },
+  "version": 1
+}

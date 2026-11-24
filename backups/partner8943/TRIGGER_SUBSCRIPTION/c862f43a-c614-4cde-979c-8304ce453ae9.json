@@ -1,0 +1,29 @@
+{
+  "jwsHeader": null,
+  "jwsSignature": null,
+  "object": {
+    "description": "",
+    "enabled": false,
+    "httpConfig": {
+      "basicAuthConfig": null,
+      "bearerTokenAuthConfig": {
+        "bearerToken": null
+      },
+      "httpAuthenticationType": "BEARER_TOKEN",
+      "httpDispatchMode": "ASYNC",
+      "url": "https://partner8943.api.identitynow-demo.com/v2024/workflows/workflow-executions/e600e97a-c728-4028-8f1f-0a21b33064ba"
+    },
+    "id": "c862f43a-c614-4cde-979c-8304ce453ae9",
+    "name": "Test",
+    "responseDeadline": "PT1H",
+    "triggerId": "idn:access-request-pre-approval",
+    "triggerName": "Access Request Submitted",
+    "type": "HTTP"
+  },
+  "self": {
+    "id": "c862f43a-c614-4cde-979c-8304ce453ae9",
+    "name": "Test",
+    "type": "TRIGGER_SUBSCRIPTION"
+  },
+  "version": 1
+}

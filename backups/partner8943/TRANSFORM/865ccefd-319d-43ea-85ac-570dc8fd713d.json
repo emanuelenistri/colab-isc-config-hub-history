@@ -1,0 +1,69 @@
+{
+  "jwsHeader": null,
+  "jwsSignature": null,
+  "object": {
+    "attributes": {
+      "emailOriginal": {
+        "attributes": {
+          "values": [
+            "@",
+            {
+              "attributes": {
+                "id": "emailDomain"
+              },
+              "type": "reference"
+            },
+            {
+              "attributes": {
+                "values": [
+                  {
+                    "attributes": {
+                      "attributeName": "name",
+                      "sourceName": "BCC-Source-External"
+                    },
+                    "type": "accountAttribute"
+                  },
+                  {
+                    "attributes": {
+                      "attributeName": "name",
+                      "sourceName": "BCC-Source-Internal"
+                    },
+                    "type": "accountAttribute"
+                  },
+                  {
+                    "attributes": {
+                      "name": "dni"
+                    },
+                    "type": "identityAttribute"
+                  }
+                ]
+              },
+              "type": "firstValid"
+            }
+          ]
+        },
+        "type": "concat"
+      },
+      "expression": "$username eq cnavarro",
+      "negativeCondition": "$emailOriginal",
+      "positiveCondition": "rcgalvez@minsait.com",
+      "requiresPeriodicRefresh": "true",
+      "username": {
+        "attributes": {
+          "name": "uid"
+        },
+        "type": "identityAttribute"
+      }
+    },
+    "id": "865ccefd-319d-43ea-85ac-570dc8fd713d",
+    "internal": false,
+    "name": "emailExternoConditional",
+    "type": "conditional"
+  },
+  "self": {
+    "id": "865ccefd-319d-43ea-85ac-570dc8fd713d",
+    "name": "emailExternoConditional",
+    "type": "TRANSFORM"
+  },
+  "version": 1
+}

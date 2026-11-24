@@ -1,0 +1,360 @@
+{
+  "jwsHeader": null,
+  "jwsSignature": null,
+  "object": {
+    "attributes": {
+      "absentismo": {
+        "attributes": {
+          "ignoreErrors": "true",
+          "values": [
+            "null",
+            {
+              "attributes": {
+                "attributeName": "absentismo",
+                "sourceName": "BCC-Source-External"
+              },
+              "type": "accountAttribute"
+            }
+          ]
+        },
+        "type": "firstValid"
+      },
+      "cuarentenaMayor30dias": {
+        "attributes": {
+          "firstDate": {
+            "attributes": {
+              "values": [
+                {
+                  "attributes": {
+                    "expression": "+30d",
+                    "input": {
+                      "attributes": {
+                        "input": {
+                          "attributes": {
+                            "values": [
+                              "31/12/9999",
+                              {
+                                "attributes": {
+                                  "attributeName": "endDate",
+                                  "sourceName": "BCC-Source-External"
+                                },
+                                "type": "accountAttribute"
+                              }
+                            ]
+                          },
+                          "type": "firstValid"
+                        },
+                        "inputFormat": "dd/MM/yyyy",
+                        "outputFormat": "ISO8601"
+                      },
+                      "type": "dateFormat"
+                    },
+                    "roundUp": true
+                  },
+                  "type": "dateMath"
+                }
+              ]
+            },
+            "type": "firstValid"
+          },
+          "negativeCondition": "false",
+          "operator": "lte",
+          "positiveCondition": "true",
+          "secondDate": {
+            "attributes": {
+              "expression": "now",
+              "roundUp": true
+            },
+            "type": "dateMath"
+          }
+        },
+        "type": "dateCompare"
+      },
+      "endDate": {
+        "attributes": {
+          "values": [
+            "null",
+            {
+              "attributes": {
+                "input": {
+                  "attributes": {
+                    "attributeName": "endDate",
+                    "sourceName": "BCC-Source-External"
+                  },
+                  "type": "accountAttribute"
+                },
+                "inputFormat": "dd/MM/yyyy",
+                "outputFortmat": "ISO8601"
+              },
+              "type": "dateFormat"
+            }
+          ]
+        },
+        "type": "firstValid"
+      },
+      "endDateBeforeNow": {
+        "attributes": {
+          "firstDate": {
+            "attributes": {
+              "values": [
+                {
+                  "attributes": {
+                    "input": {
+                      "attributes": {
+                        "values": [
+                          "31/12/9999",
+                          {
+                            "attributes": {
+                              "attributeName": "endDate",
+                              "sourceName": "BCC-Source-External"
+                            },
+                            "type": "accountAttribute"
+                          }
+                        ]
+                      },
+                      "type": "firstValid"
+                    },
+                    "inputFormat": "dd/MM/yyyy",
+                    "outputFormat": "ISO8601"
+                  },
+                  "type": "dateFormat"
+                }
+              ]
+            },
+            "type": "firstValid"
+          },
+          "negativeCondition": "false",
+          "operator": "lt",
+          "positiveCondition": "true",
+          "secondDate": {
+            "attributes": {
+              "expression": "now",
+              "roundUp": true
+            },
+            "type": "dateMath"
+          }
+        },
+        "type": "dateCompare"
+      },
+      "flagWhiteList": {
+        "attributes": {
+          "values": [
+            "false",
+            {
+              "attributes": {
+                "attributeName": "flagWhiteList",
+                "sourceName": "BCC-Source-External"
+              },
+              "type": "accountAttribute"
+            }
+          ]
+        },
+        "type": "firstValid"
+      },
+      "lastLogonTimestampMayor45Dias": {
+        "attributes": {
+          "firstDate": {
+            "attributes": {
+              "values": [
+                "",
+                {
+                  "attributes": {
+                    "expression": "+45d",
+                    "input": {
+                      "attributes": {
+                        "input": {
+                          "attributes": {
+                            "values": [
+                              "133170048000000000",
+                              {
+                                "attributes": {
+                                  "attributeName": "lastLogonTimestamp",
+                                  "sourceName": "Active Directory LAB SIA"
+                                },
+                                "type": "accountAttribute"
+                              },
+                              {
+                                "attributes": {
+                                  "input": {
+                                    "attributes": {
+                                      "values": [
+                                        "133170048000000000",
+                                        {
+                                          "attributes": {
+                                            "attributeName": "startDate",
+                                            "sourceName": "BCC-Source-External"
+                                          },
+                                          "type": "accountAttribute"
+                                        }
+                                      ]
+                                    },
+                                    "type": "firstValid"
+                                  },
+                                  "inputFormat": "dd-MM-yyyy",
+                                  "outputFormat": "EPOCH_TIME_WIN32"
+                                },
+                                "type": "dateFormat"
+                              }
+                            ]
+                          },
+                          "type": "firstValid"
+                        },
+                        "inputFormat": "EPOCH_TIME_WIN32",
+                        "outputFormat": "ISO8601"
+                      },
+                      "type": "dateFormat"
+                    },
+                    "roundUp": true
+                  },
+                  "type": "dateMath"
+                }
+              ]
+            },
+            "type": "firstValid"
+          },
+          "negativeCondition": "false",
+          "operator": "lt",
+          "positiveCondition": "true",
+          "secondDate": {
+            "attributes": {
+              "expression": "now",
+              "roundUp": true
+            },
+            "type": "dateMath"
+          }
+        },
+        "type": "dateCompare"
+      },
+      "lastLogonTimestampMayor75dias": {
+        "attributes": {
+          "firstDate": {
+            "attributes": {
+              "values": [
+                "",
+                {
+                  "attributes": {
+                    "expression": "+75d",
+                    "input": {
+                      "attributes": {
+                        "input": {
+                          "attributes": {
+                            "values": [
+                              "133170048000000000",
+                              {
+                                "attributes": {
+                                  "attributeName": "lastLogonTimestamp",
+                                  "sourceName": "Active Directory LAB SIA"
+                                },
+                                "type": "accountAttribute"
+                              },
+                              {
+                                "attributes": {
+                                  "input": {
+                                    "attributes": {
+                                      "values": [
+                                        "133170048000000000",
+                                        {
+                                          "attributes": {
+                                            "attributeName": "startDate",
+                                            "sourceName": "BCC-Source-External"
+                                          },
+                                          "type": "accountAttribute"
+                                        }
+                                      ]
+                                    },
+                                    "type": "firstValid"
+                                  },
+                                  "inputFormat": "dd-MM-yyyy",
+                                  "outputFormat": "EPOCH_TIME_WIN32"
+                                },
+                                "type": "dateFormat"
+                              }
+                            ]
+                          },
+                          "type": "firstValid"
+                        },
+                        "inputFormat": "EPOCH_TIME_WIN32",
+                        "outputFormat": "ISO8601"
+                      },
+                      "type": "dateFormat"
+                    },
+                    "roundUp": true
+                  },
+                  "type": "dateMath"
+                }
+              ]
+            },
+            "type": "firstValid"
+          },
+          "negativeCondition": "false",
+          "operator": "lt",
+          "positiveCondition": "true",
+          "secondDate": {
+            "attributes": {
+              "expression": "now",
+              "roundUp": true
+            },
+            "type": "dateMath"
+          }
+        },
+        "type": "dateCompare"
+      },
+      "requiresPeriodicRefresh": "true",
+      "startDateAfterNow": {
+        "attributes": {
+          "firstDate": {
+            "attributes": {
+              "values": [
+                "",
+                {
+                  "attributes": {
+                    "input": {
+                      "attributes": {
+                        "attributeName": "startDate",
+                        "sourceName": "BCC-Source-External"
+                      },
+                      "type": "accountAttribute"
+                    },
+                    "inputFormat": "dd-MM-yyyy",
+                    "outputFormat": "ISO8601"
+                  },
+                  "type": "dateFormat"
+                }
+              ]
+            },
+            "type": "firstValid"
+          },
+          "negativeCondition": "false",
+          "operator": "gt",
+          "positiveCondition": "true",
+          "secondDate": {
+            "attributes": {
+              "expression": "now",
+              "roundUp": true
+            },
+            "type": "dateMath"
+          }
+        },
+        "type": "dateCompare"
+      },
+      "test": {
+        "attributes": {
+          "attributeName": "absentismo",
+          "sourceName": "BCC-Source-External"
+        },
+        "type": "accountAttribute"
+      },
+      "value": "#if($startDateAfterNow == 'true' && ($endDateBeforeNow == 'false' || $endDate == \"null\"))preactivo#elseif($flagWhiteList == \"S\")activo#elseif($absentismo == \"S\")suspendido#elseif($cuarentenaMayor30dias == 'true' || $lastLogonTimestampMayor75dias == 'true')baja#elseif($endDateBeforeNow == 'true' || $lastLogonTimestampMayor45Dias == 'true')suspendido#elseif($endDateBeforeNow == 'true' || $endDate == \"null\")#activo{else}vacio#end"
+    },
+    "id": "3029908c-67bb-46d0-9086-f76bae4ac71f",
+    "internal": false,
+    "name": "test_Sergio_ultimo_CloudLifecycle_external",
+    "type": "static"
+  },
+  "self": {
+    "id": "3029908c-67bb-46d0-9086-f76bae4ac71f",
+    "name": "test_Sergio_ultimo_CloudLifecycle_external",
+    "type": "TRANSFORM"
+  },
+  "version": 1
+}

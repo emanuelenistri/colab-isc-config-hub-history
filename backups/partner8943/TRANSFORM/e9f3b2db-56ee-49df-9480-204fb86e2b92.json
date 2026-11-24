@@ -1,0 +1,27 @@
+{
+  "jwsHeader": null,
+  "jwsSignature": null,
+  "object": {
+    "attributes": {
+      "values": [
+        "-00",
+        {
+          "attributes": {
+            "name": "physicalOffice"
+          },
+          "type": "identityAttribute"
+        }
+      ]
+    },
+    "id": "e9f3b2db-56ee-49df-9480-204fb86e2b92",
+    "internal": false,
+    "name": "Z Concat Oficina Fisica + -00",
+    "type": "concat"
+  },
+  "self": {
+    "id": "e9f3b2db-56ee-49df-9480-204fb86e2b92",
+    "name": "Z Concat Oficina Fisica + -00",
+    "type": "TRANSFORM"
+  },
+  "version": 1
+}

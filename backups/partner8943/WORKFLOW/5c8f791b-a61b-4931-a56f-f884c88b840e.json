@@ -1,0 +1,131 @@
+{
+  "jwsHeader": null,
+  "jwsSignature": null,
+  "object": {
+    "created": "2024-06-14T06:08:07.220063615Z",
+    "creator": {
+      "id": "84a568c1f5024b24b21a25a27379ac66",
+      "name": "smenendezp",
+      "type": "IDENTITY"
+    },
+    "definition": {
+      "start": "Get List of Identities",
+      "steps": {
+        "End Step - Success": {
+          "displayName": "",
+          "type": "success"
+        },
+        "Get List of Identities": {
+          "actionId": "sp:get-identities",
+          "attributes": {
+            "inputQuery": "@accounts(source.name:\"BCC-Source-External\")",
+            "searchBy": "searchQuery"
+          },
+          "description": null,
+          "displayName": "",
+          "nextStep": "Loop",
+          "type": "action",
+          "versionNumber": 2
+        },
+        "Loop": {
+          "actionId": "sp:loop:iterator",
+          "attributes": {
+            "context.$": "$",
+            "input.$": "$.getListOfIdentities.identities",
+            "start": "Get Accounts",
+            "steps": {
+              "Compare Strings": {
+                "choiceList": [
+                  {
+                    "comparator": "StringEquals",
+                    "nextStep": "Send Email",
+                    "variableA.$": "$.loop.loopInput.source.name",
+                    "variableB": "BCC-Source-External"
+                  }
+                ],
+                "defaultStep": "End Step - Failure",
+                "displayName": "",
+                "type": "choice"
+              },
+              "End Step - Failure": {
+                "description": null,
+                "displayName": "",
+                "failureName": "fallo",
+                "type": "failure"
+              },
+              "End Step - Success 1": {
+                "displayName": "",
+                "type": "success"
+              },
+              "Get Accounts": {
+                "actionId": "sp:get-accounts",
+                "attributes": {
+                  "filterCriteria": null,
+                  "getAccountsBy": "specificIdentity",
+                  "identity.$": "$.loop.loopInput.source.name"
+                },
+                "displayName": "",
+                "nextStep": "Compare Strings",
+                "type": "action",
+                "versionNumber": 1
+              },
+              "Send Email": {
+                "actionId": "sp:send-email",
+                "attributes": {
+                  "body": "La identidad {{$.loop.loopInput.firstName}} {{$.loop.loopInput.lastName}} tiene el source {{$.loop.loopInput.source.name}}",
+                  "context": {},
+                  "recipientEmailList": [
+                    "smenendezp@sia.es"
+                  ],
+                  "subject": "Prueba workflow"
+                },
+                "displayName": "",
+                "nextStep": "End Step - Success 1",
+                "type": "action",
+                "versionNumber": 2
+              }
+            }
+          },
+          "displayName": "",
+          "nextStep": "End Step - Success",
+          "type": "action",
+          "versionNumber": 1
+        }
+      }
+    },
+    "description": "Comprueba si una identidad de una determinada fuente tiene Active Directory y, en eses caso, se envía un email.",
+    "enabled": false,
+    "id": "5c8f791b-a61b-4931-a56f-f884c88b840e",
+    "modified": "2024-09-10T16:34:06.30596628Z",
+    "modifiedBy": {
+      "id": "84a568c1f5024b24b21a25a27379ac66",
+      "name": "smenendezp",
+      "type": "IDENTITY"
+    },
+    "name": "becarios _comprobar_si_identidad_tiene_AD_y_mandar_correo",
+    "owner": {
+      "id": "84a568c1f5024b24b21a25a27379ac66",
+      "name": "smenendezp",
+      "type": "IDENTITY"
+    },
+    "trigger": {
+      "attributes": {
+        "cronString": "0 0 * * *",
+        "dailyTimes": [
+          "1969-12-31T23:00:00.000Z"
+        ],
+        "frequency": "daily",
+        "id": "idn:cron-schedule",
+        "integrationId": null,
+        "timeZone": "Europe/Madrid"
+      },
+      "type": "SCHEDULED"
+    }
+  },
+  "self": {
+    "id": "5c8f791b-a61b-4931-a56f-f884c88b840e",
+    "name": "becarios _comprobar_si_identidad_tiene_AD_y_mandar_correo",
+    "type": "WORKFLOW"
+  },
+  "version": 1
+}

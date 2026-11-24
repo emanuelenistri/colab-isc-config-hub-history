@@ -1,0 +1,38 @@
+{
+  "jwsHeader": null,
+  "jwsSignature": null,
+  "object": {
+    "accountIdMinWordLength": -1,
+    "accountNameMinWordLength": -1,
+    "defaultPolicy": false,
+    "description": null,
+    "enablePasswdExpiration": true,
+    "firstExpirationReminder": 1,
+    "id": "551582ff6447469a9d06fa8f6336b46a",
+    "maxLength": 0,
+    "maxRepeatedChars": 2,
+    "minAlpha": 2,
+    "minCharacterTypes": 1,
+    "minLength": 8,
+    "minLower": 1,
+    "minNumeric": 1,
+    "minSpecial": 2,
+    "minUpper": 1,
+    "name": "Test SL",
+    "passwordExpiration": 90,
+    "requireStrongAuthOffNetwork": false,
+    "requireStrongAuthUntrustedGeographies": false,
+    "requireStrongAuthn": true,
+    "useAccountAttributes": true,
+    "useDictionary": true,
+    "useIdentityAttributes": true,
+    "validateAgainstAccountId": true,
+    "validateAgainstAccountName": true
+  },
+  "self": {
+    "id": "551582ff6447469a9d06fa8f6336b46a",
+    "name": "Test SL",
+    "type": "PASSWORD_POLICY"
+  },
+  "version": 1
+}

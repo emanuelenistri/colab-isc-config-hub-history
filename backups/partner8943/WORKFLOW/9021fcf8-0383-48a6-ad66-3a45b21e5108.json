@@ -1,0 +1,543 @@
+{
+  "jwsHeader": null,
+  "jwsSignature": null,
+  "object": {
+    "created": "2024-10-08T10:55:41.147823302Z",
+    "creator": {
+      "id": "d024cdc01088491194e571464f97b308",
+      "name": "dmedinay",
+      "type": "IDENTITY"
+    },
+    "definition": {
+      "start": "Send Email",
+      "steps": {
+        "Compare Strings": {
+          "actionId": "sp:compare-strings",
+          "choiceList": [
+            {
+              "comparator": "StringContains",
+              "nextStep": "HTTP Request 1",
+              "variableA.$": "$.defineVariable1.joblist",
+              "variableB.$": "$.defineVariable5.jobRequesterBy"
+            }
+          ],
+          "defaultStep": "Verify Data Type 4",
+          "displayName": "",
+          "type": "choice"
+        },
+        "Compare Strings 1": {
+          "actionId": "sp:compare-strings",
+          "choiceList": [
+            {
+              "comparator": "StringContains",
+              "nextStep": "HTTP Request 1",
+              "variableA.$": "$.defineVariable1.joblist",
+              "variableB.$": "$.defineVariable6.jobRequesterFor"
+            }
+          ],
+          "defaultStep": "Verify Data Type 5",
+          "displayName": "",
+          "type": "choice"
+        },
+        "Compare Strings 2": {
+          "actionId": "sp:compare-strings",
+          "choiceList": [
+            {
+              "comparator": "StringContains",
+              "nextStep": "HTTP Request",
+              "variableA.$": "$.defineVariable1.joblist",
+              "variableB.$": "$.defineVariable2.managerJob"
+            }
+          ],
+          "defaultStep": "HTTP Request",
+          "displayName": "",
+          "type": "choice"
+        },
+        "Compare Strings 3": {
+          "actionId": "sp:compare-strings",
+          "choiceList": [
+            {
+              "comparator": "StringEquals",
+              "nextStep": "Compare Strings 4",
+              "variableA.$": "$.defineVariable.operation",
+              "variableB": "Add"
+            }
+          ],
+          "defaultStep": "HTTP Request 1",
+          "displayName": "",
+          "type": "choice"
+        },
+        "Compare Strings 4": {
+          "actionId": "sp:compare-strings",
+          "choiceList": [
+            {
+              "comparator": "StringContains",
+              "nextStep": "Get Identity",
+              "variableA.$": "$.defineVariable.roleList",
+              "variableB.$": "$.defineVariable.rolName"
+            }
+          ],
+          "defaultStep": "HTTP Request 1",
+          "description": null,
+          "displayName": "",
+          "type": "choice"
+        },
+        "Define Variable": {
+          "actionId": "sp:define-variable",
+          "attributes": {
+            "id": "sp:define-variable",
+            "variables": [
+              {
+                "description": "",
+                "name": "idAprobador",
+                "transforms": [],
+                "variableA": "0"
+              },
+              {
+                "description": "",
+                "name": "operation",
+                "transforms": [],
+                "variableA.$": "$.trigger.requestedItems[0].operation"
+              },
+              {
+                "description": "",
+                "name": "requestedBy",
+                "transforms": [],
+                "variableA.$": "$.trigger.requestedBy.id"
+              },
+              {
+                "description": "",
+                "name": "requestedFor",
+                "transforms": [],
+                "variableA.$": "$.trigger.requestedFor.id"
+              },
+              {
+                "description": "",
+                "name": "rolName",
+                "transforms": [
+                  {
+                    "id": "sp:transform:concatenate:string",
+                    "input": {
+                      "variableB": "|"
+                    }
+                  },
+                  {
+                    "id": "sp:transform:concatenate:string",
+                    "input": {
+                      "variableB.$": "$.trigger.requestedItems[0].name"
+                    }
+                  }
+                ],
+                "variableA": "|"
+              },
+              {
+                "description": "",
+                "name": "roleList",
+                "transforms": [],
+                "variableA": "|Test|"
+              },
+              {
+                "description": "",
+                "name": "rolename2",
+                "transforms": [
+                  {
+                    "id": "sp:transform:concatenate:string",
+                    "input": {
+                      "variableB": "|"
+                    }
+                  },
+                  {
+                    "id": "sp:transform:concatenate:string",
+                    "input": {
+                      "variableB.$": "$.trigger.requestedItems[0].name"
+                    }
+                  }
+                ],
+                "variableA": "|"
+              }
+            ]
+          },
+          "displayName": "",
+          "nextStep": "Compare Strings 3",
+          "type": "Mutation"
+        },
+        "Define Variable 1": {
+          "actionId": "sp:define-variable",
+          "attributes": {
+            "id": "sp:define-variable",
+            "variables": [
+              {
+                "description": "",
+                "name": "joblist",
+                "transforms": [],
+                "variableA": ",50000178,60610986,67221359,60610983,60584186,60501765,60445927,60445927,60445350,60427555,60315511,60019244,50082295,50066387,50050984,50050977,50027131,50000181,50000179,50000177,50000176,50000175,50000173,67048946,60610982,50000174,98765432,"
+              },
+              {
+                "description": "",
+                "name": "requestedJob",
+                "transforms": [],
+                "variableA.$": "$.getIdentity1.attributes.jobId"
+              },
+              {
+                "description": "",
+                "name": "requesteeJob",
+                "transforms": [],
+                "variableA.$": "$.getIdentity.attributes.jobId"
+              }
+            ]
+          },
+          "displayName": "",
+          "nextStep": "Verify Data Type 1",
+          "type": "Mutation"
+        },
+        "Define Variable 2": {
+          "actionId": "sp:define-variable",
+          "attributes": {
+            "id": "sp:define-variable",
+            "variables": [
+              {
+                "description": "",
+                "name": "managerJob",
+                "transforms": [
+                  {
+                    "id": "sp:transform:concatenate:string",
+                    "input": {
+                      "variableB": ","
+                    }
+                  },
+                  {
+                    "id": "sp:transform:concatenate:string",
+                    "input": {
+                      "variableB.$": "$.getIdentity2.attributes.jobId"
+                    }
+                  }
+                ],
+                "variableA": ","
+              }
+            ]
+          },
+          "displayName": "",
+          "nextStep": "Compare Strings 2",
+          "type": "Mutation"
+        },
+        "Define Variable 3": {
+          "actionId": "sp:define-variable",
+          "attributes": {
+            "id": "sp:define-variable",
+            "variables": [
+              {
+                "description": "",
+                "name": "jobRequesterBy",
+                "transforms": [],
+                "variableA": "0"
+              }
+            ]
+          },
+          "displayName": "",
+          "nextStep": "Verify Data Type 2",
+          "type": "Mutation"
+        },
+        "Define Variable 4": {
+          "actionId": "sp:define-variable",
+          "attributes": {
+            "id": "sp:define-variable",
+            "variables": [
+              {
+                "description": "",
+                "name": "jobRequesterFor",
+                "transforms": [],
+                "variableA": "0"
+              }
+            ]
+          },
+          "displayName": "",
+          "nextStep": "Verify Data Type 3",
+          "type": "Mutation"
+        },
+        "Define Variable 5": {
+          "actionId": "sp:define-variable",
+          "attributes": {
+            "id": "sp:define-variable",
+            "variables": [
+              {
+                "description": "",
+                "name": "jobRequesterBy",
+                "transforms": [
+                  {
+                    "id": "sp:transform:concatenate:string",
+                    "input": {
+                      "variableB": "$.getIdentity.attributes.jobId"
+                    }
+                  },
+                  {
+                    "id": "sp:transform:concatenate:string",
+                    "input": {
+                      "variableB": ","
+                    }
+                  }
+                ],
+                "variableA": ","
+              }
+            ]
+          },
+          "displayName": "",
+          "nextStep": "Verify Data Type 2",
+          "type": "Mutation"
+        },
+        "Define Variable 6": {
+          "actionId": "sp:define-variable",
+          "attributes": {
+            "id": "sp:define-variable",
+            "variables": [
+              {
+                "description": "",
+                "name": "jobRequesterFor",
+                "transforms": [
+                  {
+                    "id": "sp:transform:concatenate:string",
+                    "input": {
+                      "variableB": ","
+                    }
+                  },
+                  {
+                    "id": "sp:transform:concatenate:string",
+                    "input": {
+                      "variableB.$": "$.defineVariable1.requestedJob"
+                    }
+                  }
+                ],
+                "variableA": ","
+              }
+            ]
+          },
+          "displayName": "",
+          "nextStep": "Verify Data Type 3",
+          "type": "Mutation"
+        },
+        "End Step - Success": {
+          "actionId": "sp:operator-success",
+          "displayName": "",
+          "type": "success"
+        },
+        "Get Identity": {
+          "actionId": "sp:get-identity",
+          "attributes": {
+            "id.$": "$.defineVariable.requestedBy"
+          },
+          "description": null,
+          "displayName": "",
+          "nextStep": "Get Identity 1",
+          "type": "action",
+          "versionNumber": 2
+        },
+        "Get Identity 1": {
+          "actionId": "sp:get-identity",
+          "attributes": {
+            "id.$": "$.defineVariable.requestedFor"
+          },
+          "displayName": "",
+          "nextStep": "Define Variable 1",
+          "type": "action",
+          "versionNumber": 2
+        },
+        "Get Identity 2": {
+          "actionId": "sp:get-identity",
+          "attributes": {
+            "id.$": "$.getIdentity1.managerRef.id"
+          },
+          "displayName": "",
+          "nextStep": "Verify Data Type",
+          "type": "action",
+          "versionNumber": 2
+        },
+        "HTTP Request": {
+          "actionId": "sp:http",
+          "attributes": {
+            "authenticationType": "OAuth",
+            "jsonPatchRequestBody": null,
+            "jsonRequestBody": {
+              "output": {
+                "id": "826cf702-2147-47aa-845c-4eaaa9df3f2f",
+                "name": "Test CJP",
+                "type": "GOVERNANCE_GROUP"
+              },
+              "secret": "{{$.trigger._metadata.secret}}"
+            },
+            "method": "post",
+            "oAuthClientId": "cdcc941bb12042709244f2d924227e91",
+            "oAuthClientSecret": "",
+            "oAuthCredentialLocation": "oAuthInHeader",
+            "oAuthTokenUrl": "https://partner8943.api.identitynow-demo.com/oauth/token",
+            "requestContentType": "json",
+            "requestHeaders": {
+              "content-type": "application/json"
+            },
+            "url.$": "$.trigger._metadata.callbackURL"
+          },
+          "description": null,
+          "displayName": "",
+          "nextStep": "End Step - Success",
+          "type": "action",
+          "versionNumber": 2
+        },
+        "HTTP Request 1": {
+          "actionId": "sp:http",
+          "attributes": {
+            "authenticationType": "OAuth",
+            "jsonPatchRequestBody": null,
+            "jsonRequestBody": {
+              "output": {
+                "id": "",
+                "name": "",
+                "type": ""
+              },
+              "secret": "{{$.trigger._metadata.secret}}"
+            },
+            "method": "post",
+            "oAuthClientId": "cdcc941bb12042709244f2d924227e91",
+            "oAuthClientSecret": "",
+            "oAuthCredentialLocation": "oAuthInHeader",
+            "oAuthTokenUrl": "https://partner8943.api.identitynow-demo.com/oauth/token",
+            "requestContentType": "json",
+            "requestHeaders": {
+              "content-type": "application/json"
+            },
+            "url.$": "$.trigger._metadata.callbackURL"
+          },
+          "description": null,
+          "displayName": "",
+          "nextStep": "End Step - Success",
+          "type": "action",
+          "versionNumber": 2
+        },
+        "Send Email": {
+          "actionId": "sp:send-email",
+          "attributes": {
+            "body": "<p>${body}</p>\n<p>{{$.trigger._metadata.callbackURL}}</p>\n<p>{{$.trigger}}</p>\n<p>&nbsp;</p>\n<p>&nbsp;</p>\n<p>{{$.trigger.requestedBy.id}}</p>\n<p>&nbsp;</p>\n<p>{{$.trigger.requestedFor.id}}</p>\n<p>&nbsp;</p>\n<p>{{$.trigger.requestedItems[0].operation}}</p>\n<p>{{$.trigger.requestedItems[0].name}}</p>",
+            "context": {
+              "body.$": "$"
+            },
+            "from": null,
+            "recipientEmailList": [
+              "cjoglar@minsait.com"
+            ],
+            "replyTo": null,
+            "subject": "Test"
+          },
+          "displayName": "",
+          "nextStep": "Define Variable",
+          "type": "action",
+          "versionNumber": 2
+        },
+        "Verify Data Type": {
+          "actionId": "sp:compare-unary",
+          "choiceList": [
+            {
+              "comparator": "IsNull",
+              "nextStep": "HTTP Request",
+              "variableA.$": "$.getIdentity2.attributes.jobId"
+            }
+          ],
+          "defaultStep": "Define Variable 2",
+          "displayName": "",
+          "type": "choice"
+        },
+        "Verify Data Type 1": {
+          "actionId": "sp:compare-unary",
+          "choiceList": [
+            {
+              "comparator": "IsNull",
+              "nextStep": "Define Variable 3",
+              "variableA.$": "$.getIdentity.attributes.jobId"
+            }
+          ],
+          "defaultStep": "Define Variable 5",
+          "displayName": "",
+          "type": "choice"
+        },
+        "Verify Data Type 2": {
+          "actionId": "sp:compare-unary",
+          "choiceList": [
+            {
+              "comparator": "IsNull",
+              "nextStep": "Define Variable 4",
+              "variableA.$": "$.getIdentity1.attributes.jobId"
+            }
+          ],
+          "defaultStep": "Define Variable 6",
+          "displayName": "",
+          "type": "choice"
+        },
+        "Verify Data Type 3": {
+          "actionId": "sp:compare-unary",
+          "choiceList": [
+            {
+              "comparator": "IsPresent",
+              "nextStep": "Compare Strings",
+              "variableA.$": "$.defineVariable5.jobRequesterBy"
+            }
+          ],
+          "defaultStep": "Verify Data Type 4",
+          "displayName": "",
+          "type": "choice"
+        },
+        "Verify Data Type 4": {
+          "actionId": "sp:compare-unary",
+          "choiceList": [
+            {
+              "comparator": "IsPresent",
+              "nextStep": "Compare Strings 1",
+              "variableA.$": "$.defineVariable6.jobRequesterFor"
+            }
+          ],
+          "defaultStep": "Verify Data Type 5",
+          "displayName": "",
+          "type": "choice"
+        },
+        "Verify Data Type 5": {
+          "actionId": "sp:compare-unary",
+          "choiceList": [
+            {
+              "comparator": "IsNull",
+              "nextStep": "HTTP Request 1",
+              "variableA.$": "$.getIdentity1.managerRef"
+            }
+          ],
+          "defaultStep": "Get Identity 2",
+          "displayName": "",
+          "type": "choice"
+        }
+      }
+    },
+    "description": "Prueba",
+    "enabled": false,
+    "id": "9021fcf8-0383-48a6-ad66-3a45b21e5108",
+    "modified": "2025-11-06T13:01:43.021555522Z",
+    "modifiedBy": {
+      "id": "1dff61379fdc41fbac00c7f5ae992e23",
+      "name": "cjoglar",
+      "type": "IDENTITY"
+    },
+    "name": "Dynamic Approval Dani",
+    "owner": {
+      "id": "d024cdc01088491194e571464f97b308",
+      "name": "dmedinay",
+      "type": "IDENTITY"
+    },
+    "trigger": {
+      "attributes": {
+        "clientId": "dbcc85e3-f4b1-4999-b7f7-7fdb142ce033",
+        "id": "idn:external-http",
+        "integrationId": null,
+        "url": "/beta/workflows/execute/external/1cc6b044-868d-40dc-8c03-4c730eb298c1"
+      },
+      "type": "EXTERNAL"
+    }
+  },
+  "self": {
+    "id": "9021fcf8-0383-48a6-ad66-3a45b21e5108",
+    "name": "Dynamic Approval Dani",
+    "type": "WORKFLOW"
+  },
+  "version": 1
+}

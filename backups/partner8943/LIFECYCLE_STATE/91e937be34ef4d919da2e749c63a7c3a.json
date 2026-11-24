@@ -1,0 +1,40 @@
+{
+  "jwsHeader": null,
+  "jwsSignature": null,
+  "object": {
+    "accessActionConfiguration": {
+      "removeAllAccessEnabled": false
+    },
+    "accessProfileIds": [],
+    "accessProfileRefs": null,
+    "accountActionRefs": [],
+    "accountActions": [],
+    "created": "2024-05-22T14:11:01.087Z",
+    "description": null,
+    "emailNotificationOption": {
+      "emailAddressList": [],
+      "notifyAllAdmins": false,
+      "notifyManagers": false,
+      "notifySpecificUsers": false
+    },
+    "enabled": false,
+    "id": "91e937be34ef4d919da2e749c63a7c3a",
+    "identityCount": 0,
+    "identityProfileRef": {
+      "id": "f02a7b86e6c04b01901b6413f7e12213",
+      "name": "IdentityNow Admins",
+      "type": "IDENTITY_PROFILE"
+    },
+    "identityState": null,
+    "modified": "2024-05-22T14:11:01.087Z",
+    "name": "BajaDefinitiva",
+    "priority": null,
+    "technicalName": "bajadefinitiva"
+  },
+  "self": {
+    "id": "91e937be34ef4d919da2e749c63a7c3a",
+    "name": "BajaDefinitiva",
+    "type": "LIFECYCLE_STATE"
+  },
+  "version": 1
+}

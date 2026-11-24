@@ -1,0 +1,92 @@
+{
+  "jwsHeader": null,
+  "jwsSignature": null,
+  "object": {
+    "created": "2022-10-04T19:27:04.456Z",
+    "description": "description",
+    "formConditions": [
+      {
+        "effects": [
+          {
+            "config": {
+              "element": "2614088730489570"
+            },
+            "effectType": "HIDE"
+          }
+        ],
+        "ruleOperator": "AND",
+        "rules": [
+          {
+            "operator": "EQ",
+            "source": "Department",
+            "sourceType": "INPUT",
+            "value": "Sales",
+            "valueType": "STRING"
+          }
+        ]
+      }
+    ],
+    "formElements": [
+      {
+        "config": {
+          "formElements": [
+            {
+              "config": {
+                "label": "First Name"
+              },
+              "elementType": "TEXT",
+              "id": "3069272797630700",
+              "key": "firstName"
+            },
+            {
+              "config": {
+                "label": "Last Name"
+              },
+              "elementType": "TEXT",
+              "id": "3498415402897539",
+              "key": "lastName"
+            }
+          ],
+          "label": "First Section"
+        },
+        "elementType": "SECTION",
+        "id": "3069272797630701",
+        "validations": []
+      }
+    ],
+    "formInput": [
+      {
+        "description": "A single dynamic scalar value (i.e. number, string, date, etc) that can be passed into the form for use in conditional logic",
+        "id": "input1",
+        "label": "input1",
+        "type": "STRING"
+      }
+    ],
+    "id": "05ed4edb-d0a9-41d9-ad0c-2f6e486ec4aa",
+    "modified": "2024-07-17T06:10:50.731432331Z",
+    "name": "All fields not required",
+    "owner": {
+      "id": "3447d8ec2602455ab6f1e8408a0f0150",
+      "name": "",
+      "type": "IDENTITY"
+    },
+    "usedBy": [
+      {
+        "id": "5008594c-dacc-4295-8fee-41df60477304",
+        "name": "",
+        "type": "WORKFLOW"
+      },
+      {
+        "id": "97e75a75-c179-4fbc-a2da-b5fa4aaa8743",
+        "name": "",
+        "type": "WORKFLOW"
+      }
+    ]
+  },
+  "self": {
+    "id": "05ed4edb-d0a9-41d9-ad0c-2f6e486ec4aa",
+    "name": "All fields not required",
+    "type": "FORM_DEFINITION"
+  },
+  "version": 1
+}

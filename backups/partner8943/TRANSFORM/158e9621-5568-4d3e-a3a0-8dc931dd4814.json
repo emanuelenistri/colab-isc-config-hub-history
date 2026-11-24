@@ -1,0 +1,26 @@
+{
+  "jwsHeader": null,
+  "jwsSignature": null,
+  "object": {
+    "attributes": {
+      "cloudLifecycleState": {
+        "attributes": {
+          "attributeName": "cloudLifecycleState",
+          "sourceName": "BCC-Source-External"
+        },
+        "type": "accountAttribute"
+      },
+      "value": "#if($cloudLifecycleState == \"activo\")0001#elseif($cloudLifecycleState == \"baja\")0006#end"
+    },
+    "id": "158e9621-5568-4d3e-a3a0-8dc931dd4814",
+    "internal": false,
+    "name": "SituacionLaboral",
+    "type": "static"
+  },
+  "self": {
+    "id": "158e9621-5568-4d3e-a3a0-8dc931dd4814",
+    "name": "SituacionLaboral",
+    "type": "TRANSFORM"
+  },
+  "version": 1
+}

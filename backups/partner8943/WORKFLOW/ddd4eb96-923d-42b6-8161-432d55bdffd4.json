@@ -1,0 +1,86 @@
+{
+  "jwsHeader": null,
+  "jwsSignature": null,
+  "object": {
+    "created": "2024-03-01T07:58:03.616017707Z",
+    "creator": {
+      "id": "748aaee232614741b6f6cddf341ee281",
+      "name": "lmmartinez",
+      "type": "IDENTITY"
+    },
+    "definition": {
+      "start": "Compare Strings",
+      "steps": {
+        "Compare Strings": {
+          "choiceList": [
+            {
+              "comparator": "StringEquals",
+              "nextStep": "Send Email",
+              "variableA.$": "$.trigger.attributes.department",
+              "variableB": "Sales"
+            }
+          ],
+          "defaultStep": "End Step - Failure",
+          "description": "Test Welcome Email Trigger",
+          "displayName": "",
+          "type": "choice"
+        },
+        "End Step - Failure": {
+          "description": "Test workflow failed",
+          "displayName": "",
+          "failureDetails": "Test workflow failed",
+          "failureName": "Sales Email Send Failure",
+          "type": "failure"
+        },
+        "End Step - Success": {
+          "displayName": "",
+          "type": "success"
+        },
+        "Send Email": {
+          "actionId": "sp:send-email",
+          "attributes": {
+            "body": "Hello, and welcome to the Sales team!",
+            "context": {},
+            "recipientEmailList": [
+              "lmmartinez@sia.es"
+            ],
+            "subject": null
+          },
+          "description": "Welcome New Hire",
+          "displayName": "",
+          "nextStep": "End Step - Success",
+          "type": "action",
+          "versionNumber": 2
+        }
+      }
+    },
+    "description": "",
+    "enabled": false,
+    "id": "ddd4eb96-923d-42b6-8161-432d55bdffd4",
+    "modified": "2024-03-01T08:04:02.659926102Z",
+    "modifiedBy": {
+      "id": "748aaee232614741b6f6cddf341ee281",
+      "name": "lmmartinez",
+      "type": "IDENTITY"
+    },
+    "name": "wfprueba01",
+    "owner": {
+      "id": "748aaee232614741b6f6cddf341ee281",
+      "name": "lmmartinez",
+      "type": "IDENTITY"
+    },
+    "trigger": {
+      "attributes": {
+        "id": "idn:identity-created",
+        "integrationId": null
+      },
+      "type": "EVENT"
+    }
+  },
+  "self": {
+    "id": "ddd4eb96-923d-42b6-8161-432d55bdffd4",
+    "name": "wfprueba01",
+    "type": "WORKFLOW"
+  },
+  "version": 1
+}

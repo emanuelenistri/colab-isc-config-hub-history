@@ -1,0 +1,24 @@
+{
+  "jwsHeader": null,
+  "jwsSignature": null,
+  "object": {
+    "description": "Managed by Workflows",
+    "enabled": false,
+    "filter": "$.changes[?(@.attribute == \"cloudLifecycleState\")]",
+    "id": "d92164fd-ca4e-438d-af3a-7208e5bd4e41",
+    "name": "Remove Access When an Identity Becomes Inactive",
+    "responseDeadline": "PT1H",
+    "triggerId": "idn:identity-attributes-changed",
+    "triggerName": "Identity Attributes Changed",
+    "type": "WORKFLOW",
+    "workflowConfig": {
+      "workflowId": "d92164fd-ca4e-438d-af3a-7208e5bd4e41"
+    }
+  },
+  "self": {
+    "id": "d92164fd-ca4e-438d-af3a-7208e5bd4e41",
+    "name": "Remove Access When an Identity Becomes Inactive",
+    "type": "TRIGGER_SUBSCRIPTION"
+  },
+  "version": 1
+}

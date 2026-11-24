@@ -1,0 +1,38 @@
+{
+  "jwsHeader": null,
+  "jwsSignature": null,
+  "object": {
+    "accountIdMinWordLength": -1,
+    "accountNameMinWordLength": -1,
+    "defaultPolicy": false,
+    "description": null,
+    "enablePasswdExpiration": false,
+    "firstExpirationReminder": -1,
+    "id": "6400578fbdd9424fb3d887bfe010a2ee",
+    "maxLength": 0,
+    "maxRepeatedChars": -1,
+    "minAlpha": 1,
+    "minCharacterTypes": -1,
+    "minLength": 10,
+    "minLower": 1,
+    "minNumeric": 1,
+    "minSpecial": 1,
+    "minUpper": 1,
+    "name": "Prueba smenendezp",
+    "passwordExpiration": 90,
+    "requireStrongAuthOffNetwork": false,
+    "requireStrongAuthUntrustedGeographies": false,
+    "requireStrongAuthn": true,
+    "useAccountAttributes": true,
+    "useDictionary": false,
+    "useIdentityAttributes": true,
+    "validateAgainstAccountId": false,
+    "validateAgainstAccountName": false
+  },
+  "self": {
+    "id": "6400578fbdd9424fb3d887bfe010a2ee",
+    "name": "Prueba smenendezp",
+    "type": "PASSWORD_POLICY"
+  },
+  "version": 1
+}

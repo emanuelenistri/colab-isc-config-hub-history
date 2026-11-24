@@ -1,0 +1,44 @@
+{
+  "jwsHeader": null,
+  "jwsSignature": null,
+  "object": {
+    "attributes": {
+      "sourceVersion": "1.0"
+    },
+    "created": "2024-07-17T06:10:46.926Z",
+    "description": "This rule does that",
+    "id": "b5b74f11ea934b3aae42b5342e327426",
+    "modified": "2024-07-17T06:10:46.926Z",
+    "name": "WebServiceBeforeOperationRule",
+    "signature": {
+      "input": [
+        {
+          "description": "the first name of the identity",
+          "name": "firstName",
+          "type": "String"
+        },
+        {
+          "description": "the first name of the identity",
+          "name": "firstName",
+          "type": "String"
+        }
+      ],
+      "output": {
+        "description": "the first name of the identity",
+        "name": "firstName",
+        "type": "String"
+      }
+    },
+    "sourceCode": {
+      "script": "return \"Mr. \" + firstName;",
+      "version": "1.0"
+    },
+    "type": "BuildMap"
+  },
+  "self": {
+    "id": "b5b74f11ea934b3aae42b5342e327426",
+    "name": "WebServiceBeforeOperationRule",
+    "type": "CONNECTOR_RULE"
+  },
+  "version": 1
+}

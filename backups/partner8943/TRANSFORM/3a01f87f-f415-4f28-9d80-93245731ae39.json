@@ -1,0 +1,38 @@
+{
+  "jwsHeader": null,
+  "jwsSignature": null,
+  "object": {
+    "attributes": {
+      "input": {
+        "attributes": {
+          "values": [
+            "FALSE",
+            {
+              "attributes": {
+                "accountFilter": "entitlements",
+                "attributeName": "givenName",
+                "sourceName": "IdentityNow Admins"
+              },
+              "type": "accountAttribute"
+            }
+          ]
+        },
+        "type": "firstValid"
+      },
+      "table": {
+        "FALSE": "FALSE",
+        "default": "TRUE"
+      }
+    },
+    "id": "3a01f87f-f415-4f28-9d80-93245731ae39",
+    "internal": false,
+    "name": "Z hasCoreEntitlements Dani",
+    "type": "lookup"
+  },
+  "self": {
+    "id": "3a01f87f-f415-4f28-9d80-93245731ae39",
+    "name": "Z hasCoreEntitlements Dani",
+    "type": "TRANSFORM"
+  },
+  "version": 1
+}

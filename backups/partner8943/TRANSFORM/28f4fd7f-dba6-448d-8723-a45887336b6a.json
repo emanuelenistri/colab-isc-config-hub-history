@@ -1,0 +1,45 @@
+{
+  "jwsHeader": null,
+  "jwsSignature": null,
+  "object": {
+    "attributes": {
+      "attributes": {
+        "expression": "$userId eq nulo",
+        "negativeCondition": "$userId",
+        "positiveCondition": "$userIdCalculado",
+        "userId": {
+          "attributes": {
+            "values": [
+              "nulo",
+              {
+                "attributes": {
+                  "name": "firstName"
+                },
+                "type": "identityAttribute"
+              }
+            ]
+          },
+          "type": "firstValid"
+        },
+        "userIdCalculado": {
+          "attributes": {
+            "id": "lastName"
+          },
+          "type": "reference"
+        }
+      },
+      "internal": false,
+      "type": "conditional"
+    },
+    "id": "28f4fd7f-dba6-448d-8723-a45887336b6a",
+    "internal": false,
+    "name": "Transform-UIDEXT",
+    "type": "lower"
+  },
+  "self": {
+    "id": "28f4fd7f-dba6-448d-8723-a45887336b6a",
+    "name": "Transform-UIDEXT",
+    "type": "TRANSFORM"
+  },
+  "version": 1
+}

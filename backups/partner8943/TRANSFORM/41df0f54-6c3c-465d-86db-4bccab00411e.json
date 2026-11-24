@@ -1,0 +1,19 @@
+{
+  "jwsHeader": null,
+  "jwsSignature": null,
+  "object": {
+    "attributes": {
+      "value": "dummy@pruebas.es"
+    },
+    "id": "41df0f54-6c3c-465d-86db-4bccab00411e",
+    "internal": false,
+    "name": "Z mail",
+    "type": "static"
+  },
+  "self": {
+    "id": "41df0f54-6c3c-465d-86db-4bccab00411e",
+    "name": "Z mail",
+    "type": "TRANSFORM"
+  },
+  "version": 1
+}

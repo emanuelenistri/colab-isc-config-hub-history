@@ -1,0 +1,375 @@
+{
+  "jwsHeader": null,
+  "jwsSignature": null,
+  "object": {
+    "attributes": {
+      "authException": {
+        "attributes": {
+          "values": [
+            "N",
+            {
+              "attributes": {
+                "attributeName": "authException",
+                "sourceName": "BCC-Source-External"
+              },
+              "type": "accountAttribute"
+            }
+          ]
+        },
+        "type": "firstValid"
+      },
+      "cuarentenaMayor6Meses": {
+        "attributes": {
+          "firstDate": {
+            "attributes": {
+              "values": [
+                {
+                  "attributes": {
+                    "expression": "+6M",
+                    "input": {
+                      "attributes": {
+                        "input": {
+                          "attributes": {
+                            "values": [
+                              "31/12/9999",
+                              {
+                                "attributes": {
+                                  "attributeName": "endDate",
+                                  "sourceName": "BCC-Source-External"
+                                },
+                                "type": "accountAttribute"
+                              }
+                            ]
+                          },
+                          "type": "firstValid"
+                        },
+                        "inputFormat": "dd/MM/yyyy",
+                        "outputFormat": "ISO8601"
+                      },
+                      "type": "dateFormat"
+                    },
+                    "roundUp": true
+                  },
+                  "type": "dateMath"
+                }
+              ]
+            },
+            "type": "firstValid"
+          },
+          "negativeCondition": "false",
+          "operator": "lte",
+          "positiveCondition": "true",
+          "secondDate": {
+            "attributes": {
+              "expression": "now",
+              "roundUp": true
+            },
+            "type": "dateMath"
+          }
+        },
+        "type": "dateCompare"
+      },
+      "endDate": {
+        "attributes": {
+          "values": [
+            "null",
+            {
+              "attributes": {
+                "input": {
+                  "attributes": {
+                    "attributeName": "endDate",
+                    "sourceName": "BCC-Source-External"
+                  },
+                  "type": "accountAttribute"
+                },
+                "inputFormat": "dd/MM/yyyy",
+                "outputFortmat": "ISO8601"
+              },
+              "type": "dateFormat"
+            }
+          ]
+        },
+        "type": "firstValid"
+      },
+      "endDateBeforeNow": {
+        "attributes": {
+          "firstDate": {
+            "attributes": {
+              "values": [
+                {
+                  "attributes": {
+                    "input": {
+                      "attributes": {
+                        "values": [
+                          "31/12/9999",
+                          {
+                            "attributes": {
+                              "attributeName": "endDate",
+                              "sourceName": "BCC-Source-External"
+                            },
+                            "type": "accountAttribute"
+                          }
+                        ]
+                      },
+                      "type": "firstValid"
+                    },
+                    "inputFormat": "dd/MM/yyyy",
+                    "outputFormat": "ISO8601"
+                  },
+                  "type": "dateFormat"
+                }
+              ]
+            },
+            "type": "firstValid"
+          },
+          "negativeCondition": "false",
+          "operator": "lt",
+          "positiveCondition": "true",
+          "secondDate": {
+            "attributes": {
+              "expression": "now",
+              "roundUp": true
+            },
+            "type": "dateMath"
+          }
+        },
+        "type": "dateCompare"
+      },
+      "excedenciaMayor5Anios": {
+        "attributes": {
+          "firstDate": {
+            "attributes": {
+              "values": [
+                "",
+                {
+                  "attributes": {
+                    "expression": "+5y",
+                    "input": {
+                      "attributes": {
+                        "input": {
+                          "attributes": {
+                            "values": [
+                              "31/12/9999",
+                              {
+                                "attributes": {
+                                  "attributeName": "endDate",
+                                  "sourceName": "BCC-Source-External"
+                                },
+                                "type": "accountAttribute"
+                              }
+                            ]
+                          },
+                          "type": "firstValid"
+                        },
+                        "inputFormat": "dd/MM/yyyy",
+                        "outputFormat": "ISO8601"
+                      },
+                      "type": "dateFormat"
+                    },
+                    "roundUp": true
+                  },
+                  "type": "dateMath"
+                }
+              ]
+            },
+            "type": "firstValid"
+          },
+          "negativeCondition": "false",
+          "operator": "lte",
+          "positiveCondition": "true",
+          "secondDate": {
+            "attributes": {
+              "expression": "now",
+              "roundUp": true
+            },
+            "type": "dateMath"
+          }
+        },
+        "type": "dateCompare"
+      },
+      "lastLogonTimestampMayor45Dias": {
+        "attributes": {
+          "firstDate": {
+            "attributes": {
+              "values": [
+                "",
+                {
+                  "attributes": {
+                    "expression": "+44d",
+                    "input": {
+                      "attributes": {
+                        "input": {
+                          "attributes": {
+                            "values": [
+                              "133170048000000000",
+                              {
+                                "attributes": {
+                                  "attributeName": "lastLogonTimestamp",
+                                  "sourceName": "Active Directory LAB SIA"
+                                },
+                                "type": "accountAttribute"
+                              },
+                              {
+                                "attributes": {
+                                  "input": {
+                                    "attributes": {
+                                      "values": [
+                                        "133170048000000000",
+                                        {
+                                          "attributes": {
+                                            "attributeName": "startDate",
+                                            "sourceName": "BCC-Source-External"
+                                          },
+                                          "type": "accountAttribute"
+                                        }
+                                      ]
+                                    },
+                                    "type": "firstValid"
+                                  },
+                                  "inputFormat": "dd/MM/yyyy",
+                                  "outputFormat": "EPOCH_TIME_WIN32"
+                                },
+                                "type": "dateFormat"
+                              }
+                            ]
+                          },
+                          "type": "firstValid"
+                        },
+                        "inputFormat": "EPOCH_TIME_WIN32",
+                        "outputFormat": "ISO8601"
+                      },
+                      "type": "dateFormat"
+                    },
+                    "roundUp": true
+                  },
+                  "type": "dateMath"
+                }
+              ]
+            },
+            "type": "firstValid"
+          },
+          "negativeCondition": "false",
+          "operator": "lt",
+          "positiveCondition": "true",
+          "secondDate": {
+            "attributes": {
+              "expression": "now",
+              "roundUp": true
+            },
+            "type": "dateMath"
+          }
+        },
+        "type": "dateCompare"
+      },
+      "requiresPeriodicRefresh": "true",
+      "startDateAfterNow": {
+        "attributes": {
+          "firstDate": {
+            "attributes": {
+              "values": [
+                "",
+                {
+                  "attributes": {
+                    "input": {
+                      "attributes": {
+                        "attributeName": "startDate",
+                        "sourceName": "BCC-Source-External"
+                      },
+                      "type": "accountAttribute"
+                    },
+                    "inputFormat": "dd/MM/yyyy",
+                    "outputFormat": "ISO8601"
+                  },
+                  "type": "dateFormat"
+                }
+              ]
+            },
+            "type": "firstValid"
+          },
+          "negativeCondition": "false",
+          "operator": "gt",
+          "positiveCondition": "true",
+          "secondDate": {
+            "attributes": {
+              "expression": "now",
+              "roundUp": true
+            },
+            "type": "dateMath"
+          }
+        },
+        "type": "dateCompare"
+      },
+      "stateGID": {
+        "attributes": {
+          "ignoreErrors": "true",
+          "values": [
+            "null",
+            {
+              "attributes": {
+                "attributeName": "stateGID",
+                "sourceName": "BCC-Source-External"
+              },
+              "type": "accountAttribute"
+            }
+          ]
+        },
+        "type": "firstValid"
+      },
+      "test": {
+        "attributes": {
+          "firstDate": {
+            "attributes": {
+              "values": [
+                {
+                  "attributes": {
+                    "input": {
+                      "attributes": {
+                        "values": [
+                          "31/12/9999",
+                          {
+                            "attributes": {
+                              "attributeName": "endDate",
+                              "sourceName": "BCC-Source-External"
+                            },
+                            "type": "accountAttribute"
+                          }
+                        ]
+                      },
+                      "type": "firstValid"
+                    },
+                    "inputFormat": "dd/MM/yyyy",
+                    "outputFormat": "ISO8601"
+                  },
+                  "type": "dateFormat"
+                }
+              ]
+            },
+            "type": "firstValid"
+          },
+          "negativeCondition": "false",
+          "operator": "lt",
+          "positiveCondition": "true",
+          "secondDate": {
+            "attributes": {
+              "expression": "now",
+              "roundUp": true
+            },
+            "type": "dateMath"
+          }
+        },
+        "type": "dateCompare"
+      },
+      "value": "#if($authException == \"S\")activo#elseif($stateGID == \"X\" && ($endDateBeforeNow == 'false' || $endDate == \"null\"))suspendido#elseif($stateGID == \"E\" && $endDateBeforeNow == 'true' && $excedenciaMayor5Anios == 'false')suspendido#elseif($stateGID == \"E\" && $excedenciaMayor5Anios == 'true')baja#elseif($stateGID != \"E\")#if($startDateAfterNow == 'true' && ($endDateBeforeNow == 'false' || $endDate == \"null\"))preactivo#elseif(($endDateBeforeNow == 'false' || $endDate == \"null\") && $lastLogonTimestampMayor45Dias == 'true')suspendido#elseif(($endDateBeforeNow == 'false' || $endDate == \"null\") && $lastLogonTimestampMayor45Dias == 'false')activo#elseif($endDateBeforeNow == 'true' && $cuarentenaMayor6Meses == 'false')suspendido#elseif($endDateBeforeNow == 'true' && $cuarentenaMayor6Meses == 'true')baja#end#{else}#end"
+    },
+    "id": "a00e7d42-842e-4cdd-8bc6-67d7c1770648",
+    "internal": false,
+    "name": "CloudLifecycle_external",
+    "type": "static"
+  },
+  "self": {
+    "id": "a00e7d42-842e-4cdd-8bc6-67d7c1770648",
+    "name": "CloudLifecycle_external",
+    "type": "TRANSFORM"
+  },
+  "version": 1
+}

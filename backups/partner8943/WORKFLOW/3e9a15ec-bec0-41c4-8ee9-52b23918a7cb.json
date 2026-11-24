@@ -1,0 +1,149 @@
+{
+  "jwsHeader": null,
+  "jwsSignature": null,
+  "object": {
+    "created": "2024-10-08T10:54:46.397339067Z",
+    "creator": {
+      "id": "06c1619bb4ad4fa3b793330ced2408fe",
+      "name": "rcgalvez",
+      "type": "IDENTITY"
+    },
+    "definition": {
+      "start": "HTTP Request",
+      "steps": {
+        "Compare Strings": {
+          "choiceList": [
+            {
+              "comparator": "StringEquals",
+              "nextStep": "HTTP Request 1",
+              "variableA.$": "$.defineVariable.sodpolicy",
+              "variableB": ""
+            }
+          ],
+          "defaultStep": "HTTP Request 2",
+          "displayName": "Check if SoD Policy is Empty",
+          "type": "choice"
+        },
+        "Define Variable": {
+          "attributes": {
+            "id": "sp:define-variable",
+            "variables": [
+              {
+                "description": "",
+                "name": "sodpolicy",
+                "transforms": [],
+                "variableA.$": "$.hTTPRequest.body[?(@.accessRequestId == \"{{$.trigger.accessRequestId}}\")].sodViolationContext.violationCheckResult.violatedPolicies[0].id"
+              }
+            ]
+          },
+          "displayName": "Get SoD Policy",
+          "nextStep": "Compare Strings",
+          "type": "Mutation"
+        },
+        "End Step - Success": {
+          "displayName": "End Workflow",
+          "type": "success"
+        },
+        "HTTP Request": {
+          "actionId": "sp:http",
+          "attributes": {
+            "authenticationType": "OAuth",
+            "method": "get",
+            "oAuthClientId": "%%CLIENT_ID%%",
+            "oAuthCredentialLocation": "oAuthInBody",
+            "oAuthTokenUrl": "https://partner8943.identitynow-demo.com/oauth/token",
+            "url": "https://partner8943.identitynow-demo.com/v3/access-request-status",
+            "urlParams": {
+              "requested-for": "{{$.trigger.requestedFor.id}}"
+            }
+          },
+          "description": "/beta/access-request-status",
+          "displayName": "Get Access Request Status",
+          "nextStep": "Define Variable",
+          "type": "action",
+          "versionNumber": 2
+        },
+        "HTTP Request 1": {
+          "actionId": "sp:http",
+          "attributes": {
+            "authenticationType": "OAuth",
+            "jsonRequestBody": {
+              "output": {
+                "id": "",
+                "name": "",
+                "type": ""
+              },
+              "secret": "{{$.trigger._metadata.secret}}"
+            },
+            "method": "post",
+            "oAuthClientId": "%%CLIENT_ID%%",
+            "oAuthCredentialLocation": "oAuthInBody",
+            "oAuthTokenUrl": "https://partner8943.identitynow-demo.com/oauth/token",
+            "requestContentType": "json",
+            "url.$": "$.trigger._metadata.callbackURL"
+          },
+          "displayName": "No Approvals",
+          "nextStep": "End Step - Success",
+          "type": "action",
+          "versionNumber": 2
+        },
+        "HTTP Request 2": {
+          "actionId": "sp:http",
+          "attributes": {
+            "authenticationType": "OAuth",
+            "jsonRequestBody": {
+              "output": {
+                "id": "30a94434-3fab-4eef-9b51-b4cf3a5a0c53",
+                "name": "SOD Violation Team",
+                "type": "GOVERNANCE_GROUP"
+              },
+              "secret": "{{$.trigger._metadata.secret}}"
+            },
+            "method": "post",
+            "oAuthClientId": "%%CLIENT_ID%%",
+            "oAuthCredentialLocation": "oAuthInBody",
+            "oAuthTokenUrl": "https://partner8943.identitynow-demo.com/oauth/token",
+            "requestContentType": "json",
+            "url.$": "$.trigger._metadata.callbackURL"
+          },
+          "displayName": "Add New Approval",
+          "nextStep": "End Step - Success",
+          "type": "action",
+          "versionNumber": 2
+        }
+      }
+    },
+    "description": "SoD Additional Approval",
+    "enabled": false,
+    "id": "3e9a15ec-bec0-41c4-8ee9-52b23918a7cb",
+    "modified": "2024-10-08T11:46:55.182422938Z",
+    "modifiedBy": {
+      "id": "06c1619bb4ad4fa3b793330ced2408fe",
+      "name": "rcgalvez",
+      "type": "IDENTITY"
+    },
+    "name": "SoD Additional Approval Raul",
+    "owner": {
+      "id": "06c1619bb4ad4fa3b793330ced2408fe",
+      "name": "rcgalvez",
+      "type": "IDENTITY"
+    },
+    "trigger": {
+      "attributes": {
+        "clientId": "37e079b6-ff9b-44e2-8a12-fb636ec15607",
+        "description": "External Trigger Called by the ETS Access Request Dynamic Approver",
+        "id": "idn:external-http",
+        "integrationId": null,
+        "url": "/beta/workflows/execute/external/3e9a15ec-bec0-41c4-8ee9-52b23918a7cb"
+      },
+      "displayName": "Access Request Dynamic Approver",
+      "type": "EXTERNAL"
+    }
+  },
+  "self": {
+    "id": "3e9a15ec-bec0-41c4-8ee9-52b23918a7cb",
+    "name": "SoD Additional Approval Raul",
+    "type": "WORKFLOW"
+  },
+  "version": 1
+}

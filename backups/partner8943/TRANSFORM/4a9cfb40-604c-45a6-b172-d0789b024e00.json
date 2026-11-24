@@ -1,0 +1,82 @@
+{
+  "jwsHeader": null,
+  "jwsSignature": null,
+  "object": {
+    "attributes": {
+      "values": [
+        ",",
+        ",",
+        ",",
+        {
+          "attributes": {
+            "values": [
+              "@dummy.gcc.es",
+              "smtp:",
+              {
+                "attributes": {
+                  "name": "uid"
+                },
+                "type": "identityAttribute"
+              }
+            ]
+          },
+          "type": "concat"
+        },
+        {
+          "attributes": {
+            "values": [
+              "@dummy.int",
+              "SIP:",
+              {
+                "attributes": {
+                  "name": "uid"
+                },
+                "type": "identityAttribute"
+              }
+            ]
+          },
+          "type": "concat"
+        },
+        {
+          "attributes": {
+            "values": [
+              "@dummy.int",
+              "smtp:",
+              {
+                "attributes": {
+                  "name": "uid"
+                },
+                "type": "identityAttribute"
+              }
+            ]
+          },
+          "type": "concat"
+        },
+        {
+          "attributes": {
+            "values": [
+              "SMTP:",
+              {
+                "attributes": {
+                  "name": "email"
+                },
+                "type": "identityAttribute"
+              }
+            ]
+          },
+          "type": "concat"
+        }
+      ]
+    },
+    "id": "4a9cfb40-604c-45a6-b172-d0789b024e00",
+    "internal": false,
+    "name": "Z Concat smtp1 +SIP + smtp2 + SMTP3",
+    "type": "concat"
+  },
+  "self": {
+    "id": "4a9cfb40-604c-45a6-b172-d0789b024e00",
+    "name": "Z Concat smtp1 +SIP + smtp2 + SMTP3",
+    "type": "TRANSFORM"
+  },
+  "version": 1
+}

@@ -1,0 +1,28 @@
+{
+  "jwsHeader": null,
+  "jwsSignature": null,
+  "object": {
+    "connectionCount": 0,
+    "connections": null,
+    "created": null,
+    "description": "Accounting",
+    "id": "ae32e58b-af6f-4137-9a0c-4a9232ef020f",
+    "memberCount": 0,
+    "members": null,
+    "modified": null,
+    "name": "Accounting",
+    "owner": {
+      "displayName": null,
+      "emailAddress": null,
+      "id": "8543e368a1c54ee5be169ab706e344c1",
+      "name": "Aaron.Nichols",
+      "type": "IDENTITY"
+    }
+  },
+  "self": {
+    "id": "ae32e58b-af6f-4137-9a0c-4a9232ef020f",
+    "name": "Accounting",
+    "type": "GOVERNANCE_GROUP"
+  },
+  "version": 1
+}

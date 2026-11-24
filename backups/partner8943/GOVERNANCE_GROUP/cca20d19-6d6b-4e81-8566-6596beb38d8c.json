@@ -1,0 +1,39 @@
+{
+  "jwsHeader": null,
+  "jwsSignature": null,
+  "object": {
+    "connectionCount": 0,
+    "connections": null,
+    "created": null,
+    "description": "BCC Group 1 CSV mod",
+    "id": "cca20d19-6d6b-4e81-8566-6596beb38d8c",
+    "memberCount": 0,
+    "members": [
+      {
+        "id": "49e4267e2cc547b0ad4fb41df46774ec",
+        "name": "mgmontejo",
+        "type": "IDENTITY"
+      },
+      {
+        "id": "84a568c1f5024b24b21a25a27379ac66",
+        "name": "smenendezp",
+        "type": "IDENTITY"
+      }
+    ],
+    "modified": null,
+    "name": "BCC Group 1",
+    "owner": {
+      "displayName": null,
+      "emailAddress": null,
+      "id": "4f5d4df07aad444c8676954c1a690f9f",
+      "name": "vmayo",
+      "type": "IDENTITY"
+    }
+  },
+  "self": {
+    "id": "cca20d19-6d6b-4e81-8566-6596beb38d8c",
+    "name": "BCC Group 1",
+    "type": "GOVERNANCE_GROUP"
+  },
+  "version": 1
+}

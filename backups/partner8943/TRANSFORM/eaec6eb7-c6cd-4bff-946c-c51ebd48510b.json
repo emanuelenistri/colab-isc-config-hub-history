@@ -1,0 +1,26 @@
+{
+  "jwsHeader": null,
+  "jwsSignature": null,
+  "object": {
+    "attributes": {
+      "tipoEmpleado": {
+        "attributes": {
+          "attributeName": "documentTypeId",
+          "sourceName": "BCC-Source-Internal"
+        },
+        "type": "accountAttribute"
+      },
+      "value": "#if($tipoEmpleado == \"1\")E#{else}$tipoEmpleado#end"
+    },
+    "id": "eaec6eb7-c6cd-4bff-946c-c51ebd48510b",
+    "internal": false,
+    "name": "test_coreid",
+    "type": "static"
+  },
+  "self": {
+    "id": "eaec6eb7-c6cd-4bff-946c-c51ebd48510b",
+    "name": "test_coreid",
+    "type": "TRANSFORM"
+  },
+  "version": 1
+}

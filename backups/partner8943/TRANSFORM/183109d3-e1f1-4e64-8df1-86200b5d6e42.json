@@ -1,0 +1,49 @@
+{
+  "jwsHeader": null,
+  "jwsSignature": null,
+  "object": {
+    "attributes": {
+      "external": {
+        "attributes": {
+          "values": [
+            "null",
+            {
+              "attributes": {
+                "attributeName": "firstName",
+                "sourceName": "BCC-Source-External"
+              },
+              "type": "accountAttribute"
+            }
+          ]
+        },
+        "type": "firstValid"
+      },
+      "internal": {
+        "attributes": {
+          "values": [
+            "null",
+            {
+              "attributes": {
+                "attributeName": "firstName",
+                "sourceName": "BCC-Source-Internal"
+              },
+              "type": "accountAttribute"
+            }
+          ]
+        },
+        "type": "firstValid"
+      },
+      "value": "#if($internal!=\"null\")Empleado#elseif($external!=\"null\")Externo#{else}otros#end"
+    },
+    "id": "183109d3-e1f1-4e64-8df1-86200b5d6e42",
+    "internal": false,
+    "name": "typeUser",
+    "type": "static"
+  },
+  "self": {
+    "id": "183109d3-e1f1-4e64-8df1-86200b5d6e42",
+    "name": "typeUser",
+    "type": "TRANSFORM"
+  },
+  "version": 1
+}

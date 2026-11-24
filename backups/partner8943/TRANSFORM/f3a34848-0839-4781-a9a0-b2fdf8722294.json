@@ -1,0 +1,47 @@
+{
+  "jwsHeader": null,
+  "jwsSignature": null,
+  "object": {
+    "attributes": {
+      "values": [
+        ".",
+        ".",
+        ".",
+        {
+          "attributes": {
+            "name": "building"
+          },
+          "type": "identityAttribute"
+        },
+        {
+          "attributes": {
+            "name": "buildingDes"
+          },
+          "type": "identityAttribute"
+        },
+        {
+          "attributes": {
+            "name": "roomDes"
+          },
+          "type": "identityAttribute"
+        },
+        {
+          "attributes": {
+            "name": "roomNum"
+          },
+          "type": "identityAttribute"
+        }
+      ]
+    },
+    "id": "f3a34848-0839-4781-a9a0-b2fdf8722294",
+    "internal": false,
+    "name": "Z_concat edificio+descEdificio+numSala+descSala",
+    "type": "concat"
+  },
+  "self": {
+    "id": "f3a34848-0839-4781-a9a0-b2fdf8722294",
+    "name": "Z_concat edificio+descEdificio+numSala+descSala",
+    "type": "TRANSFORM"
+  },
+  "version": 1
+}

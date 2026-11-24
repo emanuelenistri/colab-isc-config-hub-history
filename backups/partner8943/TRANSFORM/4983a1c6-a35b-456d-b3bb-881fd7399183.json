@@ -1,0 +1,19 @@
+{
+  "jwsHeader": null,
+  "jwsSignature": null,
+  "object": {
+    "attributes": {
+      "value": "rcgalvez"
+    },
+    "id": "4983a1c6-a35b-456d-b3bb-881fd7399183",
+    "internal": false,
+    "name": "testManagerVacio",
+    "type": "static"
+  },
+  "self": {
+    "id": "4983a1c6-a35b-456d-b3bb-881fd7399183",
+    "name": "testManagerVacio",
+    "type": "TRANSFORM"
+  },
+  "version": 1
+}

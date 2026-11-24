@@ -1,0 +1,27 @@
+{
+  "jwsHeader": null,
+  "jwsSignature": null,
+  "object": {
+    "attributes": {
+      "entitlementExists": {
+        "attributes": {
+          "accountPropertyFilter": "perfilTF == true)",
+          "attributeName": "firstName",
+          "sourceName": "Cajamar-IDNow"
+        },
+        "type": "accountAttribute"
+      },
+      "value": "#if($entitlementExists) true #else false #end"
+    },
+    "id": "291a96a0-55a0-47b1-80c1-f9f94f948486",
+    "internal": false,
+    "name": "Z hasCoreEntitlements Dani2",
+    "type": "static"
+  },
+  "self": {
+    "id": "291a96a0-55a0-47b1-80c1-f9f94f948486",
+    "name": "Z hasCoreEntitlements Dani2",
+    "type": "TRANSFORM"
+  },
+  "version": 1
+}

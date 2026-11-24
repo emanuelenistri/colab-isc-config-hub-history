@@ -1,0 +1,433 @@
+{
+  "jwsHeader": null,
+  "jwsSignature": null,
+  "object": {
+    "attributes": {
+      "absentismo": {
+        "attributes": {
+          "ignoreErrors": "true",
+          "values": [
+            "null",
+            {
+              "attributes": {
+                "attributeName": "absentismo",
+                "sourceName": "BCC-Source-External"
+              },
+              "type": "accountAttribute"
+            }
+          ]
+        },
+        "type": "firstValid"
+      },
+      "cuarentenaMayor30dias": {
+        "attributes": {
+          "firstDate": {
+            "attributes": {
+              "values": [
+                {
+                  "attributes": {
+                    "expression": "+30d",
+                    "input": {
+                      "attributes": {
+                        "input": {
+                          "attributes": {
+                            "values": [
+                              "31/12/9999",
+                              {
+                                "attributes": {
+                                  "attributeName": "endDate",
+                                  "sourceName": "BCC-Source-External"
+                                },
+                                "type": "accountAttribute"
+                              },
+                              {
+                                "attributes": {
+                                  "attributeName": "enddate_ne_attribute",
+                                  "sourceName": "NERM Test 2"
+                                },
+                                "type": "accountAttribute"
+                              }
+                            ]
+                          },
+                          "type": "firstValid"
+                        },
+                        "inputFormat": "dd/MM/yyyy",
+                        "outputFormat": "ISO8601"
+                      },
+                      "type": "dateFormat"
+                    },
+                    "roundUp": true
+                  },
+                  "type": "dateMath"
+                }
+              ]
+            },
+            "type": "firstValid"
+          },
+          "negativeCondition": "false",
+          "operator": "lte",
+          "positiveCondition": "true",
+          "secondDate": {
+            "attributes": {
+              "expression": "now",
+              "roundUp": true
+            },
+            "type": "dateMath"
+          }
+        },
+        "type": "dateCompare"
+      },
+      "endDate": {
+        "attributes": {
+          "values": [
+            "null",
+            {
+              "attributes": {
+                "input": {
+                  "attributes": {
+                    "attributeName": "enddate_ne_attribute",
+                    "sourceName": "NERM Test 2"
+                  },
+                  "type": "accountAttribute"
+                },
+                "inputFormat": "dd/MM/yyyy",
+                "outputFortmat": "ISO8601"
+              },
+              "type": "dateFormat"
+            }
+          ]
+        },
+        "type": "firstValid"
+      },
+      "endDateBeforeNow": {
+        "attributes": {
+          "firstDate": {
+            "attributes": {
+              "values": [
+                {
+                  "attributes": {
+                    "input": {
+                      "attributes": {
+                        "values": [
+                          "31/12/9999",
+                          {
+                            "attributes": {
+                              "attributeName": "endDate",
+                              "sourceName": "BCC-Source-External"
+                            },
+                            "type": "accountAttribute"
+                          },
+                          {
+                            "attributes": {
+                              "attributeName": "enddate_ne_attribute",
+                              "sourceName": "NERM Test 2"
+                            },
+                            "type": "accountAttribute"
+                          }
+                        ]
+                      },
+                      "type": "firstValid"
+                    },
+                    "inputFormat": "dd/MM/yyyy",
+                    "outputFormat": "ISO8601"
+                  },
+                  "type": "dateFormat"
+                }
+              ]
+            },
+            "type": "firstValid"
+          },
+          "negativeCondition": "false",
+          "operator": "lt",
+          "positiveCondition": "true",
+          "secondDate": {
+            "attributes": {
+              "expression": "now",
+              "roundUp": true
+            },
+            "type": "dateMath"
+          }
+        },
+        "type": "dateCompare"
+      },
+      "flagWhiteList": {
+        "attributes": {
+          "values": [
+            "false",
+            {
+              "attributes": {
+                "attributeName": "flagWhiteList",
+                "sourceName": "BCC-Source-External"
+              },
+              "type": "accountAttribute"
+            },
+            {
+              "attributes": {
+                "attributeName": "flagwhitelist_ne_attribute",
+                "sourceName": "NERM Test 2"
+              },
+              "type": "accountAttribute"
+            }
+          ]
+        },
+        "type": "firstValid"
+      },
+      "lastLogonTimestampMayor45Dias": {
+        "attributes": {
+          "firstDate": {
+            "attributes": {
+              "values": [
+                "",
+                {
+                  "attributes": {
+                    "expression": "+45d",
+                    "input": {
+                      "attributes": {
+                        "input": {
+                          "attributes": {
+                            "values": [
+                              "133170048000000000",
+                              {
+                                "attributes": {
+                                  "attributeName": "lastLogonTimestamp",
+                                  "sourceName": "Active Directory LAB SIA"
+                                },
+                                "type": "accountAttribute"
+                              },
+                              {
+                                "attributes": {
+                                  "input": {
+                                    "attributes": {
+                                      "values": [
+                                        "133170048000000000",
+                                        {
+                                          "attributes": {
+                                            "attributeName": "startDate",
+                                            "sourceName": "BCC-Source-External"
+                                          },
+                                          "type": "accountAttribute"
+                                        }
+                                      ]
+                                    },
+                                    "type": "firstValid"
+                                  },
+                                  "inputFormat": "dd/MM/yyyy",
+                                  "outputFormat": "EPOCH_TIME_WIN32"
+                                },
+                                "type": "dateFormat"
+                              },
+                              {
+                                "attributes": {
+                                  "input": {
+                                    "attributes": {
+                                      "values": [
+                                        "133170048000000000",
+                                        {
+                                          "attributes": {
+                                            "attributeName": "startdate_ne_attribute",
+                                            "sourceName": "NERM Test 2"
+                                          },
+                                          "type": "accountAttribute"
+                                        }
+                                      ]
+                                    },
+                                    "type": "firstValid"
+                                  },
+                                  "inputFormat": "dd/MM/yyyy",
+                                  "outputFormat": "EPOCH_TIME_WIN32"
+                                },
+                                "type": "dateFormat"
+                              }
+                            ]
+                          },
+                          "type": "firstValid"
+                        },
+                        "inputFormat": "EPOCH_TIME_WIN32",
+                        "outputFormat": "ISO8601"
+                      },
+                      "type": "dateFormat"
+                    },
+                    "roundUp": true
+                  },
+                  "type": "dateMath"
+                }
+              ]
+            },
+            "type": "firstValid"
+          },
+          "negativeCondition": "false",
+          "operator": "lt",
+          "positiveCondition": "true",
+          "secondDate": {
+            "attributes": {
+              "expression": "now",
+              "roundUp": true
+            },
+            "type": "dateMath"
+          }
+        },
+        "type": "dateCompare"
+      },
+      "lastLogonTimestampMayor75dias": {
+        "attributes": {
+          "firstDate": {
+            "attributes": {
+              "values": [
+                "",
+                {
+                  "attributes": {
+                    "expression": "+75d",
+                    "input": {
+                      "attributes": {
+                        "input": {
+                          "attributes": {
+                            "values": [
+                              "133170048000000000",
+                              {
+                                "attributes": {
+                                  "attributeName": "lastLogonTimestamp",
+                                  "sourceName": "Active Directory LAB SIA"
+                                },
+                                "type": "accountAttribute"
+                              },
+                              {
+                                "attributes": {
+                                  "input": {
+                                    "attributes": {
+                                      "values": [
+                                        "133170048000000000",
+                                        {
+                                          "attributes": {
+                                            "attributeName": "startdate_ne_attribute",
+                                            "sourceName": "NERM Test 2"
+                                          },
+                                          "type": "accountAttribute"
+                                        }
+                                      ]
+                                    },
+                                    "type": "firstValid"
+                                  },
+                                  "inputFormat": "dd/MM/yyyy",
+                                  "outputFormat": "EPOCH_TIME_WIN32"
+                                },
+                                "type": "dateFormat"
+                              }
+                            ]
+                          },
+                          "type": "firstValid"
+                        },
+                        "inputFormat": "EPOCH_TIME_WIN32",
+                        "outputFormat": "ISO8601"
+                      },
+                      "type": "dateFormat"
+                    },
+                    "roundUp": true
+                  },
+                  "type": "dateMath"
+                }
+              ]
+            },
+            "type": "firstValid"
+          },
+          "negativeCondition": "false",
+          "operator": "lt",
+          "positiveCondition": "true",
+          "secondDate": {
+            "attributes": {
+              "expression": "now",
+              "roundUp": true
+            },
+            "type": "dateMath"
+          }
+        },
+        "type": "dateCompare"
+      },
+      "requiresPeriodicRefresh": "true",
+      "startDateAfterNow": {
+        "attributes": {
+          "firstDate": {
+            "attributes": {
+              "values": [
+                "01/01/2001",
+                {
+                  "attributes": {
+                    "input": {
+                      "attributes": {
+                        "values": [
+                          "31/12/9999",
+                          {
+                            "attributes": {
+                              "attributeName": "startDate",
+                              "sourceName": "BCC-Source-External"
+                            },
+                            "type": "accountAttribute"
+                          }
+                        ]
+                      },
+                      "type": "firstValid"
+                    },
+                    "inputFormat": "dd/MM/yyyy",
+                    "outputFormat": "ISO8601"
+                  },
+                  "type": "dateFormat"
+                },
+                {
+                  "attributes": {
+                    "input": {
+                      "attributes": {
+                        "values": [
+                          "31/12/9999",
+                          {
+                            "attributes": {
+                              "attributeName": "startdate_ne_attribute",
+                              "sourceName": "NERM Test 2"
+                            },
+                            "type": "accountAttribute"
+                          }
+                        ]
+                      },
+                      "type": "firstValid"
+                    },
+                    "inputFormat": "dd/MM/yyyy",
+                    "outputFormat": "ISO8601"
+                  },
+                  "type": "dateFormat"
+                }
+              ]
+            },
+            "type": "firstValid"
+          },
+          "negativeCondition": "false",
+          "operator": "gt",
+          "positiveCondition": "true",
+          "secondDate": {
+            "attributes": {
+              "expression": "now",
+              "roundUp": true
+            },
+            "type": "dateMath"
+          }
+        },
+        "type": "dateCompare"
+      },
+      "test": {
+        "attributes": {
+          "attributeName": "absentismo",
+          "sourceName": "BCC-Source-External"
+        },
+        "type": "accountAttribute"
+      },
+      "value": "#if($flagWhiteList == \"true\")activo#elseif($absentismo == \"true\" && ($cuarentenaMayor30dias != 'true' && $lastLogonTimestampMayor75dias != 'true'))suspendido#elseif($startDateAfterNow == 'true' && ($endDateBeforeNow == 'false' || $endDate == \"null\"))preactivo#elseif($cuarentenaMayor30dias == 'true')baja#elseif($endDateBeforeNow == 'true')suspendido#{else}activo#end"
+    },
+    "id": "b66b5893-8fea-478f-8409-0d4232e3b035",
+    "internal": false,
+    "name": "test_Dani_ultimo_CloudLifecycle_external",
+    "type": "static"
+  },
+  "self": {
+    "id": "b66b5893-8fea-478f-8409-0d4232e3b035",
+    "name": "test_Dani_ultimo_CloudLifecycle_external",
+    "type": "TRANSFORM"
+  },
+  "version": 1
+}

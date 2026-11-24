@@ -1,0 +1,19 @@
+{
+  "jwsHeader": null,
+  "jwsSignature": null,
+  "object": {
+    "attributes": {
+      "value": "133485372000000000"
+    },
+    "id": "ec56e98e-e6b5-4a91-8cd9-6d56e25b0544",
+    "internal": false,
+    "name": "lastLogonTimestamp_mayor_45_dias",
+    "type": "static"
+  },
+  "self": {
+    "id": "ec56e98e-e6b5-4a91-8cd9-6d56e25b0544",
+    "name": "lastLogonTimestamp_mayor_45_dias",
+    "type": "TRANSFORM"
+  },
+  "version": 1
+}
