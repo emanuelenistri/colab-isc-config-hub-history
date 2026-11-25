@@ -17,22 +17,17 @@
           "identityAttributeName": "displayName",
           "transformDefinition": {
             "attributes": {
-              "attributeName": "name",
-              "sourceId": "ca5c0cf355a6466a984507b7f7b15416",
-              "sourceName": "IdentityNow Admins"
+              "id": "SL-Transform-displayName",
+              "input": {
+                "attributes": {
+                  "attributeName": "name",
+                  "sourceId": "ca5c0cf355a6466a984507b7f7b15416",
+                  "sourceName": "IdentityNow Admins"
+                },
+                "type": "accountAttribute"
+              }
             },
-            "type": "accountAttribute"
-          }
-        },
-        {
-          "identityAttributeName": "displayName",
-          "transformDefinition": {
-            "attributes": {
-              "attributeName": "name",
-              "sourceId": "ca5c0cf355a6466a984507b7f7b15416",
-              "sourceName": "IdentityNow Admins"
-            },
-            "type": "accountAttribute"
+            "type": "reference"
           }
         },
         {
@@ -108,17 +103,6 @@
           }
         },
         {
-          "identityAttributeName": "uid",
-          "transformDefinition": {
-            "attributes": {
-              "attributeName": "name",
-              "sourceId": "ca5c0cf355a6466a984507b7f7b15416",
-              "sourceName": "IdentityNow Admins"
-            },
-            "type": "accountAttribute"
-          }
-        },
-        {
           "identityAttributeName": "workPhone",
           "transformDefinition": {
             "attributes": {
@@ -141,7 +125,7 @@
     "identityCount": 24,
     "identityExceptionReportReference": null,
     "identityRefreshRequired": false,
-    "modified": "2024-06-19T13:43:24.003Z",
+    "modified": "2026-11-25T16:14:25.563Z",
     "name": "IdentityNow Admins",
     "owner": {
       "id": "0533ec736d874f4eb4c76552977bf727",

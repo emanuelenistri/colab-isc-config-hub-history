@@ -1,0 +1,58 @@
+{
+  "jwsHeader": null,
+  "jwsSignature": null,
+  "object": {
+    "accessRequestConfig": {
+      "approvalSchemes": [],
+      "commentsRequired": null,
+      "denialCommentsRequired": null,
+      "formDefinitionId": null,
+      "maxPermittedAccessDuration": null,
+      "reauthorizationRequired": false,
+      "requireEndDate": false
+    },
+    "additionalOwners": [],
+    "created": "2024-10-22T05:59:56.252658Z",
+    "description": "Es una prueba",
+    "enabled": true,
+    "entitlements": [
+      {
+        "id": "1ba4fe2fa91643e5bd482fc506c96583",
+        "name": "AccountsPayable",
+        "type": "ENTITLEMENT"
+      },
+      {
+        "id": "2d981a4d1346455ca44c25d3126ffac5",
+        "name": "Account Operators",
+        "type": "ENTITLEMENT"
+      }
+    ],
+    "id": "3fd10f7c33384f79a36c83d9871799d1",
+    "modified": "2024-11-07T09:06:53.952842Z",
+    "name": "test E",
+    "owner": {
+      "id": "d024cdc01088491194e571464f97b308",
+      "name": "dmedinay dmedinay",
+      "type": "IDENTITY"
+    },
+    "privilegeLevel": null,
+    "provisioningCriteria": null,
+    "requestable": true,
+    "revocationRequestConfig": {
+      "approvalSchemes": []
+    },
+    "segmentRefs": [],
+    "segments": [],
+    "source": {
+      "id": "dd15e795a6884b1e914126cdaf8ac66d",
+      "name": "Active Directory LAB SIA",
+      "type": "SOURCE"
+    }
+  },
+  "self": {
+    "id": "3fd10f7c33384f79a36c83d9871799d1",
+    "name": "test E",
+    "type": "ACCESS_PROFILE"
+  },
+  "version": 1
+}

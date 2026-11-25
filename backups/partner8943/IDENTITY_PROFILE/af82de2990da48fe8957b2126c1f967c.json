@@ -75,6 +75,17 @@
           }
         },
         {
+          "identityAttributeName": "nif",
+          "transformDefinition": {
+            "attributes": {
+              "attributeName": "NIF",
+              "sourceId": "a57560a1baaa487f81ec2acfae52d0c0",
+              "sourceName": "SL-Source-External"
+            },
+            "type": "accountAttribute"
+          }
+        },
+        {
           "identityAttributeName": "uid",
           "transformDefinition": {
             "attributes": {
@@ -88,14 +99,14 @@
       ],
       "enabled": true
     },
-    "identityCount": 4,
+    "identityCount": 6,
     "identityExceptionReportReference": null,
     "identityRefreshRequired": false,
-    "modified": "2026-11-24T11:12:26.683Z",
+    "modified": "2026-11-25T14:54:35.757Z",
     "name": "SL-IdentityProfile-External",
     "owner": {
       "id": "06c1619bb4ad4fa3b793330ced2408fe",
-      "name": "rcgalvez",
+      "name": "rcgalvez rcgalvez",
       "type": "IDENTITY"
     },
     "priority": 70

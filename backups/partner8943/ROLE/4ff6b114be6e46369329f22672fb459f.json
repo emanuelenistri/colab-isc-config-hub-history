@@ -1,0 +1,95 @@
+{
+  "jwsHeader": null,
+  "jwsSignature": null,
+  "object": {
+    "accessModelMetadata": {
+      "attributes": []
+    },
+    "accessProfiles": [
+      {
+        "id": "a5be588d3c0c4c29bb1cbc08df34d054",
+        "name": "acceso_AD",
+        "type": "ACCESS_PROFILE"
+      },
+      {
+        "id": "cd23726b00b949278884488d94a4d00e",
+        "name": "Test AP",
+        "type": "ACCESS_PROFILE"
+      }
+    ],
+    "accessRequestConfig": {
+      "approvalSchemes": [
+        {
+          "approverId": null,
+          "approverType": "MANAGER"
+        },
+        {
+          "approverId": null,
+          "approverType": "OWNER"
+        }
+      ],
+      "commentsRequired": false,
+      "denialCommentsRequired": false,
+      "formDefinitionId": null,
+      "maxPermittedAccessDuration": null,
+      "reauthorizationRequired": false,
+      "requireEndDate": false
+    },
+    "additionalOwners": [],
+    "created": "2024-09-30T13:19:58.038391Z",
+    "description": "Prueba 2 Patch",
+    "dimensionRefs": null,
+    "dimensional": false,
+    "dimensions": [],
+    "enabled": true,
+    "entitlements": [
+      {
+        "id": "01bfc28a-44a9-45dd-8475-967c32d0408e",
+        "name": "CompCommittee",
+        "sourceId": "dd15e795-a688-4b1e-9141-26cdaf8ac66d",
+        "sourceName": "Active Directory LAB SIA",
+        "type": "ENTITLEMENT"
+      }
+    ],
+    "id": "4ff6b114be6e46369329f22672fb459f",
+    "legacyMembershipInfo": null,
+    "membership": {
+      "criteria": null,
+      "identities": [
+        {
+          "aliasName": "dmedinay",
+          "id": "d024cdc01088491194e571464f97b308",
+          "name": "dmedinay",
+          "type": "IDENTITY"
+        },
+        {
+          "aliasName": "smenendezp",
+          "id": "84a568c1f5024b24b21a25a27379ac66",
+          "name": "smenendezp",
+          "type": "IDENTITY"
+        }
+      ],
+      "type": "IDENTITY_LIST"
+    },
+    "modified": "2025-09-19T10:30:30.211462Z",
+    "name": "BCC Prueba",
+    "owner": {
+      "id": "748aaee232614741b6f6cddf341ee281",
+      "name": "lmmartinez lmmartinez",
+      "type": "IDENTITY"
+    },
+    "privilegeLevel": null,
+    "requestable": false,
+    "revocationRequestConfig": {
+      "approvalSchemes": []
+    },
+    "segmentRefs": [],
+    "segments": []
+  },
+  "self": {
+    "id": "4ff6b114be6e46369329f22672fb459f",
+    "name": "BCC Prueba",
+    "type": "ROLE"
+  },
+  "version": 1
+}

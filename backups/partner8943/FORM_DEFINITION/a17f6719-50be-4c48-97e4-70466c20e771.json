@@ -1,0 +1,477 @@
+{
+  "jwsHeader": null,
+  "jwsSignature": null,
+  "object": {
+    "created": "2026-11-25T08:13:40.378682765Z",
+    "description": "Formulario para aprobacion del manager en creacion de cuentas para el workflow: SL-Workflow-CreateUserViaForm2",
+    "formConditions": [
+      {
+        "effects": [
+          {
+            "config": {
+              "defaultValueLabel": "email",
+              "element": "1283023686952"
+            },
+            "effectType": "SET_DEFAULT_VALUE"
+          },
+          {
+            "config": {
+              "element": "1283023686952"
+            },
+            "effectType": "DISABLE"
+          }
+        ],
+        "ruleOperator": "AND",
+        "rules": [
+          {
+            "operator": "NOT_EM",
+            "source": "email",
+            "sourceType": "INPUT",
+            "value": "",
+            "valueType": "STRING"
+          }
+        ]
+      },
+      {
+        "effects": [
+          {
+            "config": {
+              "defaultValueLabel": "firstName",
+              "element": "856571406675"
+            },
+            "effectType": "SET_DEFAULT_VALUE"
+          },
+          {
+            "config": {
+              "element": "856571406675"
+            },
+            "effectType": "DISABLE"
+          }
+        ],
+        "ruleOperator": "AND",
+        "rules": [
+          {
+            "operator": "NOT_EM",
+            "source": "firstName",
+            "sourceType": "INPUT",
+            "value": "",
+            "valueType": "STRING"
+          }
+        ]
+      },
+      {
+        "effects": [
+          {
+            "config": {
+              "defaultValueLabel": "lastName",
+              "element": "1309497961428"
+            },
+            "effectType": "SET_DEFAULT_VALUE"
+          },
+          {
+            "config": {
+              "element": "1309497961428"
+            },
+            "effectType": "DISABLE"
+          }
+        ],
+        "ruleOperator": "AND",
+        "rules": [
+          {
+            "operator": "NOT_EM",
+            "source": "lastName",
+            "sourceType": "INPUT",
+            "value": "",
+            "valueType": "STRING"
+          }
+        ]
+      },
+      {
+        "effects": [
+          {
+            "config": {
+              "defaultValueLabel": "managerName",
+              "element": "1082201321893"
+            },
+            "effectType": "SET_DEFAULT_VALUE"
+          },
+          {
+            "config": {
+              "element": "1082201321893"
+            },
+            "effectType": "DISABLE"
+          }
+        ],
+        "ruleOperator": "AND",
+        "rules": [
+          {
+            "operator": "NOT_EM",
+            "source": "managerName",
+            "sourceType": "INPUT",
+            "value": "",
+            "valueType": "STRING"
+          }
+        ]
+      },
+      {
+        "effects": [
+          {
+            "config": {
+              "defaultValueLabel": "nifNie",
+              "element": "91165256905"
+            },
+            "effectType": "SET_DEFAULT_VALUE"
+          },
+          {
+            "config": {
+              "element": "91165256905"
+            },
+            "effectType": "DISABLE"
+          }
+        ],
+        "ruleOperator": "AND",
+        "rules": [
+          {
+            "operator": "NOT_EM",
+            "source": "nifNie",
+            "sourceType": "INPUT",
+            "value": "",
+            "valueType": "STRING"
+          }
+        ]
+      },
+      {
+        "effects": [
+          {
+            "config": {
+              "defaultValueLabel": "userId",
+              "element": "730373772073"
+            },
+            "effectType": "SET_DEFAULT_VALUE"
+          },
+          {
+            "config": {
+              "element": "730373772073"
+            },
+            "effectType": "DISABLE"
+          }
+        ],
+        "ruleOperator": "AND",
+        "rules": [
+          {
+            "operator": "NOT_EM",
+            "source": "userId",
+            "sourceType": "INPUT",
+            "value": "",
+            "valueType": "STRING"
+          }
+        ]
+      }
+    ],
+    "formElements": [
+      {
+        "config": {
+          "alignment": "LEFT",
+          "description": "Review the information of the new SL user before approving the account creation.",
+          "formElements": [
+            {
+              "config": {
+                "columnCount": 2,
+                "columns": [
+                  [
+                    {
+                      "config": {
+                        "default": "",
+                        "description": "",
+                        "helpText": "",
+                        "label": "Email Field",
+                        "placeholder": "",
+                        "required": false
+                      },
+                      "elementType": "EMAIL",
+                      "id": "1283023686952",
+                      "key": "emailField",
+                      "validations": [
+                        {
+                          "validationType": "EMAIL"
+                        }
+                      ]
+                    }
+                  ],
+                  [
+                    {
+                      "config": {
+                        "default": "",
+                        "description": "",
+                        "helpText": "",
+                        "label": "NIF/NIE",
+                        "placeholder": "",
+                        "required": false
+                      },
+                      "elementType": "TEXT",
+                      "id": "91165256905",
+                      "key": "nifNie",
+                      "validations": [
+                        {
+                          "config": {
+                            "max": 9
+                          },
+                          "validationType": "MAX_LENGTH"
+                        },
+                        {
+                          "config": {
+                            "message": "Invalid format. Enter a valid DNI or NIE.",
+                            "regex": "^([0-9]{8}|[XYZ][0-9]{7})[TRWAGMYFPDXBNJZSQVHLCKE]$"
+                          },
+                          "validationType": "REGEX"
+                        },
+                        {
+                          "config": {
+                            "min": 9
+                          },
+                          "validationType": "MIN_LENGTH"
+                        }
+                      ]
+                    }
+                  ]
+                ],
+                "description": "",
+                "label": "Column Set",
+                "labelStyle": "h5",
+                "showLabel": false
+              },
+              "elementType": "COLUMN_SET",
+              "id": "1538457563504",
+              "key": "",
+              "validations": []
+            },
+            {
+              "config": {
+                "columnCount": 2,
+                "columns": [
+                  [
+                    {
+                      "config": {
+                        "default": "",
+                        "description": "",
+                        "helpText": "",
+                        "label": "First Name",
+                        "placeholder": "",
+                        "required": false
+                      },
+                      "elementType": "TEXT",
+                      "id": "856571406675",
+                      "key": "firstName",
+                      "validations": []
+                    }
+                  ],
+                  [
+                    {
+                      "config": {
+                        "default": "",
+                        "description": "",
+                        "helpText": "",
+                        "label": "Last Name",
+                        "placeholder": "",
+                        "required": false
+                      },
+                      "elementType": "TEXT",
+                      "id": "1309497961428",
+                      "key": "lastName",
+                      "validations": []
+                    }
+                  ]
+                ],
+                "description": "",
+                "label": "Column Set",
+                "labelStyle": "h5",
+                "showLabel": false
+              },
+              "elementType": "COLUMN_SET",
+              "id": "424803395431",
+              "key": "",
+              "validations": []
+            },
+            {
+              "config": {
+                "columnCount": 2,
+                "columns": [
+                  [
+                    {
+                      "config": {
+                        "default": "",
+                        "description": "",
+                        "helpText": "",
+                        "label": "Manager",
+                        "placeholder": "",
+                        "required": false
+                      },
+                      "elementType": "TEXT",
+                      "id": "1082201321893",
+                      "key": "managerName",
+                      "validations": []
+                    }
+                  ],
+                  [
+                    {
+                      "config": {
+                        "default": "",
+                        "description": "",
+                        "helpText": "",
+                        "label": "User ID",
+                        "placeholder": "",
+                        "required": false
+                      },
+                      "elementType": "TEXT",
+                      "id": "730373772073",
+                      "key": "userId",
+                      "validations": []
+                    }
+                  ]
+                ],
+                "description": "",
+                "label": "Column Set",
+                "labelStyle": "h5",
+                "showLabel": false
+              },
+              "elementType": "COLUMN_SET",
+              "id": "819247799062",
+              "key": "",
+              "validations": []
+            }
+          ],
+          "label": "Review user Information",
+          "labelStyle": "h2",
+          "showLabel": true
+        },
+        "elementType": "SECTION",
+        "id": "592416364359",
+        "validations": []
+      },
+      {
+        "config": {
+          "alignment": "LEFT",
+          "description": "Review the user information and approve or reject the account creation request.",
+          "formElements": [
+            {
+              "config": {
+                "dataSource": {
+                  "config": {
+                    "options": [
+                      {
+                        "label": "APPROVED",
+                        "sublabel": "",
+                        "value": "APPROVED"
+                      },
+                      {
+                        "label": "REJECTED",
+                        "sublabel": "",
+                        "value": "REJECTED"
+                      }
+                    ]
+                  },
+                  "dataSourceType": "STATIC"
+                },
+                "forceSelect": true,
+                "helpText": "Approve or reject the new user creation request.",
+                "label": "Approval Decision",
+                "maximum": 1,
+                "placeholder": "Select your decision",
+                "required": false
+              },
+              "elementType": "SELECT",
+              "id": "644924206475",
+              "key": "decision",
+              "validations": [
+                {
+                  "validationType": "DATA_SOURCE"
+                }
+              ]
+            },
+            {
+              "config": {
+                "default": "",
+                "description": "",
+                "helpText": "Provide additional information about your decision.",
+                "label": "Comments",
+                "placeholder": "Enter your comments...",
+                "required": false,
+                "resize": false,
+                "rows": 2
+              },
+              "elementType": "TEXTAREA",
+              "id": "687269463578",
+              "key": "comments",
+              "validations": []
+            }
+          ],
+          "label": "Manager Approval",
+          "labelStyle": "h2",
+          "showLabel": true
+        },
+        "elementType": "SECTION",
+        "id": "33876615060",
+        "validations": []
+      }
+    ],
+    "formInput": [
+      {
+        "description": "",
+        "id": "email",
+        "label": "Email",
+        "type": "STRING"
+      },
+      {
+        "description": "",
+        "id": "firstName",
+        "label": "First Name",
+        "type": "STRING"
+      },
+      {
+        "description": "",
+        "id": "lastName",
+        "label": "Last Name",
+        "type": "STRING"
+      },
+      {
+        "description": "",
+        "id": "managerName",
+        "label": "Manager Name",
+        "type": "STRING"
+      },
+      {
+        "description": "",
+        "id": "nifNie",
+        "label": "NIF NIE",
+        "type": "STRING"
+      },
+      {
+        "description": "",
+        "id": "userId",
+        "label": "User Id",
+        "type": "STRING"
+      }
+    ],
+    "id": "a17f6719-50be-4c48-97e4-70466c20e771",
+    "modified": "2026-11-25T09:38:46.54913694Z",
+    "name": "SL-Form-ApproveUserCreation",
+    "owner": {
+      "id": "d024cdc01088491194e571464f97b308",
+      "name": "dmedinay dmedinay",
+      "type": "IDENTITY"
+    },
+    "usedBy": [
+      {
+        "id": "c259246c-3385-4578-ba25-0122b93251ad",
+        "name": "SL-Workflow-CreateUserViaForm",
+        "type": "WORKFLOW"
+      }
+    ]
+  },
+  "self": {
+    "id": "a17f6719-50be-4c48-97e4-70466c20e771",
+    "name": "SL-Form-ApproveUserCreation",
+    "type": "FORM_DEFINITION"
+  },
+  "version": 1
+}

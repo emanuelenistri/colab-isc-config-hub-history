@@ -1,0 +1,406 @@
+{
+  "jwsHeader": null,
+  "jwsSignature": null,
+  "object": {
+    "created": "2026-11-25T12:38:28.741392989Z",
+    "description": "Form to modify existing SL user information.",
+    "formConditions": [
+      {
+        "effects": [
+          {
+            "config": {
+              "defaultValueLabel": "curentManager",
+              "element": "1311678080371"
+            },
+            "effectType": "SET_DEFAULT_VALUE"
+          },
+          {
+            "config": {
+              "element": "1311678080371"
+            },
+            "effectType": "DISABLE"
+          }
+        ],
+        "ruleOperator": "AND",
+        "rules": [
+          {
+            "operator": "NOT_EM",
+            "source": "curentManager",
+            "sourceType": "INPUT",
+            "value": "",
+            "valueType": "STRING"
+          }
+        ]
+      },
+      {
+        "effects": [
+          {
+            "config": {
+              "defaultValueLabel": "email",
+              "element": "1283023686952"
+            },
+            "effectType": "SET_DEFAULT_VALUE"
+          }
+        ],
+        "ruleOperator": "AND",
+        "rules": [
+          {
+            "operator": "NOT_EM",
+            "source": "email",
+            "sourceType": "INPUT",
+            "value": "",
+            "valueType": "STRING"
+          }
+        ]
+      },
+      {
+        "effects": [
+          {
+            "config": {
+              "defaultValueLabel": "firstName",
+              "element": "856571406675"
+            },
+            "effectType": "SET_DEFAULT_VALUE"
+          }
+        ],
+        "ruleOperator": "AND",
+        "rules": [
+          {
+            "operator": "NOT_EM",
+            "source": "firstName",
+            "sourceType": "INPUT",
+            "value": "",
+            "valueType": "STRING"
+          }
+        ]
+      },
+      {
+        "effects": [
+          {
+            "config": {
+              "defaultValueLabel": "lastName",
+              "element": "1309497961428"
+            },
+            "effectType": "SET_DEFAULT_VALUE"
+          }
+        ],
+        "ruleOperator": "AND",
+        "rules": [
+          {
+            "operator": "NOT_EM",
+            "source": "lastName",
+            "sourceType": "INPUT",
+            "value": "",
+            "valueType": "STRING"
+          }
+        ]
+      },
+      {
+        "effects": [
+          {
+            "config": {
+              "defaultValueLabel": "nifNie",
+              "element": "91165256905"
+            },
+            "effectType": "SET_DEFAULT_VALUE"
+          }
+        ],
+        "ruleOperator": "AND",
+        "rules": [
+          {
+            "operator": "NOT_EM",
+            "source": "nifNie",
+            "sourceType": "INPUT",
+            "value": "",
+            "valueType": "STRING"
+          }
+        ]
+      },
+      {
+        "effects": [
+          {
+            "config": {
+              "defaultValueLabel": "userId",
+              "element": "730373772073"
+            },
+            "effectType": "SET_DEFAULT_VALUE"
+          },
+          {
+            "config": {
+              "element": "730373772073"
+            },
+            "effectType": "DISABLE"
+          }
+        ],
+        "ruleOperator": "AND",
+        "rules": [
+          {
+            "operator": "NOT_EM",
+            "source": "userId",
+            "sourceType": "INPUT",
+            "value": "",
+            "valueType": "STRING"
+          }
+        ]
+      }
+    ],
+    "formElements": [
+      {
+        "config": {
+          "alignment": "LEFT",
+          "description": "Review and update the existing SL user information.",
+          "formElements": [
+            {
+              "config": {
+                "columnCount": 2,
+                "columns": [
+                  [
+                    {
+                      "config": {
+                        "dataSource": {
+                          "config": {
+                            "objectType": "IDENTITY"
+                          },
+                          "dataSourceType": "INTERNAL"
+                        },
+                        "forceSelect": true,
+                        "helpText": "Leave empty to keep the current manager.",
+                        "label": "New Manager",
+                        "maximum": 1,
+                        "placeholder": "Select a new manager",
+                        "required": false
+                      },
+                      "elementType": "SELECT",
+                      "id": "249373906755",
+                      "key": "newManager",
+                      "validations": [
+                        {
+                          "validationType": "DATA_SOURCE"
+                        }
+                      ]
+                    }
+                  ],
+                  [
+                    {
+                      "config": {
+                        "default": "",
+                        "description": "",
+                        "helpText": "Current manager of the selected user",
+                        "label": "Current Manager",
+                        "placeholder": "",
+                        "required": false
+                      },
+                      "elementType": "TEXT",
+                      "id": "1311678080371",
+                      "key": "currentManager",
+                      "validations": []
+                    }
+                  ]
+                ],
+                "description": "",
+                "label": "Column Set",
+                "labelStyle": "h5",
+                "showLabel": false
+              },
+              "elementType": "COLUMN_SET",
+              "id": "1538457563504",
+              "key": "",
+              "validations": []
+            },
+            {
+              "config": {
+                "columnCount": 2,
+                "columns": [
+                  [
+                    {
+                      "config": {
+                        "default": "",
+                        "description": "",
+                        "helpText": "Current user identifier",
+                        "label": "User ID",
+                        "placeholder": "",
+                        "required": false
+                      },
+                      "elementType": "TEXT",
+                      "id": "730373772073",
+                      "key": "userId",
+                      "validations": []
+                    }
+                  ],
+                  [
+                    {
+                      "config": {
+                        "default": "",
+                        "description": "",
+                        "helpText": "Modify the email address if necessary",
+                        "label": "Email Field",
+                        "placeholder": "",
+                        "required": false
+                      },
+                      "elementType": "EMAIL",
+                      "id": "1283023686952",
+                      "key": "emailField",
+                      "validations": [
+                        {
+                          "validationType": "EMAIL"
+                        }
+                      ]
+                    }
+                  ]
+                ],
+                "description": "",
+                "label": "Column Set",
+                "labelStyle": "h5",
+                "showLabel": false
+              },
+              "elementType": "COLUMN_SET",
+              "id": "819247799062",
+              "key": "",
+              "validations": []
+            },
+            {
+              "config": {
+                "columnCount": 2,
+                "columns": [
+                  [
+                    {
+                      "config": {
+                        "default": "",
+                        "description": "",
+                        "helpText": "Modify the first name if necessary",
+                        "label": "First Name",
+                        "placeholder": "",
+                        "required": false
+                      },
+                      "elementType": "TEXT",
+                      "id": "856571406675",
+                      "key": "firstName",
+                      "validations": []
+                    }
+                  ],
+                  [
+                    {
+                      "config": {
+                        "default": "",
+                        "description": "",
+                        "helpText": "Modify the last name if necessary",
+                        "label": "Last Name",
+                        "placeholder": "",
+                        "required": false
+                      },
+                      "elementType": "TEXT",
+                      "id": "1309497961428",
+                      "key": "lastName",
+                      "validations": []
+                    }
+                  ]
+                ],
+                "description": "",
+                "label": "Column Set",
+                "labelStyle": "h5",
+                "showLabel": false
+              },
+              "elementType": "COLUMN_SET",
+              "id": "424803395431",
+              "key": "",
+              "validations": []
+            },
+            {
+              "config": {
+                "default": "",
+                "description": "",
+                "helpText": "Modify the NIF/NIE if necessary. Use uppercase letters",
+                "label": "NIF/NIE",
+                "placeholder": "",
+                "required": false
+              },
+              "elementType": "TEXT",
+              "id": "91165256905",
+              "key": "nifNie",
+              "validations": [
+                {
+                  "config": {
+                    "max": 9
+                  },
+                  "validationType": "MAX_LENGTH"
+                },
+                {
+                  "config": {
+                    "message": "Invalid format. Enter a valid DNI or NIE.",
+                    "regex": "^([0-9]{8}|[XYZ][0-9]{7})[TRWAGMYFPDXBNJZSQVHLCKE]$"
+                  },
+                  "validationType": "REGEX"
+                },
+                {
+                  "config": {
+                    "min": 9
+                  },
+                  "validationType": "MIN_LENGTH"
+                }
+              ]
+            }
+          ],
+          "label": "Modify User Information",
+          "labelStyle": "h2",
+          "showLabel": true
+        },
+        "elementType": "SECTION",
+        "id": "592416364359",
+        "validations": []
+      }
+    ],
+    "formInput": [
+      {
+        "description": "Current NIF/NIE",
+        "id": "nifNie",
+        "label": "NIF NIE",
+        "type": "STRING"
+      },
+      {
+        "description": "Current email",
+        "id": "email",
+        "label": "Email",
+        "type": "STRING"
+      },
+      {
+        "description": "Current first name",
+        "id": "firstName",
+        "label": "First Name",
+        "type": "STRING"
+      },
+      {
+        "description": "Current last name",
+        "id": "lastName",
+        "label": "Last Name",
+        "type": "STRING"
+      },
+      {
+        "description": "Current manager name",
+        "id": "curentManager",
+        "label": "Curent Manager",
+        "type": "STRING"
+      },
+      {
+        "description": "Current user identifier",
+        "id": "userId",
+        "label": "User  ID",
+        "type": "STRING"
+      }
+    ],
+    "id": "0bb3c407-73e8-4afe-949f-73de58cdafb7",
+    "modified": "2026-11-25T14:36:38.673556258Z",
+    "name": "SL-Form-ModifyUser",
+    "owner": {
+      "id": "d024cdc01088491194e571464f97b308",
+      "name": "dmedinay dmedinay",
+      "type": "IDENTITY"
+    },
+    "usedBy": []
+  },
+  "self": {
+    "id": "0bb3c407-73e8-4afe-949f-73de58cdafb7",
+    "name": "SL-Form-ModifyUser",
+    "type": "FORM_DEFINITION"
+  },
+  "version": 1
+}

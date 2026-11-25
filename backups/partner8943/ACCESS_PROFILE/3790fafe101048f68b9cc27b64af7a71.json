@@ -1,0 +1,68 @@
+{
+  "jwsHeader": null,
+  "jwsSignature": null,
+  "object": {
+    "accessRequestConfig": {
+      "approvalSchemes": [
+        {
+          "approverId": "d31e710a-be76-4a8e-9dc0-822dc95be1fb",
+          "approverType": "GOVERNANCE_GROUP"
+        }
+      ],
+      "commentsRequired": true,
+      "denialCommentsRequired": true,
+      "formDefinitionId": null,
+      "maxPermittedAccessDuration": null,
+      "reauthorizationRequired": false,
+      "requireEndDate": false
+    },
+    "additionalOwners": [],
+    "created": "2025-06-13T06:14:03.847776Z",
+    "description": "Es una prueba",
+    "enabled": true,
+    "entitlements": [
+      {
+        "id": "8eef88a6b0ea4c2aadd548cad5d24d53",
+        "name": "$03T200-O163AANG0C2F",
+        "type": "ENTITLEMENT"
+      },
+      {
+        "id": "e25db765d5434f2db9b2668d9aa17da9",
+        "name": "$06T200-E1OMILRNS4HR",
+        "type": "ENTITLEMENT"
+      }
+    ],
+    "id": "3790fafe101048f68b9cc27b64af7a71",
+    "modified": "2025-06-13T10:38:58.032002Z",
+    "name": "Test Access Profile",
+    "owner": {
+      "id": "d024cdc01088491194e571464f97b308",
+      "name": "dmedinay dmedinay",
+      "type": "IDENTITY"
+    },
+    "privilegeLevel": null,
+    "provisioningCriteria": null,
+    "requestable": true,
+    "revocationRequestConfig": {
+      "approvalSchemes": [
+        {
+          "approverId": "d31e710a-be76-4a8e-9dc0-822dc95be1fb",
+          "approverType": "GOVERNANCE_GROUP"
+        }
+      ]
+    },
+    "segmentRefs": [],
+    "segments": [],
+    "source": {
+      "id": "dd15e795a6884b1e914126cdaf8ac66d",
+      "name": "Active Directory LAB SIA",
+      "type": "SOURCE"
+    }
+  },
+  "self": {
+    "id": "3790fafe101048f68b9cc27b64af7a71",
+    "name": "Test Access Profile",
+    "type": "ACCESS_PROFILE"
+  },
+  "version": 1
+}

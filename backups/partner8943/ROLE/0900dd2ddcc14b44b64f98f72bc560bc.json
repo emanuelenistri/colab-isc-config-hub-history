@@ -1,0 +1,50 @@
+{
+  "jwsHeader": null,
+  "jwsSignature": null,
+  "object": {
+    "accessModelMetadata": {
+      "attributes": []
+    },
+    "accessProfiles": [],
+    "accessRequestConfig": {
+      "approvalSchemes": [],
+      "commentsRequired": null,
+      "denialCommentsRequired": null,
+      "formDefinitionId": null,
+      "maxPermittedAccessDuration": null,
+      "reauthorizationRequired": false,
+      "requireEndDate": false
+    },
+    "additionalOwners": [],
+    "created": "2025-06-13T07:32:58.808964Z",
+    "description": null,
+    "dimensionRefs": null,
+    "dimensional": false,
+    "dimensions": [],
+    "enabled": false,
+    "entitlements": [],
+    "id": "0900dd2ddcc14b44b64f98f72bc560bc",
+    "legacyMembershipInfo": null,
+    "membership": null,
+    "modified": "2025-06-13T10:46:57.168579Z",
+    "name": "test rol1",
+    "owner": {
+      "id": "d024cdc01088491194e571464f97b308",
+      "name": "dmedinay dmedinay",
+      "type": "IDENTITY"
+    },
+    "privilegeLevel": null,
+    "requestable": false,
+    "revocationRequestConfig": {
+      "approvalSchemes": []
+    },
+    "segmentRefs": [],
+    "segments": []
+  },
+  "self": {
+    "id": "0900dd2ddcc14b44b64f98f72bc560bc",
+    "name": "test rol1",
+    "type": "ROLE"
+  },
+  "version": 1
+}
