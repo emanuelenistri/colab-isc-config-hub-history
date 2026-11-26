@@ -27,7 +27,7 @@
       "user_id": {
         "attributes": {
           "attributeName": "user_id",
-          "sourceName": "NERM Test 2"
+          "sourceName": "NERM"
         },
         "type": "accountAttribute"
       },

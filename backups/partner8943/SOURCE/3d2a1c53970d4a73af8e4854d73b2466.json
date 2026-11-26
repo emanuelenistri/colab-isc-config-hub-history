@@ -9,7 +9,7 @@
       "appTemplateData": "{\"whiteListedAttributes\":[\"enableProvisioningFeature\"]}",
       "clientLanguage": "EN",
       "clientNumber": "001",
-      "cloudCacheUpdate": 1795435414712,
+      "cloudCacheUpdate": 1795708776421,
       "cloudDisplayName": "SAP LAB",
       "connectionType": "direct",
       "connectorFileUploadHistory": {
@@ -23,7 +23,7 @@
       "encrypted": "password",
       "hasFullAggregationCompleted": true,
       "healthCheckTimeout": 30,
-      "healthy": true,
+      "healthy": false,
       "host": "10.10.3.123",
       "jco.client.snc_qop": "8",
       "load-by-sysclassloader": [
@@ -35,11 +35,11 @@
         "Connect to SAP gateway failed",
         "Server is not operational"
       ],
-      "since": "2026-11-23T12:03:34.697Z",
+      "since": "2026-11-26T15:59:36.411Z",
       "skipInactiveRoles": "true",
       "sourceConnected": true,
       "spFMName": "RFC_READ_TABLE",
-      "status": "SOURCE_STATE_HEALTHY",
+      "status": "SOURCE_STATE_FAILURE_SOURCE",
       "supportsDeltaAgg": "true",
       "systemID": "42",
       "templateApplication": "SAP Template",

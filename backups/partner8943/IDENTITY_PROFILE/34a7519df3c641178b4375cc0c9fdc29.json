@@ -35,7 +35,8 @@
           "transformDefinition": {
             "attributes": {
               "attributeName": "assignedOffice_ne_attribute",
-              "sourceName": "NERM Test 2"
+              "sourceId": "b9904c2b0c214ba6aace92a95ad3ff68",
+              "sourceName": "NERM"
             },
             "type": "accountAttribute"
           }
@@ -45,26 +46,10 @@
           "transformDefinition": {
             "attributes": {
               "attributeName": "assignedofficemanager_ne_attribute",
-              "sourceName": "NERM Test 2"
+              "sourceId": "b9904c2b0c214ba6aace92a95ad3ff68",
+              "sourceName": "NERM"
             },
             "type": "accountAttribute"
-          }
-        },
-        {
-          "identityAttributeName": "cloudLifecycleState",
-          "transformDefinition": {
-            "attributes": {
-              "id": "test_Dani_ultimo_CloudLifecycle_external",
-              "input": {
-                "attributes": {
-                  "attributeName": "user_id",
-                  "sourceId": "b9904c2b0c214ba6aace92a95ad3ff68",
-                  "sourceName": "NERM"
-                },
-                "type": "accountAttribute"
-              }
-            },
-            "type": "reference"
           }
         },
         {
@@ -72,7 +57,8 @@
           "transformDefinition": {
             "attributes": {
               "attributeName": "contracnumber_ne_attribute",
-              "sourceName": "NERM Test 2"
+              "sourceId": "b9904c2b0c214ba6aace92a95ad3ff68",
+              "sourceName": "NERM"
             },
             "type": "accountAttribute"
           }
@@ -82,7 +68,8 @@
           "transformDefinition": {
             "attributes": {
               "attributeName": "deliveryaddress_ne_attribute",
-              "sourceName": "NERM Test 2"
+              "sourceId": "b9904c2b0c214ba6aace92a95ad3ff68",
+              "sourceName": "NERM"
             },
             "type": "accountAttribute"
           }
@@ -109,7 +96,8 @@
           "transformDefinition": {
             "attributes": {
               "attributeName": "dni_ne_attribute",
-              "sourceName": "NERM Test 2"
+              "sourceId": "b9904c2b0c214ba6aace92a95ad3ff68",
+              "sourceName": "NERM"
             },
             "type": "accountAttribute"
           }
@@ -119,7 +107,8 @@
           "transformDefinition": {
             "attributes": {
               "attributeName": "email",
-              "sourceName": "NERM Test 2"
+              "sourceId": "b9904c2b0c214ba6aace92a95ad3ff68",
+              "sourceName": "NERM"
             },
             "type": "accountAttribute"
           }
@@ -129,7 +118,8 @@
           "transformDefinition": {
             "attributes": {
               "attributeName": "enddate_ne_attribute",
-              "sourceName": "NERM Test 2"
+              "sourceId": "b9904c2b0c214ba6aace92a95ad3ff68",
+              "sourceName": "NERM"
             },
             "type": "accountAttribute"
           }
@@ -139,7 +129,8 @@
           "transformDefinition": {
             "attributes": {
               "attributeName": "entity_ne_attribute",
-              "sourceName": "NERM Test 2"
+              "sourceId": "b9904c2b0c214ba6aace92a95ad3ff68",
+              "sourceName": "NERM"
             },
             "type": "accountAttribute"
           }
@@ -149,7 +140,8 @@
           "transformDefinition": {
             "attributes": {
               "attributeName": "externalcompany_ne_attribute",
-              "sourceName": "NERM Test 2"
+              "sourceId": "b9904c2b0c214ba6aace92a95ad3ff68",
+              "sourceName": "NERM"
             },
             "type": "accountAttribute"
           }
@@ -159,7 +151,8 @@
           "transformDefinition": {
             "attributes": {
               "attributeName": "externalnumber_ne_attribute",
-              "sourceName": "NERM Test 2"
+              "sourceId": "b9904c2b0c214ba6aace92a95ad3ff68",
+              "sourceName": "NERM"
             },
             "type": "accountAttribute"
           }
@@ -169,7 +162,8 @@
           "transformDefinition": {
             "attributes": {
               "attributeName": "firstname_ne_attribute",
-              "sourceName": "NERM Test 2"
+              "sourceId": "b9904c2b0c214ba6aace92a95ad3ff68",
+              "sourceName": "NERM"
             },
             "type": "accountAttribute"
           }
@@ -179,7 +173,8 @@
           "transformDefinition": {
             "attributes": {
               "attributeName": "job_ne_attribute",
-              "sourceName": "NERM Test 2"
+              "sourceId": "b9904c2b0c214ba6aace92a95ad3ff68",
+              "sourceName": "NERM"
             },
             "type": "accountAttribute"
           }
@@ -189,7 +184,8 @@
           "transformDefinition": {
             "attributes": {
               "attributeName": "jobDate_ne_attribute",
-              "sourceName": "NERM Test 2"
+              "sourceId": "b9904c2b0c214ba6aace92a95ad3ff68",
+              "sourceName": "NERM"
             },
             "type": "accountAttribute"
           }
@@ -199,7 +195,8 @@
           "transformDefinition": {
             "attributes": {
               "attributeName": "jobId_ne_attribute",
-              "sourceName": "NERM Test 2"
+              "sourceId": "b9904c2b0c214ba6aace92a95ad3ff68",
+              "sourceName": "NERM"
             },
             "type": "accountAttribute"
           }
@@ -209,7 +206,8 @@
           "transformDefinition": {
             "attributes": {
               "attributeName": "lastname_ne_attribute",
-              "sourceName": "NERM Test 2"
+              "sourceId": "b9904c2b0c214ba6aace92a95ad3ff68",
+              "sourceName": "NERM"
             },
             "type": "accountAttribute"
           }
@@ -219,7 +217,8 @@
           "transformDefinition": {
             "attributes": {
               "attributeName": "officialIdentityType_ne_attribute",
-              "sourceName": "NERM Test 2"
+              "sourceId": "b9904c2b0c214ba6aace92a95ad3ff68",
+              "sourceName": "NERM"
             },
             "type": "accountAttribute"
           }
@@ -246,7 +245,8 @@
           "transformDefinition": {
             "attributes": {
               "attributeName": "physicaloffice_ne_attribute",
-              "sourceName": "NERM Test 2"
+              "sourceId": "b9904c2b0c214ba6aace92a95ad3ff68",
+              "sourceName": "NERM"
             },
             "type": "accountAttribute"
           }
@@ -259,7 +259,8 @@
               "input": {
                 "attributes": {
                   "attributeName": "user_id",
-                  "sourceName": "NERM Test 2"
+                  "sourceId": "b9904c2b0c214ba6aace92a95ad3ff68",
+                  "sourceName": "NERM"
                 },
                 "type": "accountAttribute"
               }
@@ -272,7 +273,8 @@
           "transformDefinition": {
             "attributes": {
               "attributeName": "secondlastname_ne_attribute",
-              "sourceName": "NERM Test 2"
+              "sourceId": "b9904c2b0c214ba6aace92a95ad3ff68",
+              "sourceName": "NERM"
             },
             "type": "accountAttribute"
           }
@@ -282,7 +284,8 @@
           "transformDefinition": {
             "attributes": {
               "attributeName": "startdate_ne_attribute",
-              "sourceName": "NERM Test 2"
+              "sourceId": "b9904c2b0c214ba6aace92a95ad3ff68",
+              "sourceName": "NERM"
             },
             "type": "accountAttribute"
           }
@@ -292,7 +295,8 @@
           "transformDefinition": {
             "attributes": {
               "attributeName": "telephonenumber_ne_attribute",
-              "sourceName": "NERM Test 2"
+              "sourceId": "b9904c2b0c214ba6aace92a95ad3ff68",
+              "sourceName": "NERM"
             },
             "type": "accountAttribute"
           }
@@ -305,7 +309,8 @@
               "input": {
                 "attributes": {
                   "attributeName": "user_id",
-                  "sourceName": "NERM Test 2"
+                  "sourceId": "b9904c2b0c214ba6aace92a95ad3ff68",
+                  "sourceName": "NERM"
                 },
                 "type": "accountAttribute"
               }
@@ -318,7 +323,8 @@
           "transformDefinition": {
             "attributes": {
               "attributeName": "user_id",
-              "sourceName": "NERM Test 2"
+              "sourceId": "b9904c2b0c214ba6aace92a95ad3ff68",
+              "sourceName": "NERM"
             },
             "type": "accountAttribute"
           }
@@ -328,7 +334,8 @@
           "transformDefinition": {
             "attributes": {
               "attributeName": "user_crc32_ne_attribute",
-              "sourceName": "NERM Test 2"
+              "sourceId": "b9904c2b0c214ba6aace92a95ad3ff68",
+              "sourceName": "NERM"
             },
             "type": "accountAttribute"
           }
@@ -338,7 +345,8 @@
           "transformDefinition": {
             "attributes": {
               "attributeName": "user_id",
-              "sourceName": "NERM Test 2"
+              "sourceId": "b9904c2b0c214ba6aace92a95ad3ff68",
+              "sourceName": "NERM"
             },
             "type": "accountAttribute"
           }
@@ -349,7 +357,7 @@
     "identityCount": 10,
     "identityExceptionReportReference": null,
     "identityRefreshRequired": false,
-    "modified": "2025-03-24T18:55:32.450Z",
+    "modified": "2026-11-26T07:39:46.871Z",
     "name": "NERM TEST",
     "owner": {
       "id": "84a568c1f5024b24b21a25a27379ac66",

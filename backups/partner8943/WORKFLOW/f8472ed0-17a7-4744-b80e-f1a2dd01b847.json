@@ -50,8 +50,62 @@
             }
           },
           "description": "Retrieves the current attributes of the SL source account",
-          "displayName": "HTTP Request (get SL Account)",
+          "displayName": "HTTP Request (Get SL Account)",
+          "nextStep": "Interactive Form 1",
+          "type": "action",
+          "versionNumber": 3
+        },
+        "HTTP Request 1": {
+          "actionId": "sp:http",
+          "attributes": {
+            "jsonRequestBody": null,
+            "method": "patch",
+            "param_authenticationRef": "oauth",
+            "param_oauth": {
+              "mapping": {
+                "auth_client_id": "clientId",
+                "auth_client_secret": "clientSecret",
+                "auth_credential_location": "credentialLocation",
+                "auth_token_url": "tokenURL"
+              },
+              "paramID": "e73423ac-6e4a-4947-b354-777875570dc4",
+              "paramType": "1.4",
+              "refID": "106f3733-48f4-402d-b811-37965f17aa68"
+            },
+            "requestContentType": "json",
+            "requestHeaders": {
+              "Content-Type": "application/json-patch+json"
+            },
+            "url": "https://partner8943.api.identitynow-demo.com/accounts/v1/{{$.hTTPRequest.body[0].id}}"
+          },
+          "description": "Updates the modified attributes of the SL source account",
+          "displayName": "HTTP Request (Update Account)",
           "nextStep": "End Step - Success",
+          "type": "action",
+          "versionNumber": 3
+        },
+        "HTTP Request 2": {
+          "actionId": "sp:http",
+          "attributes": {
+            "method": "get",
+            "param_authenticationRef": "oauth",
+            "param_oauth": {
+              "mapping": {
+                "auth_client_id": "clientId",
+                "auth_client_secret": "clientSecret",
+                "auth_credential_location": "credentialLocation",
+                "auth_token_url": "tokenURL"
+              },
+              "paramID": "e73423ac-6e4a-4947-b354-777875570dc4",
+              "paramType": "1.4",
+              "refID": "106f3733-48f4-402d-b811-37965f17aa68"
+            },
+            "requestContentType": "json",
+            "url": "https://partner8943.api.identitynow-demo.com/sources/v1/a57560a1baaa487f81ec2acfae52d0c0/schemas/c6f142eb39214eb78d23197f75ba8c92"
+          },
+          "description": "Retrieves the account schema attributes of the SL source",
+          "displayName": "HTTP Request (Get SL Schema)",
+          "nextStep": "Loop",
           "type": "action",
           "versionNumber": 3
         },
@@ -68,13 +122,74 @@
           "nextStep": "Get Identity",
           "type": "action",
           "versionNumber": 1
+        },
+        "Interactive Form 1": {
+          "actionId": "sp:interactive-form",
+          "attributes": {
+            "formDefinitionId": "0bb3c407-73e8-4afe-949f-73de58cdafb7",
+            "inputForForm_curentManager.$": "$.getIdentity.managerRef.name",
+            "inputForForm_email.$": "$.hTTPRequest.body[0].attributes.correo",
+            "inputForForm_firstName.$": "$.hTTPRequest.body[0].attributes.nombre",
+            "inputForForm_lastName.$": "$.hTTPRequest.body[0].attributes.apellido",
+            "inputForForm_nifNie.$": "$.hTTPRequest.body[0].attributes.NIF",
+            "inputForForm_userId.$": "$.hTTPRequest.body[0].attributes.id",
+            "interactiveProcessId.$": "$.trigger.interactiveProcessId",
+            "message": "<p>Review the current user information and modify only the fields you want to change</p>",
+            "ownerId.$": "$.trigger.launchedBy.id",
+            "title": "Modify User Information"
+          },
+          "description": "Displays the current user information and allows modifications",
+          "displayName": "Interactive Form (Modify User)",
+          "nextStep": "HTTP Request 2",
+          "type": "action",
+          "versionNumber": 1
+        },
+        "Loop": {
+          "actionId": "sp:loop:iterator",
+          "attributes": {
+            "context.$": "$.interactiveForm1",
+            "input.$": "$.hTTPRequest2.body.attributes",
+            "start": "Compare Strings",
+            "steps": {
+              "Compare Strings": {
+                "actionId": "sp:compare-strings",
+                "choiceList": [
+                  {
+                    "comparator": "StringEquals",
+                    "nextStep": "End Step - Success 1",
+                    "variableA.$": "$.loop.loopInput.name",
+                    "variableB": "id"
+                  }
+                ],
+                "defaultStep": "End Step - Success 2",
+                "description": "Checks whether the attribute is the account identifier.",
+                "displayName": "",
+                "type": "choice"
+              },
+              "End Step - Success 1": {
+                "actionId": "sp:operator-success",
+                "displayName": "End Step - Success (Skip Account SL ID)",
+                "type": "success"
+              },
+              "End Step - Success 2": {
+                "actionId": "sp:operator-success",
+                "displayName": "End Step - Success (Process Attribute)",
+                "type": "success"
+              }
+            }
+          },
+          "description": "Processes user attribute modifications.",
+          "displayName": "",
+          "nextStep": "HTTP Request 1",
+          "type": "action",
+          "versionNumber": 1
         }
       }
     },
     "description": "Workflow to modify existing SL user",
     "enabled": false,
     "id": "f8472ed0-17a7-4744-b80e-f1a2dd01b847",
-    "modified": "2026-11-25T15:33:06.093132076Z",
+    "modified": "2026-11-26T16:10:16.966454343Z",
     "modifiedBy": {
       "id": "d024cdc01088491194e571464f97b308",
       "name": "dmedinay",

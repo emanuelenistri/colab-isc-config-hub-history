@@ -13,7 +13,7 @@
     },
     "additionalOwners": [],
     "created": "2024-10-22T05:59:56.252658Z",
-    "description": "Es una pruebas",
+    "description": "Es una prueba",
     "enabled": true,
     "entitlements": [
       {
@@ -28,11 +28,11 @@
       }
     ],
     "id": "3fd10f7c33384f79a36c83d9871799d1",
-    "modified": "2024-11-07T09:06:53.952842Z",
+    "modified": "2026-11-26T10:11:59.07237Z",
     "name": "test E",
     "owner": {
       "id": "d024cdc01088491194e571464f97b308",
-      "name": "dmedinay",
+      "name": "dmedinay dmedinay",
       "type": "IDENTITY"
     },
     "privilegeLevel": null,

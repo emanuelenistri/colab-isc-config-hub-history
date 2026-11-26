@@ -1,0 +1,701 @@
+{
+  "jwsHeader": null,
+  "jwsSignature": null,
+  "object": {
+    "accountCorrelationRule": null,
+    "beforeProvisioningRule": null,
+    "connectorAttributes": {
+      "cloudCacheUpdate": 1795704042264,
+      "cloudDisplayName": "Test SAP ID",
+      "connectionType": "direct",
+      "connectorName": "SAP Identity Directory SAAS",
+      "deleteThresholdPercentage": 10,
+      "deltaAggregationEnabled": false,
+      "encrypted": "scim0_password, scim0_client_secret, oauth_token_info",
+      "entitlementDeltaAggregationEnabled": false,
+      "healthy": false,
+      "idnProxyType": "sp-connect",
+      "pageSize": "100",
+      "provisionMultivaluedRFCCompatible": "true",
+      "relaxConfiguration": "true",
+      "scim0_authType": "Basic",
+      "scim0_grant_type": "client_credentials",
+      "scim0_usePatch": "true",
+      "since": "2026-11-26T14:40:41.815Z",
+      "spConnectorSpecId": "13f6b8f1-d7d0-4eeb-8de5-e52954f6e244",
+      "spConnectorSupportsCustomSchemas": true,
+      "status": "SOURCE_STATE_UNCHECKED_SOURCE_NO_ACCOUNTS",
+      "supportsDeltaAgg": true,
+      "templateApplication": "SAP Identity Directory SAAS"
+    },
+    "connectorClass": "",
+    "connectorScriptName": "sapidentitydirectory-saas",
+    "correlationConfigDetails": {
+      "attributeAssignments": [
+        {
+          "complex": false,
+          "filterString": null,
+          "ignoreCase": true,
+          "matchMode": null,
+          "operation": "EQ",
+          "property": "email",
+          "sequence": 2,
+          "value": "Email"
+        },
+        {
+          "complex": false,
+          "filterString": null,
+          "ignoreCase": true,
+          "matchMode": null,
+          "operation": "EQ",
+          "property": "uid",
+          "sequence": 1,
+          "value": "ID"
+        }
+      ],
+      "id": "83bd09cb082246bb94670227e01afe45",
+      "name": "37915c79f9d2439aa0e8ba05f4f7df78 Account Correlation Config"
+    },
+    "crossTenantConnectorAttributes": {},
+    "deleteThreshold": 10,
+    "description": "test sap id",
+    "features": [],
+    "id": "37915c79f9d2439aa0e8ba05f4f7df78",
+    "managementWorkgroup": null,
+    "managerCorrelationMapping": null,
+    "managerCorrelationRule": null,
+    "name": "Test SAP ID",
+    "owner": {
+      "id": "1dff61379fdc41fbac00c7f5ae992e23",
+      "name": "cjoglar",
+      "type": "IDENTITY"
+    },
+    "passwordPolicies": null,
+    "provisionAsCsv": false,
+    "provisioningPolicies": [
+      {
+        "description": null,
+        "fields": [
+          {
+            "attributes": {},
+            "isMultiValued": false,
+            "isRequired": false,
+            "name": "User Type",
+            "transform": {
+              "attributes": {
+                "name": "userType"
+              },
+              "type": "identityAttribute"
+            },
+            "type": "string"
+          },
+          {
+            "attributes": {},
+            "isMultiValued": false,
+            "isRequired": true,
+            "name": "Display Name",
+            "transform": {
+              "attributes": {
+                "name": "displayName"
+              },
+              "type": "identityAttribute"
+            },
+            "type": "string"
+          },
+          {
+            "attributes": {},
+            "isMultiValued": false,
+            "isRequired": true,
+            "name": "Email",
+            "transform": {
+              "attributes": {
+                "name": "email"
+              },
+              "type": "identityAttribute"
+            },
+            "type": "string"
+          },
+          {
+            "attributes": {},
+            "isMultiValued": false,
+            "isRequired": true,
+            "name": "First Name",
+            "transform": {
+              "attributes": {
+                "name": "firstname"
+              },
+              "type": "identityAttribute"
+            },
+            "type": "string"
+          },
+          {
+            "attributes": {},
+            "isMultiValued": false,
+            "isRequired": true,
+            "name": "Last Name",
+            "transform": {
+              "attributes": {
+                "name": "lastname"
+              },
+              "type": "identityAttribute"
+            },
+            "type": "string"
+          },
+          {
+            "attributes": {},
+            "isMultiValued": false,
+            "isRequired": true,
+            "name": "User Name",
+            "transform": {
+              "attributes": {
+                "name": "uid"
+              },
+              "type": "identityAttribute"
+            },
+            "type": "string"
+          }
+        ],
+        "name": "Account",
+        "usageType": "CREATE"
+      }
+    ],
+    "schemas": [
+      {
+        "attributes": [
+          {
+            "description": "A Boolean value indicating the Users administrative status.",
+            "isEntitlement": false,
+            "isGroup": false,
+            "isManaged": false,
+            "isMulti": false,
+            "name": "Active",
+            "nativeName": "active",
+            "schema": null,
+            "type": "STRING"
+          },
+          {
+            "description": "A Numeric or alphanumeric identifier assigned to a person, typically based on order of hire or association with an organization.",
+            "isEntitlement": false,
+            "isGroup": false,
+            "isManaged": false,
+            "isMulti": false,
+            "name": "Employee Number",
+            "nativeName": "employeeNumber",
+            "schema": null,
+            "type": "STRING"
+          },
+          {
+            "description": "A boolean value indicating user email vefification status.",
+            "isEntitlement": false,
+            "isGroup": false,
+            "isManaged": false,
+            "isMulti": false,
+            "name": "Is Email Verified?",
+            "nativeName": "mailVerified",
+            "schema": null,
+            "type": "STRING"
+          },
+          {
+            "description": "A formal title used before the user's name.",
+            "isEntitlement": false,
+            "isGroup": false,
+            "isManaged": false,
+            "isMulti": false,
+            "name": "Salutation",
+            "nativeName": "name.honorificPrefix",
+            "schema": null,
+            "type": "STRING"
+          },
+          {
+            "description": "A list of groups to which the user belongs.",
+            "isEntitlement": true,
+            "isGroup": true,
+            "isManaged": false,
+            "isMulti": true,
+            "name": "Groups",
+            "nativeName": "groups",
+            "schema": {
+              "id": "95d2e6d250ba4f73887466de1bef1573",
+              "name": "group",
+              "type": "CONNECTOR_SCHEMA"
+            },
+            "type": "STRING"
+          },
+          {
+            "description": "A list of user's corporate groups.",
+            "isEntitlement": false,
+            "isGroup": false,
+            "isManaged": false,
+            "isMulti": true,
+            "name": "Corporate Group",
+            "nativeName": "corporateGroups",
+            "schema": null,
+            "type": "STRING"
+          },
+          {
+            "description": "A unique identifier for the user",
+            "isEntitlement": false,
+            "isGroup": false,
+            "isManaged": false,
+            "isMulti": false,
+            "name": "ID",
+            "nativeName": "id",
+            "schema": null,
+            "type": "STRING"
+          },
+          {
+            "description": "An Identifier for the user as defined by the provisioning client.",
+            "isEntitlement": false,
+            "isGroup": false,
+            "isManaged": false,
+            "isMulti": false,
+            "name": "External ID",
+            "nativeName": "externalId",
+            "schema": null,
+            "type": "STRING"
+          },
+          {
+            "description": "Country used in street address.",
+            "isEntitlement": false,
+            "isGroup": false,
+            "isManaged": false,
+            "isMulti": false,
+            "name": "Country",
+            "nativeName": "addresses.work.primary.country",
+            "schema": null,
+            "type": "STRING"
+          },
+          {
+            "description": "Locality used in street address.",
+            "isEntitlement": false,
+            "isGroup": false,
+            "isManaged": false,
+            "isMulti": false,
+            "name": "Locality",
+            "nativeName": "addresses.work.primary.locality",
+            "schema": null,
+            "type": "STRING"
+          },
+          {
+            "description": "Postal Code used in street address.",
+            "isEntitlement": false,
+            "isGroup": false,
+            "isManaged": false,
+            "isMulti": false,
+            "name": "Postal Code",
+            "nativeName": "addresses.work.primary.postalCode",
+            "schema": null,
+            "type": "STRING"
+          },
+          {
+            "description": "Region used in street address.",
+            "isEntitlement": false,
+            "isGroup": false,
+            "isManaged": false,
+            "isMulti": false,
+            "name": "Region",
+            "nativeName": "addresses.work.primary.region",
+            "schema": null,
+            "type": "STRING"
+          },
+          {
+            "description": "The Users time zone in the Olson time zone database format, e.g., America/Los_Angeles.",
+            "isEntitlement": false,
+            "isGroup": false,
+            "isManaged": false,
+            "isMulti": false,
+            "name": "Timezone",
+            "nativeName": "timezone",
+            "schema": null,
+            "type": "STRING"
+          },
+          {
+            "description": "The name of the User, suitable for display to end-users.",
+            "isEntitlement": false,
+            "isGroup": false,
+            "isManaged": false,
+            "isMulti": false,
+            "name": "Display Name",
+            "nativeName": "displayName",
+            "schema": null,
+            "type": "STRING"
+          },
+          {
+            "description": "The password authentication provider ID.",
+            "isEntitlement": false,
+            "isGroup": false,
+            "isManaged": false,
+            "isMulti": false,
+            "name": "Source System ID",
+            "nativeName": "sourceSystemId",
+            "schema": null,
+            "type": "STRING"
+          },
+          {
+            "description": "The password authentication provider type.",
+            "isEntitlement": false,
+            "isGroup": false,
+            "isManaged": false,
+            "isMulti": false,
+            "name": "Source System",
+            "nativeName": "sourceSystem",
+            "schema": null,
+            "type": "STRING"
+          },
+          {
+            "description": "The type of user used to identify the relationship between the organization and the user.",
+            "isEntitlement": false,
+            "isGroup": false,
+            "isManaged": false,
+            "isMulti": false,
+            "name": "User Type",
+            "nativeName": "userType",
+            "schema": null,
+            "type": "STRING"
+          },
+          {
+            "description": "The user's ID.",
+            "isEntitlement": false,
+            "isGroup": false,
+            "isManaged": false,
+            "isMulti": false,
+            "name": "User ID",
+            "nativeName": "userId",
+            "schema": null,
+            "type": "STRING"
+          },
+          {
+            "description": "The user's SAP user name.",
+            "isEntitlement": false,
+            "isGroup": false,
+            "isManaged": false,
+            "isMulti": false,
+            "name": "SAP User Name",
+            "nativeName": "sapUserName",
+            "schema": null,
+            "type": "STRING"
+          },
+          {
+            "description": "The user's association with the organization.",
+            "isEntitlement": false,
+            "isGroup": false,
+            "isManaged": false,
+            "isMulti": false,
+            "name": "Relationship",
+            "nativeName": "companyRelationship",
+            "schema": null,
+            "type": "STRING"
+          },
+          {
+            "description": "The user's cost center.",
+            "isEntitlement": false,
+            "isGroup": false,
+            "isManaged": false,
+            "isMulti": false,
+            "name": "Cost Center",
+            "nativeName": "costCenter",
+            "schema": null,
+            "type": "STRING"
+          },
+          {
+            "description": "The user's department.",
+            "isEntitlement": false,
+            "isGroup": false,
+            "isManaged": false,
+            "isMulti": false,
+            "name": "Department",
+            "nativeName": "department",
+            "schema": null,
+            "type": "STRING"
+          },
+          {
+            "description": "The user's division.",
+            "isEntitlement": false,
+            "isGroup": false,
+            "isManaged": false,
+            "isMulti": false,
+            "name": "Division",
+            "nativeName": "division",
+            "schema": null,
+            "type": "STRING"
+          },
+          {
+            "description": "The user's first name",
+            "isEntitlement": false,
+            "isGroup": false,
+            "isManaged": false,
+            "isMulti": false,
+            "name": "First Name",
+            "nativeName": "name.givenName",
+            "schema": null,
+            "type": "STRING"
+          },
+          {
+            "description": "The user's industry.",
+            "isEntitlement": false,
+            "isGroup": false,
+            "isManaged": false,
+            "isMulti": false,
+            "name": "Industry",
+            "nativeName": "industry",
+            "schema": null,
+            "type": "STRING"
+          },
+          {
+            "description": "The user's last name",
+            "isEntitlement": false,
+            "isGroup": false,
+            "isManaged": false,
+            "isMulti": false,
+            "name": "Last Name",
+            "nativeName": "name.familyName",
+            "schema": null,
+            "type": "STRING"
+          },
+          {
+            "description": "The user's locale.",
+            "isEntitlement": false,
+            "isGroup": false,
+            "isManaged": false,
+            "isMulti": false,
+            "name": "Locale",
+            "nativeName": "locale",
+            "schema": null,
+            "type": "STRING"
+          },
+          {
+            "description": "The user's login name or user name",
+            "isEntitlement": false,
+            "isGroup": false,
+            "isManaged": false,
+            "isMulti": false,
+            "name": "User Name",
+            "nativeName": "userName",
+            "schema": null,
+            "type": "STRING"
+          },
+          {
+            "description": "The user's middle name",
+            "isEntitlement": false,
+            "isGroup": false,
+            "isManaged": false,
+            "isMulti": false,
+            "name": "Middle Name",
+            "nativeName": "name.middleName",
+            "schema": null,
+            "type": "STRING"
+          },
+          {
+            "description": "The user's organization name.",
+            "isEntitlement": false,
+            "isGroup": false,
+            "isManaged": false,
+            "isMulti": false,
+            "name": "Organization",
+            "nativeName": "organization",
+            "schema": null,
+            "type": "STRING"
+          },
+          {
+            "description": "The user's password policy.",
+            "isEntitlement": false,
+            "isGroup": false,
+            "isManaged": false,
+            "isMulti": false,
+            "name": "Password Policy",
+            "nativeName": "passwordDetails.policy",
+            "schema": null,
+            "type": "STRING"
+          },
+          {
+            "description": "The user's password status.",
+            "isEntitlement": false,
+            "isGroup": false,
+            "isManaged": false,
+            "isMulti": false,
+            "name": "Password Status",
+            "nativeName": "passwordDetails.status",
+            "schema": null,
+            "type": "STRING"
+          },
+          {
+            "description": "The user's preferred written or spoken language.",
+            "isEntitlement": false,
+            "isGroup": false,
+            "isManaged": false,
+            "isMulti": false,
+            "name": "Language",
+            "nativeName": "preferredLanguage",
+            "schema": null,
+            "type": "STRING"
+          },
+          {
+            "description": "The user's primary email address.",
+            "isEntitlement": false,
+            "isGroup": false,
+            "isManaged": false,
+            "isMulti": false,
+            "name": "Email",
+            "nativeName": "emails.work.primary.value",
+            "schema": null,
+            "type": "STRING"
+          },
+          {
+            "description": "The user's primary supervisor username.",
+            "isEntitlement": false,
+            "isGroup": false,
+            "isManaged": false,
+            "isMulti": false,
+            "name": "Manager",
+            "nativeName": "manager.value",
+            "schema": null,
+            "type": "STRING"
+          },
+          {
+            "description": "The user's primary work phone number.",
+            "isEntitlement": false,
+            "isGroup": false,
+            "isManaged": false,
+            "isMulti": false,
+            "name": "Phone",
+            "nativeName": "phoneNumbers.work.primary.value",
+            "schema": null,
+            "type": "STRING"
+          },
+          {
+            "description": "The user's street address.",
+            "isEntitlement": false,
+            "isGroup": false,
+            "isManaged": false,
+            "isMulti": false,
+            "name": "Street Address",
+            "nativeName": "addresses.work.primary.streetAddress",
+            "schema": null,
+            "type": "STRING"
+          },
+          {
+            "description": "The user's unique identification number.",
+            "isEntitlement": false,
+            "isGroup": false,
+            "isManaged": false,
+            "isMulti": false,
+            "name": "User UUID",
+            "nativeName": "userUuid",
+            "schema": null,
+            "type": "STRING"
+          },
+          {
+            "description": "The user's valid from date.",
+            "isEntitlement": false,
+            "isGroup": false,
+            "isManaged": false,
+            "isMulti": false,
+            "name": "Valid From",
+            "nativeName": "validFrom",
+            "schema": null,
+            "type": "STRING"
+          },
+          {
+            "description": "The user's valid to date.",
+            "isEntitlement": false,
+            "isGroup": false,
+            "isManaged": false,
+            "isMulti": false,
+            "name": "Valid To",
+            "nativeName": "validTo",
+            "schema": null,
+            "type": "STRING"
+          },
+          {
+            "description": "The users title, such as Vice President.",
+            "isEntitlement": false,
+            "isGroup": false,
+            "isManaged": false,
+            "isMulti": false,
+            "name": "Title",
+            "nativeName": "title",
+            "schema": null,
+            "type": "STRING"
+          }
+        ],
+        "configuration": {},
+        "created": "2026-11-26T14:40:41.815Z",
+        "displayAttribute": "User Name",
+        "features": [],
+        "hierarchyAttribute": null,
+        "id": "ac779aec1ba74957b73bd04c696fff87",
+        "identityAttribute": "ID",
+        "includePermissions": false,
+        "modified": "2026-11-26T14:40:41.815Z",
+        "name": "account",
+        "nativeObjectType": "User"
+      },
+      {
+        "attributes": [
+          {
+            "description": "A unique identifier for the group",
+            "isEntitlement": false,
+            "isGroup": false,
+            "isManaged": false,
+            "isMulti": false,
+            "name": "ID",
+            "nativeName": "id",
+            "schema": null,
+            "type": "STRING"
+          },
+          {
+            "description": "The group's description",
+            "isEntitlement": false,
+            "isGroup": false,
+            "isManaged": false,
+            "isMulti": false,
+            "name": "Description",
+            "nativeName": "description",
+            "schema": null,
+            "type": "STRING"
+          },
+          {
+            "description": "The group's display name",
+            "isEntitlement": false,
+            "isGroup": false,
+            "isManaged": false,
+            "isMulti": false,
+            "name": "Display Name",
+            "nativeName": "displayName",
+            "schema": null,
+            "type": "STRING"
+          },
+          {
+            "description": "The members of the group",
+            "isEntitlement": false,
+            "isGroup": false,
+            "isManaged": false,
+            "isMulti": true,
+            "name": "Members",
+            "nativeName": "members.value",
+            "schema": null,
+            "type": "STRING"
+          }
+        ],
+        "configuration": {},
+        "created": "2026-11-26T14:40:41.815Z",
+        "displayAttribute": "Display Name",
+        "features": [],
+        "hierarchyAttribute": null,
+        "id": "95d2e6d250ba4f73887466de1bef1573",
+        "identityAttribute": "ID",
+        "includePermissions": false,
+        "modified": "2026-11-26T14:40:41.815Z",
+        "name": "group",
+        "nativeObjectType": "group"
+      }
+    ],
+    "type": "13f6b8f1-d7d0-4eeb-8de5-e52954f6e244"
+  },
+  "self": {
+    "id": "37915c79f9d2439aa0e8ba05f4f7df78",
+    "name": "Test SAP ID",
+    "type": "SOURCE"
+  },
+  "version": 1
+}

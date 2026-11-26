@@ -43,7 +43,7 @@
                               {
                                 "attributes": {
                                   "attributeName": "enddate_ne_attribute",
-                                  "sourceName": "NERM Test 2"
+                                  "sourceName": "NERM"
                                 },
                                 "type": "accountAttribute"
                               }
@@ -86,7 +86,7 @@
                 "input": {
                   "attributes": {
                     "attributeName": "enddate_ne_attribute",
-                    "sourceName": "NERM Test 2"
+                    "sourceName": "NERM"
                   },
                   "type": "accountAttribute"
                 },
@@ -120,7 +120,7 @@
                           {
                             "attributes": {
                               "attributeName": "enddate_ne_attribute",
-                              "sourceName": "NERM Test 2"
+                              "sourceName": "NERM"
                             },
                             "type": "accountAttribute"
                           }
@@ -164,7 +164,7 @@
             {
               "attributes": {
                 "attributeName": "flagwhitelist_ne_attribute",
-                "sourceName": "NERM Test 2"
+                "sourceName": "NERM"
               },
               "type": "accountAttribute"
             }
@@ -225,7 +225,7 @@
                                         {
                                           "attributes": {
                                             "attributeName": "startdate_ne_attribute",
-                                            "sourceName": "NERM Test 2"
+                                            "sourceName": "NERM"
                                           },
                                           "type": "accountAttribute"
                                         }
@@ -299,7 +299,7 @@
                                         {
                                           "attributes": {
                                             "attributeName": "startdate_ne_attribute",
-                                            "sourceName": "NERM Test 2"
+                                            "sourceName": "NERM"
                                           },
                                           "type": "accountAttribute"
                                         }
@@ -380,7 +380,7 @@
                           {
                             "attributes": {
                               "attributeName": "startdate_ne_attribute",
-                              "sourceName": "NERM Test 2"
+                              "sourceName": "NERM"
                             },
                             "type": "accountAttribute"
                           }
