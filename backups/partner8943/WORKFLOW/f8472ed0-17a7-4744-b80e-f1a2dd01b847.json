@@ -1,0 +1,104 @@
+{
+  "jwsHeader": null,
+  "jwsSignature": null,
+  "object": {
+    "created": "2026-11-25T14:42:35.973091919Z",
+    "creator": {
+      "id": "d024cdc01088491194e571464f97b308",
+      "name": "dmedinay",
+      "type": "IDENTITY"
+    },
+    "definition": {
+      "start": "Interactive Form",
+      "steps": {
+        "End Step - Success": {
+          "actionId": "sp:operator-success",
+          "displayName": "",
+          "type": "success"
+        },
+        "Get Identity": {
+          "actionId": "sp:get-identity",
+          "attributes": {
+            "id.$": "$.interactiveForm.formData.selectedUser"
+          },
+          "description": "Retrieves the selected SL user identity",
+          "displayName": "",
+          "nextStep": "HTTP Request",
+          "type": "action",
+          "versionNumber": 2
+        },
+        "HTTP Request": {
+          "actionId": "sp:http",
+          "attributes": {
+            "method": "get",
+            "param_authenticationRef": "oauth",
+            "param_oauth": {
+              "mapping": {
+                "auth_client_id": "clientId",
+                "auth_client_secret": "clientSecret",
+                "auth_credential_location": "credentialLocation",
+                "auth_token_url": "tokenURL"
+              },
+              "paramID": "e73423ac-6e4a-4947-b354-777875570dc4",
+              "paramType": "1.4",
+              "refID": "106f3733-48f4-402d-b811-37965f17aa68"
+            },
+            "requestContentType": "json",
+            "url": "https://partner8943.api.identitynow-demo.com/accounts/v1",
+            "urlParams": {
+              "filters": "identityId eq \"{{$.getIdentity.id}}\" and sourceId eq \"a57560a1baaa487f81ec2acfae52d0c0\""
+            }
+          },
+          "description": "Retrieves the current attributes of the SL source account",
+          "displayName": "HTTP Request (get SL Account)",
+          "nextStep": "End Step - Success",
+          "type": "action",
+          "versionNumber": 3
+        },
+        "Interactive Form": {
+          "actionId": "sp:interactive-form",
+          "attributes": {
+            "formDefinitionId": "e504dab0-2326-4f4a-923e-ccd53c6c6446",
+            "interactiveProcessId.$": "$.trigger.interactiveProcessId",
+            "message": "<p>Select the existing SL existing user whose information you want to modify</p>",
+            "ownerId.$": "$.trigger.launchedBy.id",
+            "title": "Select User"
+          },
+          "displayName": "Interactive Form (Select User)",
+          "nextStep": "Get Identity",
+          "type": "action",
+          "versionNumber": 1
+        }
+      }
+    },
+    "description": "Workflow to modify existing SL user",
+    "enabled": false,
+    "id": "f8472ed0-17a7-4744-b80e-f1a2dd01b847",
+    "modified": "2026-11-25T15:33:06.093132076Z",
+    "modifiedBy": {
+      "id": "d024cdc01088491194e571464f97b308",
+      "name": "dmedinay",
+      "type": "IDENTITY"
+    },
+    "name": "SL-Workflow-ModifyUserViaForm",
+    "owner": {
+      "id": "d024cdc01088491194e571464f97b308",
+      "name": "dmedinay",
+      "type": "IDENTITY"
+    },
+    "trigger": {
+      "attributes": {
+        "filter.$": "$[?(@.workflowId == 'f8472ed0-17a7-4744-b80e-f1a2dd01b847')]",
+        "id": "idn:interactive-process-launched",
+        "integrationId": null
+      },
+      "type": "EVENT"
+    }
+  },
+  "self": {
+    "id": "f8472ed0-17a7-4744-b80e-f1a2dd01b847",
+    "name": "SL-Workflow-ModifyUserViaForm",
+    "type": "WORKFLOW"
+  },
+  "version": 1
+}

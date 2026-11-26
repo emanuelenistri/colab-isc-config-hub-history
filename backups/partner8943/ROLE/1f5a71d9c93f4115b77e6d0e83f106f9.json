@@ -1,0 +1,70 @@
+{
+  "jwsHeader": null,
+  "jwsSignature": null,
+  "object": {
+    "accessModelMetadata": {
+      "attributes": []
+    },
+    "accessProfiles": [
+      {
+        "id": "a5be588d3c0c4c29bb1cbc08df34d054",
+        "name": "acceso_AD",
+        "type": "ACCESS_PROFILE"
+      },
+      {
+        "id": "cd23726b00b949278884488d94a4d00e",
+        "name": "Test AP",
+        "type": "ACCESS_PROFILE"
+      }
+    ],
+    "accessRequestConfig": {
+      "approvalSchemes": [
+        {
+          "approverId": null,
+          "approverType": "MANAGER"
+        },
+        {
+          "approverId": null,
+          "approverType": "OWNER"
+        }
+      ],
+      "commentsRequired": false,
+      "denialCommentsRequired": false,
+      "formDefinitionId": null,
+      "maxPermittedAccessDuration": null,
+      "reauthorizationRequired": false,
+      "requireEndDate": false
+    },
+    "additionalOwners": [],
+    "created": "2024-09-30T11:41:57.948176Z",
+    "description": "Prueba 2 Patch",
+    "dimensionRefs": null,
+    "dimensional": false,
+    "dimensions": [],
+    "enabled": false,
+    "entitlements": [],
+    "id": "1f5a71d9c93f4115b77e6d0e83f106f9",
+    "legacyMembershipInfo": null,
+    "membership": null,
+    "modified": "2024-09-30T11:41:57.948176Z",
+    "name": "EDP Prueba",
+    "owner": {
+      "id": "748aaee232614741b6f6cddf341ee281",
+      "name": "lmmartinez lmmartinez",
+      "type": "IDENTITY"
+    },
+    "privilegeLevel": null,
+    "requestable": false,
+    "revocationRequestConfig": {
+      "approvalSchemes": []
+    },
+    "segmentRefs": [],
+    "segments": []
+  },
+  "self": {
+    "id": "1f5a71d9c93f4115b77e6d0e83f106f9",
+    "name": "EDP Prueba",
+    "type": "ROLE"
+  },
+  "version": 1
+}

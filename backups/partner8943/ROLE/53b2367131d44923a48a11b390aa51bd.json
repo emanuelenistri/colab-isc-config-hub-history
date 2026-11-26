@@ -1,0 +1,124 @@
+{
+  "jwsHeader": null,
+  "jwsSignature": null,
+  "object": {
+    "accessModelMetadata": {
+      "attributes": []
+    },
+    "accessProfiles": [],
+    "accessRequestConfig": {
+      "approvalSchemes": [],
+      "commentsRequired": null,
+      "denialCommentsRequired": null,
+      "dimensionSchema": {
+        "dimensionAttributes": [
+          {
+            "derived": true,
+            "displayName": "City",
+            "name": "city"
+          },
+          {
+            "derived": true,
+            "displayName": "type User",
+            "name": "typeUser"
+          }
+        ]
+      },
+      "formDefinitionId": null,
+      "maxPermittedAccessDuration": null,
+      "reauthorizationRequired": false,
+      "requireEndDate": false
+    },
+    "additionalOwners": [],
+    "created": "2025-12-17T11:10:06.800482Z",
+    "description": null,
+    "dimensionRefs": null,
+    "dimensional": true,
+    "dimensions": [
+      {
+        "accessProfiles": [
+          {
+            "id": "3fd10f7c33384f79a36c83d9871799d1",
+            "name": "test E",
+            "type": "ACCESS_PROFILE"
+          }
+        ],
+        "created": "2025-12-17T11:10:36.386024Z",
+        "description": null,
+        "entitlements": [],
+        "id": "29f34a190d064a389a804e251e3ca591",
+        "membership": {
+          "criteria": {
+            "children": [
+              {
+                "children": [
+                  {
+                    "children": null,
+                    "key": {
+                      "property": "attribute.city",
+                      "sourceId": null,
+                      "type": "IDENTITY"
+                    },
+                    "operation": "EQUALS",
+                    "stringValue": "Madrid",
+                    "values": null
+                  },
+                  {
+                    "children": null,
+                    "key": {
+                      "property": "attribute.typeUser",
+                      "sourceId": null,
+                      "type": "IDENTITY"
+                    },
+                    "operation": "EQUALS",
+                    "stringValue": "10044",
+                    "values": null
+                  }
+                ],
+                "key": null,
+                "operation": "AND",
+                "stringValue": "",
+                "values": null
+              }
+            ],
+            "key": null,
+            "operation": "AND",
+            "stringValue": "",
+            "values": null
+          },
+          "identities": null,
+          "type": "STANDARD"
+        },
+        "modified": "2025-12-17T11:28:05.667517Z",
+        "name": "a",
+        "owner": null,
+        "parentId": "53b2367131d44923a48a11b390aa51bd"
+      }
+    ],
+    "enabled": false,
+    "entitlements": [],
+    "id": "53b2367131d44923a48a11b390aa51bd",
+    "legacyMembershipInfo": null,
+    "membership": null,
+    "modified": "2025-12-17T11:13:47.039985Z",
+    "name": "a",
+    "owner": {
+      "id": "bc3935cf474241e6a3c5bc591de2f024",
+      "name": "Abel Gutierrez Augusto ",
+      "type": "IDENTITY"
+    },
+    "privilegeLevel": null,
+    "requestable": false,
+    "revocationRequestConfig": {
+      "approvalSchemes": []
+    },
+    "segmentRefs": [],
+    "segments": []
+  },
+  "self": {
+    "id": "53b2367131d44923a48a11b390aa51bd",
+    "name": "a",
+    "type": "ROLE"
+  },
+  "version": 1
+}

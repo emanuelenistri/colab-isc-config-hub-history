@@ -1,0 +1,84 @@
+{
+  "jwsHeader": null,
+  "jwsSignature": null,
+  "object": {
+    "accessModelMetadata": {
+      "attributes": []
+    },
+    "accessProfiles": [],
+    "accessRequestConfig": {
+      "approvalSchemes": [
+        {
+          "approverId": "4162fa8d-a797-40df-9dbc-7eafb30299aa",
+          "approverType": "GOVERNANCE_GROUP"
+        },
+        {
+          "approverId": null,
+          "approverType": "MANAGER"
+        }
+      ],
+      "commentsRequired": null,
+      "denialCommentsRequired": null,
+      "formDefinitionId": null,
+      "maxPermittedAccessDuration": null,
+      "reauthorizationRequired": false,
+      "requireEndDate": false
+    },
+    "additionalOwners": [],
+    "created": "2025-08-01T11:27:20.204837Z",
+    "description": "Prueba import Rol",
+    "dimensionRefs": null,
+    "dimensional": false,
+    "dimensions": [],
+    "enabled": true,
+    "entitlements": [
+      {
+        "id": "8eef88a6-b0ea-4c2a-add5-48cad5d24d53",
+        "name": "$03T200-O163AANG0C2F",
+        "sourceId": "dd15e795-a688-4b1e-9141-26cdaf8ac66d",
+        "sourceName": "Active Directory LAB SIA",
+        "type": "ENTITLEMENT"
+      }
+    ],
+    "id": "f8307204d8514981a556c5de777d857f",
+    "legacyMembershipInfo": null,
+    "membership": null,
+    "modified": "2025-11-05T15:30:00.734468Z",
+    "name": "Test-ROLRaul4",
+    "owner": {
+      "id": "06c1619bb4ad4fa3b793330ced2408fe",
+      "name": "rcgalvez rcgalvez",
+      "type": "IDENTITY"
+    },
+    "privilegeLevel": null,
+    "requestable": true,
+    "revocationRequestConfig": {
+      "approvalSchemes": [
+        {
+          "approverId": "4162fa8d-a797-40df-9dbc-7eafb30299aa",
+          "approverType": "GOVERNANCE_GROUP"
+        },
+        {
+          "approverId": null,
+          "approverType": "MANAGER"
+        }
+      ]
+    },
+    "segmentRefs": [
+      {
+        "id": "ab3ad559-c0c7-405e-a35a-fee0e99f5464",
+        "name": "Test",
+        "type": "SEGMENT"
+      }
+    ],
+    "segments": [
+      "ab3ad559-c0c7-405e-a35a-fee0e99f5464"
+    ]
+  },
+  "self": {
+    "id": "f8307204d8514981a556c5de777d857f",
+    "name": "Test-ROLRaul4",
+    "type": "ROLE"
+  },
+  "version": 1
+}

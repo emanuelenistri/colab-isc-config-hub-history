@@ -2,7 +2,7 @@
   "jwsHeader": null,
   "jwsSignature": null,
   "object": {
-    "created": "2026-11-24T08:36:39.012044679Z",
+    "created": "2026-11-25T07:45:34.755366386Z",
     "creator": {
       "id": "d024cdc01088491194e571464f97b308",
       "name": "dmedinay",
@@ -17,7 +17,7 @@
             {
               "comparator": "StringEquals",
               "nextStep": "HTTP Request",
-              "variableA.$": "$.genericApprovalPolicy.status",
+              "variableA.$": "$.form.formData.decision",
               "variableB": "APPROVED"
             }
           ],
@@ -43,28 +43,25 @@
           "displayName": "",
           "type": "success"
         },
-        "Generic Approval Policy": {
-          "actionId": "sp:generic-approval",
+        "Form": {
+          "actionId": "sp:forms",
           "attributes": {
-            "approvalActionAtTimeout": "EXPIRED",
-            "approvalReminder": "false",
-            "approvalTimeout": 7,
-            "approvalType": "SINGLE",
-            "byIdentity.$": "$.trigger.launchedBy.id",
-            "description": "User ID: {{$.interactiveForm.formData.userId}}\nName: {{$.interactiveForm.formData.firstName}} {{$.interactiveForm.formData.lastName}}\nEmail: {{$.interactiveForm.formData.emailField}}",
-            "forIdentity.$": "$.trigger.launchedBy.id",
-            "multiApproverReviewersConfig_approvalScheme": "SERIAL",
-            "name": "Create SL user: {{$.interactiveForm.formData.firstName}} {{$.interactiveForm.formData.lastName}}",
-            "priority": "MEDIUM",
-            "quorumApproverReviewersConfig_approvalScheme": "SERIAL",
-            "reAuthRequired": false,
-            "reminderFrequency_timeZone": "Europe/Madrid",
-            "requestedBy": "IDENTITY",
-            "requestedFor": "IDENTITY",
-            "singleApproverCategory": "IDENTITY",
-            "singleApproverIdentityId.$": "$.interactiveForm.formData.manager"
+            "deadline": "7d",
+            "expirationBody": "<p>Hello {{$.getIdentity.attributes.displayName}},</p>\n<p>The approval request for the following SL user has expired.</p>\n<p>User: {{$.interactiveForm.formData.firstName}} {{$.interactiveForm.formData.lastName}}<br>User ID: {{$.interactiveForm.formData.userId}}</p>\n<p>The request has not been approved and no user account has been created.</p>",
+            "formDefinitionId": "a17f6719-50be-4c48-97e4-70466c20e771",
+            "inputForForm_email.$": "$.interactiveForm.formData.emailField",
+            "inputForForm_firstName.$": "$.interactiveForm.formData.firstName",
+            "inputForForm_lastName.$": "$.interactiveForm.formData.lastName",
+            "inputForForm_managerName.$": "$.getIdentity.attributes.displayName",
+            "inputForForm_nifNie.$": "$.interactiveForm.formData.nifNie",
+            "inputForForm_userId.$": "$.interactiveForm.formData.userId",
+            "notificationBody": "<p>Hello {{$.getIdentity.attributes.displayName}},</p>\n<p>A new SL user creation request requires your approval.</p>\n<p>User: {{$.interactiveForm.formData.firstName}} {{$.interactiveForm.formData.lastName}}<br>User ID: {{$.interactiveForm.formData.userId}}</p>\n<p>Please review the user information and approve or reject the request using the form below.</p>\n<p>Thank you.</p>",
+            "notificationSubject": "SL User Creation - Manager Approval Required",
+            "recipient.$": "$.interactiveForm.formData.manager",
+            "reminder": "3d",
+            "reminderBody": "<p>Hello {{$.getIdentity.attributes.displayName}},</p>\n<p>This is a reminder that the following SL user creation request is waiting for your approval.</p>\n<p>User: {{$.interactiveForm.formData.firstName}} {{$.interactiveForm.formData.lastName}}<br>User ID: {{$.interactiveForm.formData.userId}}</p>\n<p>Please approve or reject the request before the submission deadline.</p>\n<p>Thank you.</p>"
           },
-          "description": "Approval required to create a new SL user",
+          "description": "Manager approval for user creation",
           "displayName": "",
           "nextStep": "Compare Strings",
           "type": "action",
@@ -77,7 +74,7 @@
           },
           "description": null,
           "displayName": "Get Identity (Manager)",
-          "nextStep": "Generic Approval Policy",
+          "nextStep": "Form",
           "type": "action",
           "versionNumber": 2
         },
@@ -106,7 +103,7 @@
               },
               "paramID": "e73423ac-6e4a-4947-b354-777875570dc4",
               "paramType": "1.4",
-              "refID": "c93e97cf-bf58-4e91-8c54-ae4f323c7b6f"
+              "refID": "d51c6d39-33ca-42c3-91d7-f404667c3c23"
             },
             "requestContentType": "json",
             "url": "https://partner8943.api.identitynow-demo.com/accounts/v1"
@@ -154,9 +151,9 @@
       }
     },
     "description": "Workflow to register new SL users through an interactive form.",
-    "enabled": false,
-    "id": "ed661321-88e7-473c-857b-557067bdc28b",
-    "modified": "2026-11-24T14:23:38.006366844Z",
+    "enabled": true,
+    "id": "c259246c-3385-4578-ba25-0122b93251ad",
+    "modified": "2026-11-25T11:15:12.186430541Z",
     "modifiedBy": {
       "id": "d024cdc01088491194e571464f97b308",
       "name": "dmedinay",
@@ -170,7 +167,7 @@
     },
     "trigger": {
       "attributes": {
-        "filter.$": "$[?(@.workflowId == 'ed661321-88e7-473c-857b-557067bdc28b')]",
+        "filter.$": "$[?(@.workflowId == 'c259246c-3385-4578-ba25-0122b93251ad')]",
         "id": "idn:interactive-process-launched",
         "integrationId": null
       },
@@ -178,7 +175,7 @@
     }
   },
   "self": {
-    "id": "ed661321-88e7-473c-857b-557067bdc28b",
+    "id": "c259246c-3385-4578-ba25-0122b93251ad",
     "name": "SL-Workflow-CreateUserViaForm",
     "type": "WORKFLOW"
   },

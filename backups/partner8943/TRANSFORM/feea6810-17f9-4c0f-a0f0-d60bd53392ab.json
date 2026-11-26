@@ -7,15 +7,15 @@
         " ",
         {
           "attributes": {
-            "attributeName": "apellido",
-            "sourceName": "SL-Source-External"
+            "attributeName": "familyName",
+            "sourceName": "IdentityNow Admins"
           },
           "type": "accountAttribute"
         },
         {
           "attributes": {
-            "attributeName": "nombre",
-            "sourceName": "SL-Source-External"
+            "attributeName": "givenName",
+            "sourceName": "IdentityNow Admins"
           },
           "type": "accountAttribute"
         }

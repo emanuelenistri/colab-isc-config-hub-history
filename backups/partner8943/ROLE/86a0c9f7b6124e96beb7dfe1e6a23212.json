@@ -1,0 +1,110 @@
+{
+  "jwsHeader": null,
+  "jwsSignature": null,
+  "object": {
+    "accessModelMetadata": {
+      "attributes": []
+    },
+    "accessProfiles": [],
+    "accessRequestConfig": {
+      "approvalSchemes": [],
+      "commentsRequired": null,
+      "denialCommentsRequired": null,
+      "formDefinitionId": null,
+      "maxPermittedAccessDuration": null,
+      "reauthorizationRequired": false,
+      "requireEndDate": false
+    },
+    "additionalOwners": [],
+    "created": "2025-06-11T06:46:30.249035Z",
+    "description": "Description",
+    "dimensionRefs": null,
+    "dimensional": false,
+    "dimensions": [],
+    "enabled": false,
+    "entitlements": [
+      {
+        "id": "0055073b-6f42-462a-97ee-9e638461a455",
+        "name": "SAP_PS_RM_REGISTRAR",
+        "sourceId": "3d2a1c53-970d-4a73-af8e-4854d73b2466",
+        "sourceName": "SAP LAB",
+        "type": "ENTITLEMENT"
+      }
+    ],
+    "id": "86a0c9f7b6124e96beb7dfe1e6a23212",
+    "legacyMembershipInfo": null,
+    "membership": {
+      "criteria": {
+        "children": [
+          {
+            "children": [
+              {
+                "children": null,
+                "key": {
+                  "property": "attribute.cloudLifecycleState",
+                  "sourceId": null,
+                  "type": "IDENTITY"
+                },
+                "operation": "EQUALS",
+                "stringValue": "activo",
+                "values": null
+              },
+              {
+                "children": null,
+                "key": {
+                  "property": "attribute.cloudLifecycleState",
+                  "sourceId": null,
+                  "type": "IDENTITY"
+                },
+                "operation": "EQUALS",
+                "stringValue": "suspendido",
+                "values": null
+              }
+            ],
+            "key": null,
+            "operation": "OR",
+            "stringValue": null,
+            "values": null
+          },
+          {
+            "children": null,
+            "key": {
+              "property": "attribute.null",
+              "sourceId": "73f87225612a4e24be4dc4e40e79612d",
+              "type": "ENTITLEMENT"
+            },
+            "operation": "EQUALS",
+            "stringValue": "2",
+            "values": null
+          }
+        ],
+        "key": null,
+        "operation": "AND",
+        "stringValue": null,
+        "values": null
+      },
+      "identities": null,
+      "type": "STANDARD"
+    },
+    "modified": "2025-06-13T10:46:58.344316Z",
+    "name": "Test rol",
+    "owner": {
+      "id": "4e62a143d317429db92a35448f0aff6a",
+      "name": "sas10115",
+      "type": "IDENTITY"
+    },
+    "privilegeLevel": null,
+    "requestable": false,
+    "revocationRequestConfig": {
+      "approvalSchemes": []
+    },
+    "segmentRefs": [],
+    "segments": []
+  },
+  "self": {
+    "id": "86a0c9f7b6124e96beb7dfe1e6a23212",
+    "name": "Test rol",
+    "type": "ROLE"
+  },
+  "version": 1
+}
