@@ -151,9 +151,9 @@
       }
     },
     "description": "Workflow to register new SL users through an interactive form.",
-    "enabled": true,
+    "enabled": false,
     "id": "c259246c-3385-4578-ba25-0122b93251ad",
-    "modified": "2026-11-25T11:15:12.186430541Z",
+    "modified": "2026-11-27T11:37:38.277161373Z",
     "modifiedBy": {
       "id": "d024cdc01088491194e571464f97b308",
       "name": "dmedinay",

@@ -239,7 +239,7 @@
                       },
                       "elementType": "EMAIL",
                       "id": "1283023686952",
-                      "key": "correo",
+                      "key": "correos",
                       "validations": [
                         {
                           "validationType": "EMAIL"
@@ -352,26 +352,26 @@
     "formInput": [
       {
         "description": "Current NIF/NIE",
-        "id": "nifNie",
-        "label": "NIF NIE",
+        "id": "nif",
+        "label": "NIF",
         "type": "STRING"
       },
       {
         "description": "Current email",
-        "id": "email",
-        "label": "Email",
+        "id": "correo",
+        "label": "Correo",
         "type": "STRING"
       },
       {
         "description": "Current first name",
-        "id": "firstName",
-        "label": "First Name",
+        "id": "nombre",
+        "label": "Nombre",
         "type": "STRING"
       },
       {
         "description": "Current last name",
-        "id": "lastName",
-        "label": "Last Name",
+        "id": "apellido",
+        "label": "Apellido",
         "type": "STRING"
       },
       {
@@ -388,7 +388,7 @@
       }
     ],
     "id": "0bb3c407-73e8-4afe-949f-73de58cdafb7",
-    "modified": "2026-11-26T16:08:09.006452688Z",
+    "modified": "2026-11-27T08:14:31.676410395Z",
     "name": "SL-Form-ModifyUser",
     "owner": {
       "id": "d024cdc01088491194e571464f97b308",

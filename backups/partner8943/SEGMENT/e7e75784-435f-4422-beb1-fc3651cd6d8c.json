@@ -1,0 +1,20 @@
+{
+  "jwsHeader": null,
+  "jwsSignature": null,
+  "object": {
+    "active": false,
+    "created": "2026-11-27T09:18:35.204973Z",
+    "description": "",
+    "id": "e7e75784-435f-4422-beb1-fc3651cd6d8c",
+    "modified": "2026-11-27T09:18:35.20499Z",
+    "name": "test 2",
+    "owner": null,
+    "visibilityCriteria": null
+  },
+  "self": {
+    "id": "e7e75784-435f-4422-beb1-fc3651cd6d8c",
+    "name": "test 2",
+    "type": "SEGMENT"
+  },
+  "version": 1
+}
